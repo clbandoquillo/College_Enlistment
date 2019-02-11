@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomesController extends Controller
+class EnlistController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,6 +23,6 @@ class HomesController extends Controller
      */
     public function index()
     {
-        return view('homes');
+        return view('enlist');
     }
 }

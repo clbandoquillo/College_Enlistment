@@ -12,10 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('enlistment');
 });
 
-Auth::routes();
+/*Route::get('/enlist', ['middleware' =>'guest', function(){
+  return view('enlist');
+}]);*/
+
+Route::group(['prefix' => 'misadduadmin'], function () {
+
+    Auth::routes();
+
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/homes', 'HomesController@index')->name('homes');
+//Route::get('/enlist', 'EnlistController@index')->middleware('can');
