@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>Enlistment | Ateneo de Davao University</title>
 <meta name="description" content="">
@@ -6,6 +7,7 @@
 <!-- favicon
 ============================================ -->
 <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/datatables.min.css') }}"/>
 <!-- Google Fonts
 ============================================ -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
@@ -49,6 +51,10 @@
 ============================================ -->
 <link rel="stylesheet" href="{{ asset('assets/css/calendar/fullcalendar.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/calendar/fullcalendar.print.min.css') }}">
+<!-- normalize CSS
+============================================ -->
+<link rel="stylesheet" href="{{ asset('assets/css/data-table/bootstrap-table.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/data-table/bootstrap-editable.css') }}">
 <!-- style CSS
 ============================================ -->
 <link rel="stylesheet" href="{{ asset('assets/style.css') }}">

@@ -38,7 +38,7 @@
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <div class="review-content-section">
                                                 <div id="dropzone1" class="pro-ad">
-                                                    <form action="/upload" class="dropzone dropzone-custom needsclick add-professors" id="demo1-upload">
+                                                    <form action="{{ url('enlist/create')}}" id = "enlist" class="dropzone dropzone-custom needsclick add-professors" method = "post">
                                                         <div class="row">
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                 <div class="form-group">
@@ -142,18 +142,37 @@
                                                                       <div class="row">
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                               <div class="form-select-list">
-                                                                                  <input type="text" class="form-control" placeholder="Choice 1">
+                                                                                <div class="form-select-list">
+                                                                                  <label>Choice 1</label>
+                                                                                  <select name="sex" class="form-control">
+                                                                                    <option value="none" selected="" disabled=""></option>
+                                                                                    <option value="0">Male</option>
+                                                                                    <option value="1">Female</option>
+                                                                                  </select>
+                                                                                </div>
                                                                               </div>
                                                                           </div>
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                                              <div class="form-select-list">
-                                                                                  <input type="text" class="form-control basic-ele-mg-t-10" placeholder="Choice 2">
-                                                                              </div>
+                                                                            <div class="form-select-list">
+                                                                              <label>Choice 2</label>
+                                                                              <select name="sex" class="form-control">
+                                                                                <option value="none" selected="" disabled=""></option>
+                                                                              </option>
+                                                                              @foreach($program as $p)
+                                                                                  <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription }}</option>
+                                                                              @endforeach
+                                                                              </select>
+                                                                            </div>
                                                                           </div>
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                                              <div class="form-select-list basic-ele-mg-t-10">
-                                                                                  <input type="text" class="form-control" placeholder="Choice 3">
-                                                                              </div>
+                                                                            <div class="form-select-list">
+                                                                              <label>Choice 3</label>
+                                                                              <select name="sex" class="form-control">
+                                                                                <option value="none" selected="" disabled=""></option>
+                                                                                <option value="0">Male</option>
+                                                                                <option value="1">Female</option>
+                                                                              </select>
+                                                                            </div>
                                                                           </div>
                                                                       </div>
                                                                   </div>

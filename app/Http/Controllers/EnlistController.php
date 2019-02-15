@@ -1,7 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Carbon\Carbon;
+use App\Program;
+use DB;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
 class EnlistController extends Controller
@@ -23,6 +28,7 @@ class EnlistController extends Controller
      */
     public function index()
     {
-        return view('enlist');
+        $program = Program::all();
+        return view('enlist')->with('program', $program);;
     }
 }
