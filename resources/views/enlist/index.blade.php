@@ -43,19 +43,19 @@
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                 <div class="form-group">
                                                                   <label>Surname</label>
-                                                                    <input name="surname" type="text" class="form-control" placeholder="Surname">
+                                                                    <input name="surname" type="text" class="form-control" placeholder="Surname" required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                   <label>First and Middle Names</label>
-                                                                    <input name="firstname" type="text" class="form-control" placeholder="First and Middle Names">
+                                                                    <input name="firstmiddlename" type="text" class="form-control" placeholder="First and Middle Names" required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                   <label>Date of Birth</label>
-                                                                    <input name="finish" id="finish" type="text" class="form-control" placeholder="Date of Birth">
+                                                                    <input name="dateOfBirth" id="dateOfBirth" type="text" class="form-control" placeholder="Date of Birth" required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Sex</label>
-                                                                    <select name="sex" class="form-control">
+                                                                    <select name="sex" class="form-control" required>
                                   																		<option value="none" selected="" disabled=""></option>
                                   																		<option value="0">Male</option>
                                   																		<option value="1">Female</option>
@@ -63,7 +63,7 @@
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Civil Status</label>
-                                                                    <select name="civilStatus" class="form-control">
+                                                                    <select name="civilStatus" class="form-control" required>
                                   																		<option value="none" selected="" disabled=""></option>
                                   																		<option value="0">Single (Never Married)</option>
                                   																		<option value="1">Married</option>
@@ -73,26 +73,26 @@
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Home Address</label>
-                                                                    <input name="address" type="text" class="form-control" placeholder="Address">
+                                                                    <input name="homeAddress" type="text" class="form-control" placeholder="Address" required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Home Telephone No. and Fax / Email</label>
-                                                                    <input name="address" type="text" class="form-control" placeholder="Home Telephone No. and Fax / Email">
+                                                                    <input name="homeTelFaxEmail" type="text" class="form-control" placeholder="Home Telephone No. and Fax / Email" required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Mobile / Cellphone Number</label>
-                                                                    <input name="mobileno" type="number" class="form-control" placeholder="Mobile no.">
+                                                                    <input name="mobileNum" type="number" class="form-control" placeholder="Mobile no." required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Citizenship</label>
-                                                                    <input name="postcode" id="postcode" type="text" class="form-control" placeholder="Citizenship">
+                                                                    <input name="citizenship" id="citizenship" type="text" class="form-control" placeholder="Citizenship" required>
                                                                 </div>
                                                             </div>
                                                             <!---------->
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                               <div class="form-group">
                                                                   <label>Name and Complete Address of Senior High School</label>
-                                                                  <input name="address" type="text" class="form-control" placeholder="Address">
+                                                                  <input name="nameAddSHS" type="text" class="form-control" placeholder="Name and Complete Address of Senior High School">
                                                               </div>
                                                               <div class="form-group-inner">
                                                                 <div class = "row">
@@ -101,7 +101,7 @@
                                                                           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                 <label>Track</label>
-                                                                                <select name="sex" class="form-control">
+                                                                                <select name="track" class="form-control" required>
                                                                                   <option value="none" selected="" disabled=""></option>
                                                                                   <option value="0">Male</option>
                                                                                   <option value="1">Female</option>
@@ -111,7 +111,7 @@
                                                                           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                 <label>Strand</label>
-                                                                                <select name="sex" class="form-control">
+                                                                                <select name="strand" class="form-control" required>
                                                                                   <option value="none" selected="" disabled=""></option>
                                                                                   <option value="0">Male</option>
                                                                                   <option value="1">Female</option>
@@ -124,16 +124,16 @@
                                                               </div>
                                                               <div class="form-group">
                                                                   <label>Do you identify yourself as a member of an Indigenous Community?</label>
-                                                                  <label class = "radio-inline"><input class="pull-left radio-checked" type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">Yes</label>
-                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="option2" id="optionsRadios2" name="optionsRadios">No</label>
+                                                                  <label class = "radio-inline"><input class="pull-left radio-checked" type="radio" checked="" value="1" id="isIndigenous" name="isIndigenous">Yes</label>
+                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="0" id="isIndigenous" name="isIndigenous">No</label>
                                                               </div>
                                                               <div class="form-group">
                                                                   <label>If yes, please indicate the name of your community.</label>
-                                                                  <input name="postcode" id="postcode" type="text" class="form-control" placeholder="community">
+                                                                  <input name="indigenousCommunity" id="indigenousCommunity" type="text" class="form-control" placeholder="community">
                                                               </div>
                                                               <div class="form-group">
                                                                   <label>Name and Complete Address of College or University (if transfer student)</label>
-                                                                  <input name="postcode" id="postcode" type="text" class="form-control" placeholder="Name and Complete Address of College or University (if transfer student)">
+                                                                  <input name="nameAddCollegeUniv" id="nameAddCollegeUniv" type="text" class="form-control" placeholder="Name and Complete Address of College or University (if transfer student)">
                                                               </div>
                                                               <div class="form-group-inner">
                                                                 <div class = "row">
@@ -144,10 +144,11 @@
                                                                               <div class="form-select-list">
                                                                                 <div class="form-select-list">
                                                                                   <label>Choice 1</label>
-                                                                                  <select name="sex" class="form-control">
+                                                                                  <select name="programChoiceOne" class="form-control">
                                                                                     <option value="none" selected="" disabled=""></option>
-                                                                                    <option value="0">Male</option>
-                                                                                    <option value="1">Female</option>
+                                                                                    @foreach($programs as $p)
+                                                                                        <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription }}</option>
+                                                                                    @endforeach
                                                                                   </select>
                                                                                 </div>
                                                                               </div>
@@ -155,22 +156,23 @@
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                             <div class="form-select-list">
                                                                               <label>Choice 2</label>
-                                                                              <select name="sex" class="form-control">
+                                                                              <select name="programChoiceTwo" class="form-control">
                                                                                 <option value="none" selected="" disabled=""></option>
-                                                                              </option>
-                                                                              @foreach($program as $p)
-                                                                                  <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription }}</option>
-                                                                              @endforeach
+                                                                                @foreach($programs as $p)
+                                                                                    <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription }}</option>
+                                                                                @endforeach
                                                                               </select>
                                                                             </div>
                                                                           </div>
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                             <div class="form-select-list">
                                                                               <label>Choice 3</label>
-                                                                              <select name="sex" class="form-control">
+                                                                              <select name="programChoiceThree" class="form-control">
                                                                                 <option value="none" selected="" disabled=""></option>
-                                                                                <option value="0">Male</option>
-                                                                                <option value="1">Female</option>
+                                                                                <option value="none" selected="" disabled=""></option>
+                                                                                @foreach($programs as $p)
+                                                                                    <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription }}</option>
+                                                                                @endforeach
                                                                               </select>
                                                                             </div>
                                                                           </div>
@@ -186,13 +188,13 @@
                                                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Father's Complete Name</label>
-                                                                                  <input type="text" class="form-control" placeholder="Father's Complete Name">
+                                                                                  <input type="text" class="form-control" name = "fatherName" placeholder="Father's Complete Name" required>
                                                                               </div>
                                                                           </div>
                                                                           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Father's Occupation</label>
-                                                                                  <input type="text" class="form-control basic-ele-mg-t-10" placeholder="Father's Occupation">
+                                                                                  <input type="text" class="form-control basic-ele-mg-t-10" name = "fatherOccupation" placeholder="Father's Occupation" required>
                                                                               </div>
                                                                           </div>
                                                                       </div>
@@ -207,13 +209,13 @@
                                                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Mother's Complete Name</label>
-                                                                                  <input type="text" class="form-control" placeholder="Mother's Complete Name">
+                                                                                  <input name = "motherName" type="text" class="form-control" placeholder="Mother's Complete Name" required>
                                                                               </div>
                                                                           </div>
                                                                           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Mother's Occupation</label>
-                                                                                  <input type="text" class="form-control basic-ele-mg-t-10" placeholder="Mother's Occupation">
+                                                                                  <input name = "motherOccupation" type="text" class="form-control basic-ele-mg-t-10" placeholder="Mother's Occupation" required>
                                                                               </div>
                                                                           </div>
                                                                       </div>
@@ -228,7 +230,7 @@
                                                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Annual Family Income</label>
-                                                                                  <input type="text" class="form-control" placeholder="Annual Family Income">
+                                                                                  <input name = "annualFamilyIncome" type="text" class="form-control" placeholder="Annual Family Income" required>
                                                                               </div>
                                                                           </div>
                                                                       </div>
@@ -240,10 +242,11 @@
                                                         <div class="row">
                                                             <div class="col-lg-12">
                                                                 <div class="payment-adress">
-                                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                                                    <button type="submit" id = "addEnlist" class="btn btn-primary waves-effect waves-light">Submit</button>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        {{ csrf_field() }}
                                                     </form>
                                                 </div>
                                             </div>
@@ -317,6 +320,12 @@
     <!-- main JS
 		============================================ -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script type = "text/javascript">
+      $("addEnlist").click(function()
+      {
+        $("enlist").attr("action", "/enlist/create");
+      });
+    </script>
 </body>
 
 </html>

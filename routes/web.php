@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('enlistment.index');
+    return view('home');
 });
 
 /*Route::get('/enlist', ['middleware' =>'guest', function(){
@@ -25,10 +25,11 @@ Route::group(['prefix' => 'misadduadmin'], function () {
 
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('programs', 'ProgramController@index');
 Route::post('programs/create','ProgramController@create');
 Route::get('programs/all','ProgramController@all');
 
-Route::get('enlist', 'enlistController@index');
+Route::get('enlist', 'EnlistController@index');
+Route::post('enlist/create', 'EnlistController@create');
 //Route::get('/enlist', 'EnlistController@index')->middleware('can');

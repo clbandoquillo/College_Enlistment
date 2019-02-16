@@ -29,13 +29,13 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-payment-inner-st">
                             <ul id="myTabedu1" class="tab-review-design">
-                              <!--  <li><a href="#addprograms">Add Programs</a></li>-->
+                                <li><a href="#addprograms">Add Programs</a></li>
                                 <li class="active"><a href="#viewprograms">View Programs</a></li>
                             </ul>
                             <div id="myTabContent" class="tab-content custom-product-edit">
-                                <!--<div class="product-tab-list tab-pane fade" id="addprograms">
+                                <div class="product-tab-list tab-pane fade" id="addprograms">
                                     <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                                             <div class="review-content-section">
                                                 <div id="dropzone1" class="pro-ad addcoursepro">
                                                     <form action="{{ url('programs/create')}}" id = "program" class="dropzone dropzone-custom needsclick addcourse" method = "post">
@@ -62,7 +62,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>-->
+                                </div>
                                 <div class="product-tab-list tab-pane fade active in" id="viewprograms">
                                   <!-- Static Table Start -->
                                   <div class="data-table-area mg-b-15">
@@ -173,8 +173,8 @@
     <script type = "text/javascript">
       $("#addProgram").click(function()
       {
-          $("programs").attr("action", "/programs/create")
-      })
+          $("programs").attr("action", "/programs/create");
+      });
       /*
       $(document).ready(function () {
         $.ajax({
