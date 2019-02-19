@@ -17,6 +17,7 @@ class CreateProgram extends Migration
             $table->increments('id');
             $table->string('programCode');
             $table->string('programDescription');
+            $table->string('programDiv');
             $table->timestamps();
         });
     }

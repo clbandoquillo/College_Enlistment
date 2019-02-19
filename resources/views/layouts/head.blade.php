@@ -7,7 +7,6 @@
 <!-- favicon
 ============================================ -->
 <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/datatables.min.css') }}"/>
 <!-- Google Fonts
 ============================================ -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">

@@ -542,7 +542,7 @@
 
     <!-- jquery
 		============================================ -->
-    <script src="{{ asset('assets/js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <script src="{{ asset('assets/jquery-3.3.1.min.js') }}"></script>
     <!-- bootstrap JS
 		============================================ -->
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>

@@ -34,6 +34,7 @@ class ProgramController extends Controller
         $program = new Program;
         $program->programCode = $request->programCode;
         $program->programDescription = $request->programDescription;
+        $program->programDiv = $request->programDiv;
         $program->save();
 
         return Redirect::back()->withErrors(['Program Created Successfully']);
@@ -56,6 +57,7 @@ class ProgramController extends Controller
                 <i class="fa fa-pencil"></i> EDIT</button></span>';*/
                 $array['programcode'] = $a->programCode;
                 $array['programdescription'] = $a->programDescription;
+                $array['programDiv'] = $a->programDiv;
                 $data[] = $array;
             }
         }

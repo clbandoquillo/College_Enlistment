@@ -47,6 +47,17 @@
                                                                 <div class="form-group">
                                                                     <input name="programDescription" type="text" class="form-control" placeholder="Program Description">
                                                                 </div>
+                                                                <select name="programDiv" class="form-control" required>
+                                                                  <option value="none" selected="" disabled=""></option>
+                                                                  <option value="SS">Social Science Programs</option>
+                                                                  <option value="SOE">Education Programs</option>
+                                                                  <option value="NSM">Natural Science and Mathematics Programs</option>
+                                                                  <option value="SON">School of Nursing</option>
+                                                                  <option value="HUM">Humanities and Letters Programs</option>
+                                                                  <option value="SEA">Engineering and Architecture Programs</option>
+                                                                  <option value="CS">Computer Studies Programs</option>
+                                                                  <option value="SBG">Business and Accounting Programs</option>
+                                                                </select>
                                                             </div>
                                                         </div>
                                                         <div class="row">
@@ -77,12 +88,11 @@
                                                       </div>
                                                       <div class="sparkline13-graph">
                                                           <div class="datatable-dashv1-list custom-datatable-overright">
-                                                              <table id="program_table" data-toggle="table">
+                                                              <table id="program_table" data-toggle="table" class="table table-bordered table-striped">
                                                                   <thead>
-                                                                      <tr>
-                                                                        <th data-field="programcode">Program Code</th>
-                                                                        <th data-field="programdescription" data-editable="true">Program Description</th>
-                                                                      </tr>
+                                                            						<th class="table-center-textalign">Program Code</th>
+                                                            						<th class="table-center-textalign">Program Description</th>
+                                                                        <th class="table-center-textalign">Program Division</th>
                                                                   </thead>
                                                               </table>
                                                           </div>
@@ -108,7 +118,7 @@
     <!-- jquery
 		============================================ -->
     <script src="{{ asset('assets/jquery-3.3.1.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/datatables.min.js') }}"></script>
+
     <!-- bootstrap JS
 		============================================ -->
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
@@ -170,49 +180,38 @@
     <!-- main JS
 		============================================ -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('assets/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.12/sorting/num-html.js"></script>
     <script type = "text/javascript">
       $("#addProgram").click(function()
       {
           $("programs").attr("action", "/programs/create");
       });
-      /*
-      $(document).ready(function () {
-        $.ajax({
-          url: "/programs/all",
-          type: "GET",
-          datatype: "json",
-          success: function(data){
-              $("#program_table").DataTable({
-                'columns'		: [
-                  { data: 'programcode' },
-                  { data: 'programdescription' },
-                ]
-              });
-          }
-      })
-    });*/
-    $("#program_table").DataTable({
-		'paging'		: true,
-		'pageLength'	: 10,
-		'lengthChange'	: true,
-		'searching'		: true,
-		'ordering'		: true,
-    'aaSorting'		: [[0, "asc"]],
-		'info'			: false,
-		'autoWidth'		: false,
-		'columns'		: [
-          { data: 'programcode' },
-					{ data: 'programdescription' },
-		],
-		"ajax": {
-	    	url: '/programs/all',
-			type: 'GET',
-			error: function(xhr, status, response)
-			{
 
-			},
-	    },
-	});
+    $("#program_table").DataTable({
+      'paging'		: true,
+  		'pageLength'	: 10,
+  		'lengthChange'	: true,
+  		'searching'		: true,
+  		'ordering'		: true,
+  		'aaSorting'		: [[0, "asc"]],
+  		'info'			: false,
+  		'autoWidth'		: false,
+  		'columns'		: [
+                    { data: 'programcode' },
+          					{ data: 'programdescription' },
+                    { data: 'programDiv' },
+    		],
+    		"ajax": {
+    	    	url: '/programs/all',
+    			type: 'GET',
+    			error: function(xhr, status, response)
+    			{
+
+    			},
+    	    },
+    	});
 
     </script>
 </body>

@@ -103,8 +103,10 @@
                                                                                 <label>Track</label>
                                                                                 <select name="track" class="form-control" required>
                                                                                   <option value="none" selected="" disabled=""></option>
-                                                                                  <option value="0">Male</option>
-                                                                                  <option value="1">Female</option>
+                                                                                  <option value="ACADEMIC">Academic Track</option>
+                                                                                  <option value="TVL">Technical-Vocational-Livelihood (TVL) Track</option>
+                                                                                  <option value="SPORTS">Sports Track</option>
+                                                                                  <option value="ARTANDDESIGN">Arts and Design Track</option>
                                                                                 </select>
                                                                               </div>
                                                                           </div>
@@ -113,8 +115,14 @@
                                                                                 <label>Strand</label>
                                                                                 <select name="strand" class="form-control" required>
                                                                                   <option value="none" selected="" disabled=""></option>
-                                                                                  <option value="0">Male</option>
-                                                                                  <option value="1">Female</option>
+                                                                                  <option value="HUMSS">HUMSS</option>
+                                                                                  <option value="STEM">STEM</option>
+                                                                                  <option value="ABM">ABM</option>
+                                                                                  <option value="GAS">GAS</option>
+                                                                                  <option value="Agri-Fishery Arts Strand">Agri-Fishery Arts Strand</option>
+                                                                                  <option value="Home Economics Strand">Home Economics Strand</option>
+                                                                                  <option value="Industrial Arts Strand">Industrial Arts Strand</option>
+                                                                                  <option value="ICT Strand">ICT Strand</option>
                                                                                 </select>
                                                                               </div>
                                                                           </div>
