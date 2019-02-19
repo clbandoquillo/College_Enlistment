@@ -2,8 +2,8 @@
 <div class="left-sidebar-pro">
     <nav id="sidebar" class="">
         <div class="sidebar-header">
-            <a href="index.html"><img class="main-logo" src="{{ asset('assets/img/logo/addu_2.png') }}" alt="" /></a>
-            <strong><a href="index.html"><img src="{{ asset('assets/img/logo/addu_2.png') }}" alt="" /></a></strong>
+            <a href="{{ url('/home') }}"><img class="main-logo" src="{{ asset('assets/img/logo/addu_2.png') }}" alt="" /></a>
+            <strong><a href="{{ url('/home') }}"><img src="{{ asset('assets/img/logo/addu_2.png') }}" alt="" /></a></strong>
         </div>
         <br></br>
         <div class="left-custom-menu-adp-wrap comment-scrollbar">

@@ -29,7 +29,7 @@ class CreateEnlist extends Migration
             $table->string('strand')->nullable();
             $table->integer('isIndigenous');
             $table->string('indigenousCommunity')->nullable();
-            $table->string('nameAddCollegeUniv');
+            $table->string('nameAddCollegeUniv')->nullable();
             $table->string('programChoiceOne');
             $table->string('programChoiceTwo');
             $table->string('programChoiceThree');

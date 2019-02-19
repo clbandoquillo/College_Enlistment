@@ -101,7 +101,7 @@
                                                                           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                 <label>Track</label>
-                                                                                <select name="track" class="form-control" required>
+                                                                                <select name="track" class="form-control">
                                                                                   <option value="none" selected="" disabled=""></option>
                                                                                   <option value="ACADEMIC">Academic Track</option>
                                                                                   <option value="TVL">Technical-Vocational-Livelihood (TVL) Track</option>
@@ -113,7 +113,7 @@
                                                                           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                 <label>Strand</label>
-                                                                                <select name="strand" class="form-control" required>
+                                                                                <select name="strand" class="form-control">
                                                                                   <option value="none" selected="" disabled=""></option>
                                                                                   <option value="HUMSS">HUMSS</option>
                                                                                   <option value="STEM">STEM</option>
@@ -152,7 +152,7 @@
                                                                               <div class="form-select-list">
                                                                                 <div class="form-select-list">
                                                                                   <label>Choice 1</label>
-                                                                                  <select name="programChoiceOne" class="form-control">
+                                                                                  <select name="programChoiceOne" class="form-control" required>
                                                                                     <option value="none" selected="" disabled=""></option>
                                                                                     @foreach($programs as $p)
                                                                                         <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription }}</option>
@@ -164,7 +164,7 @@
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                             <div class="form-select-list">
                                                                               <label>Choice 2</label>
-                                                                              <select name="programChoiceTwo" class="form-control">
+                                                                              <select name="programChoiceTwo" class="form-control" required>
                                                                                 <option value="none" selected="" disabled=""></option>
                                                                                 @foreach($programs as $p)
                                                                                     <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription }}</option>
@@ -175,7 +175,7 @@
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                             <div class="form-select-list">
                                                                               <label>Choice 3</label>
-                                                                              <select name="programChoiceThree" class="form-control">
+                                                                              <select name="programChoiceThree" class="form-control" required>
                                                                                 <option value="none" selected="" disabled=""></option>
                                                                                 <option value="none" selected="" disabled=""></option>
                                                                                 @foreach($programs as $p)

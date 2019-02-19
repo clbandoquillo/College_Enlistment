@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Enlist;
+use App\Mail\SendCourse;
 use App\Program;
 use DB;
 use Illuminate\Support\Facades\Redirect;
@@ -36,6 +37,7 @@ class EnlistController extends Controller
         $enlist = new Enlist;
         $enlist->surname = $request->surname;
         $enlist->firstmiddlename = $request->firstmiddlename;
+        $name = $request->surname.", ".$request->firstmiddlename;
         $enlist->dateOfBirth = $request->dateOfBirth;
         $enlist->sex = $request->sex;
         $enlist->civilStatus = $request->civilStatus;
@@ -52,6 +54,7 @@ class EnlistController extends Controller
         $enlist->programChoiceOne = $request->programChoiceOne;
         $enlist->programChoiceTwo = $request->programChoiceTwo;
         $enlist->programChoiceThree = $request->programChoiceThree;
+        $programChoice = $request->programChoiceOne.", ".$request->programChoiceTwo." and ".$request->programChoiceThree;
         $enlist->fatherName = $request->fatherName;
         $enlist->fatherOccupation = $request->fatherOccupation;
         $enlist->motherName = $request->motherName;
@@ -59,6 +62,7 @@ class EnlistController extends Controller
         $enlist->annualFamilyIncome = $request->annualFamilyIncome;
         $enlist->save();
 
+        \Mail::to($request->homeTelFaxEmail)->send(new SendCourse($name, $programChoice));
         return Redirect::back()->withErrors(['Enlistment Created Successfully']);
 
     }
