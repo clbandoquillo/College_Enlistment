@@ -32,4 +32,6 @@ Route::get('programs/all','ProgramController@all');
 
 Route::get('enlist', 'EnlistController@index');
 Route::post('enlist/create', 'EnlistController@create');
+Route::get('enlist/allenlistment', 'EnlistController@allin');
+Route::get('enlist/all', 'EnlistController@all');
 //Route::get('/enlist', 'EnlistController@index')->middleware('can');

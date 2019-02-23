@@ -32,6 +32,15 @@ class EnlistController extends Controller
                //->with('users', $users);
     }
 
+    public function allin()
+    {
+        // dd();
+        //$users = User::all();
+        $program = Program::all();
+        return view('enlist.allenlistment')->with('programs', $program);
+               //->with('users', $users);
+    }
+
     public function create(Request $request){
 
         $enlist = new Enlist;
@@ -63,7 +72,35 @@ class EnlistController extends Controller
         $enlist->save();
 
         \Mail::to($request->homeTelFaxEmail)->send(new SendCourse($name, $programChoice));
-        return Redirect::back()->withErrors(['Enlistment Created Successfully']);
+        return Redirect::back()->with(['success','Enlistment Created Successfully']);
 
+    }
+
+    public function all()
+    {
+        $enlist = Enlist::all();
+        $message = 'success';
+
+        $data = array();
+        //dd($enlist);
+        if(isset($enlist))
+        {
+            foreach($enlist as $a)
+            {
+                $array = array();
+               /* $array['edit'] = '<span class="server-maintenance-button" data-toggle="modal" data-target="#add-modal"><button class="btn btn-xs btn-primary" id="editUser" name="editUser" value='.$a->id.'>
+                <i class="fa fa-pencil"></i> EDIT</button></span>';*/
+                $array['surname'] = $a->surname;
+                $array['firstmiddlename'] = $a->firstmiddlename;
+                $array['programChoiceOne'] = $a->programChoiceOne;
+                $array['programChoiceTwo'] = $a->programChoiceTwo;
+                $array['programChoiceThree'] = $a->programChoiceThree;
+                $data[] = $array;
+            }
+        }
+
+        $data = array('data' => $data, 'message' =>$message);
+
+        return json_encode($data);
     }
 }

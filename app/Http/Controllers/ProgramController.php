@@ -37,7 +37,7 @@ class ProgramController extends Controller
         $program->programDiv = $request->programDiv;
         $program->save();
 
-        return Redirect::back()->withErrors(['Program Created Successfully']);
+        return Redirect::back()->with(['success', 'Program Created Successfully']);
 
     }
 

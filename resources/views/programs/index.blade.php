@@ -82,6 +82,22 @@
                                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                   <div class="sparkline13-list">
                                                       <div class="sparkline13-hd">
+                                                            @if($errors->any())
+                                                                <div class="alert alert-danger">
+                                                                  <strong>Failed due to the following error/s!</strong>
+                                                                      <ul>
+                                                                          @foreach($errors->all() as $e)
+                                                                            <li>{{$e}}</li>
+                                                                          @endforeach
+                                                                      </ul>
+                                                                </div>
+                                                            @endif
+                                                            @if(\Session::has('success'))
+                                                                <div class="alert alert-success alert-block">
+                                                                    <button type="button" class="close" data-dismiss="alert">x</button>
+                                                                    <strong>{!! \Session::get('success') !!}</strong>
+                                                                </div>
+                                                            @endif
                                                           <div class="main-sparkline13-hd">
                                                               <h1>Projects <span class="table-project-n">Data</span> Table</h1>
                                                           </div>

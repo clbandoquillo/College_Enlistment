@@ -10,9 +10,9 @@
             <nav class="sidebar-nav left-sidebar-menu-pro">
                 <ul class="metismenu" id="menu1">
                     <li>
-                        <a class="has-arrow" href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Enlistments</span></a>
+                        <a class="has-arrow" href="{{ url('/enlist/allenlistment') }}" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Enlistments</span></a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="All Students" href="all-students.html"><span class="mini-sub-pro">All Enlistments</span></a></li>
+                            <li><a title="All Students" href="{{ url('/enlist/allenlistment') }}"><span class="mini-sub-pro">All Enlistments</span></a></li>
                         </ul>
                     </li>
                     <li>
@@ -28,7 +28,7 @@
                             <li><a title="Add Departments" href="add-department.html"><span class="mini-sub-pro">Add Departments</span></a></li>
                             <li><a title="Edit Departments" href="edit-department.html"><span class="mini-sub-pro">Edit Departments</span></a></li>
                         </ul>
-                    </li>
+                    </li>cv
                     <li>
                 </ul>
             </nav>
