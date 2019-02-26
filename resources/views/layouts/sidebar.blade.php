@@ -16,9 +16,15 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Courses</span></a>
+                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Programs</span></a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="All Courses" href="{{ url('/programs') }}"><span class="mini-sub-pro">All Courses</span></a></li>
+                            <li><a title="All Courses" href="{{ url('/programs') }}"><span class="mini-sub-pro">All Programs</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Divisions</span></a>
+                        <ul class="submenu-angle" aria-expanded="false">
+                            <li><a title="All Courses" href="{{ url('/divisions') }}"><span class="mini-sub-pro">All Divisions</span></a></li>
                         </ul>
                     </li>
                     <li>

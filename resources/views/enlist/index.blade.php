@@ -25,8 +25,26 @@
 
         <!-- Single pro tab review Start-->
         <div class="single-pro-review-area mt-t-30 mg-b-15">
+          <!-- Single pro tab review Start-->
+          <div class="single-pro-review-area mt-t-30 mg-b-15">
             <div class="container-fluid">
                 <div class="row">
+                  @if($errors->any())
+                        <div class="alert alert-danger">
+                          <strong>Failed due to the following error/s!</strong>
+                              <ul>
+                                  @foreach($errors->all() as $e)
+                                    <li>{{$e}}</li>
+                                  @endforeach
+                              </ul>
+                        </div>
+                    @endif
+                    @if(\Session::has('success'))
+                        <div class="alert alert-success alert-block">
+                            <button type="button" class="close" data-dismiss="alert">x</button>
+                            <strong>{!! \Session::get('success') !!}</strong>
+                        </div>
+                    @endif
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-payment-inner-st">
                             <ul id="myTabedu1" class="tab-review-design">
@@ -51,7 +69,7 @@
                                                                 </div>
                                                                 <div class="form-group">
                                                                   <label>Date of Birth</label>
-                                                                    <input name="dateOfBirth" id="dateOfBirth" type="text" class="form-control" placeholder="Date of Birth" required>
+                                                                    <input name="dateOfBirth" id="datepicker" type="text" class="form-control" placeholder="Date of Birth" required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Sex</label>
@@ -76,8 +94,8 @@
                                                                     <input name="homeAddress" type="text" class="form-control" placeholder="Address" required>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label>Home Telephone No. and Fax / Email</label>
-                                                                    <input name="homeTelFaxEmail" type="text" class="form-control" placeholder="Home Telephone No. and Fax / Email" required>
+                                                                    <label>E-mail Address</label>
+                                                                    <input name="homeTelFaxEmail" type="text" class="form-control" placeholder="E-mail Address" required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Mobile / Cellphone Number</label>
@@ -238,7 +256,7 @@
                                                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Annual Family Income</label>
-                                                                                  <input name = "annualFamilyIncome" type="text" class="form-control" placeholder="Annual Family Income" required>
+                                                                                  <input name = "annualFamilyIncome" type="number" class="form-control" placeholder="Annual Family Income" required>
                                                                               </div>
                                                                           </div>
                                                                       </div>
@@ -317,6 +335,10 @@
     <script src="{{ asset('assets/js/sparkline/jquery.sparkline.min.js') }}"></script>
     <script src="{{ asset('assets/js/sparkline/jquery.charts-sparkline.js') }}"></script>
     <script src="{{ asset('assets/js/sparkline/sparkline-active.js') }}"></script>
+    <!-- datepicker JS
+		============================================ -->
+    <script src="{{ asset('assets/js/datepicker/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('assets/js/datepicker/datepicker-active.js') }}"></script>
     <!-- calendar JS
 		============================================ -->
     <script src="{{ asset('assets/js/calendar/moment.min.js') }}"></script>
@@ -328,11 +350,18 @@
     <!-- main JS
 		============================================ -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/adminlte/dist/js/adminlte.min.js') }}"></script>
+    <script src="{{ asset('assets/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
     <script type = "text/javascript">
       $("addEnlist").click(function()
       {
         $("enlist").attr("action", "/enlist/create");
       });
+
+      //Date picker
+    $('#datepicker').datepicker({
+      format: 'yyyy-mm-dd'
+    })
     </script>
 </body>
 

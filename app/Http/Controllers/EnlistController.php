@@ -72,7 +72,7 @@ class EnlistController extends Controller
         $enlist->save();
 
         \Mail::to($request->homeTelFaxEmail)->send(new SendCourse($name, $programChoice));
-        return Redirect::back()->with(['success','Enlistment Created Successfully']);
+        return Redirect::back()->with('success', "Hi ($name). You are now enlisted! Thank you.");
 
     }
 

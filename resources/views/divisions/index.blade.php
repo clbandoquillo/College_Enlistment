@@ -27,41 +27,32 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-payment-inner-st">
                             <ul id="myTabedu1" class="tab-review-design">
-                                <li><a href="#addprograms">Add Programs</a></li>
-                                <li class="active"><a href="#viewprograms">View Programs</a></li>
+                                <li><a href="#adddivisions">Add Divisions</a></li>
+                                <li class="active"><a href="#viewdivisions">View Divisions</a></li>
                             </ul>
                             <div id="myTabContent" class="tab-content custom-product-edit">
-                                <div class="product-tab-list tab-pane fade" id="addprograms">
+                                <div class="product-tab-list tab-pane fade" id="adddivisions">
                                     <div class="row">
                                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                                             <div class="review-content-section">
                                                 <div id="dropzone1" class="pro-ad addcoursepro">
-                                                    <form action="{{ url('programs/create')}}" id = "program" class="dropzone dropzone-custom needsclick addcourse" method = "post">
+                                                    <form action="{{ url('divisions/create')}}" id = "program" class="dropzone dropzone-custom needsclick addcourse" method = "post">
                                                         <div class="row">
                                                             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                                                                 <div class="form-group">
-                                                                    <label>Program Code</label>
-                                                                    <input name="programCode" type="text" class="form-control" placeholder="Program Code">
+                                                                    <label>Division Code</label>
+                                                                    <input name="divisionCode" type="text" class="form-control" placeholder="Division Code">
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label>Program Description</label>
-                                                                    <input name="programDescription" type="text" class="form-control" placeholder="Program Description">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                  <label>Division</label>
-                                                                  <select name="programDiv" class="form-control" required>
-                                                                    <option value="none" selected="" disabled=""></option>
-                                                                    @foreach($divisions as $d)
-                                                                        <option value="{{ $d->divisionCode }}">{{ $d->divisionCode.", ".$d->divisionDescription }}</option>
-                                                                    @endforeach
-                                                                  </select>
+                                                                    <label>Division Description</label>
+                                                                    <input name="divisionDescription" type="text" class="form-control" placeholder="Division Description">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-lg-8">
                                                                 <div class="payment-adress">
-                                                                    <button type="submit" id = "addProgram" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                                                    <button type="submit" id = "addDivision" class="btn btn-primary waves-effect waves-light">Submit</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -72,7 +63,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-tab-list tab-pane fade active in" id="viewprograms">
+                                <div class="product-tab-list tab-pane fade active in" id="viewdivisions">
                                   <!-- Static Table Start -->
                                   <div class="data-table-area mg-b-15">
                                       <div class="container-fluid">
@@ -102,11 +93,10 @@
                                                       </div>
                                                       <div class="sparkline13-graph">
                                                           <div class="datatable-dashv1-list custom-datatable-overright">
-                                                              <table id="program_table" data-toggle="table" class="table table-bordered table-striped">
+                                                              <table id="division_table" data-toggle="table" class="table table-bordered table-striped">
                                                                   <thead>
-                                                            						<th class="table-center-textalign">Program Code</th>
-                                                            						<th class="table-center-textalign">Program Description</th>
-                                                                        <th class="table-center-textalign">Program Division</th>
+                                                            						<th class="table-center-textalign">Division Code</th>
+                                                            						<th class="table-center-textalign">Division Description</th>
                                                                   </thead>
                                                               </table>
                                                           </div>
@@ -198,12 +188,12 @@
     <script src="{{ asset('assets/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.12/sorting/num-html.js"></script>
     <script type = "text/javascript">
-      $("#addProgram").click(function()
+      $("#addDivision").click(function()
       {
-          $("programs").attr("action", "/programs/create");
+          $("divisions").attr("action", "/divisions/create");
       });
 
-    $("#program_table").DataTable({
+    $("#division_table").DataTable({
       'paging'		: true,
   		'pageLength'	: 10,
   		'lengthChange'	: true,
@@ -213,12 +203,11 @@
   		'info'			: false,
   		'autoWidth'		: false,
   		'columns'		: [
-                    { data: 'programcode' },
-          					{ data: 'programdescription' },
-                    { data: 'programDiv' },
+                    { data: 'divisioncode' },
+          					{ data: 'divisiondescription' },
     		],
     		"ajax": {
-    	    	url: '/programs/all',
+    	    	url: '/divisions/all',
     			type: 'GET',
     			error: function(xhr, status, response)
     			{

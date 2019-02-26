@@ -3,63 +3,50 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Program;
 use App\Division;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Hash;
 
-class ProgramController extends Controller
+class DivisionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
+    //
     public function index()
     {
         // dd();
         //$users = User::all();
-        $division = Division::all();
 
-        return view('programs.index')->with('divisions', $division);
+        return view('divisions.index');
                //->with('users', $users);
     }
 
     public function create(Request $request){
 
-        $program = new Program;
-        $program->programCode = $request->programCode;
-        $program->programDescription = $request->programDescription;
-        $program->programDiv = $request->programDiv;
-        $program->save();
+        $division = new Division;
+        $division->divisionCode = $request->divisionCode;
+        $division->divisionDescription = $request->divisionDescription;
+        $division->save();
 
-        return Redirect::back()->with(['success', 'Program Created Successfully']);
+        return Redirect::back()->with(['success', 'Division Created Successfully']);
 
     }
 
     public function all()
     {
-        $program = Program::all();
+        $division = Division::all();
         $message = 'success';
 
         $data = array();
-        //dd($program);
-        if(isset($program))
+        //dd($division);
+        if(isset($division))
         {
-            foreach($program as $a)
+            foreach($division as $a)
             {
                 $array = array();
                /* $array['edit'] = '<span class="server-maintenance-button" data-toggle="modal" data-target="#add-modal"><button class="btn btn-xs btn-primary" id="editUser" name="editUser" value='.$a->id.'>
                 <i class="fa fa-pencil"></i> EDIT</button></span>';*/
-                $array['programcode'] = $a->programCode;
-                $array['programdescription'] = $a->programDescription;
-                $array['programDiv'] = $a->programDiv;
+                $array['divisioncode'] = $a->divisionCode;
+                $array['divisiondescription'] = $a->divisionDescription;
                 $data[] = $array;
             }
         }
