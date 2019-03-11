@@ -24,7 +24,7 @@ class AdminMiddleware
     public function handle($request, Closure $next)
     {
       if($request->type != 'member'){
-         return redirect('home');
+         return redirect('hsdasdome');
        }
       return $next($request);
     }

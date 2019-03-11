@@ -5,6 +5,7 @@ use Carbon\Carbon;
 use App\Enlist;
 use App\Mail\SendCourse;
 use App\Program;
+use App\Division;
 use DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,7 @@ class EnlistController extends Controller
         //$users = User::all();
         $program = Program::all();
         return view('enlist.index')->with('programs', $program);
+                                   
                //->with('users', $users);
     }
 
@@ -37,7 +39,23 @@ class EnlistController extends Controller
         // dd();
         //$users = User::all();
         $program = Program::all();
-        return view('enlist.allenlistment')->with('programs', $program);
+        $division = Division::all();
+        return view('enlist.allenlistment')->with('programs', $program)
+                                           ->with('divisions', $division);
+               //->with('users', $users);
+    }
+
+    public function filter(Request $request)
+    {
+        // dd();
+        //$users = User::all();
+        $program = Program::all();
+        $division = Division::all();
+        $period = $request->period;
+        $divisionFilter = $request->division;
+        $programFilter = $request->program;
+        return view('enlist.allenlistment')->with('programs', $program)
+                                           ->with('divisions', $division);
                //->with('users', $users);
     }
 

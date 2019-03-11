@@ -17,14 +17,27 @@ class SuperAdminMiddleware
      */
      protected function redirectTo($request)
       {
-         if (! $request->expectsJson()) {
-             return route('login');
-         }
+        $type = "";
+        if(isset(\Auth::user()->type )){
+          $type = \Auth::user()->type;
+        }
+        if($type != 'super_admin'){
+          //dd(\Auth::user()->type);
+            return redirect()->route('login');
+          }
+
+         return $next($request);
       }
     public function handle($request, Closure $next)
     {
-     if($request->type != 'super_admin'){
-        return route('logout');
+    
+     $type = "";
+     if(isset(\Auth::user()->type )){
+       $type = \Auth::user()->type;
+     }
+     if($type != 'super_admin'){
+       //dd(\Auth::user()->type);
+        return redirect()->route('home');
       }
     //  dd($request->user());
       return $next($request);

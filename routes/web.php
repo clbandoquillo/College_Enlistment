@@ -32,7 +32,7 @@ Route::group(['middleware' => ['superadmin']], function () {
     Route::post('login', 'Auth\LoginController@login');
     Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 });*/
-Route::middleware(['auth', 'superadmin'])->group(function () {
+Route::group(['middleware' => 'superadmin'],function () {
 
     Auth::routes();
 
@@ -45,6 +45,8 @@ Route::group(['middleware' => 'guest', 'admin', 'member'], function () {
     Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 });
+
+Auth::routes();
 
 //Home
 Route::get('home', 'HomeController@index')->name('home');

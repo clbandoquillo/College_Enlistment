@@ -51,48 +51,35 @@
                   <div class="box-header">
                     <h3 class="box-title">Report Filters</h3>
                   </div>
+                  <form action="{{ url('enlist/filter')}}" id = "enlistFilter" method = "post">
                   <div class="box-body">
-                    <form action="">
                       <div class="form-group">
                         <label>Period</label>
-                        <input type="text" class="form-control btn btn-default" id="daterange">
+                        <input type="text" name = "period" class="form-control btn btn-default" id="daterange">
                       </div>
                       <div class="form-group noc-filter-group">
                         <label>Divisions</label>
-                        <select class="form-control noc-select" multiple>
-                          <option selected>All</option>
-                          <option>Larry Orezonte</option>
-                          <option>James Rodulfo</option>
-                          <option>Bryan Duller</option>
-                          <option>Arbie Alcasid</option>
-                          <option>Kenny Granado</option>
+                        <select name="division" class="form-control noc-select" multiple required>
+                          <option value="all" selected="" disabled="">All</option>
+                          @foreach($divisions as $d)
+                          <option value="{{ $d->divisionCode }}">{{ $d->divisionCode.", ".$d->divisionDescription }}</option>
+                          @endforeach
                         </select>
                       </div>
                       <div class="form-group status-filter-group">
-                        <label>Status</label>
-                        <select class="form-control status-select" multiple>
-                          <option selected>All</option>
-                          <option>Login</option>
-                          <option>Logout</option>
-                          <option>Idle</option>
-                          <option>Quick Break</option>
-                          <option>Lunch Break</option>
+                        <label>Programs</label>
+                        <select name="programs" class="form-control noc-select" multiple required>
+                          <option value="all" selected="" disabled="">All</option>
+                          @foreach($programs as $p)
+                          <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription }}</option>
+                          @endforeach
                         </select>
                       </div>
-                      <div class="form-group schedule-filter-group">
-                        <label>Shift Schedule</label>
-                        <select class="form-control schedule-select" multiple>
-                          <option selected>All</option>
-                          <option>Morning Shift (10am - 7pm)</option>
-                          <option>Mid Shift (3pm - 12am)</option>
-                          <option>Night Shift (10pm - 7am)</option>
-                        </select>
-                      </div>
-                    </form>
                   </div>
                   <div class="box-footer">
-                    <button class="btn btn-primary btn-block generate-report-button">Generate Report</button>
+                    <button id = "filterEnlist" class="btn btn-primary btn-block generate-report-button">Generate Report</button>
                   </div>
+                  </form>
                 </div>
               </div>
               <div class="col-md-9">
@@ -374,6 +361,11 @@ $(function(){
     			},
     	    },
     	});
+
+      $("#filterEnlist").click(function()
+      {
+          $("filter").attr("action", "/enlist/filter");
+      });
 
     </script>
 </body>
