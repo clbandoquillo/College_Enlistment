@@ -63,3 +63,21 @@
 <!-- modernizr JS
 ============================================ -->
 <script src="{{ asset('assets/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+
+<style>
+    
+
+This CSS effectively hides the spin-button for webkit browsers (have tested it in Chrome 7.0.517.44 and Safari Version 5.0.2 (6533.18.5)):
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+</style>

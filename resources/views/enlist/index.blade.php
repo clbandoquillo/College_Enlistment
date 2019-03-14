@@ -64,50 +64,114 @@
                                                                     <input name="surname" type="text" class="form-control" placeholder="Surname" required>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                  <label>Firstname</label>
-                                                                    <input name="firstname" type="text" class="form-control" placeholder="Firstname" required>
+                                                                  <div class = "row">
+                                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                <label>Firstname</label>
+                                                                                  <input name="firstname" type="text" class="form-control" placeholder="Firstname" required>
+                                                                            </div>
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                <label>Middlename</label>
+                                                                                  <input name="middlename" type="text" class="form-control" placeholder="Middlename" required>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                  <label>Middlename</label>
-                                                                    <input name="middlename" type="text" class="form-control" placeholder="Middlename" required>
+                                                                  <div class = "row">
+                                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                        <div class="row">
+                                                                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                <label>Date of Birth</label>
+                                                                                  <input name="dateOfBirth" id="datepicker" type="date" class="form-control" placeholder="Date of Birth" required>
+                                                                            </div>
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                  <label>Mobile Number</label>
+                                                                                  <input name="mobileNum" id="mobileNum" type="tel" class="form-control" placeholder="Mobile no." data-mask="+63 999-999-9999" required>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                  <label>Date of Birth (YYYY-MM-DD)</label>
-                                                                    <input name="dateOfBirth" id="datepicker" type="text" class="form-control" placeholder="Date of Birth" required>
+                                                                  <div class = "row">
+                                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                  <label>Sex</label>
+                                                                                  <select name="sex" class="form-control" required>
+                                                                                    <option value="none" selected="" disabled=""></option>
+                                                                                    <option value="0">Male</option>
+                                                                                    <option value="1">Female</option>
+                                                                                  </select>
+                                                                            </div>
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                  <label>Civil Status</label>
+                                                                                  <select name="civilStatus" class="form-control" required>
+                                                                                    <option value="none" selected="" disabled=""></option>
+                                                                                    <option value="0">Single (Never Married)</option>
+                                                                                    <option value="1">Married</option>
+                                                                                    <option value="2">Divored</option>
+                                                                                    <option value="3">Separated</option>
+                                                                                  </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label>Sex</label>
-                                                                    <select name="sex" class="form-control" required>
-                                  																		<option value="none" selected="" disabled=""></option>
-                                  																		<option value="0">Male</option>
-                                  																		<option value="1">Female</option>
-                                  																	</select>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label>Civil Status</label>
-                                                                    <select name="civilStatus" class="form-control" required>
-                                  																		<option value="none" selected="" disabled=""></option>
-                                  																		<option value="0">Single (Never Married)</option>
-                                  																		<option value="1">Married</option>
-                                                                      <option value="2">Divored</option>
-                                                                      <option value="3">Separated</option>
-                                  																	</select>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label>Home Address</label>
+                                                                  <label>Address</label>
                                                                     <input name="homeAddress" type="text" class="form-control" placeholder="Address" required>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label>E-mail Address</label>
-                                                                    <input name="homeTelFaxEmail" type="email" class="form-control" placeholder="E-mail Address" required>
+                                                                  <div class = "row">
+                                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                <label>E-mail Address</label>
+                                                                                <input name="homeTelFaxEmail" type="email" class="form-control" placeholder="E-mail Address" required>
+                                                                            </div>
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                  <label>State</label>
+                                                                                  <input name="state" type="text" class="form-control" placeholder="State" required>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label>Mobile / Cellphone Number (Format: 0912-345-6789)</label>
-                                                                    <input name="mobileNum" id="mobileNum" type="tel" class="form-control" placeholder="Mobile no." data-mask="9999-999-9999" required>
+                                                                  <div class = "row">
+                                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                  <label>City</label>
+                                                                                  <input name="city" type="text" class="form-control" placeholder="City" required>
+                                                                            </div>
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                  <label>Zip/Postal Code</label>
+                                                                                  <input name="zippostalcode" data-mask="9999" type="text" class="form-control" placeholder="Zip/Postal Code" required>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label>Citizenship</label>
-                                                                    <input name="citizenship" id="citizenship" type="text" class="form-control" placeholder="Citizenship" required>
+                                                                  <div class = "row">
+                                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                    <label>Country</label>
+                                                                                    <input name="country" type="text" class="form-control" placeholder="Country" required>
+                                                                            </div>
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                <label>Citizenship</label>
+                                                                                <input name="citizenship" id="citizenship" type="text" class="form-control" placeholder="Citizenship" required>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
                                                                 </div>
                                                             </div>
                                                             <!---------->
@@ -116,7 +180,7 @@
                                                                   <label>Name and Complete Address of Senior High School</label>
                                                                   <input name="nameAddSHS" type="text" class="form-control" placeholder="Name and Complete Address of Senior High School">
                                                               </div>
-                                                              <div class="form-group-inner">
+                                                              <div class="form-group">
                                                                 <div class = "row">
                                                                   <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                                                                       <div class="row">
@@ -165,7 +229,7 @@
                                                                   <label>Name and Complete Address of College or University (if transfer student)</label>
                                                                   <input name="nameAddCollegeUniv" id="nameAddCollegeUniv" type="text" class="form-control" placeholder="Name and Complete Address of College or University (if transfer student)">
                                                               </div>
-                                                              <div class="form-group-inner">
+                                                              <div class="form-group">
                                                                 <div class = "row">
                                                                   <label>Preferred Degree of Program</label><br>
                                                                   <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
@@ -186,7 +250,7 @@
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                             <div class="form-select-list">
                                                                               <label>Choice 2</label>
-                                                                              <select name="programChoiceTwo" class="form-control" required>
+                                                                              <select name="programChoiceTwo" class="form-control">
                                                                                 <option value="none" selected="" disabled=""></option>
                                                                                 @foreach($programs as $p)
                                                                                     <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription.", ".$p->programDiv }}</option>
@@ -197,7 +261,7 @@
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                             <div class="form-select-list">
                                                                               <label>Choice 3</label>
-                                                                              <select name="programChoiceThree" class="form-control" required>
+                                                                              <select name="programChoiceThree" class="form-control">
                                                                                 <option value="none" selected="" disabled=""></option>
                                                                                 <option value="none" selected="" disabled=""></option>
                                                                                 @foreach($programs as $p)
@@ -210,11 +274,10 @@
                                                                   </div>
                                                                 </div>
                                                               </div>
-                                                              <div class="form-group-inner">
+                                                              <div class="form-group">
                                                                 <div class = "row">
                                                                   <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                                                                       <div class="row">
-
                                                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Father's Complete Name</label>
@@ -231,11 +294,10 @@
                                                                   </div>
                                                                 </div>
                                                               </div>
-                                                              <div class="form-group-inner">
+                                                              <div class="form-group">
                                                                 <div class = "row">
                                                                   <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                                                                       <div class="row">
-
                                                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Mother's Complete Name</label>
@@ -252,7 +314,7 @@
                                                                   </div>
                                                                 </div>
                                                               </div>
-                                                              <div class="form-group-inner">
+                                                              <div class="form-group">
                                                                 <div class = "row">
                                                                   <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                                                                       <div class="row">
@@ -260,7 +322,7 @@
                                                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Annual Family Income</label>
-                                                                                  <input name = "annualFamilyIncome" type="number" class="form-control" placeholder="Annual Family Income" required>
+                                                                                  <input type="number" id = "annualFamilyIncome" name = "annualFamilyIncome" class="form-control" min = "1" value = "0" placeholder="Annual Family Income" required>
                                                                               </div>
                                                                           </div>
                                                                       </div>
@@ -268,7 +330,7 @@
                                                                 </div>
                                                               </div>
                                                             </div>
-                                                        </div>
+                                                        </div><br><br>
                                                         <div class="row">
                                                             <div class="col-lg-12">
                                                                 <div class="payment-adress">
@@ -365,17 +427,21 @@
 		============================================ -->
     <script src="{{ asset('assets/js/input-mask/jasny-bootstrap.min.js') }}"></script>
     <script type = "text/javascript">
+
+      //Date picker
+
       $("addEnlist").click(function()
       {
         $("enlist").attr("action", "/enlist/create");
+      });    
+
+    $('#enlist').on('keyup keypress', function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode === 13) { 
+          e.preventDefault();
+          return false;
+        }
       });
-
-      //Date picker
-    $('#datepicker').datepicker({
-      format: 'yyyy-mm-dd'
-    })
-
-    </script>
 </body>
 
 </html>

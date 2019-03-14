@@ -19,11 +19,15 @@ class Enlist extends Migration
             $table->string('firstname');
             $table->string('middlename');
             $table->date('dateOfBirth');
+            $table->string('mobileNum');
             $table->integer('sex');
             $table->integer('civilStatus');
             $table->string('homeAddress');
             $table->string('homeTelFaxEmail');
-            $table->string('mobileNum');
+            $table->string('state');
+            $table->string('city');
+            $table->string('zippostalcode');
+            $table->string('country');
             $table->string('citizenship');
             $table->string('nameAddSHS')->nullable();
             $table->string('track')->nullable();
@@ -32,8 +36,8 @@ class Enlist extends Migration
             $table->string('indigenousCommunity')->nullable();
             $table->string('nameAddCollegeUniv')->nullable();
             $table->string('programChoiceOne');
-            $table->string('programChoiceTwo');
-            $table->string('programChoiceThree');
+            $table->string('programChoiceTwo')->nullable();
+            $table->string('programChoiceThree')->nullable();
             $table->string('fatherName');
             $table->string('fatherOccupation');
             $table->string('motherName');

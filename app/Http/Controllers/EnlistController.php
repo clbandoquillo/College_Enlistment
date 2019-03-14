@@ -68,11 +68,15 @@ class EnlistController extends Controller
         $enlist->middlename = $request->middlename;
         $name = $request->surname.", ".$request->firstname." ".$request->middlename;
         $enlist->dateOfBirth = $request->dateOfBirth;
+        $enlist->mobileNum = $request->mobileNum;
         $enlist->sex = $request->sex;
         $enlist->civilStatus = $request->civilStatus;
         $enlist->homeAddress = $request->homeAddress;
         $enlist->homeTelFaxEmail = $request->homeTelFaxEmail;
-        $enlist->mobileNum = $request->mobileNum;
+        $enlist->state = $request->state;
+        $enlist->city = $request->city;
+        $enlist->zippostalcode = $request->zippostalcode;
+        $enlist->country = $request->country;
         $enlist->citizenship = $request->citizenship;
         $enlist->nameAddSHS = $request->nameAddSHS;
         $enlist->track = $request->track;
