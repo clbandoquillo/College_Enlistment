@@ -29,23 +29,25 @@
           <div class="single-pro-review-area mt-t-30 mg-b-15">
             <div class="container-fluid">
                 <div class="row">
-                  @if($errors->any())
-                        <div class="alert alert-danger">
-                          <strong>Failed due to the following error/s!</strong>
-                              <ul>
-                                  @foreach($errors->all() as $e)
-                                    <li>{{$e}}</li>
-                                  @endforeach
-                              </ul>
-                        </div>
-                    @endif
-                    @if(\Session::has('success'))
-                        <div class="alert alert-success alert-block">
-                            <button type="button" class="close" data-dismiss="alert">x</button>
-                            <strong>{!! \Session::get('success') !!}</strong>
-                        </div>
-                    @endif
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class = "">
+                          @if($errors->any())
+                            <div class="alert alert-danger">
+                              <strong>Failed due to the following error/s!</strong>
+                                  <ul>
+                                      @foreach($errors->all() as $e)
+                                        <li>{{$e}}</li>
+                                      @endforeach
+                                  </ul>
+                            </div>
+                        @endif
+                        @if(\Session::has('success'))
+                            <div class="alert alert-success alert-block">
+                                <button type="button" class="close" data-dismiss="alert">x</button>
+                                <strong>{!! \Session::get('success') !!}</strong>
+                            </div>
+                        @endif
+                        </div>
                         <div class="product-payment-inner-st">
                             <ul id="myTabedu1" class="tab-review-design">
                                 <li class="active"><a href="#description">Basic Information</a></li>
