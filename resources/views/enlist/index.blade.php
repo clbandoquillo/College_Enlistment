@@ -64,8 +64,12 @@
                                                                     <input name="surname" type="text" class="form-control" placeholder="Surname" required>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                  <label>First and Middle Names</label>
-                                                                    <input name="firstmiddlename" type="text" class="form-control" placeholder="First and Middle Names" required>
+                                                                  <label>Firstname</label>
+                                                                    <input name="firstname" type="text" class="form-control" placeholder="Firstname" required>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                  <label>Middlename</label>
+                                                                    <input name="middlename" type="text" class="form-control" placeholder="Middlename" required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                   <label>Date of Birth (YYYY-MM-DD)</label>
@@ -98,8 +102,8 @@
                                                                     <input name="homeTelFaxEmail" type="email" class="form-control" placeholder="E-mail Address" required>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label>Mobile / Cellphone Number</label>
-                                                                    <input name="mobileNum" type="number" class="form-control" placeholder="Mobile no." required>
+                                                                    <label>Mobile / Cellphone Number (Format: 0912-345-6789)</label>
+                                                                    <input name="mobileNum" id="mobileNum" type="tel" class="form-control" placeholder="Mobile no." data-mask="9999-999-9999" required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Citizenship</label>
@@ -357,6 +361,9 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="{{ asset('assets/adminlte/dist/js/adminlte.min.js') }}"></script>
     <script src="{{ asset('assets/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+    <!-- input-mask JS
+		============================================ -->
+    <script src="{{ asset('assets/js/input-mask/jasny-bootstrap.min.js') }}"></script>
     <script type = "text/javascript">
       $("addEnlist").click(function()
       {
@@ -367,6 +374,7 @@
     $('#datepicker').datepicker({
       format: 'yyyy-mm-dd'
     })
+
     </script>
 </body>
 

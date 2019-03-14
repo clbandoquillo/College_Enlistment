@@ -272,7 +272,8 @@ $(function(){
 	$(".noc-select, .status-select, .schedule-select").select2({
 		width: "100%",
 		allowClear: true,
-		closeOnSelect: false,
+    closeOnSelect: false,
+    maximumSelectionLength: 3,
 	});
 });
 </script>

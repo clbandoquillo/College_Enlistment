@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEnlist extends Migration
+class Enlist extends Migration
 {
     /**
      * Run the migrations.
@@ -16,7 +16,8 @@ class CreateEnlist extends Migration
         Schema::create('enlist', function (Blueprint $table) {
             $table->increments('id');
             $table->string('surname');
-            $table->string('firstmiddlename');
+            $table->string('firstname');
+            $table->string('middlename');
             $table->date('dateOfBirth');
             $table->integer('sex');
             $table->integer('civilStatus');

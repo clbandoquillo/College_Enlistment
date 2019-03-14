@@ -64,8 +64,9 @@ class EnlistController extends Controller
 
         $enlist = new Enlist;
         $enlist->surname = $request->surname;
-        $enlist->firstmiddlename = $request->firstmiddlename;
-        $name = $request->surname.", ".$request->firstmiddlename;
+        $enlist->firstname = $request->firstname;
+        $enlist->middlename = $request->middlename;
+        $name = $request->surname.", ".$request->firstname." ".$request->middlename;
         $enlist->dateOfBirth = $request->dateOfBirth;
         $enlist->sex = $request->sex;
         $enlist->civilStatus = $request->civilStatus;
