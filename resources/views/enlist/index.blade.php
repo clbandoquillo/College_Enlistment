@@ -68,7 +68,7 @@
                                                                     <input name="firstmiddlename" type="text" class="form-control" placeholder="First and Middle Names" required>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                  <label>Date of Birth</label>
+                                                                  <label>Date of Birth (YYYY-MM-DD)</label>
                                                                     <input name="dateOfBirth" id="datepicker" type="text" class="form-control" placeholder="Date of Birth" required>
                                                                 </div>
                                                                 <div class="form-group">
@@ -95,7 +95,7 @@
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>E-mail Address</label>
-                                                                    <input name="homeTelFaxEmail" type="text" class="form-control" placeholder="E-mail Address" required>
+                                                                    <input name="homeTelFaxEmail" type="email" class="form-control" placeholder="E-mail Address" required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Mobile / Cellphone Number</label>
@@ -173,7 +173,7 @@
                                                                                   <select name="programChoiceOne" class="form-control" required>
                                                                                     <option value="none" selected="" disabled=""></option>
                                                                                     @foreach($programs as $p)
-                                                                                        <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription }}</option>
+                                                                                        <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription.", ".$p->programDiv }}</option>
                                                                                     @endforeach
                                                                                   </select>
                                                                                 </div>
@@ -185,7 +185,7 @@
                                                                               <select name="programChoiceTwo" class="form-control" required>
                                                                                 <option value="none" selected="" disabled=""></option>
                                                                                 @foreach($programs as $p)
-                                                                                    <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription }}</option>
+                                                                                    <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription.", ".$p->programDiv }}</option>
                                                                                 @endforeach
                                                                               </select>
                                                                             </div>
@@ -197,7 +197,7 @@
                                                                                 <option value="none" selected="" disabled=""></option>
                                                                                 <option value="none" selected="" disabled=""></option>
                                                                                 @foreach($programs as $p)
-                                                                                    <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription }}</option>
+                                                                                    <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription.", ".$p->programDiv }}</option>
                                                                                 @endforeach
                                                                               </select>
                                                                             </div>
@@ -288,6 +288,7 @@
         @include('layouts.footer')
     </div>
 
+    
     <!-- jquery
 		============================================ -->
     <script src="{{ asset('assets/js/vendor/jquery-1.12.4.min.js') }}"></script>
@@ -311,7 +312,11 @@
     <script src="{{ asset('assets/js/jquery.sticky.js') }}"></script>
     <!-- scrollUp JS
 		============================================ -->
-    <script src="{{ asset('assets/js/jquery.scrollUp.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.scrollUp.min.js') }}"></script><!-- form validate JS
+		============================================ -->
+    <script src="{{ asset('assets/js/form-validation/jquery.form.min.js') }}"></script>
+    <script src="{{ asset('assets/js/form-validation/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('assets/js/form-validation/form-active.js') }}"></script>
     <!-- counterup JS
 		============================================ -->
     <script src="{{ asset('assets/js/counterup/jquery.counterup.min.js') }}"></script>

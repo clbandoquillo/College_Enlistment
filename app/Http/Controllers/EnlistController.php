@@ -54,6 +54,7 @@ class EnlistController extends Controller
         $period = $request->period;
         $divisionFilter = $request->division;
         $programFilter = $request->program;
+        $query = DB::select(DB::raw("select * frp, "));
         return view('enlist.allenlistment')->with('programs', $program)
                                            ->with('divisions', $division);
                //->with('users', $users);

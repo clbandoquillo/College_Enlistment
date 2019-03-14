@@ -55,6 +55,7 @@ Route::get('home', 'HomeController@index')->name('home');
 Route::get('programs', 'ProgramController@index');
 Route::post('programs/create','ProgramController@create');
 Route::get('programs/all','ProgramController@all');
+Route::get('programs/program_choice_counter','ProgramController@program_choice_counter');
 
 //Enlist
 Route::get('enlist', 'EnlistController@index');

@@ -27,18 +27,18 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-payment-inner-st">
                             <ul id="myTabedu1" class="tab-review-design">
-                                <li><a href="#addprograms">Add Programs</a></li>
-                                <li class="active"><a href="#viewprograms">View Programs</a></li>
+                                <li class="active"><a href="#addprograms">Add Programs</a></li>
+                                <li><a href="#viewprograms">View Programs</a></li>
                             </ul>
                             <div id="myTabContent" class="tab-content custom-product-edit">
-                                <div class="product-tab-list tab-pane fade" id="addprograms">
+                                <div class="product-tab-list tab-pane fade active in" id="addprograms">
                                     <div class="row">
-                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                        <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
                                             <div class="review-content-section">
                                                 <div id="dropzone1" class="pro-ad addcoursepro">
                                                     <form action="{{ url('programs/create')}}" id = "program" class="dropzone dropzone-custom needsclick addcourse" method = "post">
                                                         <div class="row">
-                                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Program Code</label>
                                                                     <input name="programCode" type="text" class="form-control" placeholder="Program Code">
@@ -70,9 +70,45 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                          <div class="sparkline13-list">
+                                            <div class="sparkline13-hd">
+                                              @if($errors->any())
+                                                <div class="alert alert-danger">
+                                                  <strong>Failed due to the following error/s!</strong>
+                                                  <ul>
+                                                    @foreach($errors->all() as $e)
+                                                      <li>{{$e}}</li>
+                                                    @endforeach
+                                                  </ul>
+                                                </div>
+                                              @endif
+                                              @if(\Session::has('success'))
+                                                <div class="alert alert-success alert-block">
+                                                  <button type="button" class="close" data-dismiss="alert">x</button>
+                                                  <strong>{!! \Session::get('success') !!}</strong>
+                                                </div>
+                                              @endif
+                                                <div class="main-sparkline13-hd">
+                                                  <h1>Projects <span class="table-project-n">Data</span> Table</h1>
+                                                </div>
+                                              </div>
+                                              <div class="sparkline13-graph">
+                                                <div class="datatable-dashv1-list custom-datatable-overright">
+                                                  <table id="program_table" data-toggle="table" class="table table-bordered table-striped">
+                                                    <thead>
+                                                      <th class="table-center-textalign">Program Code</th>
+                                                      <th class="table-center-textalign">Program Description</th>
+                                                      <th class="table-center-textalign">Program Division</th>
+                                                    </thead>
+                                                  </table>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="product-tab-list tab-pane fade active in" id="viewprograms">
+                                <div class="product-tab-list tab-pane fade" id="viewprograms">
                                   <!-- Static Table Start -->
                                   <div class="data-table-area mg-b-15">
                                       <div class="container-fluid">
@@ -102,12 +138,16 @@
                                                       </div>
                                                       <div class="sparkline13-graph">
                                                           <div class="datatable-dashv1-list custom-datatable-overright">
-                                                              <table id="program_table" data-toggle="table" class="table table-bordered table-striped">
+                                                              <table id="program_table_counter" data-toggle="table" class="table table-bordered table-striped">
                                                                   <thead>
                                                             						<th class="table-center-textalign">Program Code</th>
                                                             						<th class="table-center-textalign">Program Description</th>
                                                                         <th class="table-center-textalign">Program Division</th>
-                                                                  </thead>
+                                                                        <th class="table-center-textalign">First Choice</th>
+                                                                        <th class="table-center-textalign">Second Choice</th>
+                                                                        <th class="table-center-textalign">Third Choice</th>
+
+                                                                        <th class="table-center-textalign">Total</th>                                                                  </thead>
                                                               </table>
                                                           </div>
                                                       </div>
@@ -219,6 +259,34 @@
     		],
     		"ajax": {
     	    	url: '/programs/all',
+    			type: 'GET',
+    			error: function(xhr, status, response)
+    			{
+
+    			},
+    	    },
+    	});
+
+      $("#program_table_counter").DataTable({
+      'paging'		: true,
+  		'pageLength'	: 10,
+  		'lengthChange'	: true,
+  		'searching'		: true,
+  		'ordering'		: true,
+  		'aaSorting'		: [[0, "asc"]],
+  		'info'			: false,
+  		'autoWidth'		: false,
+  		'columns'		: [
+                    { data: 'programcode' },
+          					{ data: 'programdescription' },
+                    { data: 'programDiv' },
+                    { data: 'firstChoice' },
+                    { data: 'secondChoice' },
+                    { data: 'thirdChoice' },
+                    { data: 'total' },
+    		],
+    		"ajax": {
+    	    	url: '/programs/program_choice_counter',
     			type: 'GET',
     			error: function(xhr, status, response)
     			{
