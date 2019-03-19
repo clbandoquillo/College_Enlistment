@@ -78,24 +78,37 @@ class EnlistController extends Controller
         $enlist->zippostalcode = $request->zippostalcode;
         $enlist->country = $request->country;
         $enlist->citizenship = $request->citizenship;
-        $enlist->nameAddSHS = $request->nameAddSHS;
+        $enlist->nameSHS = $request->nameSHS;
+        $enlist->addressSHS = $request->addressSHS;
         $enlist->track = $request->track;
         $enlist->strand = $request->strand;
         $enlist->isIndigenous = $request->isIndigenous;
         $enlist->indigenousCommunity = $request->indigenousCommunity;
-        $enlist->nameAddCollegeUniv = $request->nameAddCollegeUniv;
+        $enlist->nameCollegeUniv = $request->nameCollegeUniv;
+        $enlist->addressCollegeUniv = $request->addressCollegeUniv;
         $enlist->programChoiceOne = $request->programChoiceOne;
         $enlist->programChoiceTwo = $request->programChoiceTwo;
         $enlist->programChoiceThree = $request->programChoiceThree;
-        $programChoice = $request->programChoiceOne.", ".$request->programChoiceTwo." and ".$request->programChoiceThree;
         $enlist->fatherName = $request->fatherName;
         $enlist->fatherOccupation = $request->fatherOccupation;
         $enlist->motherName = $request->motherName;
         $enlist->motherOccupation = $request->motherOccupation;
         $enlist->annualFamilyIncome = $request->annualFamilyIncome;
-        $enlist->save();
+        $choice1 = $request->programChoiceOne;
+        $choice2 = $request->programChoiceTwo;
+        $choice3 = $request->programChoiceThree;
+        if($choice1 != ""){
+            \Mail::to($request->homeTelFaxEmail)->send(new SendCourse($name, $choice1));
+        }
 
-        \Mail::to($request->homeTelFaxEmail)->send(new SendCourse($name, $programChoice));
+        if($choice2 != ""){
+            \Mail::to($request->homeTelFaxEmail)->send(new SendCourse($name, $choice2));
+        }
+
+        if($choice3 != ""){
+            \Mail::to($request->homeTelFaxEmail)->send(new SendCourse($name, $choice3));
+        }
+        $enlist->save();
         return Redirect::back()->with('success', "Hi ($name). You are now enlisted! Thank you.");
 
     }

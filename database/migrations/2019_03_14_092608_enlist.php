@@ -29,12 +29,14 @@ class Enlist extends Migration
             $table->string('zippostalcode');
             $table->string('country');
             $table->string('citizenship');
-            $table->string('nameAddSHS')->nullable();
+            $table->string('nameSHS')->nullable();
+            $table->string('addressSHS')->nullable();
             $table->string('track')->nullable();
             $table->string('strand')->nullable();
             $table->integer('isIndigenous');
             $table->string('indigenousCommunity')->nullable();
-            $table->string('nameAddCollegeUniv')->nullable();
+            $table->string('nameCollegeUniv')->nullable();
+            $table->string('addressCollegeUniv')->nullable();
             $table->string('programChoiceOne');
             $table->string('programChoiceTwo')->nullable();
             $table->string('programChoiceThree')->nullable();

@@ -63,6 +63,12 @@
 <!-- modernizr JS
 ============================================ -->
 <script src="{{ asset('assets/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+<!-- select2 CSS
+============================================ -->
+<link rel="stylesheet" href="{{ asset('assets/css/select2/select2.min.css') }}">
+<!-- chosen CSS
+============================================ -->
+<link rel="stylesheet" href="{{ asset('assets/css/chosen/bootstrap-chosen.css') }}">
 
 <style>
     
