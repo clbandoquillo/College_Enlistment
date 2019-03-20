@@ -64,20 +64,74 @@ class EnlistController extends Controller
 
         $enlist = new Enlist;
         $enlist->surname = $request->surname;
+        $enlist->suffix = $request->suffix;
         $enlist->firstname = $request->firstname;
         $enlist->middlename = $request->middlename;
-        $name = $request->surname.", ".$request->firstname." ".$request->middlename;
-        $enlist->dateOfBirth = $request->dateOfBirth;
-        $enlist->mobileNum = $request->mobileNum;
-        $enlist->sex = $request->sex;
+        $name = $request->surname." ".$request->suffix.", ".$request->firstname." ".$request->middlename;
+        $enlist->birthDate = $request->birthDate;
+        $enlist->birthPlace = $request->birthPlace;
+        $enlist->gender = $request->gender;
         $enlist->civilStatus = $request->civilStatus;
-        $enlist->homeAddress = $request->homeAddress;
-        $enlist->homeTelFaxEmail = $request->homeTelFaxEmail;
-        $enlist->state = $request->state;
-        $enlist->city = $request->city;
-        $enlist->zippostalcode = $request->zippostalcode;
-        $enlist->country = $request->country;
         $enlist->citizenship = $request->citizenship;
+        $enlist->religion = $request->religion;
+
+        $enlist->permanentAddress = $request->permanentAddress;
+        $enlist->permanentProvince = $request->permanentProvince;
+        $enlist->permanentCity = $request->permanentCity;
+        $enlist->permanentzippostalcode = $request->permanentzippostalcode;
+        $enlist->permanentCountry = $request->permanentCountry;
+
+        $enlist->sameAsPermanent = $request->sameAsPermanent;
+        $enlist->boarding = $request->boarding;
+        $enlist->withRelative = $request->withRelative;
+
+        $enlist->cityAddress = "";
+        $enlist->cityProvince = "";
+        $enlist->cityCity = "";
+        $enlist->cityzippostalcode = "";
+        $enlist->cityCountry = "";
+        
+        if($request->sameAsPermanent == 0){
+            $enlist->cityAddress = $request->cityAddress;
+            $enlist->cityProvince = $request->cityProvince;
+            $enlist->cityCity = $request->cityCity;
+            $enlist->cityzippostalcode = $request->cityzippostalcode;
+            $enlist->cityCountry = $request->cityCountry;    
+        }
+
+        if($request->sameAsPermanent == 1){
+            $enlist->cityAddress = $request->permanentAddress;
+            $enlist->cityProvince = $request->permanentProvince;
+            $enlist->cityCity = $request->permanentCity;
+            $enlist->cityzippostalcode = $request->permanentzippostalcode;
+            $enlist->cityCountry = $request->permanentCountry;    
+        }
+
+        $enlist->email = $request->email;
+        $enlist->mobileNum = $request->mobileNum;
+
+        $enlist->personToContact = $request->personToContact;
+        $enlist->personToContactRelationship = $request->personToContactRelationship;
+        $enlist->personToContactTelNo = $request->personToContactTelNo;
+        $enlist->personToContactMobileNo = $request->personToContactMobileNo;
+
+        $enlist->positionFamily = $request->positionFamily;
+        $enlist->numBrothers = $request->numBrothers;
+        $enlist->numSisters = $request->numSisters;
+
+        $enlist->fatherName = $request->fatherName;
+        $enlist->fatherOccupation = $request->fatherOccupation;
+        $enlist->fatherAddress = $request->fatherAddress;
+        $enlist->fatherContactNum = $request->fatherContactNum;
+
+        $enlist->motherName = $request->motherName;
+        $enlist->motherOccupation = $request->motherOccupation;
+        $enlist->motherAddress = $request->motherAddress;
+        $enlist->motherContactNum = $request->motherContactNum;
+
+        $enlist->parentsMaritalStatus = $request->parentsMaritalStatus;
+        $enlist->nameOfSpouse = $request->nameOfSpouse;
+
         $enlist->nameSHS = $request->nameSHS;
         $enlist->addressSHS = $request->addressSHS;
         $enlist->track = $request->track;
@@ -86,6 +140,7 @@ class EnlistController extends Controller
         $enlist->indigenousCommunity = $request->indigenousCommunity;
         $enlist->nameCollegeUniv = $request->nameCollegeUniv;
         $enlist->addressCollegeUniv = $request->addressCollegeUniv;
+        $enlist->principalSHS = $request->principalSHS;
         $enlist->programChoiceOne = $request->programChoiceOne;
         $enlist->programChoiceTwo = $request->programChoiceTwo;
         $enlist->programChoiceThree = $request->programChoiceThree;
@@ -97,17 +152,15 @@ class EnlistController extends Controller
         $choice1 = $request->programChoiceOne;
         $choice2 = $request->programChoiceTwo;
         $choice3 = $request->programChoiceThree;
-        if($choice1 != ""){
-            \Mail::to($request->homeTelFaxEmail)->send(new SendCourse($name, $choice1));
-        }
-
+        $choices = array();
+        array_push($choices, $choice1);
         if($choice2 != ""){
-            \Mail::to($request->homeTelFaxEmail)->send(new SendCourse($name, $choice2));
+            array_push($choices, $choice2);
         }
-
         if($choice3 != ""){
-            \Mail::to($request->homeTelFaxEmail)->send(new SendCourse($name, $choice3));
+            array_push($choices, $choice3);
         }
+        \Mail::to($request->email)->send(new SendCourse($name, $choices));
         $enlist->save();
         return Redirect::back()->with('success', "Hi ($name). You are now enlisted! Thank you.");
 

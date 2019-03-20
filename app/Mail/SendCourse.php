@@ -21,7 +21,18 @@ class SendCourse extends Mailable
     public function __construct($name, $programChoice)
     {
         $this->name = $name;
-        $this->programChoice = $programChoice;
+        $str = "";
+        if(sizeof($programChoice) == 1){
+            $str = "";
+        }
+        if(sizeof($programChoice) == 2){
+            $str = " and ";
+        }
+        if(sizeof($programChoice) == 3){
+            $str = ", ";
+        }
+        $this->programChoice = implode($str, $programChoice);
+        
     }
 
     /**

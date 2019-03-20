@@ -42,6 +42,9 @@
 <!-- mCustomScrollbar CSS
 ============================================ -->
 <link rel="stylesheet" href="{{ asset('assets/css/scrollbar/jquery.mCustomScrollbar.min.css') }}">
+<!-- modals CSS
+============================================ -->
+<link rel="stylesheet" href="{{ asset('assets/css/modals.css') }}">
 <!-- metisMenu CSS
 ============================================ -->
 <link rel="stylesheet" href="{{ asset('assets/css/metisMenu/metisMenu.min.css') }}">
@@ -69,6 +72,10 @@
 <!-- chosen CSS
 ============================================ -->
 <link rel="stylesheet" href="{{ asset('assets/css/chosen/bootstrap-chosen.css') }}">
+<!-- modernizr JS
+============================================ -->
+<script src="{{ asset('assets/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+
 
 <style>
     
