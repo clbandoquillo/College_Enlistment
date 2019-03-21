@@ -6,6 +6,8 @@ use App\Enlist;
 use App\Mail\SendCourse;
 use App\Program;
 use App\Division;
+use App\Religion;
+use App\Province;
 use DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
@@ -29,7 +31,11 @@ class EnlistController extends Controller
         // dd();
         //$users = User::all();
         $program = Program::all();
-        return view('enlist.index')->with('programs', $program);
+        $religion = Religion::all();
+        $province = Province::all();
+        return view('enlist.index')->with('programs', $program)
+                                   ->with('religions', $religion)
+                                   ->with('provinces', $province);
                                    
                //->with('users', $users);
     }
@@ -115,6 +121,16 @@ class EnlistController extends Controller
         $enlist->personToContactTelNo = $request->personToContactTelNo;
         $enlist->personToContactMobileNo = $request->personToContactMobileNo;
 
+        $enlist->bloodGroup = $request->bloodGroup;
+        $enlist->rh = $request->rh;
+        $enlist->physicianName = $request->physicianName;
+        $enlist->physicianContactInformation = $request->physicianContactInformation;
+        $enlist->takingMedication = $request->takingMedication;
+        $enlist->medicationInfo = $request->medicationInfo;
+        $enlist->specialNeeds = $request->specialNeeds;
+        $enlist->typeOfSpecialNeeds = $request->typeOfSpecialNeeds;
+        $enlist->othersSpecialNeeds = $request->othersSpecialNeeds;
+
         $enlist->positionFamily = $request->positionFamily;
         $enlist->numBrothers = $request->numBrothers;
         $enlist->numSisters = $request->numSisters;
@@ -152,6 +168,11 @@ class EnlistController extends Controller
         $choice1 = $request->programChoiceOne;
         $choice2 = $request->programChoiceTwo;
         $choice3 = $request->programChoiceThree;
+
+        $enlist->currTherapyRehabCounseling = $request->currTherapyRehabCounseling;
+        $enlist->currTherapyRehabCounselingName = $request->currTherapyRehabCounselingName;
+        $enlist->currTherapyRehabCounselingContact = $request->currTherapyRehabCounselingContact;
+        $enlist->reasonToSeekHelp = $request->reasonToSeekHelp;
         $choices = array();
         array_push($choices, $choice1);
         if($choice2 != ""){

@@ -159,10 +159,11 @@
                                                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                               <div class = "form-group">
                                                                                   <label>Religion</label>
-                                                                                  <select name="religion" class="form-control" required>
+                                                                                  <select id = "religion" name="religion" class="form-control" required>
                                                                                     <option value="none" selected="" disabled=""></option>
-                                                                                    <option value="0">Roman Catholic</option>
-                                                                                    <option value="1">Moslem</option>
+                                                                                    @foreach($religions as $r)
+                                                                                    <option value="{{ $r->id }}">{{ $r->description }}</option>
+                                                                                    @endforeach
                                                                                   </select>
                                                                               </div>
                                                                             </div>
@@ -179,33 +180,30 @@
                                                                   <div class = "row">
                                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                         <div class="row">
-                                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class = "form-group">
                                                                                   <label>City</label>
                                                                                   <input name="permanentCity" type="text" class="form-control" placeholder="City" required>
                                                                               </div>
                                                                             </div>
-                                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class = "form-group">
                                                                                   <label>Province</label>
-                                                                                  <input name="permanentProvince" type="text" class="form-control" placeholder="State" required>
+                                                                                  <select id = "permanentProvince" name="permanentProvince" class="form-control" required>
+                                                                                    <option value="none" selected="" disabled=""></option>
+                                                                                    @foreach($provinces as $p)
+                                                                                    <option value="{{ $p->id }}">{{ $p->ProvinceName }}</option>
+                                                                                    @endforeach
+                                                                                  </select>
                                                                               </div>
                                                                             </div>
-                                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class = "form-group">
                                                                                   <label>Zip/Postal Code</label>
                                                                                   <input name="permanentzippostalcode" type="text" class="form-control" placeholder="Zip/Postal Code" required>
                                                                               </div>
                                                                             </div>
-                                                                        </div>
-                                                                    </div>
-                                                                  </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                  <div class = "row">
-                                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                                        <div class="row">
-                                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class = "form-group">
                                                                               <label>Country</label>
                                                                               <div class="chosen-select-single mg-b-20">
@@ -473,49 +471,48 @@
                                                                 <h4 class="form-header text-primary">City Address</h4>
                                                                 <div class="form-group">
                                                                   <label class = "radio-inline"><input class="pull-left" type="checkbox" onclick="javascript:checkPermanent();" id = "sameAsPermanent" value="1" name="sameAsPermanent">Same as permanent</label>
-                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="1" name="boarding" id = "boarding">Boarding</label>
-                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="1" name="withRelative" id = "withRelative">With relative</label>
+                                                                  <label class = "radio-inline"><input class="pull-left" type="checkbox" value="1" name="boarding" id = "boarding">Boarding</label>
+                                                                  <label class = "radio-inline"><input class="pull-left" type="checkbox" value="1" name="withRelative" id = "withRelative">With relative</label>
                                                                 </div>
                                                                 <div class="form-group" style="display:block" id="caddress">
                                                                   <label>City Address (House No., Street, Subdivision/Sitio, Barangay)</label>
-                                                                    <input name="cityAddress" type="text" class="form-control" placeholder="City Address" required>
+                                                                    <input id="cityAddress" name="cityAddress" type="text" class="form-control" placeholder="City Address" required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                   <div class = "row">
                                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                         <div class="row">
-                                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                                              <div class = "form-group" style="display:block" id="ccity">
+                                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                              <div class = "form-group">
                                                                                   <label>City</label>
-                                                                                  <input name="cityCity" type="text" class="form-control" placeholder="City" required>
+                                                                                  <input id="cityCity" 
+                                                                                  name="cityCity" type="text" class="form-control" placeholder="City" required>
                                                                               </div>
                                                                             </div>
-                                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                                              <div class = "form-group" style="display:block" id="cprovince">
+                                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                              <div class = "form-group">
                                                                                   <label>Province</label>
-                                                                                  <input name="cityProvince" type="text" class="form-control" placeholder="State" required>
+                                                                                  <select id = "cityProvince" name="cityProvince" class="form-control" required>
+                                                                                    <option value="none" selected="" disabled=""></option>
+                                                                                    @foreach($provinces as $p)
+                                                                                    <option value="{{ $p->id }}">{{ $p->ProvinceName }}</option>
+                                                                                    @endforeach
+                                                                                  </select>
                                                                               </div>
                                                                             </div>
-                                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                                              <div class = "form-group" style="display:block" id="cpostalcode">
+                                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                              <div class = "form-group">
                                                                                   <label>Zip/Postal Code</label>
-                                                                                  <input name="cityzippostalcode" data-mask="9999" type="text" class="form-control" placeholder="Zip/Postal Code" required>
+                                                                                  <input id="cityzippostalcode" name="cityzippostalcode" type="text" class="form-control" placeholder="Zip/Postal Code" required>
                                                                               </div>
                                                                             </div>
-                                                                        </div>
-                                                                    </div>
-                                                                  </div>
-                                                                </div>
-                                                                <div class="form-group" id="ccountry" style="display:block">
-                                                                  <div class = "row">
-                                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                                        <div class="row">
-                                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class = "form-group">
                                                                               <label>Country</label>
                                                                               <div class="chosen-select-single mg-b-20">
                                                                                 <select data-placeholder="Choose a Country..." id="cityCountry" name="cityCountry" class="chosen-select" tabindex="-1" required>
-                                                                                  <option value="Philippines" selected>Philippines</option>
+                                                                                  <option value="" selected></option>
+                                                                                  <option value="Philippines">Philippines</option>
                                                                                   <option value="United States">United States</option>
                                                                                   <option value="United Kingdom">United Kingdom</option>
                                                                                   <option value="Afghanistan">Afghanistan</option>
@@ -837,6 +834,101 @@
                                                                   </div>
                                                                 </div>
                                                               </div>
+                                                              
+                                                            <h4 class="form-header text-primary">Health / Medical Profile</h4>
+                                                              <div class="form-group">
+                                                                <div class = "row">
+                                                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                      <div class="row">
+                                                                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                              <div class="form-select-list">
+                                                                                  <label>Blood Group</label>
+                                                                                  <input name = "bloodGroup" type="text" class="form-control" placeholder="Blood Group">
+                                                                              </div>
+                                                                          </div>
+                                                                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                              <div class="form-select-list">
+                                                                                  <label>Rh</label>
+                                                                                  <input name = "rh" type="text" class="form-control basic-ele-mg-t-10" placeholder="Rh">
+                                                                              </div>
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                              <div class="form-group">
+                                                                <div class = "row">
+                                                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                      <div class="row">
+                                                                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                              <div class="form-select-list">
+                                                                                  <label>Family / Personal Physician's Name</label>
+                                                                                  <input name = "physicianName" type="text" class="form-control" placeholder="Family / Personal Physician's Name">
+                                                                              </div>
+                                                                          </div>
+                                                                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                              <div class="form-select-list">
+                                                                                  <label>Physician's Contact Information</label>
+                                                                                  <input name = "physicianContactInformation" type="text" class="form-control basic-ele-mg-t-10" placeholder="Physician's Contact Information">
+                                                                              </div>
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                              <div class="form-group">
+                                                                <div class = "row">
+                                                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                      <div class="row">
+                                                                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                              <div class="form-select-list">
+                                                                                  <label>Presently taking medication?</label><label class = "radio-inline"><input class="pull-left" type="radio" value="1" name="takingMedication">Yes</label>
+                                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="0" name="takingMedication">No</label>
+                                                                              </div>
+                                                                          </div>
+                                                                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                              <div class="form-select-list">
+                                                                                  <label>If yes, please indicate medication:</label>
+                                                                                  <input name = "medicationInfo" type="text" class="form-control basic-ele-mg-t-10" placeholder="">
+                                                                              </div>
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                <div class = "row">
+                                                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                      <div class="row">
+                                                                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                              <div class="form-select-list">
+                                                                                  <label>Do you have special needs?</label><br>
+                                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="1" name="specialNeeds">Yes</label>
+                                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="0" name="specialNeeds">No</label>
+                                                                              </div>
+                                                                          </div>
+                                                                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                              <div class="form-select-list">
+                                                                                  <label>Special Needs</label>
+                                                                                  <select name="typeOfSpecialNeeds" class="form-control">
+                                                                                    <option value="" selected="" disabled=""></option>
+                                                                                    <option value="0">Psychiatric</option>
+                                                                                    <option value="1">Physical</option>
+                                                                                    <option value="2">PWD</option>
+                                                                                    <option value="3">Others</option>
+                                                                                  </select>
+                                                                              </div>
+                                                                          </div>
+                                                                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                              <div class="form-select-list">
+                                                                                  <label>Others: (Please specify)</label>
+                                                                                  <input name = "othersSpecialNeeds" type="text" class="form-control basic-ele-mg-t-10" placeholder="Others: (Please specify)">
+                                                                              </div>
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                                </div>
+                                                                </div>
+                                                                </div>
                                                             </div>
                                                             <!---------->
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -854,13 +946,13 @@
                                                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                       <div class="form-group">
                                                                         <label>No. of Brothers</label>
-                                                                          <input name="numBrothers" type="text" class="form-control" placeholder="No. of Brothers">
+                                                                          <input name="numBrothers"  min = "0" value = "0" type="number" class="form-control"  placeholder="No. of Brothers" required>
                                                                       </div>
                                                                     </div>
                                                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                       <div class="form-group">
                                                                         <label>No. of Sisters</label>
-                                                                          <input name="numSisters" type="text" class="form-control" placeholder="No. of Sisters">
+                                                                          <input name="numSisters" min = "0" value = "0" type="number" class="form-control" placeholder="No. of Sisters" required>
                                                                       </div>
                                                                     </div>
                                                                   </div>
@@ -1188,7 +1280,45 @@
                                                                   </div>
                                                                 </div>
                                                               </div>
+                                                            <h4 class="form-header text-primary">Psychological Profile</h4>
+                                                              <div class="form-group">
+                                                                <div class = "row">
+                                                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                      <div class="row">
+                                                                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                              <div class="form-select-list">
+                                                                                  <label>Are you currently in therapy, rehabilitation, or clinical counseling elsewhere?</label><label class = "radio-inline"><input class="pull-left" type="radio" value="1" name="currTherapyRehabCounseling">Yes</label>
+                                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="0" name="currTherapyRehabCounseling">No</label>
+                                                                              </div>
+                                                                          </div>
+                                                                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                              <div class="form-select-list">
+                                                                                  <label>If yes, with whom:</label>
+                                                                                  <input name = "currTherapyRehabCounselingName" type="text" class="form-control basic-ele-mg-t-10" placeholder="">
+                                                                              </div>
+                                                                          </div>
+                                                                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                              <div class="form-select-list">
+                                                                                  <label>Contact Information</label>
+                                                                                  <input name="currTherapyRehabCounselingContact" id="currTherapyRehabCounselingContact" type="tel" class="form-control" placeholder="Mobile no." data-mask="+63 999-999-9999">
+                                                                              </div>
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                              <div class="form-group">
+                                                                <div class = "row">
+                                                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                      <div class="form-select-list">
+                                                                        <label>Briefly describe your reason for seeking help:</label>
+                                                                        <textarea name = "reasonToSeekHelp"></textarea>
+                                                                      </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
                                                             </div>
+                                                          </div>
                                                         </div><br><br>
                                                         <div class="row">
                                                             <div class="col-lg-12">
@@ -1373,20 +1503,18 @@
 
       function checkPermanent(){
         if (document.getElementById("sameAsPermanent").checked == 1) {
-          document.getElementById('caddress').style.display = 'none';
-          document.getElementById('ccity').style.display = 'none';
-          document.getElementById('cprovince').style.display = 'none';
-          document.getElementById('cpostalcode').style.display = 'none';
-          document.getElementById('cityzippostalcode').style.display = 'none';
-          document.getElementById('ccountry').style.display = 'none';
+          document.getElementById('cityAddress').disabled = true;
+          document.getElementById('cityCity').disabled = true;
+          document.getElementById('cityProvince').disabled = true;
+          document.getElementById('cityzippostalcode').disabled = true;
+          document.getElementById('cityCountry').disabled = true;
         }
         if (document.getElementById('sameAsPermanent').checked != 1) {
-          document.getElementById('caddress').style.display = 'block';
-          document.getElementById('ccity').style.display = 'block';
-          document.getElementById('cprovince').style.display = 'block';
-          document.getElementById('cpostalcode').style.display = 'block';
-          document.getElementById('cityzippostalcode').style.display = 'block';
-          document.getElementById('ccountry').style.display = 'block';
+          document.getElementById('cityAddress').disabled = false;
+          document.getElementById('cityCity').disabled = false;
+          document.getElementById('cityProvince').disabled = false;
+          document.getElementById('cityzippostalcode').disabled = false;
+          document.getElementById('cityCountry').disabled = false;
         }
       }
 

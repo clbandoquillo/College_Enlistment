@@ -50,9 +50,19 @@ class Enlist extends Migration
             $table->string('personToContactTelNo')->nullable();
             $table->string('personToContactMobileNo');
 
+            $table->string('bloodGroup')->nullable();
+            $table->string('rh')->nullable();
+            $table->string('physicianName')->nullable();
+            $table->string('physicianContactInformation')->nullable();
+            $table->integer('takingMedication')->nullable();
+            $table->string('medicationInfo')->nullable();
+            $table->string('specialNeeds')->nullable();
+            $table->string('typeOfSpecialNeeds')->nullable();
+            $table->string('othersSpecialNeeds')->nullable();
+
             $table->string('positionFamily');
-            $table->string('numBrothers');
-            $table->string('numSisters');
+            $table->integer('numBrothers');
+            $table->integer('numSisters');
 
 
             $table->string('fatherName');
@@ -81,6 +91,11 @@ class Enlist extends Migration
             $table->string('programChoiceOne')->nullable();
             $table->string('programChoiceTwo')->nullable();
             $table->string('programChoiceThree')->nullable();
+
+            $table->integer('currTherapyRehabCounseling')->nullable();
+            $table->string('currTherapyRehabCounselingName')->nullable();
+            $table->string('currTherapyRehabCounselingContact')->nullable();
+            $table->string('reasonToSeekHelp', 1000)->nullable();
 
             $table->timestamps();
         });
