@@ -9,6 +9,7 @@ use App\Division;
 use App\Religion;
 use App\Province;
 use DB;
+use Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Hash;
@@ -181,8 +182,16 @@ class EnlistController extends Controller
         if($choice3 != ""){
             array_push($choices, $choice3);
         }
-        \Mail::to($request->email)->send(new SendCourse($name, $choices));
-        $enlist->save();
+       \Mail::to($request->email)->send(new SendCourse($name, $choices));
+ /*       $to_name = 'MIS';
+        $to_email = $enlist->email;
+$data = array('name'=>"Sam Jose", "body" => "Test mail");
+    
+Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
+    $message->to($to_email, $to_name)
+            ->subject('Artisans Web Testing Mail');
+    $message->from('clbandoquillo@gmail.com','Artisans Web');
+});*/   $enlist->save();
         return Redirect::back()->with('success', "Hi ($name). You are now enlisted! Thank you.");
 
     }
