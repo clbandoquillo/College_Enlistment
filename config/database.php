@@ -72,10 +72,10 @@ return [
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
-            'host' => env('DB_HOST', 'localhost'),
+            'host' => env('DB_HOST', 'SQLCLUS01'),
             'port' => env('DB_PORT', '1433'),
             'database' => env('DB_DATABASE', 'Enlistment'),
-            'username' => env('DB_USERNAME', 'sa'),
+            'username' => env('DB_USERNAME', 'sa_enlist'),
             'password' => env('DB_PASSWORD', 'P@$$w0rd'),
             'charset' => 'utf8',
             'prefix' => '',

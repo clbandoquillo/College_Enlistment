@@ -8,6 +8,8 @@ use App\Program;
 use App\Division;
 use App\Religion;
 use App\Province;
+use App\Countries;
+use App\City;
 use DB;
 use Mail;
 use Illuminate\Support\Facades\Redirect;
@@ -31,12 +33,26 @@ class EnlistController extends Controller
     {
         // dd();
         //$users = User::all();
-        $program = Program::all();
-        $religion = Religion::all();
-        $province = Province::all();
+        $program = DB::select(DB::raw("SELECT * FROM [Enlistment].[dbo].[curriculumn] 
+        WHERE CODE IN (SELECT COURSECODE
+                FROM [Enlistment].[dbo].[CURRICCONTENT] 
+                WHERE [YEARSTARTED] = 2019) AND yearAbolished IS NULL and shortCode IS NOT NULL and EnlistmentLevel = 'COLLEGIATE' order by divisioncode asc"));
+        //$religion = Religion::all();
+        $religion = DB::select(DB::raw("SELECT * FROM [Enlistment].[dbo].[religion] order by DESCRIPTION asc;"));
+        $countries = Countries::all();
+        $province = DB::select(DB::raw("SELECT * FROM [Enlistment].[dbo].[Provinces] order by ProvinceName asc;"));
+        $city =  DB::select(DB::raw("SELECT * FROM [Enlistment].[dbo].[city] order by CityName asc;"));
+        $nationality =  DB::select(DB::raw("select *
+        from nationality
+        where
+            code not in (23,44,84,53,76,81,39,6,82,75,93,64,49,92,91,40,89,63,97,68,56,65,100,99,67,57,47,96,77,50,38,61,62,54,55,58,60,51,101,12,37,66,48,43,35,103,94,70,83,71,80,45)
+        order by name"));
         return view('enlist.index')->with('programs', $program)
                                    ->with('religions', $religion)
-                                   ->with('provinces', $province);
+                                   ->with('provinces', $province)
+                                   ->with('city', $city)
+                                   ->with('nationality', $nationality)
+                                   ->with('countries', $countries);
                                    
                //->with('users', $users);
     }
@@ -70,11 +86,11 @@ class EnlistController extends Controller
     public function create(Request $request){
 
         $enlist = new Enlist;
-        $enlist->surname = $request->surname;
-        $enlist->suffix = $request->suffix;
-        $enlist->firstname = $request->firstname;
-        $enlist->middlename = $request->middlename;
-        $name = $request->surname." ".$request->suffix.", ".$request->firstname." ".$request->middlename;
+        $enlist->surname = mb_strtoupper($request->surname);
+        $enlist->suffix = mb_strtoupper($request->suffix);
+        $enlist->firstname = mb_strtoupper($request->firstname);
+        $enlist->middlename = mb_strtoupper($request->middlename);
+        $name = mb_strtoupper($request->surname." ".$request->suffix.", ".$request->firstname." ".$request->middlename);
         $enlist->birthDate = $request->birthDate;
         $enlist->birthPlace = $request->birthPlace;
         $enlist->gender = $request->gender;
@@ -137,17 +153,31 @@ class EnlistController extends Controller
         $enlist->numSisters = $request->numSisters;
 
         $enlist->fatherName = $request->fatherName;
+        $enlist->fatherliving = $request->fatherLiving;
         $enlist->fatherOccupation = $request->fatherOccupation;
         $enlist->fatherAddress = $request->fatherAddress;
         $enlist->fatherContactNum = $request->fatherContactNum;
 
         $enlist->motherName = $request->motherName;
+        $enlist->motherliving = $request->motherLiving;
         $enlist->motherOccupation = $request->motherOccupation;
         $enlist->motherAddress = $request->motherAddress;
         $enlist->motherContactNum = $request->motherContactNum;
 
         $enlist->parentsMaritalStatus = $request->parentsMaritalStatus;
         $enlist->nameOfSpouse = $request->nameOfSpouse;
+
+        $enlist->preSchoolName = $request->preSchoolName;
+        $enlist->preSchoolAddress = $request->preSchoolAddress;
+        $enlist->preSchoolGraduated = $request->preSchoolGraduated;
+
+        $enlist->gradeSchoolName = $request->gradeSchoolName;
+        $enlist->gradeSchoolAddress = $request->gradeSchoolAddress;
+        $enlist->gradeSchoolGraduated = $request->gradeSchoolGraduated;
+
+        $enlist->highSchoolName = $request->highSchoolName;
+        $enlist->highSchoolAddress = $request->highSchoolAddress;
+        $enlist->highSchoolGraduated = $request->highSchoolGraduated;
 
         $enlist->nameSHS = $request->nameSHS;
         $enlist->addressSHS = $request->addressSHS;
@@ -182,7 +212,7 @@ class EnlistController extends Controller
         if($choice3 != ""){
             array_push($choices, $choice3);
         }
-       \Mail::to($request->email)->send(new SendCourse($name, $choices));
+       // $curr_content = CurricontentController::loadFirstSemSubjects($choice1, $choice2, $choice3);
  /*       $to_name = 'MIS';
         $to_email = $enlist->email;
 $data = array('name'=>"Sam Jose", "body" => "Test mail");
@@ -192,7 +222,10 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
             ->subject('Artisans Web Testing Mail');
     $message->from('clbandoquillo@gmail.com','Artisans Web');
 });*/   $enlist->save();
-        return Redirect::back()->with('success', "Hi ($name). You are now enlisted! Thank you.");
+        if($enlist->save()){
+            \Mail::to($request->email)->send(new SendCourse($name, $choices, $choice1, $choice2, $choice3));
+        }
+        return Redirect::back()->with('success', "Hi ($name). You are now enlisted! Please check your e-mail for further instructions. Thank you.");
 
     }
 

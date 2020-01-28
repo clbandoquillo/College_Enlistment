@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'clbandoquillo@addu.edu.ph'),
-        'name' => env('MAIL_FROM_NAME', 'MIS'),
+        'address' => env('MAIL_FROM_ADDRESS', 'enlisting@addu.edu.ph'),
+        'name' => env('MAIL_FROM_NAME', 'Management Information Services - Ateneo de Davao University'),
     ],
 
     /*

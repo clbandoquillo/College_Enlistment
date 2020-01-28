@@ -14,5 +14,5 @@ class Program extends Authenticatable
      *
      * @var array
      */
-    protected $table = 'programs';
+    protected $table = 'curriculumn';
 }

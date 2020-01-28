@@ -14,5 +14,5 @@ class Religion extends Authenticatable
      *
      * @var array
      */
-    protected $table = 'religions';
+    protected $table = 'religion';
 }

@@ -66,12 +66,14 @@ class Enlist extends Migration
 
 
             $table->string('fatherName');
-            $table->string('fatherOccupation');
-            $table->string('fatherAddress');
+            $table->string('fatherLiving')->nullable();
+            $table->string('fatherOccupation')->nullable();
+            $table->string('fatherAddress')->nullable();
             $table->string('fatherContactNum')->nullable();
             $table->string('motherName');
-            $table->string('motherOccupation');
-            $table->string('motherAddress');
+            $table->string('motherLiving')->nullable();
+            $table->string('motherOccupation')->nullable();
+            $table->string('motherAddress')->nullable();
             $table->string('motherContactNum')->nullable();
 
             $table->string('parentsMaritalStatus');
@@ -84,7 +86,7 @@ class Enlist extends Migration
             $table->string('principalSHS')->nullable();
             $table->string('track')->nullable();
             $table->string('strand')->nullable();
-            $table->integer('isIndigenous');
+            $table->integer('isIndigenous')->nullable();
             $table->string('indigenousCommunity')->nullable();
             $table->string('nameCollegeUniv')->nullable();
             $table->string('addressCollegeUniv')->nullable();
@@ -96,6 +98,8 @@ class Enlist extends Migration
             $table->string('currTherapyRehabCounselingName')->nullable();
             $table->string('currTherapyRehabCounselingContact')->nullable();
             $table->string('reasonToSeekHelp', 1000)->nullable();
+
+            $table->string('status')->nullable();
 
             $table->timestamps();
         });

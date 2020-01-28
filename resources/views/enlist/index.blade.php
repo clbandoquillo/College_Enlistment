@@ -74,7 +74,7 @@
                                                                             </div>
                                                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                               <div class="form-group">
-                                                                                <label>Suffix</label>
+                                                                                <label>Suffix (Jr., III, IV etc.)</label>
                                                                                   <input name="suffix" type="text" class="form-control" placeholder="Suffix">
                                                                               </div>
                                                                             </div>
@@ -124,8 +124,8 @@
                                                                                   <label>Gender</label>
                                                                                   <select name="gender" class="form-control" required>
                                                                                     <option value="none" selected="" disabled=""></option>
-                                                                                    <option value="0">Male</option>
-                                                                                    <option value="1">Female</option>
+                                                                                    <option value="1">Male</option>
+                                                                                    <option value="2">Female</option>
                                                                                   </select>
                                                                               </div>
                                                                             </div>
@@ -142,18 +142,25 @@
                                                                                   <label>Civil Status</label>
                                                                                   <select name="civilStatus" class="form-control" required>
                                                                                     <option value="none" selected="" disabled=""></option>
-                                                                                    <option value="Single">Single (Never Married)</option>
-                                                                                    <option value="Married">Married</option>
-                                                                                    <option value="Divorced">Divorced</option>
-                                                                                    <option value="Separated">Separated</option>
-                                                                                    <option value="Widowed">Widowed</option>
+                                                                                    <option value="1">Single (Never Married)</option>
+                                                                                    <option value="2">Married</option>
+                                                                                    <option value="3">Widow / Widower</option>
+                                                                                    <option value="4">Head of the Family</option>
                                                                                   </select>
                                                                               </div>
                                                                             </div>
                                                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                               <div class = "form-group">
                                                                                 <label>Citizenship</label>
-                                                                                <input name="citizenship" id="citizenship" type="text" class="form-control" value = "Filipino" placeholder="Citizenship" required>
+                                                                              <div class="chosen-select-single mg-b-20">
+                                                                                <select data-placeholder="Choose a Citizenship..." id="citizenship" name="citizenship" class="form-control" tabindex="-1" required>
+                                                                                  <option value="" selected></option>
+                                                                                  <option value="" selected="" ></option>
+                                                                                  @foreach($nationality as $n)
+                                                                                    <option value="{{ $n->CODE }}">{{ $n->NAME }}</option>
+                                                                                  @endforeach
+                                                                                </select>
+                                                                                </div>
                                                                               </div>
                                                                             </div>
                                                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -162,7 +169,7 @@
                                                                                   <select id = "religion" name="religion" class="form-control" required>
                                                                                     <option value="none" selected="" disabled=""></option>
                                                                                     @foreach($religions as $r)
-                                                                                    <option value="{{ $r->id }}">{{ $r->description }}</option>
+                                                                                    <option value="{{ $r->CODE }}">{{ $r->DESCRIPTION }}</option>
                                                                                     @endforeach
                                                                                   </select>
                                                                               </div>
@@ -183,16 +190,21 @@
                                                                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class = "form-group">
                                                                                   <label>City</label>
-                                                                                  <input name="permanentCity" type="text" class="form-control" placeholder="City" required>
+                                                                                  <select data-placeholder="Choose a City..." id="permanentCity" name="permanentCity" class="form-control" tabindex="-1">
+                                                                                  <option value="" selected="" ></option>
+                                                                                  @foreach($city as $c)
+                                                                                    <option value="{{ $c->CityId }}">{{ $c->CityName }}</option>
+                                                                                  @endforeach
+                                                                                </select>
                                                                               </div>
                                                                             </div>
                                                                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class = "form-group">
                                                                                   <label>Province</label>
                                                                                   <select id = "permanentProvince" name="permanentProvince" class="form-control" required>
-                                                                                    <option value="none" selected="" disabled=""></option>
+                                                                                    <option value="none" selected="" disabled="" ></option>
                                                                                     @foreach($provinces as $p)
-                                                                                    <option value="{{ $p->id }}">{{ $p->ProvinceName }}</option>
+                                                                                    <option value="{{ $p->ProvinceId }}">{{ $p->ProvinceName }}</option>
                                                                                     @endforeach
                                                                                   </select>
                                                                               </div>
@@ -207,259 +219,11 @@
                                                                               <div class = "form-group">
                                                                               <label>Country</label>
                                                                               <div class="chosen-select-single mg-b-20">
-                                                                                <select data-placeholder="Choose a Country..." id="permanentCountry" name="permanentCountry" class="chosen-select" tabindex="-1" required>
-                                                                                  <option value="Philippines" selected>Philippines</option>
-                                                                                  <option value="United States">United States</option>
-                                                                                  <option value="United Kingdom">United Kingdom</option>
-                                                                                  <option value="Afghanistan">Afghanistan</option>
-                                                                                  <option value="Aland Islands">Aland Islands</option>
-                                                                                  <option value="Albania">Albania</option>
-                                                                                  <option value="Algeria">Algeria</option>
-                                                                                  <option value="American Samoa">American Samoa</option>
-                                                                                  <option value="Andorra">Andorra</option>
-                                                                                  <option value="Angola">Angola</option>
-                                                                                  <option value="Anguilla">Anguilla</option>
-                                                                                  <option value="Antarctica">Antarctica</option>
-                                                                                  <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                                                                                  <option value="Argentina">Argentina</option>
-                                                                                  <option value="Armenia">Armenia</option>
-                                                                                  <option value="Aruba">Aruba</option>
-                                                                                  <option value="Australia">Australia</option>
-                                                                                  <option value="Austria">Austria</option>
-                                                                                  <option value="Azerbaijan">Azerbaijan</option>
-                                                                                  <option value="Bahamas">Bahamas</option>
-                                                                                  <option value="Bahrain">Bahrain</option>
-                                                                                  <option value="Bangladesh">Bangladesh</option>
-                                                                                  <option value="Barbados">Barbados</option>
-                                                                                  <option value="Belarus">Belarus</option>
-                                                                                  <option value="Belgium">Belgium</option>
-                                                                                  <option value="Belize">Belize</option>
-                                                                                  <option value="Benin">Benin</option>
-                                                                                  <option value="Bermuda">Bermuda</option>
-                                                                                  <option value="Bhutan">Bhutan</option>
-                                                                                  <option value="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
-                                                                                  <option value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
-                                                                                  <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                                                                                  <option value="Botswana">Botswana</option>
-                                                                                  <option value="Bouvet Island">Bouvet Island</option>
-                                                                                  <option value="Brazil">Brazil</option>
-                                                                                  <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
-                                                                                  <option value="Brunei Darussalam">Brunei Darussalam</option>
-                                                                                  <option value="Bulgaria">Bulgaria</option>
-                                                                                  <option value="Burkina Faso">Burkina Faso</option>
-                                                                                  <option value="Burundi">Burundi</option>
-                                                                                  <option value="Cambodia">Cambodia</option>
-                                                                                  <option value="Cameroon">Cameroon</option>
-                                                                                  <option value="Canada">Canada</option>
-                                                                                  <option value="Cape Verde">Cape Verde</option>
-                                                                                  <option value="Cayman Islands">Cayman Islands</option>
-                                                                                  <option value="Central African Republic">Central African Republic</option>
-                                                                                  <option value="Chad">Chad</option>
-                                                                                  <option value="Chile">Chile</option>
-                                                                                  <option value="China">China</option>
-                                                                                  <option value="Christmas Island">Christmas Island</option>
-                                                                                  <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-                                                                                  <option value="Colombia">Colombia</option>
-                                                                                  <option value="Comoros">Comoros</option>
-                                                                                  <option value="Congo">Congo</option>
-                                                                                  <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
-                                                                                  <option value="Cook Islands">Cook Islands</option>
-                                                                                  <option value="Costa Rica">Costa Rica</option>
-                                                                                  <option value="Cote D'ivoire">Cote D'ivoire</option>
-                                                                                  <option value="Croatia">Croatia</option>
-                                                                                  <option value="Cuba">Cuba</option>
-                                                                                  <option value="Curacao">Curacao</option>
-                                                                                  <option value="Cyprus">Cyprus</option>
-                                                                                  <option value="Czech Republic">Czech Republic</option>
-                                                                                  <option value="Denmark">Denmark</option>
-                                                                                  <option value="Djibouti">Djibouti</option>
-                                                                                  <option value="Dominica">Dominica</option>
-                                                                                  <option value="Dominican Republic">Dominican Republic</option>
-                                                                                  <option value="Ecuador">Ecuador</option>
-                                                                                  <option value="Egypt">Egypt</option>
-                                                                                  <option value="El Salvador">El Salvador</option>
-                                                                                  <option value="Equatorial Guinea">Equatorial Guinea</option>
-                                                                                  <option value="Eritrea">Eritrea</option>
-                                                                                  <option value="Estonia">Estonia</option>
-                                                                                  <option value="Ethiopia">Ethiopia</option>
-                                                                                  <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
-                                                                                  <option value="Faroe Islands">Faroe Islands</option>
-                                                                                  <option value="Fiji">Fiji</option>
-                                                                                  <option value="Finland">Finland</option>
-                                                                                  <option value="France">France</option>
-                                                                                  <option value="French Guiana">French Guiana</option>
-                                                                                  <option value="French Polynesia">French Polynesia</option>
-                                                                                  <option value="French Southern Territories">French Southern Territories</option>
-                                                                                  <option value="Gabon">Gabon</option>
-                                                                                  <option value="Gambia">Gambia</option>
-                                                                                  <option value="Georgia">Georgia</option>
-                                                                                  <option value="Germany">Germany</option>
-                                                                                  <option value="Ghana">Ghana</option>
-                                                                                  <option value="Gibraltar">Gibraltar</option>
-                                                                                  <option value="Greece">Greece</option>
-                                                                                  <option value="Greenland">Greenland</option>
-                                                                                  <option value="Grenada">Grenada</option>
-                                                                                  <option value="Guadeloupe">Guadeloupe</option>
-                                                                                  <option value="Guam">Guam</option>
-                                                                                  <option value="Guatemala">Guatemala</option>
-                                                                                  <option value="Guernsey">Guernsey</option>
-                                                                                  <option value="Guinea">Guinea</option>
-                                                                                  <option value="Guinea-bissau">Guinea-bissau</option>
-                                                                                  <option value="Guyana">Guyana</option>
-                                                                                  <option value="Haiti">Haiti</option>
-                                                                                  <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
-                                                                                  <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
-                                                                                  <option value="Honduras">Honduras</option>
-                                                                                  <option value="Hong Kong">Hong Kong</option>
-                                                                                  <option value="Hungary">Hungary</option>
-                                                                                  <option value="Iceland">Iceland</option>
-                                                                                  <option value="India">India</option>
-                                                                                  <option value="Indonesia">Indonesia</option>
-                                                                                  <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
-                                                                                  <option value="Iraq">Iraq</option>
-                                                                                  <option value="Ireland">Ireland</option>
-                                                                                  <option value="Isle of Man">Isle of Man</option>
-                                                                                  <option value="Israel">Israel</option>
-                                                                                  <option value="Italy">Italy</option>
-                                                                                  <option value="Jamaica">Jamaica</option>
-                                                                                  <option value="Japan">Japan</option>
-                                                                                  <option value="Jersey">Jersey</option>
-                                                                                  <option value="Jordan">Jordan</option>
-                                                                                  <option value="Kazakhstan">Kazakhstan</option>
-                                                                                  <option value="Kenya">Kenya</option>
-                                                                                  <option value="Kiribati">Kiribati</option>
-                                                                                  <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
-                                                                                  <option value="Korea, Republic of">Korea, Republic of</option>
-                                                                                  <option value="Kuwait">Kuwait</option>
-                                                                                  <option value="Kyrgyzstan">Kyrgyzstan</option>
-                                                                                  <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
-                                                                                  <option value="Latvia">Latvia</option>
-                                                                                  <option value="Lebanon">Lebanon</option>
-                                                                                  <option value="Lesotho">Lesotho</option>
-                                                                                  <option value="Liberia">Liberia</option>
-                                                                                  <option value="Libya">Libya</option>
-                                                                                  <option value="Liechtenstein">Liechtenstein</option>
-                                                                                  <option value="Lithuania">Lithuania</option>
-                                                                                  <option value="Luxembourg">Luxembourg</option>
-                                                                                  <option value="Macao">Macao</option>
-                                                                                  <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
-                                                                                  <option value="Madagascar">Madagascar</option>
-                                                                                  <option value="Malawi">Malawi</option>
-                                                                                  <option value="Malaysia">Malaysia</option>
-                                                                                  <option value="Maldives">Maldives</option>
-                                                                                  <option value="Mali">Mali</option>
-                                                                                  <option value="Malta">Malta</option>
-                                                                                  <option value="Marshall Islands">Marshall Islands</option>
-                                                                                  <option value="Martinique">Martinique</option>
-                                                                                  <option value="Mauritania">Mauritania</option>
-                                                                                  <option value="Mauritius">Mauritius</option>
-                                                                                  <option value="Mayotte">Mayotte</option>
-                                                                                  <option value="Mexico">Mexico</option>
-                                                                                  <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
-                                                                                  <option value="Moldova, Republic of">Moldova, Republic of</option>
-                                                                                  <option value="Monaco">Monaco</option>
-                                                                                  <option value="Mongolia">Mongolia</option>
-                                                                                  <option value="Montenegro">Montenegro</option>
-                                                                                  <option value="Montserrat">Montserrat</option>
-                                                                                  <option value="Morocco">Morocco</option>
-                                                                                  <option value="Mozambique">Mozambique</option>
-                                                                                  <option value="Myanmar">Myanmar</option>
-                                                                                  <option value="Namibia">Namibia</option>
-                                                                                  <option value="Nauru">Nauru</option>
-                                                                                  <option value="Nepal">Nepal</option>
-                                                                                  <option value="Netherlands">Netherlands</option>
-                                                                                  <option value="New Caledonia">New Caledonia</option>
-                                                                                  <option value="New Zealand">New Zealand</option>
-                                                                                  <option value="Nicaragua">Nicaragua</option>
-                                                                                  <option value="Niger">Niger</option>
-                                                                                  <option value="Nigeria">Nigeria</option>
-                                                                                  <option value="Niue">Niue</option>
-                                                                                  <option value="Norfolk Island">Norfolk Island</option>
-                                                                                  <option value="Northern Mariana Islands">Northern Mariana Islands</option>
-                                                                                  <option value="Norway">Norway</option>
-                                                                                  <option value="Oman">Oman</option>
-                                                                                  <option value="Pakistan">Pakistan</option>
-                                                                                  <option value="Palau">Palau</option>
-                                                                                  <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
-                                                                                  <option value="Panama">Panama</option>
-                                                                                  <option value="Papua New Guinea">Papua New Guinea</option>
-                                                                                  <option value="Paraguay">Paraguay</option>
-                                                                                  <option value="Peru">Peru</option>
-                                                                                  <option value="Philippines">Philippines</option>
-                                                                                  <option value="Pitcairn">Pitcairn</option>
-                                                                                  <option value="Poland">Poland</option>
-                                                                                  <option value="Portugal">Portugal</option>
-                                                                                  <option value="Puerto Rico">Puerto Rico</option>
-                                                                                  <option value="Qatar">Qatar</option>
-                                                                                  <option value="Reunion">Reunion</option>
-                                                                                  <option value="Romania">Romania</option>
-                                                                                  <option value="Russian Federation">Russian Federation</option>
-                                                                                  <option value="Rwanda">Rwanda</option>
-                                                                                  <option value="Saint Barthelemy">Saint Barthelemy</option>
-                                                                                  <option value="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</option>
-                                                                                  <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-                                                                                  <option value="Saint Lucia">Saint Lucia</option>
-                                                                                  <option value="Saint Martin (French part)">Saint Martin (French part)</option>
-                                                                                  <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
-                                                                                  <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
-                                                                                  <option value="Samoa">Samoa</option>
-                                                                                  <option value="San Marino">San Marino</option>
-                                                                                  <option value="Sao Tome and Principe">Sao Tome and Principe</option>
-                                                                                  <option value="Saudi Arabia">Saudi Arabia</option>
-                                                                                  <option value="Senegal">Senegal</option>
-                                                                                  <option value="Serbia">Serbia</option>
-                                                                                  <option value="Seychelles">Seychelles</option>
-                                                                                  <option value="Sierra Leone">Sierra Leone</option>
-                                                                                  <option value="Singapore">Singapore</option>
-                                                                                  <option value="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
-                                                                                  <option value="Slovakia">Slovakia</option>
-                                                                                  <option value="Slovenia">Slovenia</option>
-                                                                                  <option value="Solomon Islands">Solomon Islands</option>
-                                                                                  <option value="Somalia">Somalia</option>
-                                                                                  <option value="South Africa">South Africa</option>
-                                                                                  <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
-                                                                                  <option value="South Sudan">South Sudan</option>
-                                                                                  <option value="Spain">Spain</option>
-                                                                                  <option value="Sri Lanka">Sri Lanka</option>
-                                                                                  <option value="Sudan">Sudan</option>
-                                                                                  <option value="Suriname">Suriname</option>
-                                                                                  <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
-                                                                                  <option value="Swaziland">Swaziland</option>
-                                                                                  <option value="Sweden">Sweden</option>
-                                                                                  <option value="Switzerland">Switzerland</option>
-                                                                                  <option value="Syrian Arab Republic">Syrian Arab Republic</option>
-                                                                                  <option value="Taiwan, Province of China">Taiwan, Province of China</option>
-                                                                                  <option value="Tajikistan">Tajikistan</option>
-                                                                                  <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
-                                                                                  <option value="Thailand">Thailand</option>
-                                                                                  <option value="Timor-leste">Timor-leste</option>
-                                                                                  <option value="Togo">Togo</option>
-                                                                                  <option value="Tokelau">Tokelau</option>
-                                                                                  <option value="Tonga">Tonga</option>
-                                                                                  <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-                                                                                  <option value="Tunisia">Tunisia</option>
-                                                                                  <option value="Turkey">Turkey</option>
-                                                                                  <option value="Turkmenistan">Turkmenistan</option>
-                                                                                  <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
-                                                                                  <option value="Tuvalu">Tuvalu</option>
-                                                                                  <option value="Uganda">Uganda</option>
-                                                                                  <option value="Ukraine">Ukraine</option>
-                                                                                  <option value="United Arab Emirates">United Arab Emirates</option>
-                                                                                  <option value="United Kingdom">United Kingdom</option>
-                                                                                  <option value="United States">United States</option>
-                                                                                  <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
-                                                                                  <option value="Uruguay">Uruguay</option>
-                                                                                  <option value="Uzbekistan">Uzbekistan</option>
-                                                                                  <option value="Vanuatu">Vanuatu</option>
-                                                                                  <option value="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
-                                                                                  <option value="Viet Nam">Viet Nam</option>
-                                                                                  <option value="Virgin Islands, British">Virgin Islands, British</option>
-                                                                                  <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
-                                                                                  <option value="Wallis and Futuna">Wallis and Futuna</option>
-                                                                                  <option value="Western Sahara">Western Sahara</option>
-                                                                                  <option value="Yemen">Yemen</option>
-                                                                                  <option value="Zambia">Zambia</option>
-                                                                                  <option value="Zimbabwe">Zimbabwe</option>
+                                                                                <select data-placeholder="Choose a Country..." id="permanentCountry" name="permanentCountry" class="form-control" tabindex="-1" required>
+                                                                                  <option value="" selected="" ></option>
+                                                                                  @foreach($countries as $c)
+                                                                                    <option value="{{ $c->id }}">{{ $c->description }}</option>
+                                                                                  @endforeach
                                                                                 </select>
                                                                                 </div>
                                                                               </div>
@@ -470,13 +234,22 @@
                                                                 </div>
                                                                 <h4 class="form-header text-primary">City Address</h4>
                                                                 <div class="form-group">
-                                                                  <label class = "radio-inline"><input class="pull-left" type="checkbox" onclick="javascript:checkPermanent();" id = "sameAsPermanent" value="1" name="sameAsPermanent">Same as permanent</label>
-                                                                  <label class = "radio-inline"><input class="pull-left" type="checkbox" value="1" name="boarding" id = "boarding">Boarding</label>
-                                                                  <label class = "radio-inline"><input class="pull-left" type="checkbox" value="1" name="withRelative" id = "withRelative">With relative</label>
+                                                                  <label>Same as permanent</label>
+                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" onclick="javascript:checkPermanent();" id = "sameAsPermanent" value="1" name="sameAsPermanent">Yes</label>
+                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" onclick="javascript:checkPermanent();" id = "sameAsPermanent" value="0" name="sameAsPermanent">No</label>
+                                                                </div>
+                                                                <label id="boxcheck">Check the following boxes if the following applies to you:</label>
+                                                                <div id="board" class="form-group">
+                                                                  <label>Boarding</label>
+                                                                  <label class = "radio-inline"><input class="pull-left" type="checkbox" value="1" name="boarding" id = "boarding"></label>
+                                                                </div>
+                                                                <div id="relative" class="form-group">
+                                                                  <label>With Relative</label>
+                                                                  <label class = "radio-inline"><input class="pull-left" type="checkbox" value="1" name="withRelative" id = "withRelative"></label>
                                                                 </div>
                                                                 <div class="form-group" style="display:block" id="caddress">
-                                                                  <label>City Address (House No., Street, Subdivision/Sitio, Barangay)</label>
-                                                                    <input id="cityAddress" name="cityAddress" type="text" class="form-control" placeholder="City Address" required>
+                                                                  <label id="cityAddressLabel">City Address (House No., Street, Subdivision/Sitio, Barangay)</label>
+                                                                    <input id="cityAddress" name="cityAddress" type="text" class="form-control" placeholder="City Address">
                                                                 </div>
                                                                 <div class="form-group">
                                                                   <div class = "row">
@@ -484,286 +257,41 @@
                                                                         <div class="row">
                                                                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class = "form-group">
-                                                                                  <label>City</label>
-                                                                                  <input id="cityCity" 
-                                                                                  name="cityCity" type="text" class="form-control" placeholder="City" required>
+                                                                                  <label id="cityCityLabel">City</label>
+                                                                                  <select data-placeholder="Choose a City..." id="cityCity" name="cityCity" class="form-control" tabindex="-1">
+                                                                                  <option value="" ></option>
+                                                                                  @foreach($city as $c)
+                                                                                    <option value="{{ $c->CityId }}">{{ $c->CityName }}</option>
+                                                                                  @endforeach
+                                                                                </select>
                                                                               </div>
                                                                             </div>
                                                                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class = "form-group">
-                                                                                  <label>Province</label>
+                                                                                  <label id = "cityProvinceLabel">Province</label>
                                                                                   <select id = "cityProvince" name="cityProvince" class="form-control" required>
-                                                                                    <option value="none" selected="" disabled=""></option>
+                                                                                    <option value="" ></option>
                                                                                     @foreach($provinces as $p)
-                                                                                    <option value="{{ $p->id }}">{{ $p->ProvinceName }}</option>
+                                                                                    <option value="{{ $p->ProvinceId }}">{{ $p->ProvinceName }}</option>
                                                                                     @endforeach
                                                                                   </select>
                                                                               </div>
                                                                             </div>
                                                                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class = "form-group">
-                                                                                  <label>Zip/Postal Code</label>
-                                                                                  <input id="cityzippostalcode" name="cityzippostalcode" type="text" class="form-control" placeholder="Zip/Postal Code" required>
+                                                                                  <label id="cityzippostalcodeLabel">Zip/Postal Code</label>
+                                                                                  <input id="cityzippostalcode" name="cityzippostalcode" type="text" class="form-control" placeholder="Zip/Postal Code">
                                                                               </div>
                                                                             </div>
                                                                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class = "form-group">
-                                                                              <label>Country</label>
+                                                                              <label id="cityCountryLabel">Country</label>
                                                                               <div class="chosen-select-single mg-b-20">
-                                                                                <select data-placeholder="Choose a Country..." id="cityCountry" name="cityCountry" class="chosen-select" tabindex="-1" required>
-                                                                                  <option value="" selected></option>
-                                                                                  <option value="Philippines">Philippines</option>
-                                                                                  <option value="United States">United States</option>
-                                                                                  <option value="United Kingdom">United Kingdom</option>
-                                                                                  <option value="Afghanistan">Afghanistan</option>
-                                                                                  <option value="Aland Islands">Aland Islands</option>
-                                                                                  <option value="Albania">Albania</option>
-                                                                                  <option value="Algeria">Algeria</option>
-                                                                                  <option value="American Samoa">American Samoa</option>
-                                                                                  <option value="Andorra">Andorra</option>
-                                                                                  <option value="Angola">Angola</option>
-                                                                                  <option value="Anguilla">Anguilla</option>
-                                                                                  <option value="Antarctica">Antarctica</option>
-                                                                                  <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                                                                                  <option value="Argentina">Argentina</option>
-                                                                                  <option value="Armenia">Armenia</option>
-                                                                                  <option value="Aruba">Aruba</option>
-                                                                                  <option value="Australia">Australia</option>
-                                                                                  <option value="Austria">Austria</option>
-                                                                                  <option value="Azerbaijan">Azerbaijan</option>
-                                                                                  <option value="Bahamas">Bahamas</option>
-                                                                                  <option value="Bahrain">Bahrain</option>
-                                                                                  <option value="Bangladesh">Bangladesh</option>
-                                                                                  <option value="Barbados">Barbados</option>
-                                                                                  <option value="Belarus">Belarus</option>
-                                                                                  <option value="Belgium">Belgium</option>
-                                                                                  <option value="Belize">Belize</option>
-                                                                                  <option value="Benin">Benin</option>
-                                                                                  <option value="Bermuda">Bermuda</option>
-                                                                                  <option value="Bhutan">Bhutan</option>
-                                                                                  <option value="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
-                                                                                  <option value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
-                                                                                  <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                                                                                  <option value="Botswana">Botswana</option>
-                                                                                  <option value="Bouvet Island">Bouvet Island</option>
-                                                                                  <option value="Brazil">Brazil</option>
-                                                                                  <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
-                                                                                  <option value="Brunei Darussalam">Brunei Darussalam</option>
-                                                                                  <option value="Bulgaria">Bulgaria</option>
-                                                                                  <option value="Burkina Faso">Burkina Faso</option>
-                                                                                  <option value="Burundi">Burundi</option>
-                                                                                  <option value="Cambodia">Cambodia</option>
-                                                                                  <option value="Cameroon">Cameroon</option>
-                                                                                  <option value="Canada">Canada</option>
-                                                                                  <option value="Cape Verde">Cape Verde</option>
-                                                                                  <option value="Cayman Islands">Cayman Islands</option>
-                                                                                  <option value="Central African Republic">Central African Republic</option>
-                                                                                  <option value="Chad">Chad</option>
-                                                                                  <option value="Chile">Chile</option>
-                                                                                  <option value="China">China</option>
-                                                                                  <option value="Christmas Island">Christmas Island</option>
-                                                                                  <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-                                                                                  <option value="Colombia">Colombia</option>
-                                                                                  <option value="Comoros">Comoros</option>
-                                                                                  <option value="Congo">Congo</option>
-                                                                                  <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
-                                                                                  <option value="Cook Islands">Cook Islands</option>
-                                                                                  <option value="Costa Rica">Costa Rica</option>
-                                                                                  <option value="Cote D'ivoire">Cote D'ivoire</option>
-                                                                                  <option value="Croatia">Croatia</option>
-                                                                                  <option value="Cuba">Cuba</option>
-                                                                                  <option value="Curacao">Curacao</option>
-                                                                                  <option value="Cyprus">Cyprus</option>
-                                                                                  <option value="Czech Republic">Czech Republic</option>
-                                                                                  <option value="Denmark">Denmark</option>
-                                                                                  <option value="Djibouti">Djibouti</option>
-                                                                                  <option value="Dominica">Dominica</option>
-                                                                                  <option value="Dominican Republic">Dominican Republic</option>
-                                                                                  <option value="Ecuador">Ecuador</option>
-                                                                                  <option value="Egypt">Egypt</option>
-                                                                                  <option value="El Salvador">El Salvador</option>
-                                                                                  <option value="Equatorial Guinea">Equatorial Guinea</option>
-                                                                                  <option value="Eritrea">Eritrea</option>
-                                                                                  <option value="Estonia">Estonia</option>
-                                                                                  <option value="Ethiopia">Ethiopia</option>
-                                                                                  <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
-                                                                                  <option value="Faroe Islands">Faroe Islands</option>
-                                                                                  <option value="Fiji">Fiji</option>
-                                                                                  <option value="Finland">Finland</option>
-                                                                                  <option value="France">France</option>
-                                                                                  <option value="French Guiana">French Guiana</option>
-                                                                                  <option value="French Polynesia">French Polynesia</option>
-                                                                                  <option value="French Southern Territories">French Southern Territories</option>
-                                                                                  <option value="Gabon">Gabon</option>
-                                                                                  <option value="Gambia">Gambia</option>
-                                                                                  <option value="Georgia">Georgia</option>
-                                                                                  <option value="Germany">Germany</option>
-                                                                                  <option value="Ghana">Ghana</option>
-                                                                                  <option value="Gibraltar">Gibraltar</option>
-                                                                                  <option value="Greece">Greece</option>
-                                                                                  <option value="Greenland">Greenland</option>
-                                                                                  <option value="Grenada">Grenada</option>
-                                                                                  <option value="Guadeloupe">Guadeloupe</option>
-                                                                                  <option value="Guam">Guam</option>
-                                                                                  <option value="Guatemala">Guatemala</option>
-                                                                                  <option value="Guernsey">Guernsey</option>
-                                                                                  <option value="Guinea">Guinea</option>
-                                                                                  <option value="Guinea-bissau">Guinea-bissau</option>
-                                                                                  <option value="Guyana">Guyana</option>
-                                                                                  <option value="Haiti">Haiti</option>
-                                                                                  <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
-                                                                                  <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
-                                                                                  <option value="Honduras">Honduras</option>
-                                                                                  <option value="Hong Kong">Hong Kong</option>
-                                                                                  <option value="Hungary">Hungary</option>
-                                                                                  <option value="Iceland">Iceland</option>
-                                                                                  <option value="India">India</option>
-                                                                                  <option value="Indonesia">Indonesia</option>
-                                                                                  <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
-                                                                                  <option value="Iraq">Iraq</option>
-                                                                                  <option value="Ireland">Ireland</option>
-                                                                                  <option value="Isle of Man">Isle of Man</option>
-                                                                                  <option value="Israel">Israel</option>
-                                                                                  <option value="Italy">Italy</option>
-                                                                                  <option value="Jamaica">Jamaica</option>
-                                                                                  <option value="Japan">Japan</option>
-                                                                                  <option value="Jersey">Jersey</option>
-                                                                                  <option value="Jordan">Jordan</option>
-                                                                                  <option value="Kazakhstan">Kazakhstan</option>
-                                                                                  <option value="Kenya">Kenya</option>
-                                                                                  <option value="Kiribati">Kiribati</option>
-                                                                                  <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
-                                                                                  <option value="Korea, Republic of">Korea, Republic of</option>
-                                                                                  <option value="Kuwait">Kuwait</option>
-                                                                                  <option value="Kyrgyzstan">Kyrgyzstan</option>
-                                                                                  <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
-                                                                                  <option value="Latvia">Latvia</option>
-                                                                                  <option value="Lebanon">Lebanon</option>
-                                                                                  <option value="Lesotho">Lesotho</option>
-                                                                                  <option value="Liberia">Liberia</option>
-                                                                                  <option value="Libya">Libya</option>
-                                                                                  <option value="Liechtenstein">Liechtenstein</option>
-                                                                                  <option value="Lithuania">Lithuania</option>
-                                                                                  <option value="Luxembourg">Luxembourg</option>
-                                                                                  <option value="Macao">Macao</option>
-                                                                                  <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
-                                                                                  <option value="Madagascar">Madagascar</option>
-                                                                                  <option value="Malawi">Malawi</option>
-                                                                                  <option value="Malaysia">Malaysia</option>
-                                                                                  <option value="Maldives">Maldives</option>
-                                                                                  <option value="Mali">Mali</option>
-                                                                                  <option value="Malta">Malta</option>
-                                                                                  <option value="Marshall Islands">Marshall Islands</option>
-                                                                                  <option value="Martinique">Martinique</option>
-                                                                                  <option value="Mauritania">Mauritania</option>
-                                                                                  <option value="Mauritius">Mauritius</option>
-                                                                                  <option value="Mayotte">Mayotte</option>
-                                                                                  <option value="Mexico">Mexico</option>
-                                                                                  <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
-                                                                                  <option value="Moldova, Republic of">Moldova, Republic of</option>
-                                                                                  <option value="Monaco">Monaco</option>
-                                                                                  <option value="Mongolia">Mongolia</option>
-                                                                                  <option value="Montenegro">Montenegro</option>
-                                                                                  <option value="Montserrat">Montserrat</option>
-                                                                                  <option value="Morocco">Morocco</option>
-                                                                                  <option value="Mozambique">Mozambique</option>
-                                                                                  <option value="Myanmar">Myanmar</option>
-                                                                                  <option value="Namibia">Namibia</option>
-                                                                                  <option value="Nauru">Nauru</option>
-                                                                                  <option value="Nepal">Nepal</option>
-                                                                                  <option value="Netherlands">Netherlands</option>
-                                                                                  <option value="New Caledonia">New Caledonia</option>
-                                                                                  <option value="New Zealand">New Zealand</option>
-                                                                                  <option value="Nicaragua">Nicaragua</option>
-                                                                                  <option value="Niger">Niger</option>
-                                                                                  <option value="Nigeria">Nigeria</option>
-                                                                                  <option value="Niue">Niue</option>
-                                                                                  <option value="Norfolk Island">Norfolk Island</option>
-                                                                                  <option value="Northern Mariana Islands">Northern Mariana Islands</option>
-                                                                                  <option value="Norway">Norway</option>
-                                                                                  <option value="Oman">Oman</option>
-                                                                                  <option value="Pakistan">Pakistan</option>
-                                                                                  <option value="Palau">Palau</option>
-                                                                                  <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
-                                                                                  <option value="Panama">Panama</option>
-                                                                                  <option value="Papua New Guinea">Papua New Guinea</option>
-                                                                                  <option value="Paraguay">Paraguay</option>
-                                                                                  <option value="Peru">Peru</option>
-                                                                                  <option value="Philippines">Philippines</option>
-                                                                                  <option value="Pitcairn">Pitcairn</option>
-                                                                                  <option value="Poland">Poland</option>
-                                                                                  <option value="Portugal">Portugal</option>
-                                                                                  <option value="Puerto Rico">Puerto Rico</option>
-                                                                                  <option value="Qatar">Qatar</option>
-                                                                                  <option value="Reunion">Reunion</option>
-                                                                                  <option value="Romania">Romania</option>
-                                                                                  <option value="Russian Federation">Russian Federation</option>
-                                                                                  <option value="Rwanda">Rwanda</option>
-                                                                                  <option value="Saint Barthelemy">Saint Barthelemy</option>
-                                                                                  <option value="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</option>
-                                                                                  <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-                                                                                  <option value="Saint Lucia">Saint Lucia</option>
-                                                                                  <option value="Saint Martin (French part)">Saint Martin (French part)</option>
-                                                                                  <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
-                                                                                  <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
-                                                                                  <option value="Samoa">Samoa</option>
-                                                                                  <option value="San Marino">San Marino</option>
-                                                                                  <option value="Sao Tome and Principe">Sao Tome and Principe</option>
-                                                                                  <option value="Saudi Arabia">Saudi Arabia</option>
-                                                                                  <option value="Senegal">Senegal</option>
-                                                                                  <option value="Serbia">Serbia</option>
-                                                                                  <option value="Seychelles">Seychelles</option>
-                                                                                  <option value="Sierra Leone">Sierra Leone</option>
-                                                                                  <option value="Singapore">Singapore</option>
-                                                                                  <option value="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
-                                                                                  <option value="Slovakia">Slovakia</option>
-                                                                                  <option value="Slovenia">Slovenia</option>
-                                                                                  <option value="Solomon Islands">Solomon Islands</option>
-                                                                                  <option value="Somalia">Somalia</option>
-                                                                                  <option value="South Africa">South Africa</option>
-                                                                                  <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
-                                                                                  <option value="South Sudan">South Sudan</option>
-                                                                                  <option value="Spain">Spain</option>
-                                                                                  <option value="Sri Lanka">Sri Lanka</option>
-                                                                                  <option value="Sudan">Sudan</option>
-                                                                                  <option value="Suriname">Suriname</option>
-                                                                                  <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
-                                                                                  <option value="Swaziland">Swaziland</option>
-                                                                                  <option value="Sweden">Sweden</option>
-                                                                                  <option value="Switzerland">Switzerland</option>
-                                                                                  <option value="Syrian Arab Republic">Syrian Arab Republic</option>
-                                                                                  <option value="Taiwan, Province of China">Taiwan, Province of China</option>
-                                                                                  <option value="Tajikistan">Tajikistan</option>
-                                                                                  <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
-                                                                                  <option value="Thailand">Thailand</option>
-                                                                                  <option value="Timor-leste">Timor-leste</option>
-                                                                                  <option value="Togo">Togo</option>
-                                                                                  <option value="Tokelau">Tokelau</option>
-                                                                                  <option value="Tonga">Tonga</option>
-                                                                                  <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-                                                                                  <option value="Tunisia">Tunisia</option>
-                                                                                  <option value="Turkey">Turkey</option>
-                                                                                  <option value="Turkmenistan">Turkmenistan</option>
-                                                                                  <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
-                                                                                  <option value="Tuvalu">Tuvalu</option>
-                                                                                  <option value="Uganda">Uganda</option>
-                                                                                  <option value="Ukraine">Ukraine</option>
-                                                                                  <option value="United Arab Emirates">United Arab Emirates</option>
-                                                                                  <option value="United Kingdom">United Kingdom</option>
-                                                                                  <option value="United States">United States</option>
-                                                                                  <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
-                                                                                  <option value="Uruguay">Uruguay</option>
-                                                                                  <option value="Uzbekistan">Uzbekistan</option>
-                                                                                  <option value="Vanuatu">Vanuatu</option>
-                                                                                  <option value="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
-                                                                                  <option value="Viet Nam">Viet Nam</option>
-                                                                                  <option value="Virgin Islands, British">Virgin Islands, British</option>
-                                                                                  <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
-                                                                                  <option value="Wallis and Futuna">Wallis and Futuna</option>
-                                                                                  <option value="Western Sahara">Western Sahara</option>
-                                                                                  <option value="Yemen">Yemen</option>
-                                                                                  <option value="Zambia">Zambia</option>
-                                                                                  <option value="Zimbabwe">Zimbabwe</option>
+                                                                                <select data-placeholder="Choose a Country..." id="cityCountry" name="cityCountry" class="form-control" tabindex="-1">
+                                                                                  <option value="" selected="" ></option>
+                                                                                  @foreach($countries as $c)
+                                                                                    <option value="{{ $c->id }}">{{ $c->description }}</option>
+                                                                                  @endforeach
                                                                                 </select>
                                                                                 </div>
                                                                               </div>
@@ -821,7 +349,7 @@
                                                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Telephone No.</label>
-                                                                                  <input type="text" class="form-control" name = "personToContactTelNo" placeholder="Telephone No.">
+                                                                                  <input type="text" class="form-control" data-mask="(999) 999-9999" name = "personToContactTelNo" placeholder="Telephone No.">
                                                                               </div>
                                                                           </div>
                                                                           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
@@ -840,16 +368,26 @@
                                                                 <div class = "row">
                                                                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                       <div class="row">
-                                                                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Blood Group</label>
-                                                                                  <input name = "bloodGroup" type="text" class="form-control" placeholder="Blood Group">
+                                                                                  <select name="bloodGroup" class="form-control" required>
+                                                                                    <option value="none" selected="" disabled=""></option>
+                                                                                    <option value="A">A</option>
+                                                                                    <option value="B">B</option>
+                                                                                    <option value="AB">AB</option>
+                                                                                    <option value="O">O</option>
+                                                                                  </select>
                                                                               </div>
                                                                           </div>
-                                                                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Rh</label>
-                                                                                  <input name = "rh" type="text" class="form-control basic-ele-mg-t-10" placeholder="Rh">
+                                                                                  <select name="rh" class="form-control" required>
+                                                                                    <option value="none" selected="" disabled=""></option>
+                                                                                    <option value="+">+</option>
+                                                                                    <option value="-">-</option>
+                                                                                  </select>
                                                                               </div>
                                                                           </div>
                                                                       </div>
@@ -882,14 +420,14 @@
                                                                       <div class="row">
                                                                           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                               <div class="form-select-list">
-                                                                                  <label>Presently taking medication?</label><label class = "radio-inline"><input class="pull-left" type="radio" value="1" name="takingMedication">Yes</label>
-                                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="0" name="takingMedication">No</label>
+                                                                                  <label>Presently taking medication?</label><label class = "radio-inline"><input class="pull-left" type="radio" value="1" name="takingMedication" onclick="javascript:yesnoMedication();" id = "yestakingMedication">Yes</label>
+                                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="0" name="takingMedication" onclick="javascript:yesnoMedication();" id = "notakingMedication">No</label>
                                                                               </div>
                                                                           </div>
                                                                           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>If yes, please indicate medication:</label>
-                                                                                  <input name = "medicationInfo" type="text" class="form-control basic-ele-mg-t-10" placeholder="">
+                                                                                  <input id = "medicationInfo" name = "medicationInfo" type="text" class="form-control basic-ele-mg-t-10" placeholder="">
                                                                               </div>
                                                                           </div>
                                                                       </div>
@@ -902,15 +440,15 @@
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Do you have special needs?</label><br>
-                                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="1" name="specialNeeds">Yes</label>
-                                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="0" name="specialNeeds">No</label>
+                                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="1" name="specialNeeds" onclick="javascript:yesnoSpecialNeeds();" id = "yesSpecialNeeds">Yes</label>
+                                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="0" name="specialNeeds" onclick="javascript:yesnoSpecialNeeds();" id = "noSpecialNeeds">No</label>
                                                                               </div>
                                                                           </div>
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Special Needs</label>
-                                                                                  <select name="typeOfSpecialNeeds" class="form-control">
-                                                                                    <option value="" selected="" disabled=""></option>
+                                                                                  <select id="typeOfSpecialNeeds" name="typeOfSpecialNeeds" class="form-control">
+                                                                                    <option value="" selected="" ></option>
                                                                                     <option value="0">Psychiatric</option>
                                                                                     <option value="1">Physical</option>
                                                                                     <option value="2">PWD</option>
@@ -921,7 +459,7 @@
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Others: (Please specify)</label>
-                                                                                  <input name = "othersSpecialNeeds" type="text" class="form-control basic-ele-mg-t-10" placeholder="Others: (Please specify)">
+                                                                                  <input id = "othersSpecialNeeds" name = "othersSpecialNeeds" type="text" class="form-control basic-ele-mg-t-10" placeholder="Others: (Please specify)">
                                                                               </div>
                                                                           </div>
                                                                       </div>
@@ -964,16 +502,21 @@
                                                                 <div class = "row">
                                                                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                       <div class="row">
-                                                                          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                                                                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Father's Complete Name</label>
                                                                                   <input type="text" class="form-control" name = "fatherName" placeholder="Father's Complete Name" required>
                                                                               </div>
                                                                           </div>
-                                                                          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                                                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                                              <div class="form-select-list">
+                                                                                  <label>Check if deceased</label><input class="pull-left" type="checkbox" onclick="javascript:checkFather();" id = "fatherLiving" value="1" name="fatherLiving">
+                                                                              </div>
+                                                                          </div>
+                                                                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Father's Occupation</label>
-                                                                                  <input type="text" class="form-control basic-ele-mg-t-10" name = "fatherOccupation" placeholder="Father's Occupation" required>
+                                                                                  <input type="text" class="form-control basic-ele-mg-t-10" id = "fatherOccupation" name = "fatherOccupation" placeholder="Father's Occupation" required>
                                                                               </div>
                                                                           </div>
                                                                       </div>
@@ -986,8 +529,8 @@
                                                                       <div class="row">
                                                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                                                                               <div class="form-select-list">
-                                                                                  <label>Father's Address (if father is deceased, please type "deceased")</label>
-                                                                                  <input type="text" class="form-control" name = "fatherAddress" placeholder="Living (if father is deceased, please type 'deceased')" required>
+                                                                                  <label>Father's Address</label>
+                                                                                  <input type="text" class="form-control" id = "fatherAddress" name = "fatherAddress" placeholder="Father's Address" required>
                                                                               </div>
                                                                           </div>
                                                                           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
@@ -1004,18 +547,23 @@
                                                                 <div class = "row">
                                                                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                       <div class="row">
-                                                                          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-                                                                              <div class="form-select-list">
-                                                                                  <label>Mother's Complete Name</label>
-                                                                                  <input name = "motherName" type="text" class="form-control" placeholder="Mother's Complete Name" required>
+                                                                              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                <div class="form-select-list">
+                                                                                    <label>Mother's Complete Name</label>
+                                                                                    <input name = "motherName" type="text" class="form-control" placeholder="Mother's Complete Name" required>
+                                                                                </div>
                                                                               </div>
-                                                                          </div>
-                                                                          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                                                              <div class="form-select-list">
-                                                                                  <label>Mother's Occupation</label>
-                                                                                  <input name = "motherOccupation" type="text" class="form-control basic-ele-mg-t-10" placeholder="Mother's Occupation" required>
+                                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                                                <div class="form-select-list">
+                                                                                    <label>Check if deceased</label><input class="pull-left" type="checkbox" onclick="javascript:checkMother();" id = "motherLiving" value="1" name="motherLiving">
+                                                                                </div>
                                                                               </div>
-                                                                          </div>
+                                                                              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                                <div class="form-select-list">
+                                                                                    <label>Mother's Occupation</label>
+                                                                                    <input id = "motherOccupation" name = "motherOccupation" type="text" class="form-control basic-ele-mg-t-10" placeholder="Mother's Occupation" required>
+                                                                                </div>
+                                                                              </div>
                                                                       </div>
                                                                   </div>
                                                                 </div>
@@ -1026,8 +574,8 @@
                                                                       <div class="row">
                                                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                                                                               <div class="form-select-list">
-                                                                                  <label>Mother's Address (if mother is deceased, please type "deceased")</label>
-                                                                                  <input type="text" class="form-control" name = "motherAddress" placeholder="Address (if mother is deceased, please type 'deceased')" required>
+                                                                                  <label>Mother's Address</label>
+                                                                                  <input type="text" class="form-control" id = "motherAddress" name = "motherAddress" placeholder="Mother's Address" required>
                                                                               </div>
                                                                           </div>
                                                                           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
@@ -1047,12 +595,28 @@
                                                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Parent's Marital Status</label>
-                                                                                  <input type="text" class="form-control" name = "parentsMaritalStatus" placeholder="Parent's Marital Status" required>
+                                                                                <select name="parentsMaritalStatus" class="form-control" required>
+                                                                                    <option value="none" selected="" disabled=""></option>
+                                                                                    <option value="1">Single (Never Married)</option>
+                                                                                    <option value="2">Married</option>
+                                                                                    <option value="3">Widow / Widower</option>
+                                                                                    <option value="4">Head of the Family</option>
+                                                                                </select>
                                                                               </div>
                                                                           </div>
                                                                           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                              <div class="form-group">
+                                                                <div class = "row">
+                                                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                      <div class="row">
+                                                                          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                                                                               <div class="form-select-list">
-                                                                                  <label>Name of Spouse (if married)</label>
+                                                                                  <label>Name of Enlistee's Spouse (if married)</label>
                                                                                   <input type="text" class="form-control" name = "nameOfSpouse" placeholder="Name of Spouse (if married)">
                                                                               </div>
                                                                           </div>
@@ -1066,7 +630,7 @@
                                                                       <div class="row">
                                                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                                                                               <div class="form-select-list">
-                                                                                  <label>Annual Family Income</label>
+                                                                                  <label>Annual Family Income (in Philippine Peso)</label>
                                                                                   <input type="number" id = "annualFamilyIncome" name = "annualFamilyIncome" class="form-control" min = "1" value = "0" placeholder="Annual Family Income" required>
                                                                               </div>
                                                                           </div>
@@ -1075,7 +639,7 @@
                                                                 </div>
                                                               </div>
                                                             <h4 class="form-header text-primary">Educational Background</h4>
-                                                            <h5 class="form-header text-primary">Primary School</h5>
+                                                            <h5 class="form-header text-primary">Preschool</h5>
                                                               <div class="form-group">
                                                                 <div class = "row">
                                                                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -1083,26 +647,26 @@
                                                                           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Name of School</label>
-                                                                                  <input name = "primarySchoolName" type="text" class="form-control" placeholder="Name of School" required>
+                                                                                  <input name = "preSchoolName" type="text" class="form-control" placeholder="Name of School" required>
                                                                               </div>
                                                                           </div>
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>Address</label>
-                                                                                  <input name = "primarySchoolAddress" type="text" class="form-control basic-ele-mg-t-10" placeholder="Address" required>
+                                                                                  <input name = "preSchoolAddress" type="text" class="form-control basic-ele-mg-t-10" placeholder="Address" required>
                                                                               </div>
                                                                           </div>
                                                                           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class="form-select-list">
-                                                                                  <label>Years Attended</label>
-                                                                                  <input name = "primarySchoolYearsAttended" type="text" class="form-control basic-ele-mg-t-10" placeholder="Years Attended" required>
+                                                                                  <label>Year Graduated</label>
+                                                                                  <input name = "preSchoolGraduated" type="number" class="form-control basic-ele-mg-t-10" min="1" placeholder="Years Graduated" required>
                                                                               </div>
                                                                           </div>
                                                                       </div>
                                                                   </div>
                                                                 </div>
                                                               </div>
-                                                            <h5 class="form-header text-primary">Grade School</h5>
+                                                            <h5 class="form-header text-primary">Primary School</h5>
                                                               <div class="form-group">
                                                                 <div class = "row">
                                                                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -1121,15 +685,15 @@
                                                                           </div>
                                                                           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class="form-select-list">
-                                                                                  <label>Years Attended</label>
-                                                                                  <input name = "gradeSchoolYearsAttended" type="text" class="form-control basic-ele-mg-t-10" placeholder="Years Attended" required>
+                                                                                  <label>Year Graduated</label>
+                                                                                  <input name = "gradeSchoolGraduated" type="number" class="form-control basic-ele-mg-t-10" min="1" placeholder="Years Graduated" required>
                                                                               </div>
                                                                           </div>
                                                                       </div>
                                                                   </div>
                                                                 </div>
                                                               </div>
-                                                            <h5 class="form-header text-primary">High School</h5>
+                                                            <h5 class="form-header text-primary">High School (Grade 7 to 10)</h5>
                                                               <div class="form-group">
                                                                 <div class = "row">
                                                                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -1148,18 +712,30 @@
                                                                           </div>
                                                                           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                               <div class="form-select-list">
-                                                                                  <label>Years Attended</label>
-                                                                                  <input name = "highSchoolYearsAttended" type="text" class="form-control basic-ele-mg-t-10" placeholder="Years Attended" required>
+                                                                                  <label>Year Graduated</label>
+                                                                                  <input name = "highSchoolGraduated" type="number" class="form-control basic-ele-mg-t-10" min="1" placeholder="Years Graduated" required>
                                                                               </div>
                                                                           </div>
                                                                       </div>
                                                                   </div>
                                                                 </div>
                                                               </div>
+                                                              <label>Check the following boxes if the following applies to you:</label>
                                                             <div class="form-group isIndigenousComm">
                                                                   <label>Are you a College Transferee?</label>
-                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" onclick="javascript:yesnoCheckCollege();" id = "yesCheckCollege" value="1" name="isIndigenous">Yes</label>
-                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="0" name="isIndigenous" onclick="javascript:yesnoCheckCollege();" id = "noCheckCollege">No</label>
+                                                                  <label class = "radio-inline"><input class="pull-left" type="checkbox" onclick="javascript:yesnoCheckCollege();" id = "yesCheckCollege" value="1" name="isCollege"></label>
+                                                              </div>
+                                                              <div class="form-group">
+                                                                <div id="collegeInfo" style="display:none">
+                                                                  <label>Name of College or University Attended(if transfer student)</label>
+                                                                  <input name="nameCollegeUniv" id="nameCollegeUniv" type="text" class="form-control" placeholder="Name of College or University Attended(if transfer student)">
+                                                                  <label>Complete Address of College or University Attended(if transfer student)</label>
+                                                                  <input name="addressCollegeUniv" id="addressCollegeUniv" type="text" class="form-control" placeholder="Complete Address of College or University Attended(if transfer student)">
+                                                                </div>
+                                                              </div>
+                                                              <div class="form-group isIndigenousComm">
+                                                                  <label>Did you attend Senior High School?</label>
+                                                                  <label class = "radio-inline"><input class="pull-left" type="checkbox" value="0" name="isSHS" onclick="javascript:yesnoCheckSHS();" id = "yesCheckSHS"></label>
                                                               </div>
                                                               <div class="form-group" id = "shsName" style="display:none">
                                                                   <label>Name of Senior High School Attended</label>
@@ -1217,18 +793,9 @@
                                                                   </div>
                                                                 </div>
                                                               </div>
-                                                              <div class="form-group">
-                                                                <div id="collegeInfo" style="display:none">
-                                                                  <label>Name of College or University Attended(if transfer student)</label>
-                                                                  <input name="nameCollegeUniv" id="nameCollegeUniv" type="text" class="form-control" placeholder="Name of College or University Attended(if transfer student)">
-                                                                  <label>Complete Address of College or University Attended(if transfer student)</label>
-                                                                  <input name="addressCollegeUniv" id="addressCollegeUniv" type="text" class="form-control" placeholder="Complete Address of College or University Attended(if transfer student)">
-                                                                </div>
-                                                              </div>
                                                               <div class="form-group isIndigenousComm">
                                                                   <label>Do you identify yourself as a member of an Indigenous Community?</label>
-                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" onclick="javascript:yesnoCheck();" id = "yesCheck" value="1" name="isIndigenous">Yes</label>
-                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="0" name="isIndigenous" onclick="javascript:yesnoCheck();" id = "noCheck">No</label>
+                                                                  <label class = "radio-inline"><input class="pull-left" type="checkbox" onclick="javascript:yesnoCheck();" id = "yesCheck" value="1" name="isIndigenous"></label>
                                                               </div>
                                                               <div class="form-group">
                                                                 <div id="ifYes" style="display:none">
@@ -1238,17 +805,17 @@
                                                               </div>
                                                               <div class="form-group">
                                                                 <div class = "row">
-                                                                  <label>Course(s) Applied for in order of preference</label><br>
+                                                                  <label>Program(s) Applied for in order of preference</label><br>
                                                                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                       <div class="row">
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                 <div class="form-select-list">
                                                                                   <label>Choice 1</label>
-                                                                                  <select id = "choice" name="programChoiceOne" class="form-control" required>
+                                                                                  <select id = "choice" name="programChoiceOne" class="form-control programChoice1" required>
                                                                                     <option value="none" selected="" disabled=""></option>
                                                                                     @foreach($programs as $p)
-                                                                                        <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription.", ".$p->programDiv }}</option>
+                                                                                        <option value="{{ $p->CODE }}">{{ $p->CODE.", ".$p->DESCRIPTION.", ".$p->DIVISIONCODE }}</option>
                                                                                     @endforeach
                                                                                   </select>
                                                                                 </div>
@@ -1257,10 +824,10 @@
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                             <div class="form-select-list">
                                                                               <label>Choice 2</label>
-                                                                              <select id="choice" name="programChoiceTwo" class="form-control">
+                                                                              <select id="choice" name="programChoiceTwo" class="form-control programChoice2">
                                                                                 <option value="" selected="" ></option>
                                                                                 @foreach($programs as $p)
-                                                                                    <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription.", ".$p->programDiv }}</option>
+                                                                                    <option value="{{ $p->CODE }}">{{ $p->CODE.", ".$p->DESCRIPTION.", ".$p->DIVISIONCODE }}</option>
                                                                                 @endforeach
                                                                               </select>
                                                                             </div>
@@ -1268,10 +835,10 @@
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                             <div class="form-select-list">
                                                                               <label>Choice 3</label>
-                                                                              <select id="choice" name="programChoiceThree" class="form-control">
+                                                                              <select id="choice" name="programChoiceThree" class="form-control programChoice3">
                                                                                 <option value="" selected=""></option>
                                                                                 @foreach($programs as $p)
-                                                                                    <option value="{{ $p->programCode }}">{{ $p->programCode.", ".$p->programDescription.", ".$p->programDiv }}</option>
+                                                                                    <option value="{{ $p->CODE }}">{{ $p->CODE.", ".$p->DESCRIPTION.", ".$p->DIVISIONCODE }}</option>
                                                                                 @endforeach
                                                                               </select>
                                                                             </div>
@@ -1287,14 +854,14 @@
                                                                       <div class="row">
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                               <div class="form-select-list">
-                                                                                  <label>Are you currently in therapy, rehabilitation, or clinical counseling elsewhere?</label><label class = "radio-inline"><input class="pull-left" type="radio" value="1" name="currTherapyRehabCounseling">Yes</label>
-                                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="0" name="currTherapyRehabCounseling">No</label>
+                                                                                  <label>Are you currently in therapy, rehabilitation, or clinical counseling elsewhere?</label><label class = "radio-inline"><input class="pull-left" type="radio" value="1" name="currTherapyRehabCounseling" onclick="javascript:yesnoCounseling();" id = "yesCheckCounseling">Yes</label>
+                                                                                  <label class = "radio-inline"><input class="pull-left" type="radio" value="0" name="currTherapyRehabCounseling" onclick="javascript:yesnoCounseling();" id = "noCheckCounseling">No</label>
                                                                               </div>
                                                                           </div>
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                               <div class="form-select-list">
                                                                                   <label>If yes, with whom:</label>
-                                                                                  <input name = "currTherapyRehabCounselingName" type="text" class="form-control basic-ele-mg-t-10" placeholder="">
+                                                                                  <input id = "currTherapyRehabCounselingName" name = "currTherapyRehabCounselingName" type="text" class="form-control basic-ele-mg-t-10" placeholder="">
                                                                               </div>
                                                                           </div>
                                                                           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -1312,7 +879,7 @@
                                                                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                       <div class="form-select-list">
                                                                         <label>Briefly describe your reason for seeking help:</label>
-                                                                        <textarea name = "reasonToSeekHelp"></textarea>
+                                                                        <textarea id = "reasonToSeekHelp" name = "reasonToSeekHelp"></textarea>
                                                                       </div>
                                                                   </div>
                                                                 </div>
@@ -1320,15 +887,6 @@
                                                             </div>
                                                           </div>
                                                         </div><br><br>
-                                                        <div class="row">
-                                                            <div class="col-lg-12">
-                                                                <div class="payment-adress">
-                                                                    <!--<button type="submit" id = "addEnlist" class="btn btn-primary waves-effect waves-light">Submit</button>-->
-                                                                    <button data-toggle="modal" data-target="#PrimaryModalalert" class="btn btn-primary waves-effect waves-light">Submit</button>
-                                                                    <!--<a class="Primary mg-b-10" href="#" data-toggle="modal" data-target="#PrimaryModalalert">Primary</a>-->
-                                                                </div>
-                                                            </div>
-                                                        </div>
 
                                                         <div id="PrimaryModalalert" class="modal modal-edu-general default-popup-PrimaryModal fade" role="dialog">
                                                           <div class="modal-dialog">
@@ -1338,18 +896,29 @@
                                                                   </div>
                                                                   <div class="modal-body">
                                                                       <span class="educate-icon educate-warning modal-check-pro information-icon-pro"></span>
-                                                                      <h2>Confirm Enlistment</h2>
-                                                                      <p>Please review the information that you've provided before enlisting yourself.</p>
+                                                                      <h2>Please Review your Enlistment Information. Click the confirm button ONCE.</h2>
+                                                                      <p> This form will not be submitted unless all required fields are filled up. The pre-enrollee assures that all data filled-up in this form is accurate. A feedback will be given along with confirmation message will also be sent to the e-mail that you have provided once the pre-registration is successful.</p>
                                                                   </div>
                                                                   <div class="modal-footer">
                                                                       <button data-dismiss="modal" class="btn btn-custon-rounded-four btn-primary">Cancel</button>
-                                                                      <button id="addEnlist" class="btn btn-custon-rounded-four btn-primary">Add Enlistment</button>
+                                                                      <button id="addEnlist" class="btn btn-custon-rounded-four btn-primary">Confirm Enlistment</button>
                                                                   </div>
                                                               </div>
                                                           </div>
                                                       </div>
                                                         {{ csrf_field() }}
                                                     </form>
+
+                                                      
+                                                <div class="row">
+                                                      <div class="col-lg-12">
+                                                          <div class="payment-adress">
+                                                              <!--<button type="submit" id = "addEnlist" class="btn btn-primary waves-effect waves-light">Submit</button>-->
+                                                              <button data-toggle="modal" data-target="#PrimaryModalalert" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                                              <!--<a class="Primary mg-b-10" href="#" data-toggle="modal" data-target="#PrimaryModalalert">Primary</a>-->
+                                                          </div>
+                                                      </div>
+                                                  </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1441,6 +1010,28 @@
     <script src="{{ asset('assets/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
     <script src="{{ asset('assets/js/input-mask/jasny-bootstrap.min.js') }}"></script>
     <script type = "text/javascript">
+      function validateForm() {
+        var isValid = true;
+        $('.form-field').each(function() {
+          if ( $(this).val() === '' )
+              isValid = false;
+        });
+        return isValid;
+      }
+
+      
+      $('.programChoice1').select2();
+      $('.programChoice2').select2();
+      $('.programChoice3').select2();
+      $('#permanentProvince').select2();
+      $('#citizenship').select2();
+      $('#permanentCountry').select2();
+      $('#permanentCity').select2();
+      $('#cityProvince').select2();
+      $('#cityCountry').select2();
+      $('#cityCity').select2();
+//      $('#cityProvince').prop('disabled', true);
+
       //Date picker
 
       $("addEnlist").click(function()
@@ -1481,23 +1072,107 @@
         else document.getElementById('ifYes').style.display = 'none';
       }
 
+      function yesnoMedication() {
+        if (document.getElementById('yestakingMedication').checked) {
+            document.getElementById('medicationInfo').disabled = false;
+        }
+        else document.getElementById('medicationInfo').disabled = true;
+      }
+
+      function yesnoSpecialNeeds() {
+        if (document.getElementById('yesSpecialNeeds').checked) {
+            document.getElementById('typeOfSpecialNeeds').disabled = false;
+            document.getElementById('othersSpecialNeeds').disabled = false;
+        }
+        else {
+          document.getElementById('typeOfSpecialNeeds').disabled = true;
+          document.getElementById('othersSpecialNeeds').disabled = true;
+        }
+      }
+
+      function yesnoCounseling() {
+        if (document.getElementById('yesCheckCounseling').checked) {
+            document.getElementById('currTherapyRehabCounselingName').disabled = false;
+            document.getElementById('currTherapyRehabCounselingContact').disabled = false;
+            document.getElementById('reasonToSeekHelp').disabled = false;
+        }
+        else {
+          document.getElementById('currTherapyRehabCounselingName').disabled = true;
+          document.getElementById('currTherapyRehabCounselingContact').disabled = true;
+          document.getElementById('reasonToSeekHelp').disabled = true;
+        }
+      }
+
+      function checkFather() {
+        if (document.getElementById('fatherLiving').checked) {
+            document.getElementById('fatherOccupation').disabled = true;
+            document.getElementById('fatherAddress').disabled = true;
+            document.getElementById('fatherContactNum').disabled = true;
+            document.getElementById('fatherOccupation').required = false;
+            document.getElementById('fatherAddress').required = false;
+            document.getElementById('fatherContactNum').required = false;
+
+        }
+        else {
+            document.getElementById('fatherOccupation').disabled = false;
+            document.getElementById('fatherAddress').disabled = false;
+            document.getElementById('fatherContactNum').disabled = false;
+            document.getElementById('fatherOccupation').value = "";
+            document.getElementById('fatherAddress').value = "";
+            document.getElementById('fatherContactNum').value = "";
+            document.getElementById('fatherOccupation').required = true;
+            document.getElementById('fatherAddress').required = true;
+            document.getElementById('fatherContactNum').required = true;
+        }
+      }
+
+      function checkMother() {
+        if (document.getElementById('motherLiving').checked) {
+            document.getElementById('motherOccupation').disabled = true;
+            document.getElementById('motherAddress').disabled = true;
+            document.getElementById('motherContactNum').disabled = true;
+            document.getElementById('motherOccupation').required = false;
+            document.getElementById('motherAddress').required = false;
+            document.getElementById('motherContactNum').required = false;
+        }
+        else {
+            document.getElementById('motherOccupation').disabled = false;
+            document.getElementById('motherAddress').disabled = false;
+            document.getElementById('motherContactNum').disabled = false;
+            document.getElementById('motherOccupation').value = "";
+            document.getElementById('motherAddress').value = "";
+            document.getElementById('motherContactNum').value = "";
+            document.getElementById('motherOccupation').required = true;
+            document.getElementById('motherAddress').required = true;
+            document.getElementById('motherContactNum').required = true;
+        }
+      }
+
       function yesnoCheckCollege() {
-        if (document.getElementById('noCheckCollege').checked) {
+        if (document.getElementById('yesCheckCollege').checked) {;
+          document.getElementById('collegeInfo').style.display = 'block';
+          document.getElementById('collegeProgram').style.display = 'block';
+        }
+
+        else {
+          document.getElementById('collegeInfo').style.display = 'none';
+          document.getElementById('collegeProgram').style.display = 'none';
+        }
+      }
+
+      function yesnoCheckSHS() {
+        if (document.getElementById('yesCheckSHS').checked) {
           document.getElementById('shsName').style.display = 'block';
           document.getElementById('shsAdd').style.display = 'block';
           document.getElementById('shsTrackStrand').style.display = 'block';
           document.getElementById('shsPrincipal').style.display = 'block';
-          document.getElementById('collegeInfo').style.display = 'none';
-          document.getElementById('collegeProgram').style.display = 'none';
         }
 
-        if (document.getElementById('yesCheckCollege').checked) {
+        else {
           document.getElementById('shsName').style.display = 'none';
           document.getElementById('shsAdd').style.display = 'none';
           document.getElementById('shsTrackStrand').style.display = 'none';
           document.getElementById('shsPrincipal').style.display = 'none';
-          document.getElementById('collegeInfo').style.display = 'block';
-          document.getElementById('collegeProgram').style.display = 'block';
         }
       }
 
@@ -1505,18 +1180,53 @@
         if (document.getElementById("sameAsPermanent").checked == 1) {
           document.getElementById('cityAddress').disabled = true;
           document.getElementById('cityCity').disabled = true;
-          document.getElementById('cityProvince').disabled = true;
           document.getElementById('cityzippostalcode').disabled = true;
-          document.getElementById('cityCountry').disabled = true;
+          document.getElementById('cityAddress').style.display = 'none';
+          document.getElementById('cityCity').style.display = 'none';
+          document.getElementById('cityzippostalcode').style.display = 'none';
+          $('#cityProvince').prop('disabled', true);
+          $('#cityProvince').next(".select2-container").hide();
+          $('#cityCountry').prop('disabled', true);
+          $('#cityCountry').next(".select2-container").hide();
+          $('#cityCity').prop('disabled', true);
+          $('#cityCity').next(".select2-container").hide();
+          document.getElementById('cityAddressLabel').style.display = 'none';
+          document.getElementById('cityCityLabel').style.display = 'none';
+          document.getElementById('cityzippostalcodeLabel').style.display = 'none';
+          document.getElementById('cityProvinceLabel').style.display = 'none';
+          document.getElementById('cityCountryLabel').style.display = 'none';
+          document.getElementById('board').style.display = 'none';
+          document.getElementById('relative').style.display = 'none';
+          document.getElementById('boxcheck').style.display = 'none';
+          
         }
         if (document.getElementById('sameAsPermanent').checked != 1) {
           document.getElementById('cityAddress').disabled = false;
           document.getElementById('cityCity').disabled = false;
-          document.getElementById('cityProvince').disabled = false;
           document.getElementById('cityzippostalcode').disabled = false;
-          document.getElementById('cityCountry').disabled = false;
+          
+          document.getElementById('cityAddress').style.display = 'block';
+          document.getElementById('cityCity').style.display = 'block';
+          document.getElementById('cityzippostalcode').style.display = 'block';
+          $('#cityProvince').prop('disabled', false);
+          $('#cityProvince').next(".select2-container").show();
+          $('#cityCountry').prop('disabled', false);
+          $('#cityCountry').next(".select2-container").show();
+          
+          $('#cityCity').prop('disabled', false);
+          $('#cityCity').next(".select2-container").show();
+          
+          document.getElementById('cityAddressLabel').style.display = 'block';
+          document.getElementById('cityCityLabel').style.display = 'block';
+          document.getElementById('cityzippostalcodeLabel').style.display = 'block';
+          document.getElementById('cityProvinceLabel').style.display = 'block';
+          document.getElementById('cityCountryLabel').style.display = 'block';
+          document.getElementById('board').style.display = 'block';
+          document.getElementById('relative').style.display = 'block';
+          document.getElementById('boxcheck').style.display = 'block';
         }
       }
+
 
       function strandCheck() {
         if (document.getElementById('track').value == "ACADEMIC") {

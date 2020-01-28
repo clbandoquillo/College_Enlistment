@@ -67,7 +67,7 @@
 			<div class="content-error">
         <img src="{{ asset('assets/img/logo/addu_2.png')}}" alt="logo">
 				<h1>Ateneo de Davao University<br> Enlistment System</h1>
-				<p>This serves as a system for the enlistment of incoming freshmen college students.</p>
+				<p>This serves as a system for the enlistment of incoming freshmen college students for the <b>1st Semester of A.Y. 2019-2020</b></p>
 				<a href="{{ url('/enlist') }}">Enlist Here</a>
 			</div>
 			<div class="text-center login-footer">
