@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 
 /*Route::get('/enlist', ['middleware' =>'guest', function(){
   return view('enlist');
