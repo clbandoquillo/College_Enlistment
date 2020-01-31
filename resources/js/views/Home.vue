@@ -3,6 +3,8 @@
     <center>
       <h1 class="cover-heading">Enlistment System</h1>
       <p class="lead col-md-4">This serves as a system for the enlistment of incoming freshmen college students for the 1st Semester of A.Y. {{ schoolyear}} - {{ schoolyear + 1}}</p>
+      <h3>Please ensure that all entered information is correct.</h3>
+      <br/><br/>
       <router-link :to="{ name: 'enlist' }">
         <button 
           type="button" 

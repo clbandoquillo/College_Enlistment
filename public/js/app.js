@@ -1752,6 +1752,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1822,7 +1824,130 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      personalinfo: 'nav-link active'
+    };
+  }
+});
 
 /***/ }),
 
@@ -71896,6 +72021,13 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
+          _c("h3", [
+            _vm._v("Please ensure that all entered information is correct.")
+          ]),
+          _vm._v(" "),
+          _c("br"),
+          _c("br"),
+          _vm._v(" "),
           _c("router-link", { attrs: { to: { name: "enlist" } } }, [
             _c(
               "button",
@@ -71935,234 +72067,584 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container-fluid" }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-xs-3" }, [
+        _c(
+          "div",
+          {
+            staticClass: "nav flex-column nav-pills",
+            attrs: {
+              id: "v-pills-tab",
+              role: "tablist",
+              "aria-orientation": "vertical"
+            }
+          },
+          [
+            _c(
+              "a",
+              {
+                class: _vm.personalinfo,
+                attrs: {
+                  id: "v-pills-personalinfo-tab",
+                  "data-toggle": "pill",
+                  href: "#v-pills-personalinfo",
+                  role: "tab",
+                  "aria-controls": "v-pills-personalinfo",
+                  "aria-selected": "true"
+                }
+              },
+              [_vm._v("Basic Personal Information")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "nav-link",
+                attrs: {
+                  id: "v-pills-addressAndContact-tab",
+                  "data-toggle": "pill",
+                  href: "#v-pills-addressAndContact",
+                  role: "tab",
+                  "aria-controls": "v-pills-addressAndContact",
+                  "aria-selected": "false"
+                }
+              },
+              [_vm._v("Address and Contact Information")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "nav-link",
+                attrs: {
+                  id: "v-pills-contactinfo-tab",
+                  "data-toggle": "pill",
+                  href: "#v-pills-contactinfo",
+                  role: "tab",
+                  "aria-controls": "v-pills-contactinfo",
+                  "aria-selected": "false"
+                }
+              },
+              [_vm._v("Health / Medical profile")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "nav-link",
+                attrs: {
+                  id: "v-pills-contactinfo-tab",
+                  "data-toggle": "pill",
+                  href: "#v-pills-contactinfo",
+                  role: "tab",
+                  "aria-controls": "v-pills-contactinfo",
+                  "aria-selected": "false"
+                }
+              },
+              [_vm._v("Family Information")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "nav-link",
+                attrs: {
+                  id: "v-pills-contactinfo-tab",
+                  "data-toggle": "pill",
+                  href: "#v-pills-contactinfo",
+                  role: "tab",
+                  "aria-controls": "v-pills-contactinfo",
+                  "aria-selected": "false"
+                }
+              },
+              [_vm._v("Educational Background")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "nav-link",
+                attrs: {
+                  id: "v-pills-contactinfo-tab",
+                  "data-toggle": "pill",
+                  href: "#v-pills-contactinfo",
+                  role: "tab",
+                  "aria-controls": "v-pills-contactinfo",
+                  "aria-selected": "false"
+                }
+              },
+              [_vm._v("Psychological Profile")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "nav-link",
+                attrs: {
+                  id: "v-pills-contactinfo-tab",
+                  "data-toggle": "pill",
+                  href: "#v-pills-contactinfo",
+                  role: "tab",
+                  "aria-controls": "v-pills-contactinfo",
+                  "aria-selected": "false"
+                }
+              },
+              [_vm._v("Pre-Interview Questions")]
+            )
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _vm._m(0)
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container-fluid" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-3" }, [
+    return _c("div", { staticClass: "col-xs-9 col-9" }, [
+      _c(
+        "div",
+        { staticClass: "tab-content", attrs: { id: "v-pills-tabContent" } },
+        [
           _c(
             "div",
             {
-              staticClass: "nav flex-column nav-pills",
+              staticClass: "tab-pane fade show active",
               attrs: {
-                id: "v-pills-tab",
-                role: "tablist",
-                "aria-orientation": "vertical"
+                id: "v-pills-personalinfo",
+                role: "tabpanel",
+                "aria-labelledby": "v-pills-personalinfo-tab"
               }
             },
             [
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link active",
-                  attrs: {
-                    id: "v-pills-home-tab",
-                    "data-toggle": "pill",
-                    href: "#v-pills-home",
-                    role: "tab",
-                    "aria-controls": "v-pills-home",
-                    "aria-selected": "true"
-                  }
-                },
-                [_vm._v("Name as it appears on the Birth Certificate")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link",
-                  attrs: {
-                    id: "v-pills-profile-tab",
-                    "data-toggle": "pill",
-                    href: "#v-pills-profile",
-                    role: "tab",
-                    "aria-controls": "v-pills-profile",
-                    "aria-selected": "false"
-                  }
-                },
-                [_vm._v("Basic Personal Information")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link",
-                  attrs: {
-                    id: "v-pills-messages-tab",
-                    "data-toggle": "pill",
-                    href: "#v-pills-messages",
-                    role: "tab",
-                    "aria-controls": "v-pills-messages",
-                    "aria-selected": "false"
-                  }
-                },
-                [_vm._v("Addresses")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link",
-                  attrs: {
-                    id: "v-pills-settings-tab",
-                    "data-toggle": "pill",
-                    href: "#v-pills-settings",
-                    role: "tab",
-                    "aria-controls": "v-pills-settings",
-                    "aria-selected": "false"
-                  }
-                },
-                [_vm._v("Contact Information")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link",
-                  attrs: {
-                    id: "v-pills-settings-tab",
-                    "data-toggle": "pill",
-                    href: "#v-pills-settings",
-                    role: "tab",
-                    "aria-controls": "v-pills-settings",
-                    "aria-selected": "false"
-                  }
-                },
-                [_vm._v("Health / Medical profile")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link",
-                  attrs: {
-                    id: "v-pills-settings-tab",
-                    "data-toggle": "pill",
-                    href: "#v-pills-settings",
-                    role: "tab",
-                    "aria-controls": "v-pills-settings",
-                    "aria-selected": "false"
-                  }
-                },
-                [_vm._v("Family Information")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link",
-                  attrs: {
-                    id: "v-pills-settings-tab",
-                    "data-toggle": "pill",
-                    href: "#v-pills-settings",
-                    role: "tab",
-                    "aria-controls": "v-pills-settings",
-                    "aria-selected": "false"
-                  }
-                },
-                [_vm._v("Educational Background")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link",
-                  attrs: {
-                    id: "v-pills-settings-tab",
-                    "data-toggle": "pill",
-                    href: "#v-pills-settings",
-                    role: "tab",
-                    "aria-controls": "v-pills-settings",
-                    "aria-selected": "false"
-                  }
-                },
-                [_vm._v("Psychological Profile")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link",
-                  attrs: {
-                    id: "v-pills-settings-tab",
-                    "data-toggle": "pill",
-                    href: "#v-pills-settings",
-                    role: "tab",
-                    "aria-controls": "v-pills-settings",
-                    "aria-selected": "false"
-                  }
-                },
-                [_vm._v("Pre-Interview Questions")]
-              )
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
+                  [
+                    _c("h4", { staticClass: "form-header text-primary" }, [
+                      _vm._v("Name as it appears on the Birth Certificate")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("div", { staticClass: "row" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                          },
+                          [
+                            _c("div", { staticClass: "row" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-lg-8 col-md-8 col-sm-8 col-xs-12"
+                                },
+                                [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", [_vm._v("Surname")]),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        name: "surname",
+                                        type: "text",
+                                        placeholder: "Surname",
+                                        required: ""
+                                      }
+                                    })
+                                  ])
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                                },
+                                [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", [
+                                      _vm._v("Suffix (Jr., III, IV etc.)")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        name: "suffix",
+                                        type: "text",
+                                        placeholder: "Suffix"
+                                      }
+                                    })
+                                  ])
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("div", { staticClass: "row" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                          },
+                          [
+                            _c("div", { staticClass: "row" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                                },
+                                [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", [_vm._v("First Name")]),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        name: "firstname",
+                                        type: "text",
+                                        placeholder: "Firstname",
+                                        required: ""
+                                      }
+                                    })
+                                  ])
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                                },
+                                [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", [_vm._v("Middle Name")]),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        name: "middlename",
+                                        type: "text",
+                                        placeholder: "Middlename",
+                                        required: ""
+                                      }
+                                    })
+                                  ])
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "form-header text-primary" }, [
+                      _vm._v("Basic Personal Information")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("div", { staticClass: "row" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                          },
+                          [
+                            _c("div", { staticClass: "row" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                                },
+                                [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", [_vm._v("Birthdate")]),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        name: "birthDate",
+                                        id: "datepicker",
+                                        type: "date",
+                                        placeholder: "Date of Birth",
+                                        required: ""
+                                      }
+                                    })
+                                  ])
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                                },
+                                [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", [_vm._v("Birthplace")]),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        name: "birthPlace",
+                                        type: "text",
+                                        placeholder: "Birthplace",
+                                        required: ""
+                                      }
+                                    })
+                                  ])
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                                },
+                                [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", [_vm._v("Gender")]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "select",
+                                      {
+                                        staticClass: "form-control",
+                                        attrs: { name: "gender", required: "" }
+                                      },
+                                      [
+                                        _c("option", {
+                                          attrs: {
+                                            value: "none",
+                                            selected: "",
+                                            disabled: ""
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "option",
+                                          { attrs: { value: "1" } },
+                                          [_vm._v("Male")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "option",
+                                          { attrs: { value: "2" } },
+                                          [_vm._v("Female")]
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("div", { staticClass: "row" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                          },
+                          [
+                            _c("div", { staticClass: "row" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                                },
+                                [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", [_vm._v("Civil Status")]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "select",
+                                      {
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          name: "civilStatus",
+                                          required: ""
+                                        }
+                                      },
+                                      [
+                                        _c("option", {
+                                          attrs: {
+                                            value: "none",
+                                            selected: "",
+                                            disabled: ""
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "option",
+                                          { attrs: { value: "1" } },
+                                          [_vm._v("Single (Never Married)")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "option",
+                                          { attrs: { value: "2" } },
+                                          [_vm._v("Married")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "option",
+                                          { attrs: { value: "3" } },
+                                          [_vm._v("Widow / Widower")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "option",
+                                          { attrs: { value: "4" } },
+                                          [_vm._v("Head of the Family")]
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                                },
+                                [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", [_vm._v("Citizenship")]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "chosen-select-single mg-b-20"
+                                      },
+                                      [
+                                        _c(
+                                          "select",
+                                          {
+                                            staticClass: "form-control",
+                                            attrs: {
+                                              "data-placeholder":
+                                                "Choose a Citizenship...",
+                                              id: "citizenship",
+                                              name: "citizenship",
+                                              tabindex: "-1",
+                                              required: ""
+                                            }
+                                          },
+                                          [
+                                            _c("option", {
+                                              attrs: { value: "", selected: "" }
+                                            }),
+                                            _vm._v(" "),
+                                            _c("option", {
+                                              attrs: { value: "", selected: "" }
+                                            })
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                                },
+                                [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", [_vm._v("Religion")]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "select",
+                                      {
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          id: "religion",
+                                          name: "religion",
+                                          required: ""
+                                        }
+                                      },
+                                      [
+                                        _c("option", {
+                                          attrs: {
+                                            value: "none",
+                                            selected: "",
+                                            disabled: ""
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ])
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
+                  ]
+                )
+              ])
             ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-9" }, [
+          ),
+          _vm._v(" "),
           _c(
             "div",
-            { staticClass: "tab-content", attrs: { id: "v-pills-tabContent" } },
-            [
-              _c(
-                "div",
-                {
-                  staticClass: "tab-pane fade show active",
-                  attrs: {
-                    id: "v-pills-home",
-                    role: "tabpanel",
-                    "aria-labelledby": "v-pills-home-tab"
-                  }
-                },
-                [_vm._v("...\n\n                ")]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "tab-pane fade",
-                  attrs: {
-                    id: "v-pills-profile",
-                    role: "tabpanel",
-                    "aria-labelledby": "v-pills-profile-tab"
-                  }
-                },
-                [_vm._v("...\n\n                ")]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "tab-pane fade",
-                  attrs: {
-                    id: "v-pills-messages",
-                    role: "tabpanel",
-                    "aria-labelledby": "v-pills-messages-tab"
-                  }
-                },
-                [_vm._v("...\n                    \n                ")]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "tab-pane fade",
-                  attrs: {
-                    id: "v-pills-settings",
-                    role: "tabpanel",
-                    "aria-labelledby": "v-pills-settings-tab"
-                  }
-                },
-                [_vm._v("...\n\n                ")]
-              )
-            ]
+            {
+              staticClass: "tab-pane fade",
+              attrs: {
+                id: "v-pills-addressAndContact",
+                role: "tabpanel",
+                "aria-labelledby": "v-pills-addressAndContact-tab"
+              }
+            },
+            [_vm._v("...\n                    \n                ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "tab-pane fade",
+              attrs: {
+                id: "v-pills-contactinfo",
+                role: "tabpanel",
+                "aria-labelledby": "v-pills-contactinfo-tab"
+              }
+            },
+            [_vm._v("...\n\n                ")]
           )
-        ])
-      ])
+        ]
+      )
     ])
   }
 ]
@@ -87701,8 +88183,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Git\AdDU_Enlistment\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Git\AdDU_Enlistment\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\MIS\AdDU_Enlistment\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\MIS\AdDU_Enlistment\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

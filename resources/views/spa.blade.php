@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Ateneo de Davao University') }}</title>
+    <title>Ateneo de Davao University</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
