@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-dark bg-primary">
         <router-link to="/">
           <a class="navbar-brand">
               <img src="assets/img/logo/addu_2.png" alt="logo">
