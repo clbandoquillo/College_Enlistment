@@ -3263,25 +3263,85 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      personalInfo: "nav-link active",
-      addressContactInfo: "nav-link",
-      healthMedicalProfile: "nav-link",
-      familyInformation: "nav-link",
-      educationalBackground: "nav-link",
-      psychologicalProfile: "nav-link"
+      activeStatus: "",
+      personalInfo: "active",
+      addressContactInfo: "",
+      medicalProfile: "",
+      familyInfo: "",
+      educationalBackground: "",
+      psychologicalProfile: "",
+      href: ''
     };
   },
   methods: {
-    basicPersonalNav: function basicPersonalNav() {
-      this.personalInfo = "nav-link active";
-      this.addressContactInfo = "nav-link";
+    personalInfoNav: function personalInfoNav() {
+      this.personalInfo = "active";
+      this.addressContactInfo = "";
+      this.medicalProfile = "";
+      this.familyInfo = "";
+      this.educationalBackground = "";
+      this.psychologicalProfile = "";
+      this.activeStatus = "personalInfoNav active";
     },
     addressContactNav: function addressContactNav() {
-      this.personalInfo = "nav-link";
-      this.addressContactInfo = "nav-link active";
+      this.personalInfo = "";
+      this.addressContactInfo = "active";
+      this.medicalProfile = "";
+      this.familyInfo = "";
+      this.educationalBackground = "";
+      this.psychologicalProfile = "";
+      this.activeStatus = "addressContactNav active";
+    },
+    medicalProfileNav: function medicalProfileNav() {
+      this.personalInfo = "";
+      this.addressContactInfo = "";
+      this.medicalProfile = "active";
+      this.familyInfo = "";
+      this.educationalBackground = "";
+      this.psychologicalProfile = "";
+      this.activeStatus = "medicalProfileNav active";
+      this.href = "#v-pills-medicalProfile";
+    },
+    familyInfoNav: function familyInfoNav() {
+      this.personalInfo = "";
+      this.addressContactInfo = "";
+      this.medicalProfile = "";
+      this.familyInfo = "active";
+      this.educationalBackground = "";
+      this.psychologicalProfile = "";
+      this.activeStatus = "familyInfoNav active";
+    },
+    educationalBackgroundNav: function educationalBackgroundNav() {
+      this.personalInfo = "";
+      this.addressContactInfo = "";
+      this.medicalProfile = "";
+      this.familyInfo = "";
+      this.educationalBackground = "active";
+      this.psychologicalProfile = "";
+      this.activeStatus = "educationalBackgroundNav active";
+    },
+    psychologicalProfileNav: function psychologicalProfileNav() {
+      this.personalInfo = "";
+      this.addressContactInfo = "";
+      this.medicalProfile = "";
+      this.familyInfo = "";
+      this.educationalBackground = "";
+      this.psychologicalProfile = "active";
+      this.activeStatus = "psychologicalProfileNav active";
     }
   }
 });
@@ -72712,9 +72772,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container-fluid" }, [
     _c("div", { staticClass: "row" }, [
-      _c("h1", [_vm._v(_vm._s(_vm.personalInfo))]),
-      _c("h1", [_vm._v(_vm._s(_vm.addressContactInfo))]),
-      _vm._v(" "),
       _c("div", { staticClass: "col-xs-3" }, [
         _c(
           "div",
@@ -72730,15 +72787,20 @@ var render = function() {
             _c(
               "a",
               {
-                class: [_vm.personalInfo],
+                staticClass: "nav-link",
+                class: { personalInfo: _vm.personalInfo },
                 attrs: {
-                  click: _vm.basicPersonalNav(),
                   id: "v-pills-personalinfo-tab",
                   "data-toggle": "pill",
                   href: "#v-pills-personalinfo",
                   role: "tab",
                   "aria-controls": "v-pills-personalinfo",
                   "aria-selected": "true"
+                },
+                on: {
+                  click: function($event) {
+                    return _vm.personalInfoNav()
+                  }
                 }
               },
               [_vm._v("Basic Personal Information")]
@@ -72747,15 +72809,20 @@ var render = function() {
             _c(
               "a",
               {
-                class: [_vm.addressContactInfo],
+                staticClass: "nav-link",
+                class: { addressContactInfo: _vm.addressContactInfo },
                 attrs: {
-                  click: _vm.addressContactNav(),
                   id: "v-pills-addressAndContact-tab",
                   "data-toggle": "pill",
                   href: "#v-pills-addressAndContact",
                   role: "tab",
                   "aria-controls": "v-pills-addressAndContact",
                   "aria-selected": "false"
+                },
+                on: {
+                  click: function($event) {
+                    return _vm.addressContactNav()
+                  }
                 }
               },
               [_vm._v("Address and Contact Information")]
@@ -72764,14 +72831,20 @@ var render = function() {
             _c(
               "a",
               {
-                class: _vm.healthMedicalProfile,
+                staticClass: "nav-link",
+                class: { medicalProfile: _vm.medicalProfile },
                 attrs: {
                   id: "v-pills-medicalProfile-tab",
                   "data-toggle": "pill",
-                  href: "#v-pills-medicalProfile",
+                  href: _vm.href,
                   role: "tab",
                   "aria-controls": "v-pills-medicalProfile",
                   "aria-selected": "false"
+                },
+                on: {
+                  click: function($event) {
+                    return _vm.medicalProfileNav()
+                  }
                 }
               },
               [_vm._v("Health / Medical profile")]
@@ -72780,7 +72853,8 @@ var render = function() {
             _c(
               "a",
               {
-                class: _vm.familyInformation,
+                staticClass: "nav-link",
+                class: { familyInfo: _vm.familyInfo },
                 attrs: {
                   id: "v-pills-familyInfo-tab",
                   "data-toggle": "pill",
@@ -72788,6 +72862,11 @@ var render = function() {
                   role: "tab",
                   "aria-controls": "v-pills-familyInfo",
                   "aria-selected": "false"
+                },
+                on: {
+                  click: function($event) {
+                    return _vm.familyInfoNav()
+                  }
                 }
               },
               [_vm._v("Family Information")]
@@ -72796,7 +72875,8 @@ var render = function() {
             _c(
               "a",
               {
-                class: _vm.educationalBackground,
+                staticClass: "nav-link",
+                class: { educationalBackground: _vm.educationalBackground },
                 attrs: {
                   id: "v-pills-educationalBackground-tab",
                   "data-toggle": "pill",
@@ -72804,6 +72884,11 @@ var render = function() {
                   role: "tab",
                   "aria-controls": "v-pills-educationalBackground",
                   "aria-selected": "false"
+                },
+                on: {
+                  click: function($event) {
+                    return _vm.educationalBackgroundNav()
+                  }
                 }
               },
               [_vm._v("Educational Background")]
@@ -72812,7 +72897,8 @@ var render = function() {
             _c(
               "a",
               {
-                class: _vm.psychologicalProfile,
+                staticClass: "nav-link",
+                class: { psychologicalProfile: _vm.psychologicalProfile },
                 attrs: {
                   id: "v-pills-psychologicalProfile-tab",
                   "data-toggle": "pill",
@@ -72820,6 +72906,11 @@ var render = function() {
                   role: "tab",
                   "aria-controls": "v-pills-psychologicalProfile",
                   "aria-selected": "false"
+                },
+                on: {
+                  click: function($event) {
+                    return _vm.psychologicalProfileNav()
+                  }
                 }
               },
               [_vm._v("Psychological Profile")]
@@ -72850,11 +72941,16 @@ var render = function() {
                   "a",
                   {
                     staticClass: "btn btn-primary btn-lg btn-block",
+                    class: { addressContactInfo: _vm.addressContactInfo },
                     attrs: {
-                      click: _vm.addressContactNav(),
                       id: "v-pills-addressAndContact-tab",
                       "data-toggle": "pill",
                       href: "#v-pills-addressAndContact"
+                    },
+                    on: {
+                      click: function($event) {
+                        return _vm.addressContactNav()
+                      }
                     }
                   },
                   [_vm._v("Proceed to Address and Contact Information")]
@@ -91062,8 +91158,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Git\AdDU_Enlistment\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Git\AdDU_Enlistment\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\MIS\AdDU_Enlistment\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\MIS\AdDU_Enlistment\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <div class="row"><h1>{{ personalInfo }}</h1><h1>{{ addressContactInfo }}</h1>
+    <div class="row">
       <div class="col-xs-3">
         <div
           class="nav flex-column nav-pills"
@@ -9,8 +9,9 @@
           aria-orientation="vertical"
         >
           <a
-            :class="[personalInfo]"
-            :click="basicPersonalNav()"
+            class="nav-link"
+            :class="{ personalInfo }"
+            @click="personalInfoNav()"
             id="v-pills-personalinfo-tab"
             data-toggle="pill"
             href="#v-pills-personalinfo"
@@ -20,8 +21,9 @@
           >Basic Personal Information</a>
 
           <a
-            :class="[addressContactInfo]"
-            :click="addressContactNav()"
+            class="nav-link"
+            :class="{ addressContactInfo }"
+            @click="addressContactNav()"
             id="v-pills-addressAndContact-tab"
             data-toggle="pill"
             href="#v-pills-addressAndContact"
@@ -31,17 +33,21 @@
           >Address and Contact Information</a>
 
           <a
-            :class="healthMedicalProfile"
+            class="nav-link"
+            :class="{ medicalProfile }"
+            @click="medicalProfileNav()"
             id="v-pills-medicalProfile-tab"
             data-toggle="pill"
-            href="#v-pills-medicalProfile"
+            :href="href"
             role="tab"
             aria-controls="v-pills-medicalProfile"
             aria-selected="false"
           >Health / Medical profile</a>
 
           <a
-            :class="familyInformation"
+            class="nav-link"
+            :class="{ familyInfo }"
+            @click="familyInfoNav()"
             id="v-pills-familyInfo-tab"
             data-toggle="pill"
             href="#v-pills-familyInfo"
@@ -51,7 +57,9 @@
           >Family Information</a>
 
           <a
-            :class="educationalBackground"
+            class="nav-link"
+            :class="{ educationalBackground }"
+            @click="educationalBackgroundNav()"
             id="v-pills-educationalBackground-tab"
             data-toggle="pill"
             href="#v-pills-educationalBackground"
@@ -61,7 +69,9 @@
           >Educational Background</a>
 
           <a
-            :class="psychologicalProfile"
+            class="nav-link"
+            :class="{ psychologicalProfile }"
+            @click="psychologicalProfileNav()"
             id="v-pills-psychologicalProfile-tab"
             data-toggle="pill"
             href="#v-pills-psychologicalProfile"
@@ -254,7 +264,8 @@
               </div>
             </div>
             <a
-              :click="addressContactNav()"
+            :class="{ addressContactInfo }"
+            @click="addressContactNav()"
               id="v-pills-addressAndContact-tab"
               data-toggle="pill"
               href="#v-pills-addressAndContact"
@@ -1492,22 +1503,71 @@
 export default {
   data() {
     return {
-      personalInfo: "nav-link active",
-      addressContactInfo: "nav-link",
-      healthMedicalProfile: "nav-link",
-      familyInformation: "nav-link",
-      educationalBackground: "nav-link",
-      psychologicalProfile: "nav-link"
+      activeStatus: "",
+      personalInfo: "active",
+      addressContactInfo: "",
+      medicalProfile: "",
+      familyInfo: "",
+      educationalBackground: "",
+      psychologicalProfile: "",
+      href: ''
     };
   },
   methods: {
-    basicPersonalNav() {
-      this.personalInfo = "nav-link active";
-      this.addressContactInfo = "nav-link";
+    personalInfoNav() {
+      this.personalInfo = "active";
+      this.addressContactInfo = "";
+      this.medicalProfile = "";
+      this.familyInfo = "";
+      this.educationalBackground = "";
+      this.psychologicalProfile = "";
+      this.activeStatus = "personalInfoNav active";
     },
     addressContactNav() {
-      this.personalInfo = "nav-link";
-      this.addressContactInfo = "nav-link active";
+      this.personalInfo = "";
+      this.addressContactInfo = "active";
+      this.medicalProfile = "";
+      this.familyInfo = "";
+      this.educationalBackground = "";
+      this.psychologicalProfile = "";
+      this.activeStatus = "addressContactNav active";
+    },
+    medicalProfileNav() {
+      this.personalInfo = "";
+      this.addressContactInfo = "";
+      this.medicalProfile = "active";
+      this.familyInfo = "";
+      this.educationalBackground = "";
+      this.psychologicalProfile = "";
+      this.activeStatus = "medicalProfileNav active";
+      this.href = "#v-pills-medicalProfile"
+    },
+    familyInfoNav() {
+      this.personalInfo = "";
+      this.addressContactInfo = "";
+      this.medicalProfile = "";
+      this.familyInfo = "active";
+      this.educationalBackground = "";
+      this.psychologicalProfile = "";
+      this.activeStatus = "familyInfoNav active";
+    },
+    educationalBackgroundNav() {
+      this.personalInfo = "";
+      this.addressContactInfo = "";
+      this.medicalProfile = "";
+      this.familyInfo = "";
+      this.educationalBackground = "active";
+      this.psychologicalProfile = "";
+      this.activeStatus = "educationalBackgroundNav active";
+    },
+    psychologicalProfileNav() {
+      this.personalInfo = "";
+      this.addressContactInfo = "";
+      this.medicalProfile = "";
+      this.familyInfo = "";
+      this.educationalBackground = "";
+      this.psychologicalProfile = "active";
+      this.activeStatus = "psychologicalProfileNav active";
     }
   }
 };
