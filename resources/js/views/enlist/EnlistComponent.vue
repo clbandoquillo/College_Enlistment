@@ -17,7 +17,7 @@
             role="tab"
             aria-controls="v-pills-personalinfo"
             aria-selected="true"
-            @click="clicked_value = 1"
+            :click="changeVal(1)"
             :class="{ active: personalInfoNav }"
           >Basic Personal Information</a>
 
@@ -29,7 +29,7 @@
             role="tab"
             aria-controls="v-pills-addressAndContact"
             aria-selected="false"
-            @click="clicked_value = 2"
+            :click="changeVal(2)"
             :class="{ active: addressContactInfoNav }"
           >Address and Contact Information</a>
           <!--
@@ -265,6 +265,14 @@
                 </div>
               </div>
             </div>
+            <button
+              :click="clicked_value = 2"
+              :class="{ active: addressContactInfoNav }"
+              id="v-pills-addressAndContact-tab"
+              data-toggle="pill"
+              href="#v-pills-addressAndContact"
+              class="btn btn-primary btn-lg btn-block"
+            >Proceed to Address and Contact Information</button>
           </div>
 
           <div

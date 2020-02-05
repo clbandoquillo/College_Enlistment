@@ -3269,6 +3269,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -73385,12 +73393,8 @@ var render = function() {
                   href: "#v-pills-personalinfo",
                   role: "tab",
                   "aria-controls": "v-pills-personalinfo",
-                  "aria-selected": "true"
-                },
-                on: {
-                  click: function($event) {
-                    _vm.clicked_value = 1
-                  }
+                  "aria-selected": "true",
+                  click: _vm.changeVal(1)
                 }
               },
               [_vm._v("Basic Personal Information")]
@@ -73407,12 +73411,8 @@ var render = function() {
                   href: "#v-pills-addressAndContact",
                   role: "tab",
                   "aria-controls": "v-pills-addressAndContact",
-                  "aria-selected": "false"
-                },
-                on: {
-                  click: function($event) {
-                    _vm.clicked_value = 2
-                  }
+                  "aria-selected": "false",
+                  click: _vm.changeVal(2)
                 }
               },
               [_vm._v("Address and Contact Information")]
@@ -73437,7 +73437,24 @@ var render = function() {
                   "aria-labelledby": "v-pills-personalinfo-tab"
                 }
               },
-              [_vm._m(0)]
+              [
+                _vm._m(0),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary btn-lg btn-block",
+                    class: { active: _vm.addressContactInfoNav },
+                    attrs: {
+                      click: (_vm.clicked_value = 2),
+                      id: "v-pills-addressAndContact-tab",
+                      "data-toggle": "pill",
+                      href: "#v-pills-addressAndContact"
+                    }
+                  },
+                  [_vm._v("Proceed to Address and Contact Information")]
+                )
+              ]
             ),
             _vm._v(" "),
             _c(
