@@ -8,37 +8,38 @@
           role="tablist"
           aria-orientation="vertical"
         >
+          {{ clicked_value }}
           <a
             class="nav-link"
-            :class="{ personalInfo }"
-            @click="personalInfoNav()"
             id="v-pills-personalinfo-tab"
             data-toggle="pill"
             href="#v-pills-personalinfo"
             role="tab"
             aria-controls="v-pills-personalinfo"
             aria-selected="true"
+            @click="clicked_value = 1"
+            :class="{ active: personalInfoNav }"
           >Basic Personal Information</a>
 
           <a
             class="nav-link"
-            :class="{ addressContactInfo }"
-            @click="addressContactNav()"
             id="v-pills-addressAndContact-tab"
             data-toggle="pill"
             href="#v-pills-addressAndContact"
             role="tab"
             aria-controls="v-pills-addressAndContact"
             aria-selected="false"
+            @click="clicked_value = 2"
+            :class="{ active: addressContactInfoNav }"
           >Address and Contact Information</a>
-
+          <!--
           <a
             class="nav-link"
             :class="{ medicalProfile }"
-            @click="medicalProfileNav()"
+            @click="medicalProfile"
             id="v-pills-medicalProfile-tab"
             data-toggle="pill"
-            :href="href"
+            href="#v-pills-medicalProfile"
             role="tab"
             aria-controls="v-pills-medicalProfile"
             aria-selected="false"
@@ -47,7 +48,7 @@
           <a
             class="nav-link"
             :class="{ familyInfo }"
-            @click="familyInfoNav()"
+            @click="familyInfo"
             id="v-pills-familyInfo-tab"
             data-toggle="pill"
             href="#v-pills-familyInfo"
@@ -59,7 +60,7 @@
           <a
             class="nav-link"
             :class="{ educationalBackground }"
-            @click="educationalBackgroundNav()"
+            @click="educationalBackground"
             id="v-pills-educationalBackground-tab"
             data-toggle="pill"
             href="#v-pills-educationalBackground"
@@ -71,14 +72,14 @@
           <a
             class="nav-link"
             :class="{ psychologicalProfile }"
-            @click="psychologicalProfileNav()"
+            @click="psychologicalProfile"
             id="v-pills-psychologicalProfile-tab"
             data-toggle="pill"
             href="#v-pills-psychologicalProfile"
             role="tab"
             aria-controls="v-pills-psychologicalProfile"
             aria-selected="false"
-          >Psychological Profile</a>
+          >Psychological Profile</a>-->
 
           <!--<a
             class="nav-link"
@@ -96,6 +97,7 @@
           <div
             class="tab-pane fade show active"
             id="v-pills-personalinfo"
+            ref="personalInfo"
             role="tabpanel"
             aria-labelledby="v-pills-personalinfo-tab"
           >
@@ -263,19 +265,12 @@
                 </div>
               </div>
             </div>
-            <a
-            :class="{ addressContactInfo }"
-            @click="addressContactNav()"
-              id="v-pills-addressAndContact-tab"
-              data-toggle="pill"
-              href="#v-pills-addressAndContact"
-              class="btn btn-primary btn-lg btn-block"
-            >Proceed to Address and Contact Information</a>
           </div>
 
           <div
             class="tab-pane fade"
             id="v-pills-addressAndContact"
+            ref="addressAndContact"
             role="tabpanel"
             aria-labelledby="v-pills-addressAndContact-tab"
           >
@@ -1503,75 +1498,31 @@
 export default {
   data() {
     return {
-      activeStatus: "",
-      personalInfo: "active",
-      addressContactInfo: "",
-      medicalProfile: "",
-      familyInfo: "",
-      educationalBackground: "",
-      psychologicalProfile: "",
-      href: ''
-    };
+      clicked_value: 1
+    }
   },
+
   methods: {
-    personalInfoNav() {
-      this.personalInfo = "active";
-      this.addressContactInfo = "";
-      this.medicalProfile = "";
-      this.familyInfo = "";
-      this.educationalBackground = "";
-      this.psychologicalProfile = "";
-      this.activeStatus = "personalInfoNav active";
+    changeVal(el){
+      this.clicked_value = el;
+    }
+  },
+
+  computed: {
+    personalInfoNav: function() {
+      return this.clicked_value == 1 ? true : false;
     },
-    addressContactNav() {
-      this.personalInfo = "";
-      this.addressContactInfo = "active";
-      this.medicalProfile = "";
-      this.familyInfo = "";
-      this.educationalBackground = "";
-      this.psychologicalProfile = "";
-      this.activeStatus = "addressContactNav active";
-    },
-    medicalProfileNav() {
-      this.personalInfo = "";
-      this.addressContactInfo = "";
-      this.medicalProfile = "active";
-      this.familyInfo = "";
-      this.educationalBackground = "";
-      this.psychologicalProfile = "";
-      this.activeStatus = "medicalProfileNav active";
-      this.href = "#v-pills-medicalProfile"
-    },
-    familyInfoNav() {
-      this.personalInfo = "";
-      this.addressContactInfo = "";
-      this.medicalProfile = "";
-      this.familyInfo = "active";
-      this.educationalBackground = "";
-      this.psychologicalProfile = "";
-      this.activeStatus = "familyInfoNav active";
-    },
-    educationalBackgroundNav() {
-      this.personalInfo = "";
-      this.addressContactInfo = "";
-      this.medicalProfile = "";
-      this.familyInfo = "";
-      this.educationalBackground = "active";
-      this.psychologicalProfile = "";
-      this.activeStatus = "educationalBackgroundNav active";
-    },
-    psychologicalProfileNav() {
-      this.personalInfo = "";
-      this.addressContactInfo = "";
-      this.medicalProfile = "";
-      this.familyInfo = "";
-      this.educationalBackground = "";
-      this.psychologicalProfile = "active";
-      this.activeStatus = "psychologicalProfileNav active";
+
+    addressContactInfoNav: function() {
+      return this.clicked_value == 2 ? true : false;
     }
   }
 };
 </script>
 
-<style scoped>
+<style>
+.active {
+  opacity: 1;
+  visibility: visible;
+}
 </style>
