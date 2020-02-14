@@ -8,17 +8,14 @@
           role="tablist"
           aria-orientation="vertical"
         >
-          {{ clicked_value }}
           <a
-            class="nav-link"
+            class="nav-link active"
             id="v-pills-personalinfo-tab"
             data-toggle="pill"
             href="#v-pills-personalinfo"
             role="tab"
             aria-controls="v-pills-personalinfo"
             aria-selected="true"
-            :click="changeVal(1)"
-            :class="{ active: personalInfoNav }"
           >Basic Personal Information</a>
 
           <a
@@ -29,14 +26,9 @@
             role="tab"
             aria-controls="v-pills-addressAndContact"
             aria-selected="false"
-            :click="changeVal(2)"
-            :class="{ active: addressContactInfoNav }"
           >Address and Contact Information</a>
-          <!--
           <a
             class="nav-link"
-            :class="{ medicalProfile }"
-            @click="medicalProfile"
             id="v-pills-medicalProfile-tab"
             data-toggle="pill"
             href="#v-pills-medicalProfile"
@@ -47,8 +39,6 @@
 
           <a
             class="nav-link"
-            :class="{ familyInfo }"
-            @click="familyInfo"
             id="v-pills-familyInfo-tab"
             data-toggle="pill"
             href="#v-pills-familyInfo"
@@ -59,8 +49,6 @@
 
           <a
             class="nav-link"
-            :class="{ educationalBackground }"
-            @click="educationalBackground"
             id="v-pills-educationalBackground-tab"
             data-toggle="pill"
             href="#v-pills-educationalBackground"
@@ -71,15 +59,13 @@
 
           <a
             class="nav-link"
-            :class="{ psychologicalProfile }"
-            @click="psychologicalProfile"
             id="v-pills-psychologicalProfile-tab"
             data-toggle="pill"
             href="#v-pills-psychologicalProfile"
             role="tab"
             aria-controls="v-pills-psychologicalProfile"
             aria-selected="false"
-          >Psychological Profile</a>-->
+          >Psychological Profile</a>
 
           <!--<a
             class="nav-link"
@@ -112,6 +98,7 @@
                           <div class="form-group">
                             <label>Surname</label>
                             <input
+                              v-model="enlist.surname"
                               name="surname"
                               type="text"
                               class="form-control"
@@ -143,6 +130,7 @@
                           <div class="form-group">
                             <label>First Name</label>
                             <input
+                              v-model="enlist.firstname"
                               name="firstname"
                               type="text"
                               class="form-control"
@@ -155,6 +143,7 @@
                           <div class="form-group">
                             <label>Middle Name</label>
                             <input
+                              v-model="enlist.middlename"
                               name="middlename"
                               type="text"
                               class="form-control"
@@ -177,6 +166,7 @@
                           <div class="form-group">
                             <label>Birthdate</label>
                             <input
+                              v-model="enlist.birthDate"
                               name="birthDate"
                               id="datepicker"
                               type="date"
@@ -191,6 +181,7 @@
                           <div class="form-group">
                             <label>Birthplace</label>
                             <input
+                              v-model="enlist.birthPlace"
                               name="birthPlace"
                               type="text"
                               class="form-control"
@@ -203,7 +194,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <div class="form-group">
                             <label>Gender</label>
-                            <select name="gender" class="form-control" required>
+                            <select v-model="enlist.gender" name="gender" class="form-control" required>
                               <option value="none" selected disabled></option>
                               <option value="1">Male</option>
                               <option value="2">Female</option>
@@ -222,7 +213,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <div class="form-group">
                             <label>Civil Status</label>
-                            <select name="civilStatus" class="form-control" required>
+                            <select v-model="enlist.civilStatus" name="civilStatus" class="form-control" required>
                               <option value="none" selected disabled></option>
                               <option value="1">Single (Never Married)</option>
                               <option value="2">Married</option>
@@ -239,6 +230,7 @@
                               <select
                                 data-placeholder="Choose a Citizenship..."
                                 id="citizenship"
+                                v-model="enlist.citizenship"
                                 name="citizenship"
                                 class="form-control"
                                 tabindex="-1"
@@ -254,7 +246,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <div class="form-group">
                             <label>Religion</label>
-                            <select id="religion" name="religion" class="form-control" required>
+                            <select id="religion" v-model="enlist.religion" name="religion" class="form-control" required>
                               <option value="none" selected disabled></option>
                             </select>
                           </div>
@@ -265,14 +257,6 @@
                 </div>
               </div>
             </div>
-            <button
-              :click="clicked_value = 2"
-              :class="{ active: addressContactInfoNav }"
-              id="v-pills-addressAndContact-tab"
-              data-toggle="pill"
-              href="#v-pills-addressAndContact"
-              class="btn btn-primary btn-lg btn-block"
-            >Proceed to Address and Contact Information</button>
           </div>
 
           <div
@@ -288,6 +272,7 @@
                 <div class="form-group">
                   <label>Permanent Address (House No., Street, Subdivision/Sitio, Barangay)</label>
                   <input
+                    v-model="enlist.permanentAddress"
                     name="permanentAddress"
                     type="text"
                     class="form-control"
@@ -306,6 +291,7 @@
                             <select
                               data-placeholder="Choose a City..."
                               id="permanentCity"
+                              v-model="enlist.permanentCity"
                               name="permanentCity"
                               class="form-control"
                               tabindex="-1"
@@ -319,6 +305,7 @@
                             <label>Province</label>
                             <select
                               id="permanentProvince"
+                              v-model="enlist.permanentProvince"
                               name="permanentProvince"
                               class="form-control"
                               required
@@ -332,6 +319,7 @@
                             <label>Zip/Postal Code</label>
                             <input
                               name="permanentzippostalcode"
+                              v-model="enlist.permanentzippostalcode"
                               type="text"
                               class="form-control"
                               placeholder="Zip/Postal Code"
@@ -347,6 +335,7 @@
                                 data-placeholder="Choose a Country..."
                                 id="permanentCountry"
                                 name="permanentCountry"
+                                v-model="enlist.permanentCountry"
                                 class="form-control"
                                 tabindex="-1"
                                 required
@@ -371,6 +360,7 @@
                       id="sameAsPermanent"
                       value="1"
                       name="sameAsPermanent"
+                      v-model="enlist.sameAsPermanent"
                     />Yes
                   </label>
                   <label class="radio-inline">
@@ -381,6 +371,7 @@
                       id="sameAsPermanent"
                       value="0"
                       name="sameAsPermanent"
+                      v-model="enlist.sameAsPermanent"
                     />No
                   </label>
                 </div>
@@ -393,6 +384,7 @@
                       type="checkbox"
                       value="1"
                       name="boarding"
+                      v-model="enlist.boarding"
                       id="boarding"
                     />
                   </label>
@@ -405,6 +397,7 @@
                       type="checkbox"
                       value="1"
                       name="withRelative"
+                      v-model="enlist.withRelative"
                       id="withRelative"
                     />
                   </label>
@@ -416,6 +409,7 @@
                   <input
                     id="cityAddress"
                     name="cityAddress"
+                    v-model="enlist.cityAddress"
                     type="text"
                     class="form-control"
                     placeholder="City Address"
@@ -432,6 +426,7 @@
                               data-placeholder="Choose a City..."
                               id="cityCity"
                               name="cityCity"
+                              v-model="enlist.cityCity"
                               class="form-control"
                               tabindex="-1"
                             >
@@ -445,6 +440,7 @@
                             <select
                               id="cityProvince"
                               name="cityProvince"
+                              v-model="enlist.cityProvince"
                               class="form-control"
                               required
                             >
@@ -458,6 +454,7 @@
                             <input
                               id="cityzippostalcode"
                               name="cityzippostalcode"
+                              v-model="enlist.cityzippostalcode"
                               type="text"
                               class="form-control"
                               placeholder="Zip/Postal Code"
@@ -472,6 +469,7 @@
                                 data-placeholder="Choose a Country..."
                                 id="cityCountry"
                                 name="cityCountry"
+                              v-model="enlist.cityCountry"
                                 class="form-control"
                                 tabindex="-1"
                               >
@@ -494,6 +492,7 @@
                             <label>E-mail Address</label>
                             <input
                               name="email"
+                              v-model="enlist.email"
                               type="email"
                               class="form-control"
                               placeholder="E-mail Address"
@@ -506,6 +505,7 @@
                             <label>Mobile Number</label>
                             <input
                               name="mobileNum"
+                              v-model="enlist.mobileNum"
                               id="mobileNum"
                               type="tel"
                               class="form-control"
@@ -534,6 +534,7 @@
                             <label>Person To Contact</label>
                             <input
                               name="personToContact"
+                              v-model="enlist.personToContact"
                               type="text"
                               class="form-control"
                               placeholder="Person To Contact"
@@ -546,6 +547,7 @@
                             <label>Relationship</label>
                             <input
                               name="personToContactRelationship"
+                              v-model="enlist.personToContactRelationship"
                               type="text"
                               class="form-control basic-ele-mg-t-10"
                               placeholder="Relationship"
@@ -569,6 +571,7 @@
                               class="form-control"
                               data-mask="(999) 999-9999"
                               name="personToContactTelNo"
+                              v-model="enlist.personToContactTelNo"
                               placeholder="Telephone No."
                             />
                           </div>
@@ -579,6 +582,7 @@
                             <input
                               name="personToContactMobileNo"
                               id="personToContactMobileNo"
+                              v-model="enlist.personToContactMobileNo"
                               type="tel"
                               class="form-control"
                               placeholder="Mobile no."
@@ -609,7 +613,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <div class="form-select-list">
                         <label>Blood Group</label>
-                        <select name="bloodGroup" class="form-control" required>
+                        <select v-model="enlist.bloodGroup" name="bloodGroup" class="form-control" required>
                           <option value="none" selected disabled></option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -621,7 +625,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <div class="form-select-list">
                         <label>Rh</label>
-                        <select name="rh" class="form-control" required>
+                        <select v-model="enlist.rh" name="rh" class="form-control" required>
                           <option value="none" selected disabled></option>
                           <option value="+">+</option>
                           <option value="-">-</option>
@@ -641,6 +645,7 @@
                         <label>Family / Personal Physician's Name</label>
                         <input
                           name="physicianName"
+                          v-model="enlist.physicianName"
                           type="text"
                           class="form-control"
                           placeholder="Family / Personal Physician's Name"
@@ -652,6 +657,7 @@
                         <label>Physician's Contact Information</label>
                         <input
                           name="physicianContactInformation"
+                          v-model="enlist.physicianContactInformation"
                           type="text"
                           class="form-control basic-ele-mg-t-10"
                           placeholder="Physician's Contact Information"
@@ -675,6 +681,7 @@
                             type="radio"
                             value="1"
                             name="takingMedication"
+                            v-model="enlist.takingMedication"
                             onclick="javascript:yesnoMedication();"
                             id="yestakingMedication"
                           />Yes
@@ -685,6 +692,7 @@
                             type="radio"
                             value="0"
                             name="takingMedication"
+                            v-model="enlist.takingMedication"
                             onclick="javascript:yesnoMedication();"
                             id="notakingMedication"
                           />No
@@ -705,6 +713,7 @@
                         <input
                           id="medicationInfo"
                           name="medicationInfo"
+                          v-model="enlist.medicationInfo"
                           type="text"
                           class="form-control basic-ele-mg-t-10"
                           placeholder
@@ -729,6 +738,7 @@
                             type="radio"
                             value="1"
                             name="specialNeeds"
+                            v-model="enlist.specialNeeds"
                             onclick="javascript:yesnoSpecialNeeds();"
                             id="yesSpecialNeeds"
                           />Yes
@@ -739,6 +749,7 @@
                             type="radio"
                             value="0"
                             name="specialNeeds"
+                            v-model="enlist.specialNeeds"
                             onclick="javascript:yesnoSpecialNeeds();"
                             id="noSpecialNeeds"
                           />No
@@ -755,6 +766,7 @@
                         <select
                           id="typeOfSpecialNeeds"
                           name="typeOfSpecialNeeds"
+                          v-model="enlist.typeOfSpecialNeeds"
                           class="form-control"
                         >
                           <option value selected></option>
@@ -771,6 +783,7 @@
                         <input
                           id="othersSpecialNeeds"
                           name="othersSpecialNeeds"
+                          v-model="enlist.othersSpecialNeeds"
                           type="text"
                           class="form-control basic-ele-mg-t-10"
                           placeholder="Others: (Please specify)"
@@ -799,6 +812,7 @@
                         <label>Position in the Family(e.g. eldest)</label>
                         <input
                           name="positionFamily"
+                          v-model="enlist.positionFamily"
                           type="text"
                           class="form-control"
                           placeholder="Position in the Family"
@@ -811,6 +825,7 @@
                         <label>No. of Brothers</label>
                         <input
                           name="numBrothers"
+                          v-model="enlist.numBrothers"
                           min="0"
                           value="0"
                           type="number"
@@ -825,6 +840,7 @@
                         <label>No. of Sisters</label>
                         <input
                           name="numSisters"
+                          v-model="enlist.numSisters"
                           min="0"
                           value="0"
                           type="number"
@@ -851,6 +867,7 @@
                           type="text"
                           class="form-control"
                           name="fatherName"
+                          v-model="enlist.fatherName"
                           placeholder="Father's Complete Name"
                           required
                         />
@@ -862,6 +879,7 @@
                           id="fatherLiving"
                           value="1"
                           name="fatherLiving"
+                          v-model="enlist.fatherLiving"
                         />
                       </div>
                     </div>
@@ -873,6 +891,7 @@
                           class="form-control basic-ele-mg-t-10"
                           id="fatherOccupation"
                           name="fatherOccupation"
+                          v-model="enlist.fatherOccupation"
                           placeholder="Father's Occupation"
                           required
                         />
@@ -894,6 +913,7 @@
                           class="form-control"
                           id="fatherAddress"
                           name="fatherAddress"
+                          v-model="enlist.fatherAddress"
                           placeholder="Father's Address"
                           required
                         />
@@ -904,6 +924,7 @@
                         <label>Father's Contact Number</label>
                         <input
                           name="fatherContactNum"
+                          v-model="enlist.fatherContactNum"
                           id="fatherContactNum"
                           type="tel"
                           class="form-control"
@@ -925,6 +946,7 @@
                         <label>Mother's Complete Name</label>
                         <input
                           name="motherName"
+                          v-model="enlist.motherName"
                           type="text"
                           class="form-control"
                           placeholder="Mother's Complete Name"
@@ -936,6 +958,7 @@
                           type="checkbox"
                           onclick="javascript:checkMother();"
                           id="motherLiving"
+                          v-model="enlist.motherLiving"
                           value="1"
                           name="motherLiving"
                         />
@@ -947,6 +970,7 @@
                         <input
                           id="motherOccupation"
                           name="motherOccupation"
+                          v-model="enlist.motherOccupation"
                           type="text"
                           class="form-control basic-ele-mg-t-10"
                           placeholder="Mother's Occupation"
@@ -970,6 +994,7 @@
                           class="form-control"
                           id="motherAddress"
                           name="motherAddress"
+                          v-model="enlist.motherAddress"
                           placeholder="Mother's Address"
                           required
                         />
@@ -980,6 +1005,7 @@
                         <label>Mother's Contact Number</label>
                         <input
                           name="motherContactNum"
+                          v-model="enlist.motherContactNum"
                           id="motherContactNum"
                           type="tel"
                           class="form-control"
@@ -999,7 +1025,7 @@
                     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                       <div class="form-select-list">
                         <label>Parents' Marital Status</label>
-                        <select name="parentsMaritalStatus" class="form-control" required>
+                        <select v-model="enlist.parentsMaritalStatus" name="parentsMaritalStatus" class="form-control" required>
                           <option value="none" selected disabled></option>
                           <option value="1">Single (Never Married)</option>
                           <option value="2">Married</option>
@@ -1015,6 +1041,7 @@
                           type="text"
                           class="form-control"
                           name="nameOfSpouse"
+                          v-model="enlist.nameOfSpouse"
                           placeholder="Name of Spouse (if married)"
                         />
                       </div>
@@ -1030,30 +1057,12 @@
                   <div class="row">
                     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                       <div class="form-select-list">
-                        <label>Name of Enlistee's Spouse (if married)</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="nameOfSpouse"
-                          placeholder="Name of Spouse (if married)"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <div class="row">
-                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-                      <div class="form-select-list">
                         <label>Annual Family Income (in Philippine Peso)</label>
                         <input
                           type="number"
                           id="annualFamilyIncome"
                           name="annualFamilyIncome"
+                          v-model="enlist.annualFamilyIncome"
                           class="form-control"
                           min="1"
                           value="0"
@@ -1085,6 +1094,7 @@
                         <label>Name of School</label>
                         <input
                           name="preSchoolName"
+                          v-model="enlist.preSchoolName"
                           type="text"
                           class="form-control"
                           placeholder="Name of School"
@@ -1097,6 +1107,7 @@
                         <label>Address</label>
                         <input
                           name="preSchoolAddress"
+                          v-model="enlist.preSchoolAddress"
                           type="text"
                           class="form-control basic-ele-mg-t-10"
                           placeholder="Address"
@@ -1109,6 +1120,7 @@
                         <label>Year Graduated</label>
                         <input
                           name="preSchoolGraduated"
+                          v-model="enlist.preSchoolGraduated"
                           type="number"
                           class="form-control basic-ele-mg-t-10"
                           min="1"
@@ -1131,6 +1143,7 @@
                         <label>Name of School</label>
                         <input
                           name="gradeSchoolName"
+                          v-model="enlist.gradeSchoolName"
                           type="text"
                           class="form-control"
                           placeholder="Name of School"
@@ -1143,6 +1156,7 @@
                         <label>Address</label>
                         <input
                           name="gradeSchoolAddress"
+                          v-model="enlist.gradeSchoolAddress"
                           type="text"
                           class="form-control basic-ele-mg-t-10"
                           placeholder="Address"
@@ -1155,6 +1169,7 @@
                         <label>Year Graduated</label>
                         <input
                           name="gradeSchoolGraduated"
+                          v-model="enlist.gradeSchoolGraduated"
                           type="number"
                           class="form-control basic-ele-mg-t-10"
                           min="1"
@@ -1177,6 +1192,7 @@
                         <label>Name of School</label>
                         <input
                           name="highSchoolName"
+                          v-model="enlist.highSchoolName"
                           type="text"
                           class="form-control"
                           placeholder="Name of School"
@@ -1189,6 +1205,7 @@
                         <label>Address</label>
                         <input
                           name="highSchoolAddress"
+                          v-model="enlist.highSchoolAddress"
                           type="text"
                           class="form-control basic-ele-mg-t-10"
                           placeholder="Address"
@@ -1201,6 +1218,7 @@
                         <label>Year Graduated</label>
                         <input
                           name="highSchoolGraduated"
+                          v-model="enlist.highSchoolGraduated"
                           type="number"
                           class="form-control basic-ele-mg-t-10"
                           min="1"
@@ -1224,6 +1242,7 @@
                   id="yesCheckCollege"
                   value="1"
                   name="isCollege"
+                  v-model="enlist.isCollege"
                 />
               </label>
             </div>
@@ -1232,6 +1251,7 @@
                 <label>Name of College or University Attended(if transfer student)</label>
                 <input
                   name="nameCollegeUniv"
+                  v-model="enlist.nameCollegeUniv"
                   id="nameCollegeUniv"
                   type="text"
                   class="form-control"
@@ -1240,6 +1260,7 @@
                 <label>Complete Address of College or University Attended(if transfer student)</label>
                 <input
                   name="addressCollegeUniv"
+                  v-model="enlist.addressCollegeUniv"
                   id="addressCollegeUniv"
                   type="text"
                   class="form-control"
@@ -1255,6 +1276,7 @@
                   type="checkbox"
                   value="0"
                   name="isSHS"
+                  v-model="enlist.isSHS"
                   onclick="javascript:yesnoCheckSHS();"
                   id="yesCheckSHS"
                 />
@@ -1264,6 +1286,7 @@
               <label>Name of Senior High School Attended</label>
               <input
                 name="nameSHS"
+                v-model="enlist.nameSHS"
                 id="nameSHS"
                 type="text"
                 class="form-control"
@@ -1274,6 +1297,7 @@
               <label>Complete Address of Senior High School Attended</label>
               <input
                 name="addressSHS"
+                v-model="enlist.addressSHS"
                 id="addressSHS"
                 type="text"
                 class="form-control"
@@ -1284,6 +1308,7 @@
               <label>Principal's Name</label>
               <input
                 name="principalSHS"
+                v-model="enlist.principalSHS"
                 id="principalSHS"
                 type="text"
                 class="form-control"
@@ -1300,6 +1325,7 @@
                         <select
                           id="track"
                           name="track"
+                          v-model="enlist.track"
                           class="form-control"
                           onclick="javascript:strandCheck();"
                         >
@@ -1314,7 +1340,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <div class="form-select-list">
                         <label>Strand</label>
-                        <select id="strand" name="strand" class="form-control">
+                        <select id="strand" v-model="enlist.strand" name="strand" class="form-control">
                           <option value="none" selected></option>
                           <option value="HUMSS" id="HUMSS" style="display:none">HUMSS</option>
                           <option value="STEM" id="STEM" style="display:none">STEM</option>
@@ -1353,6 +1379,7 @@
                   id="yesCheck"
                   value="1"
                   name="isIndigenous"
+                  v-model="enlist.isIndigenous"
                 />
               </label>
             </div>
@@ -1361,6 +1388,7 @@
                 <label>If yes, please indicate the name of your community.</label>
                 <input
                   name="indigenousCommunity"
+                  v-model="enlist.indigenousCommunity"
                   id="indigenousCommunity"
                   type="text"
                   class="form-control"
@@ -1381,6 +1409,7 @@
                           <select
                             id="choice"
                             name="programChoiceOne"
+                            v-model="enlist.programChoiceOne"
                             class="form-control programChoice1"
                             required
                           >
@@ -1395,6 +1424,7 @@
                         <select
                           id="choice"
                           name="programChoiceTwo"
+                          v-model="enlist.programChoiceTwo"
                           class="form-control programChoice2"
                         >
                           <option value selected></option>
@@ -1407,6 +1437,7 @@
                         <select
                           id="choice"
                           name="programChoiceThree"
+                          v-model="enlist.programChoiceThree"
                           class="form-control programChoice3"
                         >
                           <option value selected></option>
@@ -1439,6 +1470,7 @@
                             type="radio"
                             value="1"
                             name="currTherapyRehabCounseling"
+                            v-model="enlist.currTherapyRehabCounseling"
                             onclick="javascript:yesnoCounseling();"
                             id="yesCheckCounseling"
                           />Yes
@@ -1449,6 +1481,7 @@
                             type="radio"
                             value="0"
                             name="currTherapyRehabCounseling"
+                            v-model="enlist.currTherapyRehabCounseling"
                             onclick="javascript:yesnoCounseling();"
                             id="noCheckCounseling"
                           />No
@@ -1459,6 +1492,7 @@
                         <input
                           id="currTherapyRehabCounselingName"
                           name="currTherapyRehabCounselingName"
+                          v-model="enlist.currTherapyRehabCounselingName"
                           type="text"
                           class="form-control basic-ele-mg-t-10"
                           placeholder
@@ -1468,6 +1502,7 @@
                         <label>Contact Information</label>
                         <input
                           name="currTherapyRehabCounselingContact"
+                          v-model="enlist.currTherapyRehabCounselingContact"
                           id="currTherapyRehabCounselingContact"
                           type="tel"
                           class="form-control"
@@ -1481,6 +1516,7 @@
                           class="form-control"
                           id="reasonToSeekHelp"
                           name="reasonToSeekHelp"
+                          v-model="enlist.reasonToSeekHelp"
                         ></textarea>
                       </div>
                     </div>
@@ -1506,24 +1542,95 @@
 export default {
   data() {
     return {
-      clicked_value: 1
-    }
+      enlist: {
+        surname: "",
+        suffix: "",
+        firstname: "",
+        middlename: "",
+        birthDate: "",
+        birthPlace: "",
+        gender: "",
+        civilStatus: "",
+        citizenship: "",
+        religion: "",
+        permanentAddress: "",
+        permanentProvince: "",
+        permanentCity: "",
+        permanentzippostalcode: "",
+        permanentCountry: "",
+        sameAsPermanent: "",
+        boarding: "",
+        withRelative: "",
+        cityAddress: "",
+        cityProvince: "",
+        cityCity: "",
+        cityzippostalcode: "",
+        cityCountry: "",
+        email: "",
+        mobileNum: "",
+        personToContact: "",
+        personToContactRelationship: "",
+        personToContactTelNo: "",
+        personToContactMobileNo: "",
+        bloodGroup: "",
+        rh: "",
+        physicianName: "",
+        physicianContactInformation: "",
+        takingMedication: "",
+        medicationInfo: "",
+        specialNeeds: "",
+        typeOfSpecialNeeds: "",
+        othersSpecialNeeds: "",
+        positionFamily: "",
+        numBrothers: "",
+        numSisters: "",
+        fatherName: "",
+        fatherLiving: "",
+        fatherOccupation: "",
+        fatherAddress: "",
+        fatherContactNum: "",
+        motherName: "",
+        motherLiving: "",
+        motherOccupation: "",
+        motherAddress: "",
+        motherContactNum: "",
+        parentsMaritalStatus: "",
+        nameOfSpouse: "",
+        annualFamilyIncome: "",
+        preSchoolName: "",
+        preSchoolAddress: "",
+        preSchoolGraduated: "",
+        gradeSchoolName: "",
+        gradeSchoolAddress: "",
+        gradeSchoolGraduated: "",
+        highSchoolName: "",
+        highSchoolAddress: "",
+        highSchoolGraduated: "",
+        nameSHS: "",
+        addressSHS: "",
+        principalSHS: "",
+        track: "",
+        strand: "",
+        isIndigenous: "",
+        indigenousCommunity: "",
+        nameCollegeUniv: "",
+        addressCollegeUniv: "",
+        programChoiceOne: "",
+        programChoiceTwo: "",
+        programChoiceThree: "",
+        currTherapyRehabCounseling: "",
+        currTherapyRehabCounselingName: "",
+        currTherapyRehabCounselingContact: "",
+        reasonToSeekHelp: "",
+        status: ""
+      },
+    };
   },
 
   methods: {
-    changeVal(el){
-      this.clicked_value = el;
-    }
   },
 
   computed: {
-    personalInfoNav: function() {
-      return this.clicked_value == 1 ? true : false;
-    },
-
-    addressContactInfoNav: function() {
-      return this.clicked_value == 2 ? true : false;
-    }
   }
 };
 </script>

@@ -3277,25 +3277,131 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      clicked_value: 1
+      enlist: {
+        surname: "",
+        suffix: "",
+        firstname: "",
+        middlename: "",
+        birthDate: "",
+        birthPlace: "",
+        gender: "",
+        civilStatus: "",
+        citizenship: "",
+        religion: "",
+        permanentAddress: "",
+        permanentProvince: "",
+        permanentCity: "",
+        permanentzippostalcode: "",
+        permanentCountry: "",
+        sameAsPermanent: "",
+        boarding: "",
+        withRelative: "",
+        cityAddress: "",
+        cityProvince: "",
+        cityCity: "",
+        cityzippostalcode: "",
+        cityCountry: "",
+        email: "",
+        mobileNum: "",
+        personToContact: "",
+        personToContactRelationship: "",
+        personToContactTelNo: "",
+        personToContactMobileNo: "",
+        bloodGroup: "",
+        rh: "",
+        physicianName: "",
+        physicianContactInformation: "",
+        takingMedication: "",
+        medicationInfo: "",
+        specialNeeds: "",
+        typeOfSpecialNeeds: "",
+        othersSpecialNeeds: "",
+        positionFamily: "",
+        numBrothers: "",
+        numSisters: "",
+        fatherName: "",
+        fatherLiving: "",
+        fatherOccupation: "",
+        fatherAddress: "",
+        fatherContactNum: "",
+        motherName: "",
+        motherLiving: "",
+        motherOccupation: "",
+        motherAddress: "",
+        motherContactNum: "",
+        parentsMaritalStatus: "",
+        nameOfSpouse: "",
+        annualFamilyIncome: "",
+        preSchoolName: "",
+        preSchoolAddress: "",
+        preSchoolGraduated: "",
+        gradeSchoolName: "",
+        gradeSchoolAddress: "",
+        gradeSchoolGraduated: "",
+        highSchoolName: "",
+        highSchoolAddress: "",
+        highSchoolGraduated: "",
+        nameSHS: "",
+        addressSHS: "",
+        principalSHS: "",
+        track: "",
+        strand: "",
+        isIndigenous: "",
+        indigenousCommunity: "",
+        nameCollegeUniv: "",
+        addressCollegeUniv: "",
+        programChoiceOne: "",
+        programChoiceTwo: "",
+        programChoiceThree: "",
+        currTherapyRehabCounseling: "",
+        currTherapyRehabCounselingName: "",
+        currTherapyRehabCounselingContact: "",
+        reasonToSeekHelp: "",
+        status: ""
+      }
     };
   },
-  methods: {
-    changeVal: function changeVal(el) {
-      this.clicked_value = el;
-    }
-  },
-  computed: {
-    personalInfoNav: function personalInfoNav() {
-      return this.clicked_value == 1 ? true : false;
-    },
-    addressContactInfoNav: function addressContactInfoNav() {
-      return this.clicked_value == 2 ? true : false;
-    }
-  }
+  methods: {},
+  computed: {}
 });
 
 /***/ }),
@@ -73369,57 +73475,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container-fluid" }, [
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-xs-3" }, [
-        _c(
-          "div",
-          {
-            staticClass: "nav flex-column nav-pills",
-            attrs: {
-              id: "v-pills-tab",
-              role: "tablist",
-              "aria-orientation": "vertical"
-            }
-          },
-          [
-            _vm._v("\n        " + _vm._s(_vm.clicked_value) + "\n        "),
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                class: { active: _vm.personalInfoNav },
-                attrs: {
-                  id: "v-pills-personalinfo-tab",
-                  "data-toggle": "pill",
-                  href: "#v-pills-personalinfo",
-                  role: "tab",
-                  "aria-controls": "v-pills-personalinfo",
-                  "aria-selected": "true",
-                  click: _vm.changeVal(1)
-                }
-              },
-              [_vm._v("Basic Personal Information")]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                class: { active: _vm.addressContactInfoNav },
-                attrs: {
-                  id: "v-pills-addressAndContact-tab",
-                  "data-toggle": "pill",
-                  href: "#v-pills-addressAndContact",
-                  role: "tab",
-                  "aria-controls": "v-pills-addressAndContact",
-                  "aria-selected": "false",
-                  click: _vm.changeVal(2)
-                }
-              },
-              [_vm._v("Address and Contact Information")]
-            )
-          ]
-        )
-      ]),
+      _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "col-xs-9 col-9" }, [
         _c(
@@ -73438,22 +73494,633 @@ var render = function() {
                 }
               },
               [
-                _vm._m(0),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-primary btn-lg btn-block",
-                    class: { active: _vm.addressContactInfoNav },
-                    attrs: {
-                      click: (_vm.clicked_value = 2),
-                      id: "v-pills-addressAndContact-tab",
-                      "data-toggle": "pill",
-                      href: "#v-pills-addressAndContact"
-                    }
-                  },
-                  [_vm._v("Proceed to Address and Contact Information")]
-                )
+                _c("div", { staticClass: "row" }, [
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
+                    [
+                      _c("h4", { staticClass: "form-header text-primary" }, [
+                        _vm._v("Name as it appears on the Birth Certificate")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "row" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-8 col-md-8 col-sm-8 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("Surname")]),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.enlist.surname,
+                                            expression: "enlist.surname"
+                                          }
+                                        ],
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          name: "surname",
+                                          type: "text",
+                                          placeholder: "Surname",
+                                          required: ""
+                                        },
+                                        domProps: { value: _vm.enlist.surname },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "surname",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _vm._m(1)
+                              ])
+                            ]
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "row" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("First Name")]),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.enlist.firstname,
+                                            expression: "enlist.firstname"
+                                          }
+                                        ],
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          name: "firstname",
+                                          type: "text",
+                                          placeholder: "Firstname",
+                                          required: ""
+                                        },
+                                        domProps: {
+                                          value: _vm.enlist.firstname
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "firstname",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("Middle Name")]),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.enlist.middlename,
+                                            expression: "enlist.middlename"
+                                          }
+                                        ],
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          name: "middlename",
+                                          type: "text",
+                                          placeholder: "Middlename",
+                                          required: ""
+                                        },
+                                        domProps: {
+                                          value: _vm.enlist.middlename
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "middlename",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ])
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("h4", { staticClass: "form-header text-primary" }, [
+                        _vm._v("Basic Personal Information")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "row" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("Birthdate")]),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.enlist.birthDate,
+                                            expression: "enlist.birthDate"
+                                          }
+                                        ],
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          name: "birthDate",
+                                          id: "datepicker",
+                                          type: "date",
+                                          placeholder: "Date of Birth",
+                                          required: ""
+                                        },
+                                        domProps: {
+                                          value: _vm.enlist.birthDate
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "birthDate",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("Birthplace")]),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.enlist.birthPlace,
+                                            expression: "enlist.birthPlace"
+                                          }
+                                        ],
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          name: "birthPlace",
+                                          type: "text",
+                                          placeholder: "Birthplace",
+                                          required: ""
+                                        },
+                                        domProps: {
+                                          value: _vm.enlist.birthPlace
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "birthPlace",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("Gender")]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "select",
+                                        {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.enlist.gender,
+                                              expression: "enlist.gender"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            name: "gender",
+                                            required: ""
+                                          },
+                                          on: {
+                                            change: function($event) {
+                                              var $$selectedVal = Array.prototype.filter
+                                                .call(
+                                                  $event.target.options,
+                                                  function(o) {
+                                                    return o.selected
+                                                  }
+                                                )
+                                                .map(function(o) {
+                                                  var val =
+                                                    "_value" in o
+                                                      ? o._value
+                                                      : o.value
+                                                  return val
+                                                })
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "gender",
+                                                $event.target.multiple
+                                                  ? $$selectedVal
+                                                  : $$selectedVal[0]
+                                              )
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("option", {
+                                            attrs: {
+                                              value: "none",
+                                              selected: "",
+                                              disabled: ""
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "1" } },
+                                            [_vm._v("Male")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "2" } },
+                                            [_vm._v("Female")]
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "row" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("Civil Status")]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "select",
+                                        {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.enlist.civilStatus,
+                                              expression: "enlist.civilStatus"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            name: "civilStatus",
+                                            required: ""
+                                          },
+                                          on: {
+                                            change: function($event) {
+                                              var $$selectedVal = Array.prototype.filter
+                                                .call(
+                                                  $event.target.options,
+                                                  function(o) {
+                                                    return o.selected
+                                                  }
+                                                )
+                                                .map(function(o) {
+                                                  var val =
+                                                    "_value" in o
+                                                      ? o._value
+                                                      : o.value
+                                                  return val
+                                                })
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "civilStatus",
+                                                $event.target.multiple
+                                                  ? $$selectedVal
+                                                  : $$selectedVal[0]
+                                              )
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("option", {
+                                            attrs: {
+                                              value: "none",
+                                              selected: "",
+                                              disabled: ""
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "1" } },
+                                            [_vm._v("Single (Never Married)")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "2" } },
+                                            [_vm._v("Married")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "3" } },
+                                            [_vm._v("Widow / Widower")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "4" } },
+                                            [_vm._v("Head of the Family")]
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("Citizenship")]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "chosen-select-single mg-b-20"
+                                        },
+                                        [
+                                          _c(
+                                            "select",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.enlist.citizenship,
+                                                  expression:
+                                                    "enlist.citizenship"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              attrs: {
+                                                "data-placeholder":
+                                                  "Choose a Citizenship...",
+                                                id: "citizenship",
+                                                name: "citizenship",
+                                                tabindex: "-1",
+                                                required: ""
+                                              },
+                                              on: {
+                                                change: function($event) {
+                                                  var $$selectedVal = Array.prototype.filter
+                                                    .call(
+                                                      $event.target.options,
+                                                      function(o) {
+                                                        return o.selected
+                                                      }
+                                                    )
+                                                    .map(function(o) {
+                                                      var val =
+                                                        "_value" in o
+                                                          ? o._value
+                                                          : o.value
+                                                      return val
+                                                    })
+                                                  _vm.$set(
+                                                    _vm.enlist,
+                                                    "citizenship",
+                                                    $event.target.multiple
+                                                      ? $$selectedVal
+                                                      : $$selectedVal[0]
+                                                  )
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _c("option", {
+                                                attrs: {
+                                                  value: "",
+                                                  selected: ""
+                                                }
+                                              }),
+                                              _vm._v(" "),
+                                              _c("option", {
+                                                attrs: {
+                                                  value: "",
+                                                  selected: ""
+                                                }
+                                              })
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("Religion")]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "select",
+                                        {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.enlist.religion,
+                                              expression: "enlist.religion"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            id: "religion",
+                                            name: "religion",
+                                            required: ""
+                                          },
+                                          on: {
+                                            change: function($event) {
+                                              var $$selectedVal = Array.prototype.filter
+                                                .call(
+                                                  $event.target.options,
+                                                  function(o) {
+                                                    return o.selected
+                                                  }
+                                                )
+                                                .map(function(o) {
+                                                  var val =
+                                                    "_value" in o
+                                                      ? o._value
+                                                      : o.value
+                                                  return val
+                                                })
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "religion",
+                                                $event.target.multiple
+                                                  ? $$selectedVal
+                                                  : $$selectedVal[0]
+                                              )
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("option", {
+                                            attrs: {
+                                              value: "none",
+                                              selected: "",
+                                              disabled: ""
+                                            }
+                                          })
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ])
               ]
             ),
             _vm._v(" "),
@@ -73468,16 +74135,4527 @@ var render = function() {
                   "aria-labelledby": "v-pills-addressAndContact-tab"
                 }
               },
-              [_vm._m(1)]
+              [
+                _c("div", { staticClass: "row" }, [
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
+                    [
+                      _c("h4", { staticClass: "form-header text-primary" }, [
+                        _vm._v("Permanent Address")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("label", [
+                          _vm._v(
+                            "Permanent Address (House No., Street, Subdivision/Sitio, Barangay)"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.enlist.permanentAddress,
+                              expression: "enlist.permanentAddress"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: {
+                            name: "permanentAddress",
+                            type: "text",
+                            placeholder: "Permanent Address",
+                            required: ""
+                          },
+                          domProps: { value: _vm.enlist.permanentAddress },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.enlist,
+                                "permanentAddress",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "row" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("City")]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "select",
+                                        {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.enlist.permanentCity,
+                                              expression: "enlist.permanentCity"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            "data-placeholder":
+                                              "Choose a City...",
+                                            id: "permanentCity",
+                                            name: "permanentCity",
+                                            tabindex: "-1"
+                                          },
+                                          on: {
+                                            change: function($event) {
+                                              var $$selectedVal = Array.prototype.filter
+                                                .call(
+                                                  $event.target.options,
+                                                  function(o) {
+                                                    return o.selected
+                                                  }
+                                                )
+                                                .map(function(o) {
+                                                  var val =
+                                                    "_value" in o
+                                                      ? o._value
+                                                      : o.value
+                                                  return val
+                                                })
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "permanentCity",
+                                                $event.target.multiple
+                                                  ? $$selectedVal
+                                                  : $$selectedVal[0]
+                                              )
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("option", {
+                                            attrs: { value: "", selected: "" }
+                                          })
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("Province")]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "select",
+                                        {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value:
+                                                _vm.enlist.permanentProvince,
+                                              expression:
+                                                "enlist.permanentProvince"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            id: "permanentProvince",
+                                            name: "permanentProvince",
+                                            required: ""
+                                          },
+                                          on: {
+                                            change: function($event) {
+                                              var $$selectedVal = Array.prototype.filter
+                                                .call(
+                                                  $event.target.options,
+                                                  function(o) {
+                                                    return o.selected
+                                                  }
+                                                )
+                                                .map(function(o) {
+                                                  var val =
+                                                    "_value" in o
+                                                      ? o._value
+                                                      : o.value
+                                                  return val
+                                                })
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "permanentProvince",
+                                                $event.target.multiple
+                                                  ? $$selectedVal
+                                                  : $$selectedVal[0]
+                                              )
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("option", {
+                                            attrs: {
+                                              value: "none",
+                                              selected: "",
+                                              disabled: ""
+                                            }
+                                          })
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("Zip/Postal Code")]),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value:
+                                              _vm.enlist.permanentzippostalcode,
+                                            expression:
+                                              "enlist.permanentzippostalcode"
+                                          }
+                                        ],
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          name: "permanentzippostalcode",
+                                          type: "text",
+                                          placeholder: "Zip/Postal Code",
+                                          required: ""
+                                        },
+                                        domProps: {
+                                          value:
+                                            _vm.enlist.permanentzippostalcode
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "permanentzippostalcode",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("Country")]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "chosen-select-single mg-b-20"
+                                        },
+                                        [
+                                          _c(
+                                            "select",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value:
+                                                    _vm.enlist.permanentCountry,
+                                                  expression:
+                                                    "enlist.permanentCountry"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              attrs: {
+                                                "data-placeholder":
+                                                  "Choose a Country...",
+                                                id: "permanentCountry",
+                                                name: "permanentCountry",
+                                                tabindex: "-1",
+                                                required: ""
+                                              },
+                                              on: {
+                                                change: function($event) {
+                                                  var $$selectedVal = Array.prototype.filter
+                                                    .call(
+                                                      $event.target.options,
+                                                      function(o) {
+                                                        return o.selected
+                                                      }
+                                                    )
+                                                    .map(function(o) {
+                                                      var val =
+                                                        "_value" in o
+                                                          ? o._value
+                                                          : o.value
+                                                      return val
+                                                    })
+                                                  _vm.$set(
+                                                    _vm.enlist,
+                                                    "permanentCountry",
+                                                    $event.target.multiple
+                                                      ? $$selectedVal
+                                                      : $$selectedVal[0]
+                                                  )
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _c("option", {
+                                                attrs: {
+                                                  value: "",
+                                                  selected: ""
+                                                }
+                                              })
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("h4", { staticClass: "form-header text-primary" }, [
+                        _vm._v("City Address")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("label", [_vm._v("Same as permanent")]),
+                        _vm._v(" "),
+                        _c("label", { staticClass: "radio-inline" }, [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.enlist.sameAsPermanent,
+                                expression: "enlist.sameAsPermanent"
+                              }
+                            ],
+                            staticClass: "pull-left",
+                            attrs: {
+                              type: "radio",
+                              onclick: "javascript:checkPermanent();",
+                              id: "sameAsPermanent",
+                              value: "1",
+                              name: "sameAsPermanent"
+                            },
+                            domProps: {
+                              checked: _vm._q(_vm.enlist.sameAsPermanent, "1")
+                            },
+                            on: {
+                              change: function($event) {
+                                return _vm.$set(
+                                  _vm.enlist,
+                                  "sameAsPermanent",
+                                  "1"
+                                )
+                              }
+                            }
+                          }),
+                          _vm._v("Yes\n                ")
+                        ]),
+                        _vm._v(" "),
+                        _c("label", { staticClass: "radio-inline" }, [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.enlist.sameAsPermanent,
+                                expression: "enlist.sameAsPermanent"
+                              }
+                            ],
+                            staticClass: "pull-left",
+                            attrs: {
+                              type: "radio",
+                              onclick: "javascript:checkPermanent();",
+                              id: "sameAsPermanent",
+                              value: "0",
+                              name: "sameAsPermanent"
+                            },
+                            domProps: {
+                              checked: _vm._q(_vm.enlist.sameAsPermanent, "0")
+                            },
+                            on: {
+                              change: function($event) {
+                                return _vm.$set(
+                                  _vm.enlist,
+                                  "sameAsPermanent",
+                                  "0"
+                                )
+                              }
+                            }
+                          }),
+                          _vm._v("No\n                ")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("label", { attrs: { id: "boxcheck" } }, [
+                        _vm._v(
+                          "Check the following boxes if the following applies to you:"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group", attrs: { id: "board" } },
+                        [
+                          _c("label", [_vm._v("Boarding")]),
+                          _vm._v(" "),
+                          _c("label", { staticClass: "radio-inline" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.enlist.boarding,
+                                  expression: "enlist.boarding"
+                                }
+                              ],
+                              staticClass: "pull-left",
+                              attrs: {
+                                type: "checkbox",
+                                value: "1",
+                                name: "boarding",
+                                id: "boarding"
+                              },
+                              domProps: {
+                                checked: Array.isArray(_vm.enlist.boarding)
+                                  ? _vm._i(_vm.enlist.boarding, "1") > -1
+                                  : _vm.enlist.boarding
+                              },
+                              on: {
+                                change: function($event) {
+                                  var $$a = _vm.enlist.boarding,
+                                    $$el = $event.target,
+                                    $$c = $$el.checked ? true : false
+                                  if (Array.isArray($$a)) {
+                                    var $$v = "1",
+                                      $$i = _vm._i($$a, $$v)
+                                    if ($$el.checked) {
+                                      $$i < 0 &&
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "boarding",
+                                          $$a.concat([$$v])
+                                        )
+                                    } else {
+                                      $$i > -1 &&
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "boarding",
+                                          $$a
+                                            .slice(0, $$i)
+                                            .concat($$a.slice($$i + 1))
+                                        )
+                                    }
+                                  } else {
+                                    _vm.$set(_vm.enlist, "boarding", $$c)
+                                  }
+                                }
+                              }
+                            })
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "form-group",
+                          attrs: { id: "relative" }
+                        },
+                        [
+                          _c("label", [_vm._v("With Relative")]),
+                          _vm._v(" "),
+                          _c("label", { staticClass: "radio-inline" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.enlist.withRelative,
+                                  expression: "enlist.withRelative"
+                                }
+                              ],
+                              staticClass: "pull-left",
+                              attrs: {
+                                type: "checkbox",
+                                value: "1",
+                                name: "withRelative",
+                                id: "withRelative"
+                              },
+                              domProps: {
+                                checked: Array.isArray(_vm.enlist.withRelative)
+                                  ? _vm._i(_vm.enlist.withRelative, "1") > -1
+                                  : _vm.enlist.withRelative
+                              },
+                              on: {
+                                change: function($event) {
+                                  var $$a = _vm.enlist.withRelative,
+                                    $$el = $event.target,
+                                    $$c = $$el.checked ? true : false
+                                  if (Array.isArray($$a)) {
+                                    var $$v = "1",
+                                      $$i = _vm._i($$a, $$v)
+                                    if ($$el.checked) {
+                                      $$i < 0 &&
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "withRelative",
+                                          $$a.concat([$$v])
+                                        )
+                                    } else {
+                                      $$i > -1 &&
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "withRelative",
+                                          $$a
+                                            .slice(0, $$i)
+                                            .concat($$a.slice($$i + 1))
+                                        )
+                                    }
+                                  } else {
+                                    _vm.$set(_vm.enlist, "withRelative", $$c)
+                                  }
+                                }
+                              }
+                            })
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "form-group",
+                          staticStyle: { display: "block" },
+                          attrs: { id: "caddress" }
+                        },
+                        [
+                          _c("label", { attrs: { id: "cityAddressLabel" } }, [
+                            _vm._v(
+                              "City Address (House No., Street, Subdivision/Sitio, Barangay)"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.enlist.cityAddress,
+                                expression: "enlist.cityAddress"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: {
+                              id: "cityAddress",
+                              name: "cityAddress",
+                              type: "text",
+                              placeholder: "City Address"
+                            },
+                            domProps: { value: _vm.enlist.cityAddress },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.enlist,
+                                  "cityAddress",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "row" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c(
+                                        "label",
+                                        { attrs: { id: "cityCityLabel" } },
+                                        [_vm._v("City")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "select",
+                                        {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.enlist.cityCity,
+                                              expression: "enlist.cityCity"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            "data-placeholder":
+                                              "Choose a City...",
+                                            id: "cityCity",
+                                            name: "cityCity",
+                                            tabindex: "-1"
+                                          },
+                                          on: {
+                                            change: function($event) {
+                                              var $$selectedVal = Array.prototype.filter
+                                                .call(
+                                                  $event.target.options,
+                                                  function(o) {
+                                                    return o.selected
+                                                  }
+                                                )
+                                                .map(function(o) {
+                                                  var val =
+                                                    "_value" in o
+                                                      ? o._value
+                                                      : o.value
+                                                  return val
+                                                })
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "cityCity",
+                                                $event.target.multiple
+                                                  ? $$selectedVal
+                                                  : $$selectedVal[0]
+                                              )
+                                            }
+                                          }
+                                        },
+                                        [_c("option", { attrs: { value: "" } })]
+                                      )
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c(
+                                        "label",
+                                        { attrs: { id: "cityProvinceLabel" } },
+                                        [_vm._v("Province")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "select",
+                                        {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.enlist.cityProvince,
+                                              expression: "enlist.cityProvince"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            id: "cityProvince",
+                                            name: "cityProvince",
+                                            required: ""
+                                          },
+                                          on: {
+                                            change: function($event) {
+                                              var $$selectedVal = Array.prototype.filter
+                                                .call(
+                                                  $event.target.options,
+                                                  function(o) {
+                                                    return o.selected
+                                                  }
+                                                )
+                                                .map(function(o) {
+                                                  var val =
+                                                    "_value" in o
+                                                      ? o._value
+                                                      : o.value
+                                                  return val
+                                                })
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "cityProvince",
+                                                $event.target.multiple
+                                                  ? $$selectedVal
+                                                  : $$selectedVal[0]
+                                              )
+                                            }
+                                          }
+                                        },
+                                        [_c("option", { attrs: { value: "" } })]
+                                      )
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c(
+                                        "label",
+                                        {
+                                          attrs: {
+                                            id: "cityzippostalcodeLabel"
+                                          }
+                                        },
+                                        [_vm._v("Zip/Postal Code")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.enlist.cityzippostalcode,
+                                            expression:
+                                              "enlist.cityzippostalcode"
+                                          }
+                                        ],
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          id: "cityzippostalcode",
+                                          name: "cityzippostalcode",
+                                          type: "text",
+                                          placeholder: "Zip/Postal Code"
+                                        },
+                                        domProps: {
+                                          value: _vm.enlist.cityzippostalcode
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "cityzippostalcode",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c(
+                                        "label",
+                                        { attrs: { id: "cityCountryLabel" } },
+                                        [_vm._v("Country")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "chosen-select-single mg-b-20"
+                                        },
+                                        [
+                                          _c(
+                                            "select",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.enlist.cityCountry,
+                                                  expression:
+                                                    "enlist.cityCountry"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              attrs: {
+                                                "data-placeholder":
+                                                  "Choose a Country...",
+                                                id: "cityCountry",
+                                                name: "cityCountry",
+                                                tabindex: "-1"
+                                              },
+                                              on: {
+                                                change: function($event) {
+                                                  var $$selectedVal = Array.prototype.filter
+                                                    .call(
+                                                      $event.target.options,
+                                                      function(o) {
+                                                        return o.selected
+                                                      }
+                                                    )
+                                                    .map(function(o) {
+                                                      var val =
+                                                        "_value" in o
+                                                          ? o._value
+                                                          : o.value
+                                                      return val
+                                                    })
+                                                  _vm.$set(
+                                                    _vm.enlist,
+                                                    "cityCountry",
+                                                    $event.target.multiple
+                                                      ? $$selectedVal
+                                                      : $$selectedVal[0]
+                                                  )
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _c("option", {
+                                                attrs: {
+                                                  value: "",
+                                                  selected: ""
+                                                }
+                                              })
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("h4", { staticClass: "form-header text-primary" }, [
+                        _vm._v("Contact Information")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "row" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("E-mail Address")]),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.enlist.email,
+                                            expression: "enlist.email"
+                                          }
+                                        ],
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          name: "email",
+                                          type: "email",
+                                          placeholder: "E-mail Address",
+                                          required: ""
+                                        },
+                                        domProps: { value: _vm.enlist.email },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "email",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [_vm._v("Mobile Number")]),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.enlist.mobileNum,
+                                            expression: "enlist.mobileNum"
+                                          }
+                                        ],
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          name: "mobileNum",
+                                          id: "mobileNum",
+                                          type: "tel",
+                                          placeholder: "Mobile no.",
+                                          "data-mask": "+63 999-999-9999",
+                                          required: ""
+                                        },
+                                        domProps: {
+                                          value: _vm.enlist.mobileNum
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "mobileNum",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ])
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(2),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "row" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-7 col-md-7 col-sm-7 col-xs-12"
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "form-select-list" },
+                                      [
+                                        _c("label", [
+                                          _vm._v("Person To Contact")
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.enlist.personToContact,
+                                              expression:
+                                                "enlist.personToContact"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            name: "personToContact",
+                                            type: "text",
+                                            placeholder: "Person To Contact",
+                                            required: ""
+                                          },
+                                          domProps: {
+                                            value: _vm.enlist.personToContact
+                                          },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "personToContact",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-5 col-md-5 col-sm-5 col-xs-12"
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "form-select-list" },
+                                      [
+                                        _c("label", [_vm._v("Relationship")]),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value:
+                                                _vm.enlist
+                                                  .personToContactRelationship,
+                                              expression:
+                                                "enlist.personToContactRelationship"
+                                            }
+                                          ],
+                                          staticClass:
+                                            "form-control basic-ele-mg-t-10",
+                                          attrs: {
+                                            name: "personToContactRelationship",
+                                            type: "text",
+                                            placeholder: "Relationship",
+                                            required: ""
+                                          },
+                                          domProps: {
+                                            value:
+                                              _vm.enlist
+                                                .personToContactRelationship
+                                          },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "personToContactRelationship",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "row" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-7 col-md-7 col-sm-7 col-xs-12"
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "form-select-list" },
+                                      [
+                                        _c("label", [_vm._v("Telephone No.")]),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value:
+                                                _vm.enlist.personToContactTelNo,
+                                              expression:
+                                                "enlist.personToContactTelNo"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            type: "text",
+                                            "data-mask": "(999) 999-9999",
+                                            name: "personToContactTelNo",
+                                            placeholder: "Telephone No."
+                                          },
+                                          domProps: {
+                                            value:
+                                              _vm.enlist.personToContactTelNo
+                                          },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "personToContactTelNo",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-5 col-md-5 col-sm-5 col-xs-12"
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "form-select-list" },
+                                      [
+                                        _c("label", [_vm._v("Mobile No.")]),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value:
+                                                _vm.enlist
+                                                  .personToContactMobileNo,
+                                              expression:
+                                                "enlist.personToContactMobileNo"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            name: "personToContactMobileNo",
+                                            id: "personToContactMobileNo",
+                                            type: "tel",
+                                            placeholder: "Mobile no.",
+                                            "data-mask": "+63 999-999-9999",
+                                            required: ""
+                                          },
+                                          domProps: {
+                                            value:
+                                              _vm.enlist.personToContactMobileNo
+                                          },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "personToContactMobileNo",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ])
+              ]
             ),
             _vm._v(" "),
-            _vm._m(2),
+            _c(
+              "div",
+              {
+                staticClass: "tab-pane fade",
+                attrs: {
+                  id: "v-pills-medicalProfile",
+                  role: "tabpanel",
+                  "aria-labelledby": "v-pills-medicalProfile-tab"
+                }
+              },
+              [
+                _c("h4", { staticClass: "form-header text-primary" }, [
+                  _vm._v("Health / Medical Profile")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Blood Group")]),
+                                _vm._v(" "),
+                                _c(
+                                  "select",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.enlist.bloodGroup,
+                                        expression: "enlist.bloodGroup"
+                                      }
+                                    ],
+                                    staticClass: "form-control",
+                                    attrs: { name: "bloodGroup", required: "" },
+                                    on: {
+                                      change: function($event) {
+                                        var $$selectedVal = Array.prototype.filter
+                                          .call($event.target.options, function(
+                                            o
+                                          ) {
+                                            return o.selected
+                                          })
+                                          .map(function(o) {
+                                            var val =
+                                              "_value" in o ? o._value : o.value
+                                            return val
+                                          })
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "bloodGroup",
+                                          $event.target.multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        )
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("option", {
+                                      attrs: {
+                                        value: "none",
+                                        selected: "",
+                                        disabled: ""
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "A" } }, [
+                                      _vm._v("A")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "B" } }, [
+                                      _vm._v("B")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "AB" } }, [
+                                      _vm._v("AB")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "O" } }, [
+                                      _vm._v("O")
+                                    ])
+                                  ]
+                                )
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Rh")]),
+                                _vm._v(" "),
+                                _c(
+                                  "select",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.enlist.rh,
+                                        expression: "enlist.rh"
+                                      }
+                                    ],
+                                    staticClass: "form-control",
+                                    attrs: { name: "rh", required: "" },
+                                    on: {
+                                      change: function($event) {
+                                        var $$selectedVal = Array.prototype.filter
+                                          .call($event.target.options, function(
+                                            o
+                                          ) {
+                                            return o.selected
+                                          })
+                                          .map(function(o) {
+                                            var val =
+                                              "_value" in o ? o._value : o.value
+                                            return val
+                                          })
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "rh",
+                                          $event.target.multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        )
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("option", {
+                                      attrs: {
+                                        value: "none",
+                                        selected: "",
+                                        disabled: ""
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "+" } }, [
+                                      _vm._v("+")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "-" } }, [
+                                      _vm._v("-")
+                                    ])
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [
+                                  _vm._v("Family / Personal Physician's Name")
+                                ]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.physicianName,
+                                      expression: "enlist.physicianName"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    name: "physicianName",
+                                    type: "text",
+                                    placeholder:
+                                      "Family / Personal Physician's Name"
+                                  },
+                                  domProps: { value: _vm.enlist.physicianName },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "physicianName",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [
+                                  _vm._v("Physician's Contact Information")
+                                ]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value:
+                                        _vm.enlist.physicianContactInformation,
+                                      expression:
+                                        "enlist.physicianContactInformation"
+                                    }
+                                  ],
+                                  staticClass: "form-control basic-ele-mg-t-10",
+                                  attrs: {
+                                    name: "physicianContactInformation",
+                                    type: "text",
+                                    placeholder:
+                                      "Physician's Contact Information"
+                                  },
+                                  domProps: {
+                                    value:
+                                      _vm.enlist.physicianContactInformation
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "physicianContactInformation",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [
+                                  _vm._v("Presently taking medication?")
+                                ]),
+                                _vm._v(" "),
+                                _c("label", { staticClass: "radio-inline" }, [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.enlist.takingMedication,
+                                        expression: "enlist.takingMedication"
+                                      }
+                                    ],
+                                    staticClass: "pull-left",
+                                    attrs: {
+                                      type: "radio",
+                                      value: "1",
+                                      name: "takingMedication",
+                                      onclick: "javascript:yesnoMedication();",
+                                      id: "yestakingMedication"
+                                    },
+                                    domProps: {
+                                      checked: _vm._q(
+                                        _vm.enlist.takingMedication,
+                                        "1"
+                                      )
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        return _vm.$set(
+                                          _vm.enlist,
+                                          "takingMedication",
+                                          "1"
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v("Yes\n                      ")
+                                ]),
+                                _vm._v(" "),
+                                _c("label", { staticClass: "radio-inline" }, [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.enlist.takingMedication,
+                                        expression: "enlist.takingMedication"
+                                      }
+                                    ],
+                                    staticClass: "pull-left",
+                                    attrs: {
+                                      type: "radio",
+                                      value: "0",
+                                      name: "takingMedication",
+                                      onclick: "javascript:yesnoMedication();",
+                                      id: "notakingMedication"
+                                    },
+                                    domProps: {
+                                      checked: _vm._q(
+                                        _vm.enlist.takingMedication,
+                                        "0"
+                                      )
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        return _vm.$set(
+                                          _vm.enlist,
+                                          "takingMedication",
+                                          "0"
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v("No\n                      ")
+                                ])
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [
+                                  _vm._v("If yes, please indicate medication:")
+                                ]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.medicationInfo,
+                                      expression: "enlist.medicationInfo"
+                                    }
+                                  ],
+                                  staticClass: "form-control basic-ele-mg-t-10",
+                                  attrs: {
+                                    id: "medicationInfo",
+                                    name: "medicationInfo",
+                                    type: "text",
+                                    placeholder: ""
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.medicationInfo
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "medicationInfo",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-2 col-md-2 col-sm-2 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [
+                                  _vm._v("Do you have special needs?")
+                                ]),
+                                _vm._v(" "),
+                                _c("br"),
+                                _vm._v(" "),
+                                _c("label", { staticClass: "radio-inline" }, [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.enlist.specialNeeds,
+                                        expression: "enlist.specialNeeds"
+                                      }
+                                    ],
+                                    staticClass: "pull-left",
+                                    attrs: {
+                                      type: "radio",
+                                      value: "1",
+                                      name: "specialNeeds",
+                                      onclick:
+                                        "javascript:yesnoSpecialNeeds();",
+                                      id: "yesSpecialNeeds"
+                                    },
+                                    domProps: {
+                                      checked: _vm._q(
+                                        _vm.enlist.specialNeeds,
+                                        "1"
+                                      )
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        return _vm.$set(
+                                          _vm.enlist,
+                                          "specialNeeds",
+                                          "1"
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v("Yes\n                      ")
+                                ]),
+                                _vm._v(" "),
+                                _c("label", { staticClass: "radio-inline" }, [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.enlist.specialNeeds,
+                                        expression: "enlist.specialNeeds"
+                                      }
+                                    ],
+                                    staticClass: "pull-left",
+                                    attrs: {
+                                      type: "radio",
+                                      value: "0",
+                                      name: "specialNeeds",
+                                      onclick:
+                                        "javascript:yesnoSpecialNeeds();",
+                                      id: "noSpecialNeeds"
+                                    },
+                                    domProps: {
+                                      checked: _vm._q(
+                                        _vm.enlist.specialNeeds,
+                                        "0"
+                                      )
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        return _vm.$set(
+                                          _vm.enlist,
+                                          "specialNeeds",
+                                          "0"
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v("No\n                      ")
+                                ])
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-5 col-md-5 col-sm-5 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Special Needs")]),
+                                _vm._v(" "),
+                                _c(
+                                  "select",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.enlist.typeOfSpecialNeeds,
+                                        expression: "enlist.typeOfSpecialNeeds"
+                                      }
+                                    ],
+                                    staticClass: "form-control",
+                                    attrs: {
+                                      id: "typeOfSpecialNeeds",
+                                      name: "typeOfSpecialNeeds"
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        var $$selectedVal = Array.prototype.filter
+                                          .call($event.target.options, function(
+                                            o
+                                          ) {
+                                            return o.selected
+                                          })
+                                          .map(function(o) {
+                                            var val =
+                                              "_value" in o ? o._value : o.value
+                                            return val
+                                          })
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "typeOfSpecialNeeds",
+                                          $event.target.multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        )
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("option", {
+                                      attrs: { value: "", selected: "" }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "0" } }, [
+                                      _vm._v("Psychiatric")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "1" } }, [
+                                      _vm._v("Physical")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "2" } }, [
+                                      _vm._v("PWD")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "3" } }, [
+                                      _vm._v("Others")
+                                    ])
+                                  ]
+                                )
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-7 col-md-7 col-sm-7 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [
+                                  _vm._v("Others: (Please specify)")
+                                ]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.othersSpecialNeeds,
+                                      expression: "enlist.othersSpecialNeeds"
+                                    }
+                                  ],
+                                  staticClass: "form-control basic-ele-mg-t-10",
+                                  attrs: {
+                                    id: "othersSpecialNeeds",
+                                    name: "othersSpecialNeeds",
+                                    type: "text",
+                                    placeholder: "Others: (Please specify)"
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.othersSpecialNeeds
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "othersSpecialNeeds",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]
+            ),
             _vm._v(" "),
-            _vm._m(3),
+            _c(
+              "div",
+              {
+                staticClass: "tab-pane fade",
+                attrs: {
+                  id: "v-pills-familyInfo",
+                  role: "tabpanel",
+                  "aria-labelledby": "v-pills-familyInfo-tab"
+                }
+              },
+              [
+                _c("h4", { staticClass: "form-header text-primary" }, [
+                  _vm._v("Family Information")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-group" }, [
+                                _c("label", [
+                                  _vm._v("Position in the Family(e.g. eldest)")
+                                ]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.positionFamily,
+                                      expression: "enlist.positionFamily"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    name: "positionFamily",
+                                    type: "text",
+                                    placeholder: "Position in the Family",
+                                    required: ""
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.positionFamily
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "positionFamily",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-group" }, [
+                                _c("label", [_vm._v("No. of Brothers")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.numBrothers,
+                                      expression: "enlist.numBrothers"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    name: "numBrothers",
+                                    min: "0",
+                                    value: "0",
+                                    type: "number",
+                                    placeholder: "No. of Brothers",
+                                    required: ""
+                                  },
+                                  domProps: { value: _vm.enlist.numBrothers },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "numBrothers",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-group" }, [
+                                _c("label", [_vm._v("No. of Sisters")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.numSisters,
+                                      expression: "enlist.numSisters"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    name: "numSisters",
+                                    min: "0",
+                                    value: "0",
+                                    type: "number",
+                                    placeholder: "No. of Sisters",
+                                    required: ""
+                                  },
+                                  domProps: { value: _vm.enlist.numSisters },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "numSisters",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("h5", { staticClass: "form-header text-primary" }, [
+                  _vm._v("Parents")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Father's Complete Name")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.fatherName,
+                                      expression: "enlist.fatherName"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    type: "text",
+                                    name: "fatherName",
+                                    placeholder: "Father's Complete Name",
+                                    required: ""
+                                  },
+                                  domProps: { value: _vm.enlist.fatherName },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "fatherName",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass: "text-danger font-weight-bold"
+                                  },
+                                  [_vm._v("Check if deceased")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.fatherLiving,
+                                      expression: "enlist.fatherLiving"
+                                    }
+                                  ],
+                                  staticClass: "pull-left",
+                                  attrs: {
+                                    type: "checkbox",
+                                    onclick: "javascript:checkFather();",
+                                    id: "fatherLiving",
+                                    value: "1",
+                                    name: "fatherLiving"
+                                  },
+                                  domProps: {
+                                    checked: Array.isArray(
+                                      _vm.enlist.fatherLiving
+                                    )
+                                      ? _vm._i(_vm.enlist.fatherLiving, "1") >
+                                        -1
+                                      : _vm.enlist.fatherLiving
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      var $$a = _vm.enlist.fatherLiving,
+                                        $$el = $event.target,
+                                        $$c = $$el.checked ? true : false
+                                      if (Array.isArray($$a)) {
+                                        var $$v = "1",
+                                          $$i = _vm._i($$a, $$v)
+                                        if ($$el.checked) {
+                                          $$i < 0 &&
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "fatherLiving",
+                                              $$a.concat([$$v])
+                                            )
+                                        } else {
+                                          $$i > -1 &&
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "fatherLiving",
+                                              $$a
+                                                .slice(0, $$i)
+                                                .concat($$a.slice($$i + 1))
+                                            )
+                                        }
+                                      } else {
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "fatherLiving",
+                                          $$c
+                                        )
+                                      }
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Father's Occupation")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.fatherOccupation,
+                                      expression: "enlist.fatherOccupation"
+                                    }
+                                  ],
+                                  staticClass: "form-control basic-ele-mg-t-10",
+                                  attrs: {
+                                    type: "text",
+                                    id: "fatherOccupation",
+                                    name: "fatherOccupation",
+                                    placeholder: "Father's Occupation",
+                                    required: ""
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.fatherOccupation
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "fatherOccupation",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-7 col-md-7 col-sm-7 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Father's Address")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.fatherAddress,
+                                      expression: "enlist.fatherAddress"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    type: "text",
+                                    id: "fatherAddress",
+                                    name: "fatherAddress",
+                                    placeholder: "Father's Address",
+                                    required: ""
+                                  },
+                                  domProps: { value: _vm.enlist.fatherAddress },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "fatherAddress",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-5 col-md-5 col-sm-5 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [
+                                  _vm._v("Father's Contact Number")
+                                ]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.fatherContactNum,
+                                      expression: "enlist.fatherContactNum"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    name: "fatherContactNum",
+                                    id: "fatherContactNum",
+                                    type: "tel",
+                                    placeholder: "Mobile no.",
+                                    "data-mask": "+63 999-999-9999"
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.fatherContactNum
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "fatherContactNum",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Mother's Complete Name")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.motherName,
+                                      expression: "enlist.motherName"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    name: "motherName",
+                                    type: "text",
+                                    placeholder: "Mother's Complete Name",
+                                    required: ""
+                                  },
+                                  domProps: { value: _vm.enlist.motherName },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "motherName",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass: "text-danger font-weight-bold"
+                                  },
+                                  [_vm._v("Check if deceased")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.motherLiving,
+                                      expression: "enlist.motherLiving"
+                                    }
+                                  ],
+                                  staticClass: "pull-left",
+                                  attrs: {
+                                    type: "checkbox",
+                                    onclick: "javascript:checkMother();",
+                                    id: "motherLiving",
+                                    value: "1",
+                                    name: "motherLiving"
+                                  },
+                                  domProps: {
+                                    checked: Array.isArray(
+                                      _vm.enlist.motherLiving
+                                    )
+                                      ? _vm._i(_vm.enlist.motherLiving, "1") >
+                                        -1
+                                      : _vm.enlist.motherLiving
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      var $$a = _vm.enlist.motherLiving,
+                                        $$el = $event.target,
+                                        $$c = $$el.checked ? true : false
+                                      if (Array.isArray($$a)) {
+                                        var $$v = "1",
+                                          $$i = _vm._i($$a, $$v)
+                                        if ($$el.checked) {
+                                          $$i < 0 &&
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "motherLiving",
+                                              $$a.concat([$$v])
+                                            )
+                                        } else {
+                                          $$i > -1 &&
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "motherLiving",
+                                              $$a
+                                                .slice(0, $$i)
+                                                .concat($$a.slice($$i + 1))
+                                            )
+                                        }
+                                      } else {
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "motherLiving",
+                                          $$c
+                                        )
+                                      }
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Mother's Occupation")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.motherOccupation,
+                                      expression: "enlist.motherOccupation"
+                                    }
+                                  ],
+                                  staticClass: "form-control basic-ele-mg-t-10",
+                                  attrs: {
+                                    id: "motherOccupation",
+                                    name: "motherOccupation",
+                                    type: "text",
+                                    placeholder: "Mother's Occupation",
+                                    required: ""
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.motherOccupation
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "motherOccupation",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-7 col-md-7 col-sm-7 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Mother's Address")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.motherAddress,
+                                      expression: "enlist.motherAddress"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    type: "text",
+                                    id: "motherAddress",
+                                    name: "motherAddress",
+                                    placeholder: "Mother's Address",
+                                    required: ""
+                                  },
+                                  domProps: { value: _vm.enlist.motherAddress },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "motherAddress",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-5 col-md-5 col-sm-5 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [
+                                  _vm._v("Mother's Contact Number")
+                                ]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.motherContactNum,
+                                      expression: "enlist.motherContactNum"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    name: "motherContactNum",
+                                    id: "motherContactNum",
+                                    type: "tel",
+                                    placeholder: "Mobile no.",
+                                    "data-mask": "+63 999-999-9999"
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.motherContactNum
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "motherContactNum",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-7 col-md-7 col-sm-7 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [
+                                  _vm._v("Parents' Marital Status")
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "select",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.enlist.parentsMaritalStatus,
+                                        expression:
+                                          "enlist.parentsMaritalStatus"
+                                      }
+                                    ],
+                                    staticClass: "form-control",
+                                    attrs: {
+                                      name: "parentsMaritalStatus",
+                                      required: ""
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        var $$selectedVal = Array.prototype.filter
+                                          .call($event.target.options, function(
+                                            o
+                                          ) {
+                                            return o.selected
+                                          })
+                                          .map(function(o) {
+                                            var val =
+                                              "_value" in o ? o._value : o.value
+                                            return val
+                                          })
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "parentsMaritalStatus",
+                                          $event.target.multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        )
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("option", {
+                                      attrs: {
+                                        value: "none",
+                                        selected: "",
+                                        disabled: ""
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "1" } }, [
+                                      _vm._v("Single (Never Married)")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "2" } }, [
+                                      _vm._v("Married")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "3" } }, [
+                                      _vm._v("Widow / Widower")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("option", { attrs: { value: "4" } }, [
+                                      _vm._v("Head of the Family")
+                                    ])
+                                  ]
+                                )
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-7 col-md-7 col-sm-7 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [
+                                  _vm._v(
+                                    "Name of Enlistee's Spouse (if married)"
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.nameOfSpouse,
+                                      expression: "enlist.nameOfSpouse"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    type: "text",
+                                    name: "nameOfSpouse",
+                                    placeholder: "Name of Spouse (if married)"
+                                  },
+                                  domProps: { value: _vm.enlist.nameOfSpouse },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "nameOfSpouse",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", {
+                            staticClass: "col-lg-5 col-md-5 col-sm-5 col-xs-12"
+                          })
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-7 col-md-7 col-sm-7 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [
+                                  _vm._v(
+                                    "Annual Family Income (in Philippine Peso)"
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.annualFamilyIncome,
+                                      expression: "enlist.annualFamilyIncome"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    type: "number",
+                                    id: "annualFamilyIncome",
+                                    name: "annualFamilyIncome",
+                                    min: "1",
+                                    value: "0",
+                                    placeholder: "Annual Family Income",
+                                    required: ""
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.annualFamilyIncome
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "annualFamilyIncome",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]
+            ),
             _vm._v(" "),
-            _vm._m(4),
+            _c(
+              "div",
+              {
+                staticClass: "tab-pane fade",
+                attrs: {
+                  id: "v-pills-educationalBackground",
+                  role: "tabpanel",
+                  "aria-labelledby": "v-pills-educationalBackground-tab"
+                }
+              },
+              [
+                _c("h4", { staticClass: "form-header text-primary" }, [
+                  _vm._v("Educational Background")
+                ]),
+                _vm._v(" "),
+                _c("h5", { staticClass: "form-header text-primary" }, [
+                  _vm._v("Preschool")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-5 col-md-5 col-sm-5 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Name of School")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.preSchoolName,
+                                      expression: "enlist.preSchoolName"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    name: "preSchoolName",
+                                    type: "text",
+                                    placeholder: "Name of School",
+                                    required: ""
+                                  },
+                                  domProps: { value: _vm.enlist.preSchoolName },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "preSchoolName",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Address")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.preSchoolAddress,
+                                      expression: "enlist.preSchoolAddress"
+                                    }
+                                  ],
+                                  staticClass: "form-control basic-ele-mg-t-10",
+                                  attrs: {
+                                    name: "preSchoolAddress",
+                                    type: "text",
+                                    placeholder: "Address",
+                                    required: ""
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.preSchoolAddress
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "preSchoolAddress",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Year Graduated")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.preSchoolGraduated,
+                                      expression: "enlist.preSchoolGraduated"
+                                    }
+                                  ],
+                                  staticClass: "form-control basic-ele-mg-t-10",
+                                  attrs: {
+                                    name: "preSchoolGraduated",
+                                    type: "number",
+                                    min: "1",
+                                    placeholder: "Years Graduated",
+                                    required: ""
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.preSchoolGraduated
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "preSchoolGraduated",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("h5", { staticClass: "form-header text-primary" }, [
+                  _vm._v("Primary School")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-5 col-md-5 col-sm-5 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Name of School")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.gradeSchoolName,
+                                      expression: "enlist.gradeSchoolName"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    name: "gradeSchoolName",
+                                    type: "text",
+                                    placeholder: "Name of School",
+                                    required: ""
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.gradeSchoolName
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "gradeSchoolName",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Address")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.gradeSchoolAddress,
+                                      expression: "enlist.gradeSchoolAddress"
+                                    }
+                                  ],
+                                  staticClass: "form-control basic-ele-mg-t-10",
+                                  attrs: {
+                                    name: "gradeSchoolAddress",
+                                    type: "text",
+                                    placeholder: "Address",
+                                    required: ""
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.gradeSchoolAddress
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "gradeSchoolAddress",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Year Graduated")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.gradeSchoolGraduated,
+                                      expression: "enlist.gradeSchoolGraduated"
+                                    }
+                                  ],
+                                  staticClass: "form-control basic-ele-mg-t-10",
+                                  attrs: {
+                                    name: "gradeSchoolGraduated",
+                                    type: "number",
+                                    min: "1",
+                                    placeholder: "Years Graduated",
+                                    required: ""
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.gradeSchoolGraduated
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "gradeSchoolGraduated",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("h5", { staticClass: "form-header text-primary" }, [
+                  _vm._v("High School (Grade 7 to 10)")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-5 col-md-5 col-sm-5 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Name of School")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.highSchoolName,
+                                      expression: "enlist.highSchoolName"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    name: "highSchoolName",
+                                    type: "text",
+                                    placeholder: "Name of School",
+                                    required: ""
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.highSchoolName
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "highSchoolName",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Address")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.highSchoolAddress,
+                                      expression: "enlist.highSchoolAddress"
+                                    }
+                                  ],
+                                  staticClass: "form-control basic-ele-mg-t-10",
+                                  attrs: {
+                                    name: "highSchoolAddress",
+                                    type: "text",
+                                    placeholder: "Address",
+                                    required: ""
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.highSchoolAddress
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "highSchoolAddress",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Year Graduated")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.highSchoolGraduated,
+                                      expression: "enlist.highSchoolGraduated"
+                                    }
+                                  ],
+                                  staticClass: "form-control basic-ele-mg-t-10",
+                                  attrs: {
+                                    name: "highSchoolGraduated",
+                                    type: "number",
+                                    min: "1",
+                                    placeholder: "Years Graduated",
+                                    required: ""
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.highSchoolGraduated
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "highSchoolGraduated",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("label", [
+                  _vm._v(
+                    "Check the following boxes if the following applies to you:"
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group isIndigenousComm" }, [
+                  _c("label", [_vm._v("Are you a College Transferee?")]),
+                  _vm._v(" "),
+                  _c("label", { staticClass: "radio-inline" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.enlist.isCollege,
+                          expression: "enlist.isCollege"
+                        }
+                      ],
+                      staticClass: "pull-left",
+                      attrs: {
+                        type: "checkbox",
+                        onclick: "javascript:yesnoCheckCollege();",
+                        id: "yesCheckCollege",
+                        value: "1",
+                        name: "isCollege"
+                      },
+                      domProps: {
+                        checked: Array.isArray(_vm.enlist.isCollege)
+                          ? _vm._i(_vm.enlist.isCollege, "1") > -1
+                          : _vm.enlist.isCollege
+                      },
+                      on: {
+                        change: function($event) {
+                          var $$a = _vm.enlist.isCollege,
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = "1",
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 &&
+                                _vm.$set(
+                                  _vm.enlist,
+                                  "isCollege",
+                                  $$a.concat([$$v])
+                                )
+                            } else {
+                              $$i > -1 &&
+                                _vm.$set(
+                                  _vm.enlist,
+                                  "isCollege",
+                                  $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                )
+                            }
+                          } else {
+                            _vm.$set(_vm.enlist, "isCollege", $$c)
+                          }
+                        }
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "div",
+                    {
+                      staticStyle: { display: "none" },
+                      attrs: { id: "collegeInfo" }
+                    },
+                    [
+                      _c("label", [
+                        _vm._v(
+                          "Name of College or University Attended(if transfer student)"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.enlist.nameCollegeUniv,
+                            expression: "enlist.nameCollegeUniv"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          name: "nameCollegeUniv",
+                          id: "nameCollegeUniv",
+                          type: "text",
+                          placeholder:
+                            "Name of College or University Attended(if transfer student)"
+                        },
+                        domProps: { value: _vm.enlist.nameCollegeUniv },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.enlist,
+                              "nameCollegeUniv",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("label", [
+                        _vm._v(
+                          "Complete Address of College or University Attended(if transfer student)"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.enlist.addressCollegeUniv,
+                            expression: "enlist.addressCollegeUniv"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          name: "addressCollegeUniv",
+                          id: "addressCollegeUniv",
+                          type: "text",
+                          placeholder:
+                            "Complete Address of College or University Attended(if transfer student)"
+                        },
+                        domProps: { value: _vm.enlist.addressCollegeUniv },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.enlist,
+                              "addressCollegeUniv",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group isIndigenousComm" }, [
+                  _c("label", [_vm._v("Did you attend Senior High School?")]),
+                  _vm._v(" "),
+                  _c("label", { staticClass: "radio-inline" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.enlist.isSHS,
+                          expression: "enlist.isSHS"
+                        }
+                      ],
+                      staticClass: "pull-left",
+                      attrs: {
+                        type: "checkbox",
+                        value: "0",
+                        name: "isSHS",
+                        onclick: "javascript:yesnoCheckSHS();",
+                        id: "yesCheckSHS"
+                      },
+                      domProps: {
+                        checked: Array.isArray(_vm.enlist.isSHS)
+                          ? _vm._i(_vm.enlist.isSHS, "0") > -1
+                          : _vm.enlist.isSHS
+                      },
+                      on: {
+                        change: function($event) {
+                          var $$a = _vm.enlist.isSHS,
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = "0",
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 &&
+                                _vm.$set(_vm.enlist, "isSHS", $$a.concat([$$v]))
+                            } else {
+                              $$i > -1 &&
+                                _vm.$set(
+                                  _vm.enlist,
+                                  "isSHS",
+                                  $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                )
+                            }
+                          } else {
+                            _vm.$set(_vm.enlist, "isSHS", $$c)
+                          }
+                        }
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group",
+                    staticStyle: { display: "none" },
+                    attrs: { id: "shsName" }
+                  },
+                  [
+                    _c("label", [
+                      _vm._v("Name of Senior High School Attended")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.enlist.nameSHS,
+                          expression: "enlist.nameSHS"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        name: "nameSHS",
+                        id: "nameSHS",
+                        type: "text",
+                        placeholder: "Name of Senior High School"
+                      },
+                      domProps: { value: _vm.enlist.nameSHS },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.enlist, "nameSHS", $event.target.value)
+                        }
+                      }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group",
+                    staticStyle: { display: "none" },
+                    attrs: { id: "shsAdd" }
+                  },
+                  [
+                    _c("label", [
+                      _vm._v("Complete Address of Senior High School Attended")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.enlist.addressSHS,
+                          expression: "enlist.addressSHS"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        name: "addressSHS",
+                        id: "addressSHS",
+                        type: "text",
+                        placeholder: "Complete Address of Senior High School"
+                      },
+                      domProps: { value: _vm.enlist.addressSHS },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.enlist,
+                            "addressSHS",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group",
+                    staticStyle: { display: "none" },
+                    attrs: { id: "shsPrincipal" }
+                  },
+                  [
+                    _c("label", [_vm._v("Principal's Name")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.enlist.principalSHS,
+                          expression: "enlist.principalSHS"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        name: "principalSHS",
+                        id: "principalSHS",
+                        type: "text",
+                        placeholder: "Principal's Name"
+                      },
+                      domProps: { value: _vm.enlist.principalSHS },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.enlist,
+                            "principalSHS",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group",
+                    staticStyle: { display: "none" },
+                    attrs: { id: "shsTrackStrand" }
+                  },
+                  [
+                    _c("div", { staticClass: "row" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                        },
+                        [
+                          _c("div", { staticClass: "row" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                              },
+                              [
+                                _c("div", { staticClass: "form-select-list" }, [
+                                  _c("label", [_vm._v("Track")]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "select",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.enlist.track,
+                                          expression: "enlist.track"
+                                        }
+                                      ],
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        id: "track",
+                                        name: "track",
+                                        onclick: "javascript:strandCheck();"
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          var $$selectedVal = Array.prototype.filter
+                                            .call(
+                                              $event.target.options,
+                                              function(o) {
+                                                return o.selected
+                                              }
+                                            )
+                                            .map(function(o) {
+                                              var val =
+                                                "_value" in o
+                                                  ? o._value
+                                                  : o.value
+                                              return val
+                                            })
+                                          _vm.$set(
+                                            _vm.enlist,
+                                            "track",
+                                            $event.target.multiple
+                                              ? $$selectedVal
+                                              : $$selectedVal[0]
+                                          )
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c("option", {
+                                        attrs: {
+                                          value: "",
+                                          selected: "",
+                                          disabled: ""
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "ACADEMIC" } },
+                                        [_vm._v("Academic Track")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "TVL" } },
+                                        [
+                                          _vm._v(
+                                            "Technical-Vocational-Livelihood (TVL) Track"
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "SPORTS" } },
+                                        [_vm._v("Sports Track")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "ARTANDDESIGN" } },
+                                        [_vm._v("Arts and Design Track")]
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                              },
+                              [
+                                _c("div", { staticClass: "form-select-list" }, [
+                                  _c("label", [_vm._v("Strand")]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "select",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.enlist.strand,
+                                          expression: "enlist.strand"
+                                        }
+                                      ],
+                                      staticClass: "form-control",
+                                      attrs: { id: "strand", name: "strand" },
+                                      on: {
+                                        change: function($event) {
+                                          var $$selectedVal = Array.prototype.filter
+                                            .call(
+                                              $event.target.options,
+                                              function(o) {
+                                                return o.selected
+                                              }
+                                            )
+                                            .map(function(o) {
+                                              var val =
+                                                "_value" in o
+                                                  ? o._value
+                                                  : o.value
+                                              return val
+                                            })
+                                          _vm.$set(
+                                            _vm.enlist,
+                                            "strand",
+                                            $event.target.multiple
+                                              ? $$selectedVal
+                                              : $$selectedVal[0]
+                                          )
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c("option", {
+                                        attrs: { value: "none", selected: "" }
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          staticStyle: { display: "none" },
+                                          attrs: { value: "HUMSS", id: "HUMSS" }
+                                        },
+                                        [_vm._v("HUMSS")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          staticStyle: { display: "none" },
+                                          attrs: { value: "STEM", id: "STEM" }
+                                        },
+                                        [_vm._v("STEM")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          staticStyle: { display: "none" },
+                                          attrs: { value: "ABM", id: "ABM" }
+                                        },
+                                        [_vm._v("ABM")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          staticStyle: { display: "none" },
+                                          attrs: { value: "GAS", id: "GAS" }
+                                        },
+                                        [_vm._v("GAS")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          staticStyle: { display: "none" },
+                                          attrs: {
+                                            value: "Agri-Fishery Arts Strand",
+                                            id: "Agri"
+                                          }
+                                        },
+                                        [_vm._v("Agri-Fishery Arts Strand")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          staticStyle: { display: "none" },
+                                          attrs: {
+                                            value: "Home Economics Strand",
+                                            id: "Home"
+                                          }
+                                        },
+                                        [_vm._v("Home Economics Strand")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          staticStyle: { display: "none" },
+                                          attrs: {
+                                            value: "Industrial Arts Strand",
+                                            id: "Industrial"
+                                          }
+                                        },
+                                        [_vm._v("Industrial Arts Strand")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          staticStyle: { display: "none" },
+                                          attrs: {
+                                            value: "ICT Strand",
+                                            id: "ICT"
+                                          }
+                                        },
+                                        [_vm._v("ICT Strand")]
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group isIndigenousComm" }, [
+                  _c("label", [
+                    _vm._v(
+                      "Do you identify yourself as a member of an Indigenous Community?"
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("label", { staticClass: "radio-inline" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.enlist.isIndigenous,
+                          expression: "enlist.isIndigenous"
+                        }
+                      ],
+                      staticClass: "pull-left",
+                      attrs: {
+                        type: "checkbox",
+                        onclick: "javascript:yesnoCheck();",
+                        id: "yesCheck",
+                        value: "1",
+                        name: "isIndigenous"
+                      },
+                      domProps: {
+                        checked: Array.isArray(_vm.enlist.isIndigenous)
+                          ? _vm._i(_vm.enlist.isIndigenous, "1") > -1
+                          : _vm.enlist.isIndigenous
+                      },
+                      on: {
+                        change: function($event) {
+                          var $$a = _vm.enlist.isIndigenous,
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = "1",
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 &&
+                                _vm.$set(
+                                  _vm.enlist,
+                                  "isIndigenous",
+                                  $$a.concat([$$v])
+                                )
+                            } else {
+                              $$i > -1 &&
+                                _vm.$set(
+                                  _vm.enlist,
+                                  "isIndigenous",
+                                  $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                )
+                            }
+                          } else {
+                            _vm.$set(_vm.enlist, "isIndigenous", $$c)
+                          }
+                        }
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "div",
+                    {
+                      staticStyle: { display: "none" },
+                      attrs: { id: "ifYes" }
+                    },
+                    [
+                      _c("label", [
+                        _vm._v(
+                          "If yes, please indicate the name of your community."
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.enlist.indigenousCommunity,
+                            expression: "enlist.indigenousCommunity"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          name: "indigenousCommunity",
+                          id: "indigenousCommunity",
+                          type: "text",
+                          placeholder: "community"
+                        },
+                        domProps: { value: _vm.enlist.indigenousCommunity },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.enlist,
+                              "indigenousCommunity",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("label", [
+                      _vm._v("Program(s) Applied for in order of preference")
+                    ]),
+                    _vm._v(" "),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("div", { staticClass: "form-select-list" }, [
+                                  _c("label", [_vm._v("Choice 1")]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "select",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.enlist.programChoiceOne,
+                                          expression: "enlist.programChoiceOne"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "form-control programChoice1",
+                                      attrs: {
+                                        id: "choice",
+                                        name: "programChoiceOne",
+                                        required: ""
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          var $$selectedVal = Array.prototype.filter
+                                            .call(
+                                              $event.target.options,
+                                              function(o) {
+                                                return o.selected
+                                              }
+                                            )
+                                            .map(function(o) {
+                                              var val =
+                                                "_value" in o
+                                                  ? o._value
+                                                  : o.value
+                                              return val
+                                            })
+                                          _vm.$set(
+                                            _vm.enlist,
+                                            "programChoiceOne",
+                                            $event.target.multiple
+                                              ? $$selectedVal
+                                              : $$selectedVal[0]
+                                          )
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c("option", {
+                                        attrs: {
+                                          value: "none",
+                                          selected: "",
+                                          disabled: ""
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Choice 2")]),
+                                _vm._v(" "),
+                                _c(
+                                  "select",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.enlist.programChoiceTwo,
+                                        expression: "enlist.programChoiceTwo"
+                                      }
+                                    ],
+                                    staticClass: "form-control programChoice2",
+                                    attrs: {
+                                      id: "choice",
+                                      name: "programChoiceTwo"
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        var $$selectedVal = Array.prototype.filter
+                                          .call($event.target.options, function(
+                                            o
+                                          ) {
+                                            return o.selected
+                                          })
+                                          .map(function(o) {
+                                            var val =
+                                              "_value" in o ? o._value : o.value
+                                            return val
+                                          })
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "programChoiceTwo",
+                                          $event.target.multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        )
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("option", {
+                                      attrs: { value: "", selected: "" }
+                                    })
+                                  ]
+                                )
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Choice 3")]),
+                                _vm._v(" "),
+                                _c(
+                                  "select",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.enlist.programChoiceThree,
+                                        expression: "enlist.programChoiceThree"
+                                      }
+                                    ],
+                                    staticClass: "form-control programChoice3",
+                                    attrs: {
+                                      id: "choice",
+                                      name: "programChoiceThree"
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        var $$selectedVal = Array.prototype.filter
+                                          .call($event.target.options, function(
+                                            o
+                                          ) {
+                                            return o.selected
+                                          })
+                                          .map(function(o) {
+                                            var val =
+                                              "_value" in o ? o._value : o.value
+                                            return val
+                                          })
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "programChoiceThree",
+                                          $event.target.multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        )
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("option", {
+                                      attrs: { value: "", selected: "" }
+                                    })
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]
+            ),
             _vm._v(" "),
-            _vm._m(5),
+            _c(
+              "div",
+              {
+                staticClass: "tab-pane fade",
+                attrs: {
+                  id: "v-pills-psychologicalProfile",
+                  role: "tabpanel",
+                  "aria-labelledby": "v-pills-psychologicalProfile-tab"
+                }
+              },
+              [
+                _c("h4", { staticClass: "form-header text-primary" }, [
+                  _vm._v("Psychological Profile")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [
+                                  _vm._v(
+                                    "Are you currently in therapy, rehabilitation, or clinical counseling elsewhere?"
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("label", { staticClass: "radio-inline" }, [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value:
+                                          _vm.enlist.currTherapyRehabCounseling,
+                                        expression:
+                                          "enlist.currTherapyRehabCounseling"
+                                      }
+                                    ],
+                                    staticClass: "pull-left",
+                                    attrs: {
+                                      type: "radio",
+                                      value: "1",
+                                      name: "currTherapyRehabCounseling",
+                                      onclick: "javascript:yesnoCounseling();",
+                                      id: "yesCheckCounseling"
+                                    },
+                                    domProps: {
+                                      checked: _vm._q(
+                                        _vm.enlist.currTherapyRehabCounseling,
+                                        "1"
+                                      )
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        return _vm.$set(
+                                          _vm.enlist,
+                                          "currTherapyRehabCounseling",
+                                          "1"
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v("Yes\n                      ")
+                                ]),
+                                _vm._v(" "),
+                                _c("label", { staticClass: "radio-inline" }, [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value:
+                                          _vm.enlist.currTherapyRehabCounseling,
+                                        expression:
+                                          "enlist.currTherapyRehabCounseling"
+                                      }
+                                    ],
+                                    staticClass: "pull-left",
+                                    attrs: {
+                                      type: "radio",
+                                      value: "0",
+                                      name: "currTherapyRehabCounseling",
+                                      onclick: "javascript:yesnoCounseling();",
+                                      id: "noCheckCounseling"
+                                    },
+                                    domProps: {
+                                      checked: _vm._q(
+                                        _vm.enlist.currTherapyRehabCounseling,
+                                        "0"
+                                      )
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        return _vm.$set(
+                                          _vm.enlist,
+                                          "currTherapyRehabCounseling",
+                                          "0"
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v("No\n                      ")
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("If yes, with whom:")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value:
+                                        _vm.enlist
+                                          .currTherapyRehabCounselingName,
+                                      expression:
+                                        "enlist.currTherapyRehabCounselingName"
+                                    }
+                                  ],
+                                  staticClass: "form-control basic-ele-mg-t-10",
+                                  attrs: {
+                                    id: "currTherapyRehabCounselingName",
+                                    name: "currTherapyRehabCounselingName",
+                                    type: "text",
+                                    placeholder: ""
+                                  },
+                                  domProps: {
+                                    value:
+                                      _vm.enlist.currTherapyRehabCounselingName
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "currTherapyRehabCounselingName",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [_vm._v("Contact Information")]),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value:
+                                        _vm.enlist
+                                          .currTherapyRehabCounselingContact,
+                                      expression:
+                                        "enlist.currTherapyRehabCounselingContact"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    name: "currTherapyRehabCounselingContact",
+                                    id: "currTherapyRehabCounselingContact",
+                                    type: "tel",
+                                    placeholder: "Mobile no.",
+                                    "data-mask": "+63 999-999-9999"
+                                  },
+                                  domProps: {
+                                    value:
+                                      _vm.enlist
+                                        .currTherapyRehabCounselingContact
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "currTherapyRehabCounselingContact",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "form-select-list" }, [
+                                _c("label", [
+                                  _vm._v(
+                                    "Briefly describe your reason for seeking help:"
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("textarea", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.reasonToSeekHelp,
+                                      expression: "enlist.reasonToSeekHelp"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    id: "reasonToSeekHelp",
+                                    name: "reasonToSeekHelp"
+                                  },
+                                  domProps: {
+                                    value: _vm.enlist.reasonToSeekHelp
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "reasonToSeekHelp",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]
+            ),
             _vm._v(" "),
             _c(
               "div",
@@ -73502,331 +78680,129 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" }, [
-        _c("h4", { staticClass: "form-header text-primary" }, [
-          _vm._v("Name as it appears on the Birth Certificate")
-        ]),
+    return _c("div", { staticClass: "col-xs-3" }, [
+      _c(
+        "div",
+        {
+          staticClass: "nav flex-column nav-pills",
+          attrs: {
+            id: "v-pills-tab",
+            role: "tablist",
+            "aria-orientation": "vertical"
+          }
+        },
+        [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link active",
+              attrs: {
+                id: "v-pills-personalinfo-tab",
+                "data-toggle": "pill",
+                href: "#v-pills-personalinfo",
+                role: "tab",
+                "aria-controls": "v-pills-personalinfo",
+                "aria-selected": "true"
+              }
+            },
+            [_vm._v("Basic Personal Information")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: {
+                id: "v-pills-addressAndContact-tab",
+                "data-toggle": "pill",
+                href: "#v-pills-addressAndContact",
+                role: "tab",
+                "aria-controls": "v-pills-addressAndContact",
+                "aria-selected": "false"
+              }
+            },
+            [_vm._v("Address and Contact Information")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: {
+                id: "v-pills-medicalProfile-tab",
+                "data-toggle": "pill",
+                href: "#v-pills-medicalProfile",
+                role: "tab",
+                "aria-controls": "v-pills-medicalProfile",
+                "aria-selected": "false"
+              }
+            },
+            [_vm._v("Health / Medical profile")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: {
+                id: "v-pills-familyInfo-tab",
+                "data-toggle": "pill",
+                href: "#v-pills-familyInfo",
+                role: "tab",
+                "aria-controls": "v-pills-familyInfo",
+                "aria-selected": "false"
+              }
+            },
+            [_vm._v("Family Information")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: {
+                id: "v-pills-educationalBackground-tab",
+                "data-toggle": "pill",
+                href: "#v-pills-educationalBackground",
+                role: "tab",
+                "aria-controls": "v-pills-educationalBackground",
+                "aria-selected": "false"
+              }
+            },
+            [_vm._v("Educational Background")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: {
+                id: "v-pills-psychologicalProfile-tab",
+                "data-toggle": "pill",
+                href: "#v-pills-psychologicalProfile",
+                role: "tab",
+                "aria-controls": "v-pills-psychologicalProfile",
+                "aria-selected": "false"
+              }
+            },
+            [_vm._v("Psychological Profile")]
+          )
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+      _c("div", { staticClass: "form-group" }, [
+        _c("label", [_vm._v("Suffix (Jr., III, IV etc.)")]),
         _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-8 col-md-8 col-sm-8 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Surname")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "surname",
-                            type: "text",
-                            placeholder: "Surname",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Suffix (Jr., III, IV etc.)")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "suffix",
-                            type: "text",
-                            placeholder: "Suffix"
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("First Name")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "firstname",
-                            type: "text",
-                            placeholder: "Firstname",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Middle Name")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "middlename",
-                            type: "text",
-                            placeholder: "Middlename",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("h4", { staticClass: "form-header text-primary" }, [
-          _vm._v("Basic Personal Information")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Birthdate")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "birthDate",
-                            id: "datepicker",
-                            type: "date",
-                            placeholder: "Date of Birth",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Birthplace")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "birthPlace",
-                            type: "text",
-                            placeholder: "Birthplace",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Gender")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            staticClass: "form-control",
-                            attrs: { name: "gender", required: "" }
-                          },
-                          [
-                            _c("option", {
-                              attrs: {
-                                value: "none",
-                                selected: "",
-                                disabled: ""
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "1" } }, [
-                              _vm._v("Male")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "2" } }, [
-                              _vm._v("Female")
-                            ])
-                          ]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Civil Status")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            staticClass: "form-control",
-                            attrs: { name: "civilStatus", required: "" }
-                          },
-                          [
-                            _c("option", {
-                              attrs: {
-                                value: "none",
-                                selected: "",
-                                disabled: ""
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "1" } }, [
-                              _vm._v("Single (Never Married)")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "2" } }, [
-                              _vm._v("Married")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "3" } }, [
-                              _vm._v("Widow / Widower")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "4" } }, [
-                              _vm._v("Head of the Family")
-                            ])
-                          ]
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Citizenship")]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "chosen-select-single mg-b-20" },
-                          [
-                            _c(
-                              "select",
-                              {
-                                staticClass: "form-control",
-                                attrs: {
-                                  "data-placeholder": "Choose a Citizenship...",
-                                  id: "citizenship",
-                                  name: "citizenship",
-                                  tabindex: "-1",
-                                  required: ""
-                                }
-                              },
-                              [
-                                _c("option", {
-                                  attrs: { value: "", selected: "" }
-                                }),
-                                _vm._v(" "),
-                                _c("option", {
-                                  attrs: { value: "", selected: "" }
-                                })
-                              ]
-                            )
-                          ]
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Religion")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            staticClass: "form-control",
-                            attrs: {
-                              id: "religion",
-                              name: "religion",
-                              required: ""
-                            }
-                          },
-                          [
-                            _c("option", {
-                              attrs: {
-                                value: "none",
-                                selected: "",
-                                disabled: ""
-                              }
-                            })
-                          ]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ])
+        _c("input", {
+          staticClass: "form-control",
+          attrs: { name: "suffix", type: "text", placeholder: "Suffix" }
+        })
       ])
     ])
   },
@@ -73834,2245 +78810,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" }, [
-        _c("h4", { staticClass: "form-header text-primary" }, [
-          _vm._v("Permanent Address")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", [
-            _vm._v(
-              "Permanent Address (House No., Street, Subdivision/Sitio, Barangay)"
-            )
-          ]),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: {
-              name: "permanentAddress",
-              type: "text",
-              placeholder: "Permanent Address",
-              required: ""
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("City")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            staticClass: "form-control",
-                            attrs: {
-                              "data-placeholder": "Choose a City...",
-                              id: "permanentCity",
-                              name: "permanentCity",
-                              tabindex: "-1"
-                            }
-                          },
-                          [_c("option", { attrs: { value: "", selected: "" } })]
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Province")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            staticClass: "form-control",
-                            attrs: {
-                              id: "permanentProvince",
-                              name: "permanentProvince",
-                              required: ""
-                            }
-                          },
-                          [
-                            _c("option", {
-                              attrs: {
-                                value: "none",
-                                selected: "",
-                                disabled: ""
-                              }
-                            })
-                          ]
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Zip/Postal Code")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "permanentzippostalcode",
-                            type: "text",
-                            placeholder: "Zip/Postal Code",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Country")]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "chosen-select-single mg-b-20" },
-                          [
-                            _c(
-                              "select",
-                              {
-                                staticClass: "form-control",
-                                attrs: {
-                                  "data-placeholder": "Choose a Country...",
-                                  id: "permanentCountry",
-                                  name: "permanentCountry",
-                                  tabindex: "-1",
-                                  required: ""
-                                }
-                              },
-                              [
-                                _c("option", {
-                                  attrs: { value: "", selected: "" }
-                                })
-                              ]
-                            )
-                          ]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("h4", { staticClass: "form-header text-primary" }, [
-          _vm._v("City Address")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", [_vm._v("Same as permanent")]),
-          _vm._v(" "),
-          _c("label", { staticClass: "radio-inline" }, [
-            _c("input", {
-              staticClass: "pull-left",
-              attrs: {
-                type: "radio",
-                onclick: "javascript:checkPermanent();",
-                id: "sameAsPermanent",
-                value: "1",
-                name: "sameAsPermanent"
-              }
-            }),
-            _vm._v("Yes\n                ")
-          ]),
-          _vm._v(" "),
-          _c("label", { staticClass: "radio-inline" }, [
-            _c("input", {
-              staticClass: "pull-left",
-              attrs: {
-                type: "radio",
-                onclick: "javascript:checkPermanent();",
-                id: "sameAsPermanent",
-                value: "0",
-                name: "sameAsPermanent"
-              }
-            }),
-            _vm._v("No\n                ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("label", { attrs: { id: "boxcheck" } }, [
-          _vm._v("Check the following boxes if the following applies to you:")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group", attrs: { id: "board" } }, [
-          _c("label", [_vm._v("Boarding")]),
-          _vm._v(" "),
-          _c("label", { staticClass: "radio-inline" }, [
-            _c("input", {
-              staticClass: "pull-left",
-              attrs: {
-                type: "checkbox",
-                value: "1",
-                name: "boarding",
-                id: "boarding"
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group", attrs: { id: "relative" } }, [
-          _c("label", [_vm._v("With Relative")]),
-          _vm._v(" "),
-          _c("label", { staticClass: "radio-inline" }, [
-            _c("input", {
-              staticClass: "pull-left",
-              attrs: {
-                type: "checkbox",
-                value: "1",
-                name: "withRelative",
-                id: "withRelative"
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "form-group",
-            staticStyle: { display: "block" },
-            attrs: { id: "caddress" }
-          },
-          [
-            _c("label", { attrs: { id: "cityAddressLabel" } }, [
-              _vm._v(
-                "City Address (House No., Street, Subdivision/Sitio, Barangay)"
-              )
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                id: "cityAddress",
-                name: "cityAddress",
-                type: "text",
-                placeholder: "City Address"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", { attrs: { id: "cityCityLabel" } }, [
-                          _vm._v("City")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            staticClass: "form-control",
-                            attrs: {
-                              "data-placeholder": "Choose a City...",
-                              id: "cityCity",
-                              name: "cityCity",
-                              tabindex: "-1"
-                            }
-                          },
-                          [_c("option", { attrs: { value: "" } })]
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", { attrs: { id: "cityProvinceLabel" } }, [
-                          _vm._v("Province")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            staticClass: "form-control",
-                            attrs: {
-                              id: "cityProvince",
-                              name: "cityProvince",
-                              required: ""
-                            }
-                          },
-                          [_c("option", { attrs: { value: "" } })]
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c(
-                          "label",
-                          { attrs: { id: "cityzippostalcodeLabel" } },
-                          [_vm._v("Zip/Postal Code")]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            id: "cityzippostalcode",
-                            name: "cityzippostalcode",
-                            type: "text",
-                            placeholder: "Zip/Postal Code"
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", { attrs: { id: "cityCountryLabel" } }, [
-                          _vm._v("Country")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "chosen-select-single mg-b-20" },
-                          [
-                            _c(
-                              "select",
-                              {
-                                staticClass: "form-control",
-                                attrs: {
-                                  "data-placeholder": "Choose a Country...",
-                                  id: "cityCountry",
-                                  name: "cityCountry",
-                                  tabindex: "-1"
-                                }
-                              },
-                              [
-                                _c("option", {
-                                  attrs: { value: "", selected: "" }
-                                })
-                              ]
-                            )
-                          ]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("h4", { staticClass: "form-header text-primary" }, [
-          _vm._v("Contact Information")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("E-mail Address")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "email",
-                            type: "email",
-                            placeholder: "E-mail Address",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Mobile Number")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "mobileNum",
-                            id: "mobileNum",
-                            type: "tel",
-                            placeholder: "Mobile no.",
-                            "data-mask": "+63 999-999-9999",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("h4", { staticClass: "form-header text-primary" }, [
-          _vm._v("\n                In Case of Emergency\n                "),
-          _c("h5", { staticClass: "form-header text-primary" }, [
-            _vm._v(
-              "(if boarding or living with relative, indicate name of landlady of guardian as person to contact)"
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-7 col-md-7 col-sm-7 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Person To Contact")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "personToContact",
-                            type: "text",
-                            placeholder: "Person To Contact",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-5 col-md-5 col-sm-5 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Relationship")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control basic-ele-mg-t-10",
-                          attrs: {
-                            name: "personToContactRelationship",
-                            type: "text",
-                            placeholder: "Relationship",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-7 col-md-7 col-sm-7 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Telephone No.")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "text",
-                            "data-mask": "(999) 999-9999",
-                            name: "personToContactTelNo",
-                            placeholder: "Telephone No."
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-5 col-md-5 col-sm-5 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Mobile No.")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "personToContactMobileNo",
-                            id: "personToContactMobileNo",
-                            type: "tel",
-                            placeholder: "Mobile no.",
-                            "data-mask": "+63 999-999-9999",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ])
+    return _c("h4", { staticClass: "form-header text-primary" }, [
+      _vm._v("\n                In Case of Emergency\n                "),
+      _c("h5", { staticClass: "form-header text-primary" }, [
+        _vm._v(
+          "(if boarding or living with relative, indicate name of landlady of guardian as person to contact)"
+        )
       ])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "tab-pane fade",
-        attrs: {
-          id: "v-pills-medicalProfile",
-          role: "tabpanel",
-          "aria-labelledby": "v-pills-medicalProfile-tab"
-        }
-      },
-      [
-        _c("h4", { staticClass: "form-header text-primary" }, [
-          _vm._v("Health / Medical Profile")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Blood Group")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            staticClass: "form-control",
-                            attrs: { name: "bloodGroup", required: "" }
-                          },
-                          [
-                            _c("option", {
-                              attrs: {
-                                value: "none",
-                                selected: "",
-                                disabled: ""
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "A" } }, [
-                              _vm._v("A")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "B" } }, [
-                              _vm._v("B")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "AB" } }, [
-                              _vm._v("AB")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "O" } }, [
-                              _vm._v("O")
-                            ])
-                          ]
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Rh")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            staticClass: "form-control",
-                            attrs: { name: "rh", required: "" }
-                          },
-                          [
-                            _c("option", {
-                              attrs: {
-                                value: "none",
-                                selected: "",
-                                disabled: ""
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "+" } }, [
-                              _vm._v("+")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "-" } }, [
-                              _vm._v("-")
-                            ])
-                          ]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [
-                          _vm._v("Family / Personal Physician's Name")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "physicianName",
-                            type: "text",
-                            placeholder: "Family / Personal Physician's Name"
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [
-                          _vm._v("Physician's Contact Information")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control basic-ele-mg-t-10",
-                          attrs: {
-                            name: "physicianContactInformation",
-                            type: "text",
-                            placeholder: "Physician's Contact Information"
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Presently taking medication?")]),
-                        _vm._v(" "),
-                        _c("label", { staticClass: "radio-inline" }, [
-                          _c("input", {
-                            staticClass: "pull-left",
-                            attrs: {
-                              type: "radio",
-                              value: "1",
-                              name: "takingMedication",
-                              onclick: "javascript:yesnoMedication();",
-                              id: "yestakingMedication"
-                            }
-                          }),
-                          _vm._v("Yes\n                      ")
-                        ]),
-                        _vm._v(" "),
-                        _c("label", { staticClass: "radio-inline" }, [
-                          _c("input", {
-                            staticClass: "pull-left",
-                            attrs: {
-                              type: "radio",
-                              value: "0",
-                              name: "takingMedication",
-                              onclick: "javascript:yesnoMedication();",
-                              id: "notakingMedication"
-                            }
-                          }),
-                          _vm._v("No\n                      ")
-                        ])
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [
-                          _vm._v("If yes, please indicate medication:")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control basic-ele-mg-t-10",
-                          attrs: {
-                            id: "medicationInfo",
-                            name: "medicationInfo",
-                            type: "text",
-                            placeholder: ""
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-2 col-md-2 col-sm-2 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Do you have special needs?")]),
-                        _vm._v(" "),
-                        _c("br"),
-                        _vm._v(" "),
-                        _c("label", { staticClass: "radio-inline" }, [
-                          _c("input", {
-                            staticClass: "pull-left",
-                            attrs: {
-                              type: "radio",
-                              value: "1",
-                              name: "specialNeeds",
-                              onclick: "javascript:yesnoSpecialNeeds();",
-                              id: "yesSpecialNeeds"
-                            }
-                          }),
-                          _vm._v("Yes\n                      ")
-                        ]),
-                        _vm._v(" "),
-                        _c("label", { staticClass: "radio-inline" }, [
-                          _c("input", {
-                            staticClass: "pull-left",
-                            attrs: {
-                              type: "radio",
-                              value: "0",
-                              name: "specialNeeds",
-                              onclick: "javascript:yesnoSpecialNeeds();",
-                              id: "noSpecialNeeds"
-                            }
-                          }),
-                          _vm._v("No\n                      ")
-                        ])
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-5 col-md-5 col-sm-5 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Special Needs")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            staticClass: "form-control",
-                            attrs: {
-                              id: "typeOfSpecialNeeds",
-                              name: "typeOfSpecialNeeds"
-                            }
-                          },
-                          [
-                            _c("option", {
-                              attrs: { value: "", selected: "" }
-                            }),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "0" } }, [
-                              _vm._v("Psychiatric")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "1" } }, [
-                              _vm._v("Physical")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "2" } }, [
-                              _vm._v("PWD")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "3" } }, [
-                              _vm._v("Others")
-                            ])
-                          ]
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-7 col-md-7 col-sm-7 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Others: (Please specify)")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control basic-ele-mg-t-10",
-                          attrs: {
-                            id: "othersSpecialNeeds",
-                            name: "othersSpecialNeeds",
-                            type: "text",
-                            placeholder: "Others: (Please specify)"
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "tab-pane fade",
-        attrs: {
-          id: "v-pills-familyInfo",
-          role: "tabpanel",
-          "aria-labelledby": "v-pills-familyInfo-tab"
-        }
-      },
-      [
-        _c("h4", { staticClass: "form-header text-primary" }, [
-          _vm._v("Family Information")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [
-                          _vm._v("Position in the Family(e.g. eldest)")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "positionFamily",
-                            type: "text",
-                            placeholder: "Position in the Family",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("No. of Brothers")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "numBrothers",
-                            min: "0",
-                            value: "0",
-                            type: "number",
-                            placeholder: "No. of Brothers",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("No. of Sisters")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "numSisters",
-                            min: "0",
-                            value: "0",
-                            type: "number",
-                            placeholder: "No. of Sisters",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("h5", { staticClass: "form-header text-primary" }, [
-          _vm._v("Parents")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Father's Complete Name")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "text",
-                            name: "fatherName",
-                            placeholder: "Father's Complete Name",
-                            required: ""
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "label",
-                          { staticClass: "text-danger font-weight-bold" },
-                          [_vm._v("Check if deceased")]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "pull-left",
-                          attrs: {
-                            type: "checkbox",
-                            onclick: "javascript:checkFather();",
-                            id: "fatherLiving",
-                            value: "1",
-                            name: "fatherLiving"
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Father's Occupation")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control basic-ele-mg-t-10",
-                          attrs: {
-                            type: "text",
-                            id: "fatherOccupation",
-                            name: "fatherOccupation",
-                            placeholder: "Father's Occupation",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-7 col-md-7 col-sm-7 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Father's Address")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "text",
-                            id: "fatherAddress",
-                            name: "fatherAddress",
-                            placeholder: "Father's Address",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-5 col-md-5 col-sm-5 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Father's Contact Number")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "fatherContactNum",
-                            id: "fatherContactNum",
-                            type: "tel",
-                            placeholder: "Mobile no.",
-                            "data-mask": "+63 999-999-9999"
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Mother's Complete Name")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "motherName",
-                            type: "text",
-                            placeholder: "Mother's Complete Name",
-                            required: ""
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "label",
-                          { staticClass: "text-danger font-weight-bold" },
-                          [_vm._v("Check if deceased")]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "pull-left",
-                          attrs: {
-                            type: "checkbox",
-                            onclick: "javascript:checkMother();",
-                            id: "motherLiving",
-                            value: "1",
-                            name: "motherLiving"
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Mother's Occupation")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control basic-ele-mg-t-10",
-                          attrs: {
-                            id: "motherOccupation",
-                            name: "motherOccupation",
-                            type: "text",
-                            placeholder: "Mother's Occupation",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-7 col-md-7 col-sm-7 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Mother's Address")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "text",
-                            id: "motherAddress",
-                            name: "motherAddress",
-                            placeholder: "Mother's Address",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-5 col-md-5 col-sm-5 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Mother's Contact Number")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "motherContactNum",
-                            id: "motherContactNum",
-                            type: "tel",
-                            placeholder: "Mobile no.",
-                            "data-mask": "+63 999-999-9999"
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-7 col-md-7 col-sm-7 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Parents' Marital Status")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            staticClass: "form-control",
-                            attrs: {
-                              name: "parentsMaritalStatus",
-                              required: ""
-                            }
-                          },
-                          [
-                            _c("option", {
-                              attrs: {
-                                value: "none",
-                                selected: "",
-                                disabled: ""
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "1" } }, [
-                              _vm._v("Single (Never Married)")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "2" } }, [
-                              _vm._v("Married")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "3" } }, [
-                              _vm._v("Widow / Widower")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "4" } }, [
-                              _vm._v("Head of the Family")
-                            ])
-                          ]
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-7 col-md-7 col-sm-7 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [
-                          _vm._v("Name of Enlistee's Spouse (if married)")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "text",
-                            name: "nameOfSpouse",
-                            placeholder: "Name of Spouse (if married)"
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", {
-                    staticClass: "col-lg-5 col-md-5 col-sm-5 col-xs-12"
-                  })
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-7 col-md-7 col-sm-7 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [
-                          _vm._v("Name of Enlistee's Spouse (if married)")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "text",
-                            name: "nameOfSpouse",
-                            placeholder: "Name of Spouse (if married)"
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-7 col-md-7 col-sm-7 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [
-                          _vm._v("Annual Family Income (in Philippine Peso)")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "number",
-                            id: "annualFamilyIncome",
-                            name: "annualFamilyIncome",
-                            min: "1",
-                            value: "0",
-                            placeholder: "Annual Family Income",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "tab-pane fade",
-        attrs: {
-          id: "v-pills-educationalBackground",
-          role: "tabpanel",
-          "aria-labelledby": "v-pills-educationalBackground-tab"
-        }
-      },
-      [
-        _c("h4", { staticClass: "form-header text-primary" }, [
-          _vm._v("Educational Background")
-        ]),
-        _vm._v(" "),
-        _c("h5", { staticClass: "form-header text-primary" }, [
-          _vm._v("Preschool")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-5 col-md-5 col-sm-5 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Name of School")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "preSchoolName",
-                            type: "text",
-                            placeholder: "Name of School",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Address")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control basic-ele-mg-t-10",
-                          attrs: {
-                            name: "preSchoolAddress",
-                            type: "text",
-                            placeholder: "Address",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Year Graduated")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control basic-ele-mg-t-10",
-                          attrs: {
-                            name: "preSchoolGraduated",
-                            type: "number",
-                            min: "1",
-                            placeholder: "Years Graduated",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("h5", { staticClass: "form-header text-primary" }, [
-          _vm._v("Primary School")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-5 col-md-5 col-sm-5 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Name of School")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "gradeSchoolName",
-                            type: "text",
-                            placeholder: "Name of School",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Address")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control basic-ele-mg-t-10",
-                          attrs: {
-                            name: "gradeSchoolAddress",
-                            type: "text",
-                            placeholder: "Address",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Year Graduated")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control basic-ele-mg-t-10",
-                          attrs: {
-                            name: "gradeSchoolGraduated",
-                            type: "number",
-                            min: "1",
-                            placeholder: "Years Graduated",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("h5", { staticClass: "form-header text-primary" }, [
-          _vm._v("High School (Grade 7 to 10)")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-5 col-md-5 col-sm-5 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Name of School")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "highSchoolName",
-                            type: "text",
-                            placeholder: "Name of School",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Address")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control basic-ele-mg-t-10",
-                          attrs: {
-                            name: "highSchoolAddress",
-                            type: "text",
-                            placeholder: "Address",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Year Graduated")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control basic-ele-mg-t-10",
-                          attrs: {
-                            name: "highSchoolGraduated",
-                            type: "number",
-                            min: "1",
-                            placeholder: "Years Graduated",
-                            required: ""
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("label", [
-          _vm._v("Check the following boxes if the following applies to you:")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group isIndigenousComm" }, [
-          _c("label", [_vm._v("Are you a College Transferee?")]),
-          _vm._v(" "),
-          _c("label", { staticClass: "radio-inline" }, [
-            _c("input", {
-              staticClass: "pull-left",
-              attrs: {
-                type: "checkbox",
-                onclick: "javascript:yesnoCheckCollege();",
-                id: "yesCheckCollege",
-                value: "1",
-                name: "isCollege"
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c(
-            "div",
-            { staticStyle: { display: "none" }, attrs: { id: "collegeInfo" } },
-            [
-              _c("label", [
-                _vm._v(
-                  "Name of College or University Attended(if transfer student)"
-                )
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                staticClass: "form-control",
-                attrs: {
-                  name: "nameCollegeUniv",
-                  id: "nameCollegeUniv",
-                  type: "text",
-                  placeholder:
-                    "Name of College or University Attended(if transfer student)"
-                }
-              }),
-              _vm._v(" "),
-              _c("label", [
-                _vm._v(
-                  "Complete Address of College or University Attended(if transfer student)"
-                )
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                staticClass: "form-control",
-                attrs: {
-                  name: "addressCollegeUniv",
-                  id: "addressCollegeUniv",
-                  type: "text",
-                  placeholder:
-                    "Complete Address of College or University Attended(if transfer student)"
-                }
-              })
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group isIndigenousComm" }, [
-          _c("label", [_vm._v("Did you attend Senior High School?")]),
-          _vm._v(" "),
-          _c("label", { staticClass: "radio-inline" }, [
-            _c("input", {
-              staticClass: "pull-left",
-              attrs: {
-                type: "checkbox",
-                value: "0",
-                name: "isSHS",
-                onclick: "javascript:yesnoCheckSHS();",
-                id: "yesCheckSHS"
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "form-group",
-            staticStyle: { display: "none" },
-            attrs: { id: "shsName" }
-          },
-          [
-            _c("label", [_vm._v("Name of Senior High School Attended")]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                name: "nameSHS",
-                id: "nameSHS",
-                type: "text",
-                placeholder: "Name of Senior High School"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "form-group",
-            staticStyle: { display: "none" },
-            attrs: { id: "shsAdd" }
-          },
-          [
-            _c("label", [
-              _vm._v("Complete Address of Senior High School Attended")
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                name: "addressSHS",
-                id: "addressSHS",
-                type: "text",
-                placeholder: "Complete Address of Senior High School"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "form-group",
-            staticStyle: { display: "none" },
-            attrs: { id: "shsPrincipal" }
-          },
-          [
-            _c("label", [_vm._v("Principal's Name")]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                name: "principalSHS",
-                id: "principalSHS",
-                type: "text",
-                placeholder: "Principal's Name"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "form-group",
-            staticStyle: { display: "none" },
-            attrs: { id: "shsTrackStrand" }
-          },
-          [
-            _c("div", { staticClass: "row" }, [
-              _c(
-                "div",
-                { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-                [
-                  _c("div", { staticClass: "row" }, [
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                      [
-                        _c("div", { staticClass: "form-select-list" }, [
-                          _c("label", [_vm._v("Track")]),
-                          _vm._v(" "),
-                          _c(
-                            "select",
-                            {
-                              staticClass: "form-control",
-                              attrs: {
-                                id: "track",
-                                name: "track",
-                                onclick: "javascript:strandCheck();"
-                              }
-                            },
-                            [
-                              _c("option", {
-                                attrs: { value: "", selected: "", disabled: "" }
-                              }),
-                              _vm._v(" "),
-                              _c("option", { attrs: { value: "ACADEMIC" } }, [
-                                _vm._v("Academic Track")
-                              ]),
-                              _vm._v(" "),
-                              _c("option", { attrs: { value: "TVL" } }, [
-                                _vm._v(
-                                  "Technical-Vocational-Livelihood (TVL) Track"
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("option", { attrs: { value: "SPORTS" } }, [
-                                _vm._v("Sports Track")
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                { attrs: { value: "ARTANDDESIGN" } },
-                                [_vm._v("Arts and Design Track")]
-                              )
-                            ]
-                          )
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                      [
-                        _c("div", { staticClass: "form-select-list" }, [
-                          _c("label", [_vm._v("Strand")]),
-                          _vm._v(" "),
-                          _c(
-                            "select",
-                            {
-                              staticClass: "form-control",
-                              attrs: { id: "strand", name: "strand" }
-                            },
-                            [
-                              _c("option", {
-                                attrs: { value: "none", selected: "" }
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  staticStyle: { display: "none" },
-                                  attrs: { value: "HUMSS", id: "HUMSS" }
-                                },
-                                [_vm._v("HUMSS")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  staticStyle: { display: "none" },
-                                  attrs: { value: "STEM", id: "STEM" }
-                                },
-                                [_vm._v("STEM")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  staticStyle: { display: "none" },
-                                  attrs: { value: "ABM", id: "ABM" }
-                                },
-                                [_vm._v("ABM")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  staticStyle: { display: "none" },
-                                  attrs: { value: "GAS", id: "GAS" }
-                                },
-                                [_vm._v("GAS")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  staticStyle: { display: "none" },
-                                  attrs: {
-                                    value: "Agri-Fishery Arts Strand",
-                                    id: "Agri"
-                                  }
-                                },
-                                [_vm._v("Agri-Fishery Arts Strand")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  staticStyle: { display: "none" },
-                                  attrs: {
-                                    value: "Home Economics Strand",
-                                    id: "Home"
-                                  }
-                                },
-                                [_vm._v("Home Economics Strand")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  staticStyle: { display: "none" },
-                                  attrs: {
-                                    value: "Industrial Arts Strand",
-                                    id: "Industrial"
-                                  }
-                                },
-                                [_vm._v("Industrial Arts Strand")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  staticStyle: { display: "none" },
-                                  attrs: { value: "ICT Strand", id: "ICT" }
-                                },
-                                [_vm._v("ICT Strand")]
-                              )
-                            ]
-                          )
-                        ])
-                      ]
-                    )
-                  ])
-                ]
-              )
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group isIndigenousComm" }, [
-          _c("label", [
-            _vm._v(
-              "Do you identify yourself as a member of an Indigenous Community?"
-            )
-          ]),
-          _vm._v(" "),
-          _c("label", { staticClass: "radio-inline" }, [
-            _c("input", {
-              staticClass: "pull-left",
-              attrs: {
-                type: "checkbox",
-                onclick: "javascript:yesnoCheck();",
-                id: "yesCheck",
-                value: "1",
-                name: "isIndigenous"
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c(
-            "div",
-            { staticStyle: { display: "none" }, attrs: { id: "ifYes" } },
-            [
-              _c("label", [
-                _vm._v("If yes, please indicate the name of your community.")
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                staticClass: "form-control",
-                attrs: {
-                  name: "indigenousCommunity",
-                  id: "indigenousCommunity",
-                  type: "text",
-                  placeholder: "community"
-                }
-              })
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("label", [
-              _vm._v("Program(s) Applied for in order of preference")
-            ]),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("div", { staticClass: "form-select-list" }, [
-                          _c("label", [_vm._v("Choice 1")]),
-                          _vm._v(" "),
-                          _c(
-                            "select",
-                            {
-                              staticClass: "form-control programChoice1",
-                              attrs: {
-                                id: "choice",
-                                name: "programChoiceOne",
-                                required: ""
-                              }
-                            },
-                            [
-                              _c("option", {
-                                attrs: {
-                                  value: "none",
-                                  selected: "",
-                                  disabled: ""
-                                }
-                              })
-                            ]
-                          )
-                        ])
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Choice 2")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            staticClass: "form-control programChoice2",
-                            attrs: { id: "choice", name: "programChoiceTwo" }
-                          },
-                          [_c("option", { attrs: { value: "", selected: "" } })]
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Choice 3")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            staticClass: "form-control programChoice3",
-                            attrs: { id: "choice", name: "programChoiceThree" }
-                          },
-                          [_c("option", { attrs: { value: "", selected: "" } })]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "tab-pane fade",
-        attrs: {
-          id: "v-pills-psychologicalProfile",
-          role: "tabpanel",
-          "aria-labelledby": "v-pills-psychologicalProfile-tab"
-        }
-      },
-      [
-        _c("h4", { staticClass: "form-header text-primary" }, [
-          _vm._v("Psychological Profile")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                    [
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [
-                          _vm._v(
-                            "Are you currently in therapy, rehabilitation, or clinical counseling elsewhere?"
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("label", { staticClass: "radio-inline" }, [
-                          _c("input", {
-                            staticClass: "pull-left",
-                            attrs: {
-                              type: "radio",
-                              value: "1",
-                              name: "currTherapyRehabCounseling",
-                              onclick: "javascript:yesnoCounseling();",
-                              id: "yesCheckCounseling"
-                            }
-                          }),
-                          _vm._v("Yes\n                      ")
-                        ]),
-                        _vm._v(" "),
-                        _c("label", { staticClass: "radio-inline" }, [
-                          _c("input", {
-                            staticClass: "pull-left",
-                            attrs: {
-                              type: "radio",
-                              value: "0",
-                              name: "currTherapyRehabCounseling",
-                              onclick: "javascript:yesnoCounseling();",
-                              id: "noCheckCounseling"
-                            }
-                          }),
-                          _vm._v("No\n                      ")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("If yes, with whom:")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control basic-ele-mg-t-10",
-                          attrs: {
-                            id: "currTherapyRehabCounselingName",
-                            name: "currTherapyRehabCounselingName",
-                            type: "text",
-                            placeholder: ""
-                          }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [_vm._v("Contact Information")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            name: "currTherapyRehabCounselingContact",
-                            id: "currTherapyRehabCounselingContact",
-                            type: "tel",
-                            placeholder: "Mobile no.",
-                            "data-mask": "+63 999-999-9999"
-                          }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-select-list" }, [
-                        _c("label", [
-                          _vm._v(
-                            "Briefly describe your reason for seeking help:"
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("textarea", {
-                          staticClass: "form-control",
-                          attrs: {
-                            id: "reasonToSeekHelp",
-                            name: "reasonToSeekHelp"
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ])
-      ]
-    )
   }
 ]
 render._withStripped = true
