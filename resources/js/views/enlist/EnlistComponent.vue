@@ -66,16 +66,6 @@
             aria-controls="v-pills-psychologicalProfile"
             aria-selected="false"
           >Psychological Profile</a>
-
-          <!--<a
-            class="nav-link"
-            id="v-pills-preinterview-tab"
-            data-toggle="pill"
-            href="#v-pills-preinterview"
-            role="tab"
-            aria-controls="v-pills-preinterview"
-            aria-selected="false"
-          >Pre-Interview Questions</a>-->
         </div>
       </div>
       <div class="col-xs-9 col-9">
@@ -94,7 +84,7 @@
                   <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                       <div class="row">
-                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                           <div class="form-group">
                             <label>Surname</label>
                             <input
@@ -107,7 +97,7 @@
                             />
                           </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                           <div class="form-group">
                             <label>Suffix (Jr., III, IV etc.)</label>
                             <input
@@ -116,6 +106,20 @@
                               class="form-control"
                               placeholder="Suffix"
                             />
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                          <div class="form-group">
+                            <label>Applicant Number</label>
+                            <input
+                              name="suffix"
+                              type="text"
+                              class="form-control"
+                              placeholder="Applicant Number"
+                            />
+                            <b
+                              class="text-danger"
+                            >(The number indicated on your Notice of Acceptance letter)</b>
                           </div>
                         </div>
                       </div>
@@ -194,7 +198,12 @@
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <div class="form-group">
                             <label>Gender</label>
-                            <select v-model="enlist.gender" name="gender" class="form-control" required>
+                            <select
+                              v-model="enlist.gender"
+                              name="gender"
+                              class="form-control"
+                              required
+                            >
                               <option value="none" selected disabled></option>
                               <option value="1">Male</option>
                               <option value="2">Female</option>
@@ -213,7 +222,12 @@
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <div class="form-group">
                             <label>Civil Status</label>
-                            <select v-model="enlist.civilStatus" name="civilStatus" class="form-control" required>
+                            <select
+                              v-model="enlist.civilStatus"
+                              name="civilStatus"
+                              class="form-control"
+                              required
+                            >
                               <option value="none" selected disabled></option>
                               <option value="1">Single (Never Married)</option>
                               <option value="2">Married</option>
@@ -246,7 +260,13 @@
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <div class="form-group">
                             <label>Religion</label>
-                            <select id="religion" v-model="enlist.religion" name="religion" class="form-control" required>
+                            <select
+                              id="religion"
+                              v-model="enlist.religion"
+                              name="religion"
+                              class="form-control"
+                              required
+                            >
                               <option value="none" selected disabled></option>
                             </select>
                           </div>
@@ -340,7 +360,8 @@
                                 tabindex="-1"
                                 required
                               >
-                                <option value selected></option>
+                                <option disabled selected></option>
+                                <option v-for="country in countries" v-bind:value="country.id">{{country.description}}</option>
                               </select>
                             </div>
                           </div>
@@ -469,7 +490,7 @@
                                 data-placeholder="Choose a Country..."
                                 id="cityCountry"
                                 name="cityCountry"
-                              v-model="enlist.cityCountry"
+                                v-model="enlist.cityCountry"
                                 class="form-control"
                                 tabindex="-1"
                               >
@@ -613,7 +634,12 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <div class="form-select-list">
                         <label>Blood Group</label>
-                        <select v-model="enlist.bloodGroup" name="bloodGroup" class="form-control" required>
+                        <select
+                          v-model="enlist.bloodGroup"
+                          name="bloodGroup"
+                          class="form-control"
+                          required
+                        >
                           <option value="none" selected disabled></option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -1025,7 +1051,12 @@
                     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                       <div class="form-select-list">
                         <label>Parents' Marital Status</label>
-                        <select v-model="enlist.parentsMaritalStatus" name="parentsMaritalStatus" class="form-control" required>
+                        <select
+                          v-model="enlist.parentsMaritalStatus"
+                          name="parentsMaritalStatus"
+                          class="form-control"
+                          required
+                        >
                           <option value="none" selected disabled></option>
                           <option value="1">Single (Never Married)</option>
                           <option value="2">Married</option>
@@ -1340,7 +1371,12 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <div class="form-select-list">
                         <label>Strand</label>
-                        <select id="strand" v-model="enlist.strand" name="strand" class="form-control">
+                        <select
+                          id="strand"
+                          v-model="enlist.strand"
+                          name="strand"
+                          class="form-control"
+                        >
                           <option value="none" selected></option>
                           <option value="HUMSS" id="HUMSS" style="display:none">HUMSS</option>
                           <option value="STEM" id="STEM" style="display:none">STEM</option>
@@ -1624,13 +1660,24 @@ export default {
         reasonToSeekHelp: "",
         status: ""
       },
+
+      countries: [],
+      url_countries: "http://127.0.0.1:8000/countrieslist"
     };
   },
 
   methods: {
+    load_countries() {
+      axios.get(this.url_countries).then(response => {
+        this.countries = response.data.countries;
+      });
+    }
   },
 
-  computed: {
+  computed: {},
+
+  mounted() {
+    this.load_countries();
   }
 };
 </script>

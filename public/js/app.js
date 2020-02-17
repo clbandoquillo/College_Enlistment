@@ -1754,6 +1754,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1773,6 +1811,42 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3397,11 +3471,24 @@ __webpack_require__.r(__webpack_exports__);
         currTherapyRehabCounselingContact: "",
         reasonToSeekHelp: "",
         status: ""
-      }
+      },
+      countries: [],
+      url_countries: "http://127.0.0.1:8000/countrieslist"
     };
   },
-  methods: {},
-  computed: {}
+  methods: {
+    load_countries: function load_countries() {
+      var _this = this;
+
+      axios.get(this.url_countries).then(function (response) {
+        _this.countries = response.data.countries;
+      });
+    }
+  },
+  computed: {},
+  mounted: function mounted() {
+    this.load_countries();
+  }
 });
 
 /***/ }),
@@ -73407,51 +73494,144 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "col-sm-12 my-auto" },
-    [
-      _c(
-        "center",
-        [
-          _c("h1", { staticClass: "cover-heading" }, [
-            _vm._v("Enlistment System")
+  return _c("div", { staticClass: "row mt-3 px-1" }, [
+    _c("div", { staticClass: "col-lg-3 mb-3" }, [
+      _c("div", { staticClass: "card" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "card-body" },
+          [
+            _c("h5", [
+              _vm._v(
+                "This serves as a system for the enlistment of incoming freshmen college students for the 1st Semester of A.Y. " +
+                  _vm._s(_vm.schoolyear) +
+                  " - " +
+                  _vm._s(_vm.schoolyear + 1)
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "center",
+              [
+                _c("router-link", { attrs: { to: { name: "enlist" } } }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary btn-lg btn-block",
+                      attrs: { type: "button" }
+                    },
+                    [_vm._v("Enlist Here")]
+                  )
+                ])
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _vm._m(2)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header bg-primary text-light" }, [
+      _c("h3", [_vm._v("Enlistment System")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "alert alert-danger", attrs: { role: "alert" } },
+      [
+        _c("h3", [
+          _vm._v("Please ensure that all entered information is correct.")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-8" }, [
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-header bg-primary text-white" }, [
+          _vm._v("Privacy Notice")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c("h5", { staticClass: "card-title font-weight-bold" }, [
+            _vm._v("Welcome to the Ateneo de Davao University!")
           ]),
           _vm._v(" "),
-          _c("p", { staticClass: "lead col-md-4" }, [
+          _c("p", { staticClass: "card-text" }, [
             _vm._v(
-              "This serves as a system for the enlistment of incoming freshmen college students for the 1st Semester of A.Y. " +
-                _vm._s(_vm.schoolyear) +
-                " - " +
-                _vm._s(_vm.schoolyear + 1)
+              "Your personal information as a student, or employee, may be processed manually or by automated means, upon your request or consent, or upon the lawful order of any competent authority, or by virtue of the mandate of the University, as an employer, and as an educational institution. Their disclosure and sharing shall only be upon your consent, or as required by law, with relevant private or public persons, offices, or entities."
             )
           ]),
           _vm._v(" "),
-          _c("h3", [
-            _vm._v("Please ensure that all entered information is correct.")
+          _c("p", { staticClass: "card-text" }, [
+            _vm._v(
+              "For the students, the privacy of academic and other relevant personal information, which forms part of their permanent records, is protected by the University from the moment of admission. Incumbent students may access their information via the secured portals dedicated for this particular purpose."
+            )
           ]),
           _vm._v(" "),
-          _c("br"),
-          _c("br"),
+          _c("p", { staticClass: "card-text" }, [
+            _vm._v(
+              "On the other hand, the personal information of the employees, such as their employment records and credentials, may be kept by the University HRMDO from the moment of their submission, and during their engagement with the University, unless otherwise required by law."
+            )
+          ]),
           _vm._v(" "),
-          _c("router-link", { attrs: { to: { name: "enlist" } } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-primary btn-lg",
-                attrs: { type: "button" }
-              },
-              [_vm._v("\n          Enlist Here\n      ")]
+          _c("p", { staticClass: "card-text" }, [
+            _vm._v(
+              "The University may likewise collect and process personal information of third parties who may enter its campuses and facilities, such as video recordings, and other basic information for records purposes and security."
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "card-text" }, [
+            _vm._v(
+              "As our data subject, you may avail of the guarantees provided by Section 16 of RA 10173, or the Data Privacy Act, which includes the rights to be informed, to object, access, rectify, erasure or blocking, data portability, file a complaint, and to the payment of damages."
             )
           ])
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-footer" }, [
+          _c("p", { staticClass: "card-text" }, [
+            _vm._v("For more information, please visit:")
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _c("strong", [_vm._v("THE UNIVERSITY DATA PROTECTION OFFICER")]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v("Ateneo de Davao University\n          "),
+            _c("br"),
+            _vm._v("Lower ground floor, Finster Building,\n          "),
+            _c("br"),
+            _vm._v("Jacinto Street, Davao City\n          "),
+            _c("br"),
+            _vm._v("(082) 221-2411, Local 8514\n          "),
+            _c("br"),
+            _vm._v("dataprotection@addu.edu.ph\n        ")
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -73517,7 +73697,7 @@ var render = function() {
                                   "div",
                                   {
                                     staticClass:
-                                      "col-lg-8 col-md-8 col-sm-8 col-xs-12"
+                                      "col-lg-6 col-md-6 col-sm-6 col-xs-12"
                                   },
                                   [
                                     _c("div", { staticClass: "form-group" }, [
@@ -73557,7 +73737,9 @@ var render = function() {
                                   ]
                                 ),
                                 _vm._v(" "),
-                                _vm._m(1)
+                                _vm._m(1),
+                                _vm._v(" "),
+                                _vm._m(2)
                               ])
                             ]
                           )
@@ -74445,11 +74627,32 @@ var render = function() {
                                             [
                                               _c("option", {
                                                 attrs: {
-                                                  value: "",
+                                                  disabled: "",
                                                   selected: ""
                                                 }
+                                              }),
+                                              _vm._v(" "),
+                                              _vm._l(_vm.countries, function(
+                                                country
+                                              ) {
+                                                return _c(
+                                                  "option",
+                                                  {
+                                                    domProps: {
+                                                      value: country.id
+                                                    }
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        country.description
+                                                      )
+                                                    )
+                                                  ]
+                                                )
                                               })
-                                            ]
+                                            ],
+                                            2
                                           )
                                         ]
                                       )
@@ -75111,7 +75314,7 @@ var render = function() {
                         ])
                       ]),
                       _vm._v(" "),
-                      _vm._m(2),
+                      _vm._m(3),
                       _vm._v(" "),
                       _c("div", { staticClass: "form-group" }, [
                         _c("div", { staticClass: "row" }, [
@@ -78795,7 +78998,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+    return _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" }, [
       _c("div", { staticClass: "form-group" }, [
         _c("label", [_vm._v("Suffix (Jr., III, IV etc.)")]),
         _vm._v(" "),
@@ -78803,6 +79006,29 @@ var staticRenderFns = [
           staticClass: "form-control",
           attrs: { name: "suffix", type: "text", placeholder: "Suffix" }
         })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" }, [
+      _c("div", { staticClass: "form-group" }, [
+        _c("label", [_vm._v("Applicant Number")]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-control",
+          attrs: {
+            name: "suffix",
+            type: "text",
+            placeholder: "Applicant Number"
+          }
+        }),
+        _vm._v(" "),
+        _c("b", { staticClass: "text-danger" }, [
+          _vm._v("(The number indicated on your Notice of Acceptance letter)")
+        ])
       ])
     ])
   },

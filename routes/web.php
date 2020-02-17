@@ -11,6 +11,9 @@
 |
 */
 
+//Countries
+Route::get('/countrieslist','CountriesController@countries');
+
 /*Route::get('/', function () {
     return view('welcome');
 });*/
@@ -68,3 +71,4 @@ Route::get('enlist/all', 'EnlistController@all');
 Route::get('divisions', 'DivisionController@index');
 Route::post('divisions/create','DivisionController@create');
 Route::get('divisions/all','DivisionController@all');
+
