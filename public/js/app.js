@@ -3387,6 +3387,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3473,7 +3474,9 @@ __webpack_require__.r(__webpack_exports__);
         status: ""
       },
       countries: [],
-      url_countries: "http://127.0.0.1:8000/countrieslist"
+      nationalities: [],
+      url_countries: "http://127.0.0.1:8000/countrieslist",
+      url_nationalities: "http://127.0.0.1:8000/nationalitylist"
     };
   },
   methods: {
@@ -3483,11 +3486,19 @@ __webpack_require__.r(__webpack_exports__);
       axios.get(this.url_countries).then(function (response) {
         _this.countries = response.data.countries;
       });
+    },
+    load_nationalities: function load_nationalities() {
+      var _this2 = this;
+
+      axios.get(this.url_nationalities).then(function (response) {
+        _this2.nationalities = response.data.nationalities;
+      });
     }
   },
   computed: {},
   mounted: function mounted() {
     this.load_countries();
+    this.load_nationalities();
   }
 });
 
@@ -74210,18 +74221,31 @@ var render = function() {
                                             [
                                               _c("option", {
                                                 attrs: {
-                                                  value: "",
+                                                  disabled: "",
                                                   selected: ""
                                                 }
                                               }),
                                               _vm._v(" "),
-                                              _c("option", {
-                                                attrs: {
-                                                  value: "",
-                                                  selected: ""
+                                              _vm._l(
+                                                _vm.nationalities,
+                                                function(nationality) {
+                                                  return _c(
+                                                    "option",
+                                                    {
+                                                      domProps: {
+                                                        value: nationality.code
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        _vm._s(nationality.name)
+                                                      )
+                                                    ]
+                                                  )
                                                 }
-                                              })
-                                            ]
+                                              )
+                                            ],
+                                            2
                                           )
                                         ]
                                       )
@@ -75186,11 +75210,32 @@ var render = function() {
                                             [
                                               _c("option", {
                                                 attrs: {
-                                                  value: "",
+                                                  disabled: "",
                                                   selected: ""
                                                 }
+                                              }),
+                                              _vm._v(" "),
+                                              _vm._l(_vm.countries, function(
+                                                country
+                                              ) {
+                                                return _c(
+                                                  "option",
+                                                  {
+                                                    domProps: {
+                                                      value: country.id
+                                                    }
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        country.description
+                                                      )
+                                                    )
+                                                  ]
+                                                )
                                               })
-                                            ]
+                                            ],
+                                            2
                                           )
                                         ]
                                       )

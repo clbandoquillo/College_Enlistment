@@ -13,6 +13,7 @@
 
 //Countries
 Route::get('/countrieslist','CountriesController@countries');
+Route::get('/nationalitylist','NationalityController@nationalities');
 
 /*Route::get('/', function () {
     return view('welcome');

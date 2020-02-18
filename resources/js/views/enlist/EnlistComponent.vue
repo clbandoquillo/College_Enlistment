@@ -250,8 +250,8 @@
                                 tabindex="-1"
                                 required
                               >
-                                <option value selected></option>
-                                <option value selected></option>
+                                <option disabled selected></option>
+                                <option v-for="nationality in nationalities" v-bind:value="nationality.code">{{nationality.name}}</option>
                               </select>
                             </div>
                           </div>
@@ -494,7 +494,8 @@
                                 class="form-control"
                                 tabindex="-1"
                               >
-                                <option value selected></option>
+                                <option disabled selected></option>
+                                <option v-for="country in countries" v-bind:value="country.id">{{country.description}}</option>
                               </select>
                             </div>
                           </div>
@@ -1662,7 +1663,10 @@ export default {
       },
 
       countries: [],
-      url_countries: "http://127.0.0.1:8000/countrieslist"
+      nationalities: [],
+      
+      url_countries: "http://127.0.0.1:8000/countrieslist",
+      url_nationalities: "http://127.0.0.1:8000/nationalitylist"
     };
   },
 
@@ -1671,6 +1675,11 @@ export default {
       axios.get(this.url_countries).then(response => {
         this.countries = response.data.countries;
       });
+    },
+    load_nationalities() {
+      axios.get(this.url_nationalities).then(response => {
+        this.nationalities = response.data.nationalities;
+      });
     }
   },
 
@@ -1678,6 +1687,7 @@ export default {
 
   mounted() {
     this.load_countries();
+    this.load_nationalities();
   }
 };
 </script>
