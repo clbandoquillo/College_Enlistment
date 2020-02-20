@@ -738,8 +738,6 @@
                             value="1"
                             name="takingMedication"
                             v-model="enlist.takingMedication"
-                            onclick="javascript:yesnoMedication();"
-                            id="yestakingMedication"
                           />Yes
                         </label>
                         <label class="radio-inline">
@@ -749,8 +747,6 @@
                             value="0"
                             name="takingMedication"
                             v-model="enlist.takingMedication"
-                            onclick="javascript:yesnoMedication();"
-                            id="notakingMedication"
                           />No
                         </label>
                       </div>
@@ -759,7 +755,7 @@
                 </div>
               </div>
             </div>
-            <div class="form-group">
+            <div v-if="enlist.takingMedication == 1" class="form-group">
               <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="row">
@@ -795,8 +791,6 @@
                             value="1"
                             name="specialNeeds"
                             v-model="enlist.specialNeeds"
-                            onclick="javascript:yesnoSpecialNeeds();"
-                            id="yesSpecialNeeds"
                           />Yes
                         </label>
                         <label class="radio-inline">
@@ -806,15 +800,13 @@
                             value="0"
                             name="specialNeeds"
                             v-model="enlist.specialNeeds"
-                            onclick="javascript:yesnoSpecialNeeds();"
-                            id="noSpecialNeeds"
                           />No
                         </label>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div v-if="enlist.specialNeeds == 1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="row">
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                       <div class="form-select-list">
@@ -1763,8 +1755,11 @@ export default {
         status: "",
         isCollege: "",
         isSHS: "",
-        isIndigenous: ""
+        isIndigenous: "",
+        takingMedication: "",
+        specialNeeds: ""
       },
+      
 
       cities: [],
       countries: [],

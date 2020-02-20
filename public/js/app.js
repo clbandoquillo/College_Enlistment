@@ -3483,18 +3483,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
+    var _enlist;
+
     return {
-      enlist: _defineProperty({
+      enlist: (_enlist = {
         surname: "",
         suffix: "",
         firstname: "",
@@ -3577,7 +3571,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         status: "",
         isCollege: "",
         isSHS: ""
-      }, "isIndigenous", ""),
+      }, _defineProperty(_enlist, "isIndigenous", ""), _defineProperty(_enlist, "takingMedication", ""), _defineProperty(_enlist, "specialNeeds", ""), _enlist),
       cities: [],
       countries: [],
       nationalities: [],
@@ -76262,9 +76256,7 @@ var render = function() {
                                     attrs: {
                                       type: "radio",
                                       value: "1",
-                                      name: "takingMedication",
-                                      onclick: "javascript:yesnoMedication();",
-                                      id: "yestakingMedication"
+                                      name: "takingMedication"
                                     },
                                     domProps: {
                                       checked: _vm._q(
@@ -76299,9 +76291,7 @@ var render = function() {
                                     attrs: {
                                       type: "radio",
                                       value: "0",
-                                      name: "takingMedication",
-                                      onclick: "javascript:yesnoMedication();",
-                                      id: "notakingMedication"
+                                      name: "takingMedication"
                                     },
                                     domProps: {
                                       checked: _vm._q(
@@ -76330,67 +76320,77 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
-                      },
-                      [
-                        _c("div", { staticClass: "row" }, [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
-                            },
-                            [
-                              _c("div", { staticClass: "form-select-list" }, [
-                                _c("label", [
-                                  _vm._v("If yes, please indicate medication:")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.enlist.medicationInfo,
-                                      expression: "enlist.medicationInfo"
-                                    }
-                                  ],
-                                  staticClass: "form-control basic-ele-mg-t-10",
-                                  attrs: {
-                                    id: "medicationInfo",
-                                    name: "medicationInfo",
-                                    type: "text",
-                                    placeholder: ""
-                                  },
-                                  domProps: {
-                                    value: _vm.enlist.medicationInfo
-                                  },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.enlist,
-                                        "medicationInfo",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                })
-                              ])
-                            ]
-                          )
-                        ])
-                      ]
-                    )
-                  ])
-                ]),
+                _vm.enlist.takingMedication == 1
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("div", { staticClass: "row" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                          },
+                          [
+                            _c("div", { staticClass: "row" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "form-select-list" },
+                                    [
+                                      _c("label", [
+                                        _vm._v(
+                                          "If yes, please indicate medication:"
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.enlist.medicationInfo,
+                                            expression: "enlist.medicationInfo"
+                                          }
+                                        ],
+                                        staticClass:
+                                          "form-control basic-ele-mg-t-10",
+                                        attrs: {
+                                          id: "medicationInfo",
+                                          name: "medicationInfo",
+                                          type: "text",
+                                          placeholder: ""
+                                        },
+                                        domProps: {
+                                          value: _vm.enlist.medicationInfo
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "medicationInfo",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
+                  : _vm._e(),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-group" }, [
                   _c("div", { staticClass: "row" }, [
@@ -76429,10 +76429,7 @@ var render = function() {
                                     attrs: {
                                       type: "radio",
                                       value: "1",
-                                      name: "specialNeeds",
-                                      onclick:
-                                        "javascript:yesnoSpecialNeeds();",
-                                      id: "yesSpecialNeeds"
+                                      name: "specialNeeds"
                                     },
                                     domProps: {
                                       checked: _vm._q(
@@ -76467,10 +76464,7 @@ var render = function() {
                                     attrs: {
                                       type: "radio",
                                       value: "0",
-                                      name: "specialNeeds",
-                                      onclick:
-                                        "javascript:yesnoSpecialNeeds();",
-                                      id: "noSpecialNeeds"
+                                      name: "specialNeeds"
                                     },
                                     domProps: {
                                       checked: _vm._q(
@@ -76497,138 +76491,166 @@ var render = function() {
                       ]
                     ),
                     _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
-                      },
-                      [
-                        _c("div", { staticClass: "row" }, [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "col-lg-5 col-md-5 col-sm-5 col-xs-12"
-                            },
-                            [
-                              _c("div", { staticClass: "form-select-list" }, [
-                                _c("label", [_vm._v("Special Needs")]),
-                                _vm._v(" "),
-                                _c(
-                                  "select",
-                                  {
-                                    directives: [
-                                      {
-                                        name: "model",
-                                        rawName: "v-model",
-                                        value: _vm.enlist.typeOfSpecialNeeds,
-                                        expression: "enlist.typeOfSpecialNeeds"
-                                      }
-                                    ],
-                                    staticClass: "form-control",
-                                    attrs: {
-                                      id: "typeOfSpecialNeeds",
-                                      name: "typeOfSpecialNeeds"
-                                    },
-                                    on: {
-                                      change: function($event) {
-                                        var $$selectedVal = Array.prototype.filter
-                                          .call($event.target.options, function(
-                                            o
-                                          ) {
-                                            return o.selected
-                                          })
-                                          .map(function(o) {
-                                            var val =
-                                              "_value" in o ? o._value : o.value
-                                            return val
-                                          })
-                                        _vm.$set(
-                                          _vm.enlist,
-                                          "typeOfSpecialNeeds",
-                                          $event.target.multiple
-                                            ? $$selectedVal
-                                            : $$selectedVal[0]
-                                        )
-                                      }
-                                    }
-                                  },
-                                  [
-                                    _c("option", {
-                                      attrs: { value: "", selected: "" }
-                                    }),
-                                    _vm._v(" "),
-                                    _c("option", { attrs: { value: "0" } }, [
-                                      _vm._v("Psychiatric")
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("option", { attrs: { value: "1" } }, [
-                                      _vm._v("Physical")
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("option", { attrs: { value: "2" } }, [
-                                      _vm._v("PWD")
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("option", { attrs: { value: "3" } }, [
-                                      _vm._v("Others")
-                                    ])
-                                  ]
-                                )
-                              ])
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "col-lg-7 col-md-7 col-sm-7 col-xs-12"
-                            },
-                            [
-                              _c("div", { staticClass: "form-select-list" }, [
-                                _c("label", [
-                                  _vm._v("Others: (Please specify)")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.enlist.othersSpecialNeeds,
-                                      expression: "enlist.othersSpecialNeeds"
-                                    }
-                                  ],
-                                  staticClass: "form-control basic-ele-mg-t-10",
-                                  attrs: {
-                                    id: "othersSpecialNeeds",
-                                    name: "othersSpecialNeeds",
-                                    type: "text",
-                                    placeholder: "Others: (Please specify)"
-                                  },
-                                  domProps: {
-                                    value: _vm.enlist.othersSpecialNeeds
-                                  },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.enlist,
-                                        "othersSpecialNeeds",
-                                        $event.target.value
+                    _vm.enlist.specialNeeds == 1
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                          },
+                          [
+                            _c("div", { staticClass: "row" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-lg-5 col-md-5 col-sm-5 col-xs-12"
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "form-select-list" },
+                                    [
+                                      _c("label", [_vm._v("Special Needs")]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "select",
+                                        {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value:
+                                                _vm.enlist.typeOfSpecialNeeds,
+                                              expression:
+                                                "enlist.typeOfSpecialNeeds"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            id: "typeOfSpecialNeeds",
+                                            name: "typeOfSpecialNeeds"
+                                          },
+                                          on: {
+                                            change: function($event) {
+                                              var $$selectedVal = Array.prototype.filter
+                                                .call(
+                                                  $event.target.options,
+                                                  function(o) {
+                                                    return o.selected
+                                                  }
+                                                )
+                                                .map(function(o) {
+                                                  var val =
+                                                    "_value" in o
+                                                      ? o._value
+                                                      : o.value
+                                                  return val
+                                                })
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "typeOfSpecialNeeds",
+                                                $event.target.multiple
+                                                  ? $$selectedVal
+                                                  : $$selectedVal[0]
+                                              )
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("option", {
+                                            attrs: { value: "", selected: "" }
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "0" } },
+                                            [_vm._v("Psychiatric")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "1" } },
+                                            [_vm._v("Physical")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "2" } },
+                                            [_vm._v("PWD")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "3" } },
+                                            [_vm._v("Others")]
+                                          )
+                                        ]
                                       )
-                                    }
-                                  }
-                                })
-                              ])
-                            ]
-                          )
-                        ])
-                      ]
-                    )
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-lg-7 col-md-7 col-sm-7 col-xs-12"
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "form-select-list" },
+                                    [
+                                      _c("label", [
+                                        _vm._v("Others: (Please specify)")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value:
+                                              _vm.enlist.othersSpecialNeeds,
+                                            expression:
+                                              "enlist.othersSpecialNeeds"
+                                          }
+                                        ],
+                                        staticClass:
+                                          "form-control basic-ele-mg-t-10",
+                                        attrs: {
+                                          id: "othersSpecialNeeds",
+                                          name: "othersSpecialNeeds",
+                                          type: "text",
+                                          placeholder:
+                                            "Others: (Please specify)"
+                                        },
+                                        domProps: {
+                                          value: _vm.enlist.othersSpecialNeeds
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "othersSpecialNeeds",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      : _vm._e()
                   ])
                 ])
               ]
