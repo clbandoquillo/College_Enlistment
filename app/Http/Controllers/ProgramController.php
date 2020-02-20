@@ -19,7 +19,17 @@ class ProgramController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+       // $this->middleware('auth');
+    }
+
+    public function programs(){
+        $programs = DB::select(DB::raw("SELECT * FROM [Enlistment].[dbo].[curriculumn] 
+        WHERE CODE IN (SELECT COURSECODE
+                FROM [Enlistment].[dbo].[CURRICCONTENT] 
+                WHERE [YEARSTARTED] = 2019) AND yearAbolished IS NULL and shortCode IS NOT NULL and EnlistmentLevel = 'COLLEGIATE' order by divisioncode asc"));
+        return response()->json([
+            'programs'=>$programs
+        ], 200);
     }
 
     public function index()

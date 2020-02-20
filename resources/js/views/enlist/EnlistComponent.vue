@@ -251,7 +251,10 @@
                                 required
                               >
                                 <option disabled selected></option>
-                                <option v-for="nationality in nationalities" v-bind:value="nationality.code">{{nationality.name}}</option>
+                                <option
+                                  v-for="nationality in nationalities"
+                                  v-bind:value="nationality.code"
+                                >{{nationality.name}}</option>
                               </select>
                             </div>
                           </div>
@@ -267,7 +270,11 @@
                               class="form-control"
                               required
                             >
-                              <option value="none" selected disabled></option>
+                              <option disabled selected></option>
+                              <option
+                                v-for="country in countries"
+                                v-bind:value="country.id"
+                              >{{country.description}}</option>
                             </select>
                           </div>
                         </div>
@@ -316,7 +323,11 @@
                               class="form-control"
                               tabindex="-1"
                             >
-                              <option value selected></option>
+                              <option disabled selected></option>
+                              <option
+                                v-for="city in cities"
+                                v-bind:value="city.CityId"
+                              >{{city.CityName}}, {{city.ProvinceName}}</option>
                             </select>
                           </div>
                         </div>
@@ -330,7 +341,11 @@
                               class="form-control"
                               required
                             >
-                              <option value="none" selected disabled></option>
+                              <option disabled selected></option>
+                              <option
+                                v-for="province in provinces"
+                                v-bind:value="province.ProvinceId"
+                              >{{province.ProvinceName}}</option>
                             </select>
                           </div>
                         </div>
@@ -361,7 +376,10 @@
                                 required
                               >
                                 <option disabled selected></option>
-                                <option v-for="country in countries" v-bind:value="country.id">{{country.description}}</option>
+                                <option
+                                  v-for="country in countries"
+                                  v-bind:value="country.id"
+                                >{{country.description}}</option>
                               </select>
                             </div>
                           </div>
@@ -377,7 +395,6 @@
                     <input
                       class="pull-left"
                       type="radio"
-                      onclick="javascript:checkPermanent();"
                       id="sameAsPermanent"
                       value="1"
                       name="sameAsPermanent"
@@ -388,7 +405,6 @@
                     <input
                       class="pull-left"
                       type="radio"
-                      onclick="javascript:checkPermanent();"
                       id="sameAsPermanent"
                       value="0"
                       name="sameAsPermanent"
@@ -423,80 +439,93 @@
                     />
                   </label>
                 </div>
-                <div class="form-group" style="display:block" id="caddress">
-                  <label
-                    id="cityAddressLabel"
-                  >City Address (House No., Street, Subdivision/Sitio, Barangay)</label>
-                  <input
-                    id="cityAddress"
-                    name="cityAddress"
-                    v-model="enlist.cityAddress"
-                    type="text"
-                    class="form-control"
-                    placeholder="City Address"
-                  />
-                </div>
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                      <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                          <div class="form-group">
-                            <label id="cityCityLabel">City</label>
-                            <select
-                              data-placeholder="Choose a City..."
-                              id="cityCity"
-                              name="cityCity"
-                              v-model="enlist.cityCity"
-                              class="form-control"
-                              tabindex="-1"
-                            >
-                              <option value></option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                          <div class="form-group">
-                            <label id="cityProvinceLabel">Province</label>
-                            <select
-                              id="cityProvince"
-                              name="cityProvince"
-                              v-model="enlist.cityProvince"
-                              class="form-control"
-                              required
-                            >
-                              <option value></option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                          <div class="form-group">
-                            <label id="cityzippostalcodeLabel">Zip/Postal Code</label>
-                            <input
-                              id="cityzippostalcode"
-                              name="cityzippostalcode"
-                              v-model="enlist.cityzippostalcode"
-                              type="text"
-                              class="form-control"
-                              placeholder="Zip/Postal Code"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                          <div class="form-group">
-                            <label id="cityCountryLabel">Country</label>
-                            <div class="chosen-select-single mg-b-20">
+                <div v-if="enlist.sameAsPermanent != 1">
+                  <div class="form-group" style="display:block" id="caddress">
+                    <label
+                      id="cityAddressLabel"
+                    >City Address (House No., Street, Subdivision/Sitio, Barangay)</label>
+                    <input
+                      id="cityAddress"
+                      name="cityAddress"
+                      v-model="enlist.cityAddress"
+                      type="text"
+                      class="form-control"
+                      placeholder="City Address"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="form-group">
+                              <label id="cityCityLabel">City</label>
                               <select
-                                data-placeholder="Choose a Country..."
-                                id="cityCountry"
-                                name="cityCountry"
-                                v-model="enlist.cityCountry"
+                                data-placeholder="Choose a City..."
+                                id="cityCity"
+                                name="cityCity"
+                                v-model="enlist.cityCity"
                                 class="form-control"
                                 tabindex="-1"
                               >
                                 <option disabled selected></option>
-                                <option v-for="country in countries" v-bind:value="country.id">{{country.description}}</option>
+                                <option
+                                  v-for="city in cities"
+                                  v-bind:value="city.CityId"
+                                >{{city.CityName}}, {{city.ProvinceName}}</option>
                               </select>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="form-group">
+                              <label id="cityProvinceLabel">Province</label>
+                              <select
+                                id="cityProvince"
+                                name="cityProvince"
+                                v-model="enlist.cityProvince"
+                                class="form-control"
+                                required
+                              >
+                                <option disabled selected></option>
+                                <option
+                                  v-for="province in provinces"
+                                  v-bind:value="province.ProvinceId"
+                                >{{province.ProvinceName}}</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="form-group">
+                              <label id="cityzippostalcodeLabel">Zip/Postal Code</label>
+                              <input
+                                id="cityzippostalcode"
+                                name="cityzippostalcode"
+                                v-model="enlist.cityzippostalcode"
+                                type="text"
+                                class="form-control"
+                                placeholder="Zip/Postal Code"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="form-group">
+                              <label id="cityCountryLabel">Country</label>
+                              <div class="chosen-select-single mg-b-20">
+                                <select
+                                  data-placeholder="Choose a Country..."
+                                  id="cityCountry"
+                                  name="cityCountry"
+                                  v-model="enlist.cityCountry"
+                                  class="form-control"
+                                  tabindex="-1"
+                                >
+                                  <option disabled selected></option>
+                                  <option
+                                    v-for="country in countries"
+                                    v-bind:value="country.id"
+                                  >{{country.description}}</option>
+                                </select>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1124,14 +1153,20 @@
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                       <div class="form-select-list">
                         <label>Name of School</label>
-                        <input
+                        <select
+                          data-placeholder="Choose a School..."
+                          id="preSchoolName"
                           name="preSchoolName"
                           v-model="enlist.preSchoolName"
-                          type="text"
                           class="form-control"
-                          placeholder="Name of School"
-                          required
-                        />
+                          tabindex="-1"
+                        >
+                          <option disabled selected></option>
+                          <option
+                            v-for="school in schools"
+                            v-bind:value="school.SchoolId"
+                          >{{school.SchoolName}}</option>
+                        </select>
                       </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -1173,14 +1208,20 @@
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                       <div class="form-select-list">
                         <label>Name of School</label>
-                        <input
+                        <select
+                          data-placeholder="Choose a School..."
+                          id="gradeSchoolName"
                           name="gradeSchoolName"
                           v-model="enlist.gradeSchoolName"
-                          type="text"
                           class="form-control"
-                          placeholder="Name of School"
-                          required
-                        />
+                          tabindex="-1"
+                        >
+                          <option disabled selected></option>
+                          <option
+                            v-for="school in schools"
+                            v-bind:value="school.SchoolId"
+                          >{{school.SchoolName}}</option>
+                        </select>
                       </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -1222,14 +1263,20 @@
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                       <div class="form-select-list">
                         <label>Name of School</label>
-                        <input
+                        <select
+                          data-placeholder="Choose a School..."
+                          id="highSchoolName"
                           name="highSchoolName"
                           v-model="enlist.highSchoolName"
-                          type="text"
                           class="form-control"
-                          placeholder="Name of School"
-                          required
-                        />
+                          tabindex="-1"
+                        >
+                          <option disabled selected></option>
+                          <option
+                            v-for="school in schools"
+                            v-bind:value="school.SchoolId"
+                          >{{school.SchoolName}}</option>
+                        </select>
                       </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -1270,7 +1317,6 @@
                 <input
                   class="pull-left"
                   type="checkbox"
-                  onclick="javascript:yesnoCheckCollege();"
                   id="yesCheckCollege"
                   value="1"
                   name="isCollege"
@@ -1278,30 +1324,52 @@
                 />
               </label>
             </div>
-            <div class="form-group">
-              <div id="collegeInfo" style="display:none">
-                <label>Name of College or University Attended(if transfer student)</label>
-                <input
-                  name="nameCollegeUniv"
-                  v-model="enlist.nameCollegeUniv"
-                  id="nameCollegeUniv"
-                  type="text"
-                  class="form-control"
-                  placeholder="Name of College or University Attended(if transfer student)"
-                />
-                <label>Complete Address of College or University Attended(if transfer student)</label>
-                <input
-                  name="addressCollegeUniv"
-                  v-model="enlist.addressCollegeUniv"
-                  id="addressCollegeUniv"
-                  type="text"
-                  class="form-control"
-                  placeholder="Complete Address of College or University Attended(if transfer student)"
-                />
+
+            <div v-if="enlist.isCollege == 1">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-select-list">
+                          <label>Name of College or University Attended(if transfer student)</label>
+                          <select
+                            data-placeholder="Choose a School..."
+                            id="nameCollegeUniv"
+                            name="nameCollegeUniv"
+                            v-model="enlist.preSchoolName"
+                            class="form-control"
+                            tabindex="-1"
+                          >
+                            <option disabled selected></option>
+                            <option
+                              v-for="school in schools"
+                              v-bind:value="school.SchoolId"
+                            >{{school.SchoolName}}</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-select-list">
+                          <label>Complete Address of College or University Attended(if transfer student)</label>
+                          <input
+                            name="addressCollegeUniv"
+                            v-model="enlist.addressCollegeUniv"
+                            id="addressCollegeUniv"
+                            type="text"
+                            class="form-control"
+                            placeholder="Complete Address of College or University Attended(if transfer student)"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="form-group isIndigenousComm">
-              <label>Did you attend Senior High School?</label>
+
+            <div class="form-group">
+              <label>Check if you have attended Senior High School K to 12 Program</label>
               <label class="radio-inline">
                 <input
                   class="pull-left"
@@ -1309,119 +1377,140 @@
                   value="0"
                   name="isSHS"
                   v-model="enlist.isSHS"
-                  onclick="javascript:yesnoCheckSHS();"
                   id="yesCheckSHS"
                 />
               </label>
             </div>
-            <div class="form-group" id="shsName" style="display:none">
-              <label>Name of Senior High School Attended</label>
-              <input
-                name="nameSHS"
-                v-model="enlist.nameSHS"
-                id="nameSHS"
-                type="text"
-                class="form-control"
-                placeholder="Name of Senior High School"
-              />
-            </div>
-            <div class="form-group" id="shsAdd" style="display:none">
-              <label>Complete Address of Senior High School Attended</label>
-              <input
-                name="addressSHS"
-                v-model="enlist.addressSHS"
-                id="addressSHS"
-                type="text"
-                class="form-control"
-                placeholder="Complete Address of Senior High School"
-              />
-            </div>
-            <div class="form-group" id="shsPrincipal" style="display:none">
-              <label>Principal's Name</label>
-              <input
-                name="principalSHS"
-                v-model="enlist.principalSHS"
-                id="principalSHS"
-                type="text"
-                class="form-control"
-                placeholder="Principal's Name"
-              />
-            </div>
-            <div class="form-group" id="shsTrackStrand" style="display:none">
-              <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-select-list">
-                        <label>Track</label>
-                        <select
-                          id="track"
-                          name="track"
-                          v-model="enlist.track"
-                          class="form-control"
-                          onclick="javascript:strandCheck();"
-                        >
-                          <option value selected disabled></option>
-                          <option value="ACADEMIC">Academic Track</option>
-                          <option value="TVL">Technical-Vocational-Livelihood (TVL) Track</option>
-                          <option value="SPORTS">Sports Track</option>
-                          <option value="ARTANDDESIGN">Arts and Design Track</option>
-                        </select>
+
+            <div v-if="enlist.isSHS == 1">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-select-list">
+                          <label>Name of Senior High School Attended</label>
+                          <input
+                            name="nameSHS"
+                            v-model="enlist.nameSHS"
+                            id="nameSHS"
+                            type="text"
+                            class="form-control"
+                            placeholder="Name of Senior High School"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-select-list">
+                          <label>Complete Address of Senior High School Attended</label>
+                          <input
+                            name="addressSHS"
+                            v-model="enlist.addressSHS"
+                            id="addressSHS"
+                            type="text"
+                            class="form-control"
+                            placeholder="Complete Address of Senior High School"
+                          />
+                        </div>
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-select-list">
-                        <label>Strand</label>
-                        <select
-                          id="strand"
-                          v-model="enlist.strand"
-                          name="strand"
-                          class="form-control"
-                        >
-                          <option value="none" selected></option>
-                          <option value="HUMSS" id="HUMSS" style="display:none">HUMSS</option>
-                          <option value="STEM" id="STEM" style="display:none">STEM</option>
-                          <option value="ABM" id="ABM" style="display:none">ABM</option>
-                          <option value="GAS" id="GAS" style="display:none">GAS</option>
-                          <option
-                            value="Agri-Fishery Arts Strand"
-                            id="Agri"
-                            style="display:none"
-                          >Agri-Fishery Arts Strand</option>
-                          <option
-                            value="Home Economics Strand"
-                            id="Home"
-                            style="display:none"
-                          >Home Economics Strand</option>
-                          <option
-                            value="Industrial Arts Strand"
-                            id="Industrial"
-                            style="display:none"
-                          >Industrial Arts Strand</option>
-                          <option value="ICT Strand" id="ICT" style="display:none">ICT Strand</option>
-                        </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-select-list">
+                          <label>Principal's Name</label>
+                          <input
+                            name="principalSHS"
+                            v-model="enlist.principalSHS"
+                            id="principalSHS"
+                            type="text"
+                            class="form-control"
+                            placeholder="Principal's Name"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-select-list"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group" id="shsTrackStrand">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-select-list">
+                          <label>Track</label>
+                          <select
+                            id="track"
+                            name="track"
+                            v-model="enlist.track"
+                            class="form-control"
+                          >
+                            <option value selected disabled></option>
+                            <option value="ACADEMIC">Academic Track</option>
+                            <option value="TVL">Technical-Vocational-Livelihood (TVL) Track</option>
+                            <option value="SPORTS">Sports Track</option>
+                            <option value="ARTANDDESIGN">Arts and Design Track</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-select-list">
+                          <label>Strand</label>
+                          <select
+                            id="strand"
+                            v-model="enlist.strand"
+                            name="strand"
+                            class="form-control"
+                          >
+                            <option value="none" selected></option>
+                            <option value="HUMSS" id="HUMSS">HUMSS</option>
+                            <option value="STEM" id="STEM">STEM</option>
+                            <option value="ABM" id="ABM">ABM</option>
+                            <option value="GAS" id="GAS">GAS</option>
+                            <option
+                              value="Agri-Fishery Arts Strand"
+                              id="Agri"
+                            >Agri-Fishery Arts Strand</option>
+                            <option value="Home Economics Strand" id="Home">Home Economics Strand</option>
+                            <option
+                              value="Industrial Arts Strand"
+                              id="Industrial"
+                            >Industrial Arts Strand</option>
+                            <option value="ICT Strand" id="ICT">ICT Strand</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="form-group isIndigenousComm">
               <label>Do you identify yourself as a member of an Indigenous Community?</label>
               <label class="radio-inline">
                 <input
                   class="pull-left"
                   type="checkbox"
-                  onclick="javascript:yesnoCheck();"
-                  id="yesCheck"
                   value="1"
                   name="isIndigenous"
                   v-model="enlist.isIndigenous"
                 />
               </label>
             </div>
-            <div class="form-group">
-              <div id="ifYes" style="display:none">
+            <div v-if="enlist.isIndigenous == 1" class="form-group">
+              <div>
                 <label>If yes, please indicate the name of your community.</label>
                 <input
                   name="indigenousCommunity"
@@ -1450,7 +1539,11 @@
                             class="form-control programChoice1"
                             required
                           >
-                            <option value="none" selected disabled></option>
+                            <option disabled selected></option>
+                            <option
+                              v-for="program in programs"
+                              v-bind:value="program.CODE"
+                            >{{program.CODE}}, {{program.DESCRIPTION}}</option>
                           </select>
                         </div>
                       </div>
@@ -1464,7 +1557,11 @@
                           v-model="enlist.programChoiceTwo"
                           class="form-control programChoice2"
                         >
-                          <option value selected></option>
+                          <option disabled selected></option>
+                          <option
+                            v-for="program in programs"
+                            v-bind:value="program.CODE"
+                          >{{program.CODE}}, {{program.DESCRIPTION}}</option>
                         </select>
                       </div>
                     </div>
@@ -1477,7 +1574,11 @@
                           v-model="enlist.programChoiceThree"
                           class="form-control programChoice3"
                         >
-                          <option value selected></option>
+                          <option disabled selected></option>
+                          <option
+                            v-for="program in programs"
+                            v-bind:value="program.CODE"
+                          >{{program.CODE}}, {{program.DESCRIPTION}}</option>
                         </select>
                       </div>
                     </div>
@@ -1659,18 +1760,36 @@ export default {
         currTherapyRehabCounselingName: "",
         currTherapyRehabCounselingContact: "",
         reasonToSeekHelp: "",
-        status: ""
+        status: "",
+        isCollege: "",
+        isSHS: "",
+        isIndigenous: ""
       },
 
+      cities: [],
       countries: [],
       nationalities: [],
-      
+      provinces: [],
+      religions: [],
+      schools: [],
+      programs: [],
+
+      url_cities: "http://127.0.0.1:8000/citieslist",
       url_countries: "http://127.0.0.1:8000/countrieslist",
-      url_nationalities: "http://127.0.0.1:8000/nationalitylist"
+      url_nationalities: "http://127.0.0.1:8000/nationalitylist",
+      url_provinces: "http://127.0.0.1:8000/provinceslist",
+      url_religions: "http://127.0.0.1:8000/religionlist",
+      url_schools: "http://127.0.0.1:8000/schoolslist",
+      url_programs: "http://127.0.0.1:8000/programslist"
     };
   },
 
   methods: {
+    load_cities() {
+      axios.get(this.url_cities).then(response => {
+        this.cities = response.data.cities;
+      });
+    },
     load_countries() {
       axios.get(this.url_countries).then(response => {
         this.countries = response.data.countries;
@@ -1680,14 +1799,48 @@ export default {
       axios.get(this.url_nationalities).then(response => {
         this.nationalities = response.data.nationalities;
       });
+    },
+    load_provinces() {
+      axios.get(this.url_provinces).then(response => {
+        this.provinces = response.data.provinces;
+      });
+    },
+    load_religions() {
+      axios.get(this.url_religions).then(response => {
+        this.religions = response.data.religions;
+      });
+    },
+    load_schools() {
+      axios.get(this.url_schools).then(response => {
+        this.schools = response.data.schools;
+      });
+    },
+    load_programs() {
+      axios.get(this.url_programs).then(response => {
+        this.programs = response.data.programs;
+      });
     }
   },
 
   computed: {},
 
+  watch: {
+    highSchoolAddress: {
+      handler: function(val) {
+        console.log("changed!", val);
+      },
+      deep: true
+    }
+  },
+
   mounted() {
+    this.load_cities();
     this.load_countries();
     this.load_nationalities();
+    this.load_provinces();
+    this.load_religions();
+    this.load_schools();
+    this.load_programs();
   }
 };
 </script>

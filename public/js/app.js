@@ -1811,6 +1811,109 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3391,7 +3494,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      enlist: {
+      enlist: _defineProperty({
         surname: "",
         suffix: "",
         firstname: "",
@@ -3471,34 +3574,94 @@ __webpack_require__.r(__webpack_exports__);
         currTherapyRehabCounselingName: "",
         currTherapyRehabCounselingContact: "",
         reasonToSeekHelp: "",
-        status: ""
-      },
+        status: "",
+        isCollege: "",
+        isSHS: ""
+      }, "isIndigenous", ""),
+      cities: [],
       countries: [],
       nationalities: [],
+      provinces: [],
+      religions: [],
+      schools: [],
+      programs: [],
+      url_cities: "http://127.0.0.1:8000/citieslist",
       url_countries: "http://127.0.0.1:8000/countrieslist",
-      url_nationalities: "http://127.0.0.1:8000/nationalitylist"
+      url_nationalities: "http://127.0.0.1:8000/nationalitylist",
+      url_provinces: "http://127.0.0.1:8000/provinceslist",
+      url_religions: "http://127.0.0.1:8000/religionlist",
+      url_schools: "http://127.0.0.1:8000/schoolslist",
+      url_programs: "http://127.0.0.1:8000/programslist"
     };
   },
   methods: {
-    load_countries: function load_countries() {
+    load_cities: function load_cities() {
       var _this = this;
 
+      axios.get(this.url_cities).then(function (response) {
+        _this.cities = response.data.cities;
+      });
+    },
+    load_countries: function load_countries() {
+      var _this2 = this;
+
       axios.get(this.url_countries).then(function (response) {
-        _this.countries = response.data.countries;
+        _this2.countries = response.data.countries;
       });
     },
     load_nationalities: function load_nationalities() {
-      var _this2 = this;
+      var _this3 = this;
 
       axios.get(this.url_nationalities).then(function (response) {
-        _this2.nationalities = response.data.nationalities;
+        _this3.nationalities = response.data.nationalities;
+      });
+    },
+    load_provinces: function load_provinces() {
+      var _this4 = this;
+
+      axios.get(this.url_provinces).then(function (response) {
+        _this4.provinces = response.data.provinces;
+      });
+    },
+    load_religions: function load_religions() {
+      var _this5 = this;
+
+      axios.get(this.url_religions).then(function (response) {
+        _this5.religions = response.data.religions;
+      });
+    },
+    load_schools: function load_schools() {
+      var _this6 = this;
+
+      axios.get(this.url_schools).then(function (response) {
+        _this6.schools = response.data.schools;
+      });
+    },
+    load_programs: function load_programs() {
+      var _this7 = this;
+
+      axios.get(this.url_programs).then(function (response) {
+        _this7.programs = response.data.programs;
       });
     }
   },
   computed: {},
+  watch: {
+    highSchoolAddress: {
+      handler: function handler(val) {
+        console.log("changed!", val);
+      },
+      deep: true
+    }
+  },
   mounted: function mounted() {
+    this.load_cities();
     this.load_countries();
     this.load_nationalities();
+    this.load_provinces();
+    this.load_religions();
+    this.load_schools();
+    this.load_programs();
   }
 });
 
@@ -73577,7 +73740,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-8" }, [
+    return _c("div", { staticClass: "col-md-9" }, [
       _c("div", { staticClass: "card" }, [
         _c("div", { staticClass: "card-header bg-primary text-white" }, [
           _vm._v("Privacy Notice")
@@ -74309,12 +74472,28 @@ var render = function() {
                                         [
                                           _c("option", {
                                             attrs: {
-                                              value: "none",
-                                              selected: "",
-                                              disabled: ""
+                                              disabled: "",
+                                              selected: ""
                                             }
+                                          }),
+                                          _vm._v(" "),
+                                          _vm._l(_vm.countries, function(
+                                            country
+                                          ) {
+                                            return _c(
+                                              "option",
+                                              {
+                                                domProps: { value: country.id }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  _vm._s(country.description)
+                                                )
+                                              ]
+                                            )
                                           })
-                                        ]
+                                        ],
+                                        2
                                       )
                                     ])
                                   ]
@@ -74457,9 +74636,29 @@ var render = function() {
                                         },
                                         [
                                           _c("option", {
-                                            attrs: { value: "", selected: "" }
+                                            attrs: {
+                                              disabled: "",
+                                              selected: ""
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _vm._l(_vm.cities, function(city) {
+                                            return _c(
+                                              "option",
+                                              {
+                                                domProps: { value: city.CityId }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  _vm._s(city.CityName) +
+                                                    ", " +
+                                                    _vm._s(city.ProvinceName)
+                                                )
+                                              ]
+                                            )
                                           })
-                                        ]
+                                        ],
+                                        2
                                       )
                                     ])
                                   ]
@@ -74523,12 +74722,30 @@ var render = function() {
                                         [
                                           _c("option", {
                                             attrs: {
-                                              value: "none",
-                                              selected: "",
-                                              disabled: ""
+                                              disabled: "",
+                                              selected: ""
                                             }
+                                          }),
+                                          _vm._v(" "),
+                                          _vm._l(_vm.provinces, function(
+                                            province
+                                          ) {
+                                            return _c(
+                                              "option",
+                                              {
+                                                domProps: {
+                                                  value: province.ProvinceId
+                                                }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  _vm._s(province.ProvinceName)
+                                                )
+                                              ]
+                                            )
                                           })
-                                        ]
+                                        ],
+                                        2
                                       )
                                     ])
                                   ]
@@ -74709,7 +74926,6 @@ var render = function() {
                             staticClass: "pull-left",
                             attrs: {
                               type: "radio",
-                              onclick: "javascript:checkPermanent();",
                               id: "sameAsPermanent",
                               value: "1",
                               name: "sameAsPermanent"
@@ -74743,7 +74959,6 @@ var render = function() {
                             staticClass: "pull-left",
                             attrs: {
                               type: "radio",
-                              onclick: "javascript:checkPermanent();",
                               id: "sameAsPermanent",
                               value: "0",
                               name: "sameAsPermanent"
@@ -74900,342 +75115,457 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "form-group",
-                          staticStyle: { display: "block" },
-                          attrs: { id: "caddress" }
-                        },
-                        [
-                          _c("label", { attrs: { id: "cityAddressLabel" } }, [
-                            _vm._v(
-                              "City Address (House No., Street, Subdivision/Sitio, Barangay)"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
+                      _vm.enlist.sameAsPermanent != 1
+                        ? _c("div", [
+                            _c(
+                              "div",
                               {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.enlist.cityAddress,
-                                expression: "enlist.cityAddress"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            attrs: {
-                              id: "cityAddress",
-                              name: "cityAddress",
-                              type: "text",
-                              placeholder: "City Address"
-                            },
-                            domProps: { value: _vm.enlist.cityAddress },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(
-                                  _vm.enlist,
-                                  "cityAddress",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          })
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("div", { staticClass: "row" }, [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
-                            },
-                            [
+                                staticClass: "form-group",
+                                staticStyle: { display: "block" },
+                                attrs: { id: "caddress" }
+                              },
+                              [
+                                _c(
+                                  "label",
+                                  { attrs: { id: "cityAddressLabel" } },
+                                  [
+                                    _vm._v(
+                                      "City Address (House No., Street, Subdivision/Sitio, Barangay)"
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.enlist.cityAddress,
+                                      expression: "enlist.cityAddress"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    id: "cityAddress",
+                                    name: "cityAddress",
+                                    type: "text",
+                                    placeholder: "City Address"
+                                  },
+                                  domProps: { value: _vm.enlist.cityAddress },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.enlist,
+                                        "cityAddress",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "form-group" }, [
                               _c("div", { staticClass: "row" }, [
                                 _c(
                                   "div",
                                   {
                                     staticClass:
-                                      "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                                      "col-lg-12 col-md-12 col-sm-12 col-xs-12"
                                   },
                                   [
-                                    _c("div", { staticClass: "form-group" }, [
+                                    _c("div", { staticClass: "row" }, [
                                       _c(
-                                        "label",
-                                        { attrs: { id: "cityCityLabel" } },
-                                        [_vm._v("City")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "select",
+                                        "div",
                                         {
-                                          directives: [
-                                            {
-                                              name: "model",
-                                              rawName: "v-model",
-                                              value: _vm.enlist.cityCity,
-                                              expression: "enlist.cityCity"
-                                            }
-                                          ],
-                                          staticClass: "form-control",
-                                          attrs: {
-                                            "data-placeholder":
-                                              "Choose a City...",
-                                            id: "cityCity",
-                                            name: "cityCity",
-                                            tabindex: "-1"
-                                          },
-                                          on: {
-                                            change: function($event) {
-                                              var $$selectedVal = Array.prototype.filter
-                                                .call(
-                                                  $event.target.options,
-                                                  function(o) {
-                                                    return o.selected
+                                          staticClass:
+                                            "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _c(
+                                                "label",
+                                                {
+                                                  attrs: { id: "cityCityLabel" }
+                                                },
+                                                [_vm._v("City")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "select",
+                                                {
+                                                  directives: [
+                                                    {
+                                                      name: "model",
+                                                      rawName: "v-model",
+                                                      value:
+                                                        _vm.enlist.cityCity,
+                                                      expression:
+                                                        "enlist.cityCity"
+                                                    }
+                                                  ],
+                                                  staticClass: "form-control",
+                                                  attrs: {
+                                                    "data-placeholder":
+                                                      "Choose a City...",
+                                                    id: "cityCity",
+                                                    name: "cityCity",
+                                                    tabindex: "-1"
+                                                  },
+                                                  on: {
+                                                    change: function($event) {
+                                                      var $$selectedVal = Array.prototype.filter
+                                                        .call(
+                                                          $event.target.options,
+                                                          function(o) {
+                                                            return o.selected
+                                                          }
+                                                        )
+                                                        .map(function(o) {
+                                                          var val =
+                                                            "_value" in o
+                                                              ? o._value
+                                                              : o.value
+                                                          return val
+                                                        })
+                                                      _vm.$set(
+                                                        _vm.enlist,
+                                                        "cityCity",
+                                                        $event.target.multiple
+                                                          ? $$selectedVal
+                                                          : $$selectedVal[0]
+                                                      )
+                                                    }
                                                   }
-                                                )
-                                                .map(function(o) {
-                                                  var val =
-                                                    "_value" in o
-                                                      ? o._value
-                                                      : o.value
-                                                  return val
-                                                })
-                                              _vm.$set(
-                                                _vm.enlist,
-                                                "cityCity",
-                                                $event.target.multiple
-                                                  ? $$selectedVal
-                                                  : $$selectedVal[0]
+                                                },
+                                                [
+                                                  _c("option", {
+                                                    attrs: {
+                                                      disabled: "",
+                                                      selected: ""
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _vm._l(_vm.cities, function(
+                                                    city
+                                                  ) {
+                                                    return _c(
+                                                      "option",
+                                                      {
+                                                        domProps: {
+                                                          value: city.CityId
+                                                        }
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          _vm._s(
+                                                            city.CityName
+                                                          ) +
+                                                            ", " +
+                                                            _vm._s(
+                                                              city.ProvinceName
+                                                            )
+                                                        )
+                                                      ]
+                                                    )
+                                                  })
+                                                ],
+                                                2
                                               )
-                                            }
-                                          }
-                                        },
-                                        [_c("option", { attrs: { value: "" } })]
-                                      )
-                                    ])
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "col-lg-3 col-md-3 col-sm-3 col-xs-12"
-                                  },
-                                  [
-                                    _c("div", { staticClass: "form-group" }, [
-                                      _c(
-                                        "label",
-                                        { attrs: { id: "cityProvinceLabel" } },
-                                        [_vm._v("Province")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "select",
-                                        {
-                                          directives: [
-                                            {
-                                              name: "model",
-                                              rawName: "v-model",
-                                              value: _vm.enlist.cityProvince,
-                                              expression: "enlist.cityProvince"
-                                            }
-                                          ],
-                                          staticClass: "form-control",
-                                          attrs: {
-                                            id: "cityProvince",
-                                            name: "cityProvince",
-                                            required: ""
-                                          },
-                                          on: {
-                                            change: function($event) {
-                                              var $$selectedVal = Array.prototype.filter
-                                                .call(
-                                                  $event.target.options,
-                                                  function(o) {
-                                                    return o.selected
-                                                  }
-                                                )
-                                                .map(function(o) {
-                                                  var val =
-                                                    "_value" in o
-                                                      ? o._value
-                                                      : o.value
-                                                  return val
-                                                })
-                                              _vm.$set(
-                                                _vm.enlist,
-                                                "cityProvince",
-                                                $event.target.multiple
-                                                  ? $$selectedVal
-                                                  : $$selectedVal[0]
-                                              )
-                                            }
-                                          }
-                                        },
-                                        [_c("option", { attrs: { value: "" } })]
-                                      )
-                                    ])
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "col-lg-3 col-md-3 col-sm-3 col-xs-12"
-                                  },
-                                  [
-                                    _c("div", { staticClass: "form-group" }, [
-                                      _c(
-                                        "label",
-                                        {
-                                          attrs: {
-                                            id: "cityzippostalcodeLabel"
-                                          }
-                                        },
-                                        [_vm._v("Zip/Postal Code")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("input", {
-                                        directives: [
-                                          {
-                                            name: "model",
-                                            rawName: "v-model",
-                                            value: _vm.enlist.cityzippostalcode,
-                                            expression:
-                                              "enlist.cityzippostalcode"
-                                          }
-                                        ],
-                                        staticClass: "form-control",
-                                        attrs: {
-                                          id: "cityzippostalcode",
-                                          name: "cityzippostalcode",
-                                          type: "text",
-                                          placeholder: "Zip/Postal Code"
-                                        },
-                                        domProps: {
-                                          value: _vm.enlist.cityzippostalcode
-                                        },
-                                        on: {
-                                          input: function($event) {
-                                            if ($event.target.composing) {
-                                              return
-                                            }
-                                            _vm.$set(
-                                              _vm.enlist,
-                                              "cityzippostalcode",
-                                              $event.target.value
-                                            )
-                                          }
-                                        }
-                                      })
-                                    ])
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "col-lg-3 col-md-3 col-sm-3 col-xs-12"
-                                  },
-                                  [
-                                    _c("div", { staticClass: "form-group" }, [
-                                      _c(
-                                        "label",
-                                        { attrs: { id: "cityCountryLabel" } },
-                                        [_vm._v("Country")]
+                                            ]
+                                          )
+                                        ]
                                       ),
                                       _vm._v(" "),
                                       _c(
                                         "div",
                                         {
                                           staticClass:
-                                            "chosen-select-single mg-b-20"
+                                            "col-lg-3 col-md-3 col-sm-3 col-xs-12"
                                         },
                                         [
                                           _c(
-                                            "select",
-                                            {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: _vm.enlist.cityCountry,
-                                                  expression:
-                                                    "enlist.cityCountry"
-                                                }
-                                              ],
-                                              staticClass: "form-control",
-                                              attrs: {
-                                                "data-placeholder":
-                                                  "Choose a Country...",
-                                                id: "cityCountry",
-                                                name: "cityCountry",
-                                                tabindex: "-1"
-                                              },
-                                              on: {
-                                                change: function($event) {
-                                                  var $$selectedVal = Array.prototype.filter
-                                                    .call(
-                                                      $event.target.options,
-                                                      function(o) {
-                                                        return o.selected
-                                                      }
-                                                    )
-                                                    .map(function(o) {
-                                                      var val =
-                                                        "_value" in o
-                                                          ? o._value
-                                                          : o.value
-                                                      return val
-                                                    })
-                                                  _vm.$set(
-                                                    _vm.enlist,
-                                                    "cityCountry",
-                                                    $event.target.multiple
-                                                      ? $$selectedVal
-                                                      : $$selectedVal[0]
-                                                  )
-                                                }
-                                              }
-                                            },
+                                            "div",
+                                            { staticClass: "form-group" },
                                             [
-                                              _c("option", {
-                                                attrs: {
-                                                  disabled: "",
-                                                  selected: ""
-                                                }
-                                              }),
+                                              _c(
+                                                "label",
+                                                {
+                                                  attrs: {
+                                                    id: "cityProvinceLabel"
+                                                  }
+                                                },
+                                                [_vm._v("Province")]
+                                              ),
                                               _vm._v(" "),
-                                              _vm._l(_vm.countries, function(
-                                                country
-                                              ) {
-                                                return _c(
-                                                  "option",
-                                                  {
-                                                    domProps: {
-                                                      value: country.id
+                                              _c(
+                                                "select",
+                                                {
+                                                  directives: [
+                                                    {
+                                                      name: "model",
+                                                      rawName: "v-model",
+                                                      value:
+                                                        _vm.enlist.cityProvince,
+                                                      expression:
+                                                        "enlist.cityProvince"
                                                     }
+                                                  ],
+                                                  staticClass: "form-control",
+                                                  attrs: {
+                                                    id: "cityProvince",
+                                                    name: "cityProvince",
+                                                    required: ""
                                                   },
-                                                  [
-                                                    _vm._v(
-                                                      _vm._s(
-                                                        country.description
+                                                  on: {
+                                                    change: function($event) {
+                                                      var $$selectedVal = Array.prototype.filter
+                                                        .call(
+                                                          $event.target.options,
+                                                          function(o) {
+                                                            return o.selected
+                                                          }
+                                                        )
+                                                        .map(function(o) {
+                                                          var val =
+                                                            "_value" in o
+                                                              ? o._value
+                                                              : o.value
+                                                          return val
+                                                        })
+                                                      _vm.$set(
+                                                        _vm.enlist,
+                                                        "cityProvince",
+                                                        $event.target.multiple
+                                                          ? $$selectedVal
+                                                          : $$selectedVal[0]
                                                       )
+                                                    }
+                                                  }
+                                                },
+                                                [
+                                                  _c("option", {
+                                                    attrs: {
+                                                      disabled: "",
+                                                      selected: ""
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _vm._l(
+                                                    _vm.provinces,
+                                                    function(province) {
+                                                      return _c(
+                                                        "option",
+                                                        {
+                                                          domProps: {
+                                                            value:
+                                                              province.ProvinceId
+                                                          }
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            _vm._s(
+                                                              province.ProvinceName
+                                                            )
+                                                          )
+                                                        ]
+                                                      )
+                                                    }
+                                                  )
+                                                ],
+                                                2
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _c(
+                                                "label",
+                                                {
+                                                  attrs: {
+                                                    id: "cityzippostalcodeLabel"
+                                                  }
+                                                },
+                                                [_vm._v("Zip/Postal Code")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model",
+                                                    value:
+                                                      _vm.enlist
+                                                        .cityzippostalcode,
+                                                    expression:
+                                                      "enlist.cityzippostalcode"
+                                                  }
+                                                ],
+                                                staticClass: "form-control",
+                                                attrs: {
+                                                  id: "cityzippostalcode",
+                                                  name: "cityzippostalcode",
+                                                  type: "text",
+                                                  placeholder: "Zip/Postal Code"
+                                                },
+                                                domProps: {
+                                                  value:
+                                                    _vm.enlist.cityzippostalcode
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.enlist,
+                                                      "cityzippostalcode",
+                                                      $event.target.value
                                                     )
-                                                  ]
-                                                )
+                                                  }
+                                                }
                                               })
-                                            ],
-                                            2
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _c(
+                                                "label",
+                                                {
+                                                  attrs: {
+                                                    id: "cityCountryLabel"
+                                                  }
+                                                },
+                                                [_vm._v("Country")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "chosen-select-single mg-b-20"
+                                                },
+                                                [
+                                                  _c(
+                                                    "select",
+                                                    {
+                                                      directives: [
+                                                        {
+                                                          name: "model",
+                                                          rawName: "v-model",
+                                                          value:
+                                                            _vm.enlist
+                                                              .cityCountry,
+                                                          expression:
+                                                            "enlist.cityCountry"
+                                                        }
+                                                      ],
+                                                      staticClass:
+                                                        "form-control",
+                                                      attrs: {
+                                                        "data-placeholder":
+                                                          "Choose a Country...",
+                                                        id: "cityCountry",
+                                                        name: "cityCountry",
+                                                        tabindex: "-1"
+                                                      },
+                                                      on: {
+                                                        change: function(
+                                                          $event
+                                                        ) {
+                                                          var $$selectedVal = Array.prototype.filter
+                                                            .call(
+                                                              $event.target
+                                                                .options,
+                                                              function(o) {
+                                                                return o.selected
+                                                              }
+                                                            )
+                                                            .map(function(o) {
+                                                              var val =
+                                                                "_value" in o
+                                                                  ? o._value
+                                                                  : o.value
+                                                              return val
+                                                            })
+                                                          _vm.$set(
+                                                            _vm.enlist,
+                                                            "cityCountry",
+                                                            $event.target
+                                                              .multiple
+                                                              ? $$selectedVal
+                                                              : $$selectedVal[0]
+                                                          )
+                                                        }
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("option", {
+                                                        attrs: {
+                                                          disabled: "",
+                                                          selected: ""
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _vm._l(
+                                                        _vm.countries,
+                                                        function(country) {
+                                                          return _c(
+                                                            "option",
+                                                            {
+                                                              domProps: {
+                                                                value:
+                                                                  country.id
+                                                              }
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                _vm._s(
+                                                                  country.description
+                                                                )
+                                                              )
+                                                            ]
+                                                          )
+                                                        }
+                                                      )
+                                                    ],
+                                                    2
+                                                  )
+                                                ]
+                                              )
+                                            ]
                                           )
                                         ]
                                       )
@@ -75243,10 +75573,9 @@ var render = function() {
                                   ]
                                 )
                               ])
-                            ]
-                          )
-                        ])
-                      ]),
+                            ])
+                          ])
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("h4", { staticClass: "form-header text-primary" }, [
                         _vm._v("Contact Information")
@@ -77296,36 +77625,64 @@ var render = function() {
                               _c("div", { staticClass: "form-select-list" }, [
                                 _c("label", [_vm._v("Name of School")]),
                                 _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.enlist.preSchoolName,
-                                      expression: "enlist.preSchoolName"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    name: "preSchoolName",
-                                    type: "text",
-                                    placeholder: "Name of School",
-                                    required: ""
-                                  },
-                                  domProps: { value: _vm.enlist.preSchoolName },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
+                                _c(
+                                  "select",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.enlist.preSchoolName,
+                                        expression: "enlist.preSchoolName"
                                       }
-                                      _vm.$set(
-                                        _vm.enlist,
-                                        "preSchoolName",
-                                        $event.target.value
-                                      )
+                                    ],
+                                    staticClass: "form-control",
+                                    attrs: {
+                                      "data-placeholder": "Choose a School...",
+                                      id: "preSchoolName",
+                                      name: "preSchoolName",
+                                      tabindex: "-1"
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        var $$selectedVal = Array.prototype.filter
+                                          .call($event.target.options, function(
+                                            o
+                                          ) {
+                                            return o.selected
+                                          })
+                                          .map(function(o) {
+                                            var val =
+                                              "_value" in o ? o._value : o.value
+                                            return val
+                                          })
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "preSchoolName",
+                                          $event.target.multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        )
+                                      }
                                     }
-                                  }
-                                })
+                                  },
+                                  [
+                                    _c("option", {
+                                      attrs: { disabled: "", selected: "" }
+                                    }),
+                                    _vm._v(" "),
+                                    _vm._l(_vm.schools, function(school) {
+                                      return _c(
+                                        "option",
+                                        {
+                                          domProps: { value: school.SchoolId }
+                                        },
+                                        [_vm._v(_vm._s(school.SchoolName))]
+                                      )
+                                    })
+                                  ],
+                                  2
+                                )
                               ])
                             ]
                           ),
@@ -77451,38 +77808,64 @@ var render = function() {
                               _c("div", { staticClass: "form-select-list" }, [
                                 _c("label", [_vm._v("Name of School")]),
                                 _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.enlist.gradeSchoolName,
-                                      expression: "enlist.gradeSchoolName"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    name: "gradeSchoolName",
-                                    type: "text",
-                                    placeholder: "Name of School",
-                                    required: ""
-                                  },
-                                  domProps: {
-                                    value: _vm.enlist.gradeSchoolName
-                                  },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
+                                _c(
+                                  "select",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.enlist.gradeSchoolName,
+                                        expression: "enlist.gradeSchoolName"
                                       }
-                                      _vm.$set(
-                                        _vm.enlist,
-                                        "gradeSchoolName",
-                                        $event.target.value
-                                      )
+                                    ],
+                                    staticClass: "form-control",
+                                    attrs: {
+                                      "data-placeholder": "Choose a School...",
+                                      id: "gradeSchoolName",
+                                      name: "gradeSchoolName",
+                                      tabindex: "-1"
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        var $$selectedVal = Array.prototype.filter
+                                          .call($event.target.options, function(
+                                            o
+                                          ) {
+                                            return o.selected
+                                          })
+                                          .map(function(o) {
+                                            var val =
+                                              "_value" in o ? o._value : o.value
+                                            return val
+                                          })
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "gradeSchoolName",
+                                          $event.target.multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        )
+                                      }
                                     }
-                                  }
-                                })
+                                  },
+                                  [
+                                    _c("option", {
+                                      attrs: { disabled: "", selected: "" }
+                                    }),
+                                    _vm._v(" "),
+                                    _vm._l(_vm.schools, function(school) {
+                                      return _c(
+                                        "option",
+                                        {
+                                          domProps: { value: school.SchoolId }
+                                        },
+                                        [_vm._v(_vm._s(school.SchoolName))]
+                                      )
+                                    })
+                                  ],
+                                  2
+                                )
                               ])
                             ]
                           ),
@@ -77608,38 +77991,64 @@ var render = function() {
                               _c("div", { staticClass: "form-select-list" }, [
                                 _c("label", [_vm._v("Name of School")]),
                                 _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.enlist.highSchoolName,
-                                      expression: "enlist.highSchoolName"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    name: "highSchoolName",
-                                    type: "text",
-                                    placeholder: "Name of School",
-                                    required: ""
-                                  },
-                                  domProps: {
-                                    value: _vm.enlist.highSchoolName
-                                  },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
+                                _c(
+                                  "select",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.enlist.highSchoolName,
+                                        expression: "enlist.highSchoolName"
                                       }
-                                      _vm.$set(
-                                        _vm.enlist,
-                                        "highSchoolName",
-                                        $event.target.value
-                                      )
+                                    ],
+                                    staticClass: "form-control",
+                                    attrs: {
+                                      "data-placeholder": "Choose a School...",
+                                      id: "highSchoolName",
+                                      name: "highSchoolName",
+                                      tabindex: "-1"
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        var $$selectedVal = Array.prototype.filter
+                                          .call($event.target.options, function(
+                                            o
+                                          ) {
+                                            return o.selected
+                                          })
+                                          .map(function(o) {
+                                            var val =
+                                              "_value" in o ? o._value : o.value
+                                            return val
+                                          })
+                                        _vm.$set(
+                                          _vm.enlist,
+                                          "highSchoolName",
+                                          $event.target.multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        )
+                                      }
                                     }
-                                  }
-                                })
+                                  },
+                                  [
+                                    _c("option", {
+                                      attrs: { disabled: "", selected: "" }
+                                    }),
+                                    _vm._v(" "),
+                                    _vm._l(_vm.schools, function(school) {
+                                      return _c(
+                                        "option",
+                                        {
+                                          domProps: { value: school.SchoolId }
+                                        },
+                                        [_vm._v(_vm._s(school.SchoolName))]
+                                      )
+                                    })
+                                  ],
+                                  2
+                                )
                               ])
                             ]
                           ),
@@ -77764,7 +78173,6 @@ var render = function() {
                       staticClass: "pull-left",
                       attrs: {
                         type: "checkbox",
-                        onclick: "javascript:yesnoCheckCollege();",
                         id: "yesCheckCollege",
                         value: "1",
                         name: "isCollege"
@@ -77806,95 +78214,184 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c(
-                    "div",
-                    {
-                      staticStyle: { display: "none" },
-                      attrs: { id: "collegeInfo" }
-                    },
-                    [
-                      _c("label", [
-                        _vm._v(
-                          "Name of College or University Attended(if transfer student)"
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.enlist.nameCollegeUniv,
-                            expression: "enlist.nameCollegeUniv"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          name: "nameCollegeUniv",
-                          id: "nameCollegeUniv",
-                          type: "text",
-                          placeholder:
-                            "Name of College or University Attended(if transfer student)"
-                        },
-                        domProps: { value: _vm.enlist.nameCollegeUniv },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.enlist,
-                              "nameCollegeUniv",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("label", [
-                        _vm._v(
-                          "Complete Address of College or University Attended(if transfer student)"
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.enlist.addressCollegeUniv,
-                            expression: "enlist.addressCollegeUniv"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          name: "addressCollegeUniv",
-                          id: "addressCollegeUniv",
-                          type: "text",
-                          placeholder:
-                            "Complete Address of College or University Attended(if transfer student)"
-                        },
-                        domProps: { value: _vm.enlist.addressCollegeUniv },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.enlist,
-                              "addressCollegeUniv",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ]
-                  )
-                ]),
+                _vm.enlist.isCollege == 1
+                  ? _c("div", [
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "row" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "form-select-list" },
+                                      [
+                                        _c("label", [
+                                          _vm._v(
+                                            "Name of College or University Attended(if transfer student)"
+                                          )
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "select",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "model",
+                                                rawName: "v-model",
+                                                value: _vm.enlist.preSchoolName,
+                                                expression:
+                                                  "enlist.preSchoolName"
+                                              }
+                                            ],
+                                            staticClass: "form-control",
+                                            attrs: {
+                                              "data-placeholder":
+                                                "Choose a School...",
+                                              id: "nameCollegeUniv",
+                                              name: "nameCollegeUniv",
+                                              tabindex: "-1"
+                                            },
+                                            on: {
+                                              change: function($event) {
+                                                var $$selectedVal = Array.prototype.filter
+                                                  .call(
+                                                    $event.target.options,
+                                                    function(o) {
+                                                      return o.selected
+                                                    }
+                                                  )
+                                                  .map(function(o) {
+                                                    var val =
+                                                      "_value" in o
+                                                        ? o._value
+                                                        : o.value
+                                                    return val
+                                                  })
+                                                _vm.$set(
+                                                  _vm.enlist,
+                                                  "preSchoolName",
+                                                  $event.target.multiple
+                                                    ? $$selectedVal
+                                                    : $$selectedVal[0]
+                                                )
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _c("option", {
+                                              attrs: {
+                                                disabled: "",
+                                                selected: ""
+                                              }
+                                            }),
+                                            _vm._v(" "),
+                                            _vm._l(_vm.schools, function(
+                                              school
+                                            ) {
+                                              return _c(
+                                                "option",
+                                                {
+                                                  domProps: {
+                                                    value: school.SchoolId
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(school.SchoolName)
+                                                  )
+                                                ]
+                                              )
+                                            })
+                                          ],
+                                          2
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "form-select-list" },
+                                      [
+                                        _c("label", [
+                                          _vm._v(
+                                            "Complete Address of College or University Attended(if transfer student)"
+                                          )
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value:
+                                                _vm.enlist.addressCollegeUniv,
+                                              expression:
+                                                "enlist.addressCollegeUniv"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            name: "addressCollegeUniv",
+                                            id: "addressCollegeUniv",
+                                            type: "text",
+                                            placeholder:
+                                              "Complete Address of College or University Attended(if transfer student)"
+                                          },
+                                          domProps: {
+                                            value: _vm.enlist.addressCollegeUniv
+                                          },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "addressCollegeUniv",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ])
+                    ])
+                  : _vm._e(),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group isIndigenousComm" }, [
-                  _c("label", [_vm._v("Did you attend Senior High School?")]),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "Check if you have attended Senior High School K to 12 Program"
+                    )
+                  ]),
                   _vm._v(" "),
                   _c("label", { staticClass: "radio-inline" }, [
                     _c("input", {
@@ -77911,7 +78408,6 @@ var render = function() {
                         type: "checkbox",
                         value: "0",
                         name: "isSHS",
-                        onclick: "javascript:yesnoCheckSHS();",
                         id: "yesCheckSHS"
                       },
                       domProps: {
@@ -77947,148 +78443,207 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group",
-                    staticStyle: { display: "none" },
-                    attrs: { id: "shsName" }
-                  },
-                  [
-                    _c("label", [
-                      _vm._v("Name of Senior High School Attended")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.enlist.nameSHS,
-                          expression: "enlist.nameSHS"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: {
-                        name: "nameSHS",
-                        id: "nameSHS",
-                        type: "text",
-                        placeholder: "Name of Senior High School"
-                      },
-                      domProps: { value: _vm.enlist.nameSHS },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.enlist, "nameSHS", $event.target.value)
-                        }
-                      }
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group",
-                    staticStyle: { display: "none" },
-                    attrs: { id: "shsAdd" }
-                  },
-                  [
-                    _c("label", [
-                      _vm._v("Complete Address of Senior High School Attended")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.enlist.addressSHS,
-                          expression: "enlist.addressSHS"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: {
-                        name: "addressSHS",
-                        id: "addressSHS",
-                        type: "text",
-                        placeholder: "Complete Address of Senior High School"
-                      },
-                      domProps: { value: _vm.enlist.addressSHS },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(
-                            _vm.enlist,
-                            "addressSHS",
-                            $event.target.value
+                _vm.enlist.isSHS == 1
+                  ? _c("div", [
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "row" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "form-select-list" },
+                                      [
+                                        _c("label", [
+                                          _vm._v(
+                                            "Name of Senior High School Attended"
+                                          )
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.enlist.nameSHS,
+                                              expression: "enlist.nameSHS"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            name: "nameSHS",
+                                            id: "nameSHS",
+                                            type: "text",
+                                            placeholder:
+                                              "Name of Senior High School"
+                                          },
+                                          domProps: {
+                                            value: _vm.enlist.nameSHS
+                                          },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "nameSHS",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "form-select-list" },
+                                      [
+                                        _c("label", [
+                                          _vm._v(
+                                            "Complete Address of Senior High School Attended"
+                                          )
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.enlist.addressSHS,
+                                              expression: "enlist.addressSHS"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            name: "addressSHS",
+                                            id: "addressSHS",
+                                            type: "text",
+                                            placeholder:
+                                              "Complete Address of Senior High School"
+                                          },
+                                          domProps: {
+                                            value: _vm.enlist.addressSHS
+                                          },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "addressSHS",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ])
+                            ]
                           )
-                        }
-                      }
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group",
-                    staticStyle: { display: "none" },
-                    attrs: { id: "shsPrincipal" }
-                  },
-                  [
-                    _c("label", [_vm._v("Principal's Name")]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.enlist.principalSHS,
-                          expression: "enlist.principalSHS"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: {
-                        name: "principalSHS",
-                        id: "principalSHS",
-                        type: "text",
-                        placeholder: "Principal's Name"
-                      },
-                      domProps: { value: _vm.enlist.principalSHS },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(
-                            _vm.enlist,
-                            "principalSHS",
-                            $event.target.value
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "row" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "form-select-list" },
+                                      [
+                                        _c("label", [
+                                          _vm._v("Principal's Name")
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.enlist.principalSHS,
+                                              expression: "enlist.principalSHS"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            name: "principalSHS",
+                                            id: "principalSHS",
+                                            type: "text",
+                                            placeholder: "Principal's Name"
+                                          },
+                                          domProps: {
+                                            value: _vm.enlist.principalSHS
+                                          },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                _vm.enlist,
+                                                "principalSHS",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _vm._m(4)
+                              ])
+                            ]
                           )
-                        }
-                      }
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group",
-                    staticStyle: { display: "none" },
-                    attrs: { id: "shsTrackStrand" }
-                  },
-                  [
-                    _c("div", { staticClass: "row" }, [
+                        ])
+                      ]),
+                      _vm._v(" "),
                       _c(
                         "div",
                         {
-                          staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                          staticClass: "form-group",
+                          attrs: { id: "shsTrackStrand" }
                         },
                         [
                           _c("div", { staticClass: "row" }, [
@@ -78096,233 +78651,286 @@ var render = function() {
                               "div",
                               {
                                 staticClass:
-                                  "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                                  "col-lg-12 col-md-12 col-sm-12 col-xs-12"
                               },
                               [
-                                _c("div", { staticClass: "form-select-list" }, [
-                                  _c("label", [_vm._v("Track")]),
-                                  _vm._v(" "),
+                                _c("div", { staticClass: "row" }, [
                                   _c(
-                                    "select",
+                                    "div",
                                     {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
-                                          value: _vm.enlist.track,
-                                          expression: "enlist.track"
-                                        }
-                                      ],
-                                      staticClass: "form-control",
-                                      attrs: {
-                                        id: "track",
-                                        name: "track",
-                                        onclick: "javascript:strandCheck();"
-                                      },
-                                      on: {
-                                        change: function($event) {
-                                          var $$selectedVal = Array.prototype.filter
-                                            .call(
-                                              $event.target.options,
-                                              function(o) {
-                                                return o.selected
-                                              }
-                                            )
-                                            .map(function(o) {
-                                              var val =
-                                                "_value" in o
-                                                  ? o._value
-                                                  : o.value
-                                              return val
-                                            })
-                                          _vm.$set(
-                                            _vm.enlist,
-                                            "track",
-                                            $event.target.multiple
-                                              ? $$selectedVal
-                                              : $$selectedVal[0]
-                                          )
-                                        }
-                                      }
+                                      staticClass:
+                                        "col-lg-6 col-md-6 col-sm-6 col-xs-12"
                                     },
                                     [
-                                      _c("option", {
-                                        attrs: {
-                                          value: "",
-                                          selected: "",
-                                          disabled: ""
-                                        }
-                                      }),
-                                      _vm._v(" "),
                                       _c(
-                                        "option",
-                                        { attrs: { value: "ACADEMIC" } },
-                                        [_vm._v("Academic Track")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        { attrs: { value: "TVL" } },
+                                        "div",
+                                        { staticClass: "form-select-list" },
                                         [
-                                          _vm._v(
-                                            "Technical-Vocational-Livelihood (TVL) Track"
+                                          _c("label", [_vm._v("Track")]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "select",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.enlist.track,
+                                                  expression: "enlist.track"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              attrs: {
+                                                id: "track",
+                                                name: "track"
+                                              },
+                                              on: {
+                                                change: function($event) {
+                                                  var $$selectedVal = Array.prototype.filter
+                                                    .call(
+                                                      $event.target.options,
+                                                      function(o) {
+                                                        return o.selected
+                                                      }
+                                                    )
+                                                    .map(function(o) {
+                                                      var val =
+                                                        "_value" in o
+                                                          ? o._value
+                                                          : o.value
+                                                      return val
+                                                    })
+                                                  _vm.$set(
+                                                    _vm.enlist,
+                                                    "track",
+                                                    $event.target.multiple
+                                                      ? $$selectedVal
+                                                      : $$selectedVal[0]
+                                                  )
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _c("option", {
+                                                attrs: {
+                                                  value: "",
+                                                  selected: "",
+                                                  disabled: ""
+                                                }
+                                              }),
+                                              _vm._v(" "),
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: { value: "ACADEMIC" }
+                                                },
+                                                [_vm._v("Academic Track")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "option",
+                                                { attrs: { value: "TVL" } },
+                                                [
+                                                  _vm._v(
+                                                    "Technical-Vocational-Livelihood (TVL) Track"
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "option",
+                                                { attrs: { value: "SPORTS" } },
+                                                [_vm._v("Sports Track")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    value: "ARTANDDESIGN"
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Arts and Design Track"
+                                                  )
+                                                ]
+                                              )
+                                            ]
                                           )
                                         ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        { attrs: { value: "SPORTS" } },
-                                        [_vm._v("Sports Track")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        { attrs: { value: "ARTANDDESIGN" } },
-                                        [_vm._v("Arts and Design Track")]
                                       )
                                     ]
-                                  )
-                                ])
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "col-lg-6 col-md-6 col-sm-6 col-xs-12"
-                              },
-                              [
-                                _c("div", { staticClass: "form-select-list" }, [
-                                  _c("label", [_vm._v("Strand")]),
+                                  ),
                                   _vm._v(" "),
                                   _c(
-                                    "select",
+                                    "div",
                                     {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
-                                          value: _vm.enlist.strand,
-                                          expression: "enlist.strand"
-                                        }
-                                      ],
-                                      staticClass: "form-control",
-                                      attrs: { id: "strand", name: "strand" },
-                                      on: {
-                                        change: function($event) {
-                                          var $$selectedVal = Array.prototype.filter
-                                            .call(
-                                              $event.target.options,
-                                              function(o) {
-                                                return o.selected
-                                              }
-                                            )
-                                            .map(function(o) {
-                                              var val =
-                                                "_value" in o
-                                                  ? o._value
-                                                  : o.value
-                                              return val
-                                            })
-                                          _vm.$set(
-                                            _vm.enlist,
-                                            "strand",
-                                            $event.target.multiple
-                                              ? $$selectedVal
-                                              : $$selectedVal[0]
-                                          )
-                                        }
-                                      }
+                                      staticClass:
+                                        "col-lg-6 col-md-6 col-sm-6 col-xs-12"
                                     },
                                     [
-                                      _c("option", {
-                                        attrs: { value: "none", selected: "" }
-                                      }),
-                                      _vm._v(" "),
                                       _c(
-                                        "option",
-                                        {
-                                          staticStyle: { display: "none" },
-                                          attrs: { value: "HUMSS", id: "HUMSS" }
-                                        },
-                                        [_vm._v("HUMSS")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        {
-                                          staticStyle: { display: "none" },
-                                          attrs: { value: "STEM", id: "STEM" }
-                                        },
-                                        [_vm._v("STEM")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        {
-                                          staticStyle: { display: "none" },
-                                          attrs: { value: "ABM", id: "ABM" }
-                                        },
-                                        [_vm._v("ABM")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        {
-                                          staticStyle: { display: "none" },
-                                          attrs: { value: "GAS", id: "GAS" }
-                                        },
-                                        [_vm._v("GAS")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        {
-                                          staticStyle: { display: "none" },
-                                          attrs: {
-                                            value: "Agri-Fishery Arts Strand",
-                                            id: "Agri"
-                                          }
-                                        },
-                                        [_vm._v("Agri-Fishery Arts Strand")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        {
-                                          staticStyle: { display: "none" },
-                                          attrs: {
-                                            value: "Home Economics Strand",
-                                            id: "Home"
-                                          }
-                                        },
-                                        [_vm._v("Home Economics Strand")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        {
-                                          staticStyle: { display: "none" },
-                                          attrs: {
-                                            value: "Industrial Arts Strand",
-                                            id: "Industrial"
-                                          }
-                                        },
-                                        [_vm._v("Industrial Arts Strand")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        {
-                                          staticStyle: { display: "none" },
-                                          attrs: {
-                                            value: "ICT Strand",
-                                            id: "ICT"
-                                          }
-                                        },
-                                        [_vm._v("ICT Strand")]
+                                        "div",
+                                        { staticClass: "form-select-list" },
+                                        [
+                                          _c("label", [_vm._v("Strand")]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "select",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.enlist.strand,
+                                                  expression: "enlist.strand"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              attrs: {
+                                                id: "strand",
+                                                name: "strand"
+                                              },
+                                              on: {
+                                                change: function($event) {
+                                                  var $$selectedVal = Array.prototype.filter
+                                                    .call(
+                                                      $event.target.options,
+                                                      function(o) {
+                                                        return o.selected
+                                                      }
+                                                    )
+                                                    .map(function(o) {
+                                                      var val =
+                                                        "_value" in o
+                                                          ? o._value
+                                                          : o.value
+                                                      return val
+                                                    })
+                                                  _vm.$set(
+                                                    _vm.enlist,
+                                                    "strand",
+                                                    $event.target.multiple
+                                                      ? $$selectedVal
+                                                      : $$selectedVal[0]
+                                                  )
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _c("option", {
+                                                attrs: {
+                                                  value: "none",
+                                                  selected: ""
+                                                }
+                                              }),
+                                              _vm._v(" "),
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    value: "HUMSS",
+                                                    id: "HUMSS"
+                                                  }
+                                                },
+                                                [_vm._v("HUMSS")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    value: "STEM",
+                                                    id: "STEM"
+                                                  }
+                                                },
+                                                [_vm._v("STEM")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    value: "ABM",
+                                                    id: "ABM"
+                                                  }
+                                                },
+                                                [_vm._v("ABM")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    value: "GAS",
+                                                    id: "GAS"
+                                                  }
+                                                },
+                                                [_vm._v("GAS")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    value:
+                                                      "Agri-Fishery Arts Strand",
+                                                    id: "Agri"
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Agri-Fishery Arts Strand"
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    value:
+                                                      "Home Economics Strand",
+                                                    id: "Home"
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Home Economics Strand"
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    value:
+                                                      "Industrial Arts Strand",
+                                                    id: "Industrial"
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Industrial Arts Strand"
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    value: "ICT Strand",
+                                                    id: "ICT"
+                                                  }
+                                                },
+                                                [_vm._v("ICT Strand")]
+                                              )
+                                            ]
+                                          )
+                                        ]
                                       )
                                     ]
                                   )
@@ -78333,8 +78941,7 @@ var render = function() {
                         ]
                       )
                     ])
-                  ]
-                ),
+                  : _vm._e(),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-group isIndigenousComm" }, [
                   _c("label", [
@@ -78356,8 +78963,6 @@ var render = function() {
                       staticClass: "pull-left",
                       attrs: {
                         type: "checkbox",
-                        onclick: "javascript:yesnoCheck();",
-                        id: "yesCheck",
                         value: "1",
                         name: "isIndigenous"
                       },
@@ -78398,53 +79003,48 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c(
-                    "div",
-                    {
-                      staticStyle: { display: "none" },
-                      attrs: { id: "ifYes" }
-                    },
-                    [
-                      _c("label", [
-                        _vm._v(
-                          "If yes, please indicate the name of your community."
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.enlist.indigenousCommunity,
-                            expression: "enlist.indigenousCommunity"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          name: "indigenousCommunity",
-                          id: "indigenousCommunity",
-                          type: "text",
-                          placeholder: "community"
-                        },
-                        domProps: { value: _vm.enlist.indigenousCommunity },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+                _vm.enlist.isIndigenous == 1
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("div", [
+                        _c("label", [
+                          _vm._v(
+                            "If yes, please indicate the name of your community."
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.enlist.indigenousCommunity,
+                              expression: "enlist.indigenousCommunity"
                             }
-                            _vm.$set(
-                              _vm.enlist,
-                              "indigenousCommunity",
-                              $event.target.value
-                            )
+                          ],
+                          staticClass: "form-control",
+                          attrs: {
+                            name: "indigenousCommunity",
+                            id: "indigenousCommunity",
+                            type: "text",
+                            placeholder: "community"
+                          },
+                          domProps: { value: _vm.enlist.indigenousCommunity },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.enlist,
+                                "indigenousCommunity",
+                                $event.target.value
+                              )
+                            }
                           }
-                        }
-                      })
-                    ]
-                  )
-                ]),
+                        })
+                      ])
+                    ])
+                  : _vm._e(),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-group" }, [
                   _c("div", { staticClass: "row" }, [
@@ -78518,13 +79118,24 @@ var render = function() {
                                     },
                                     [
                                       _c("option", {
-                                        attrs: {
-                                          value: "none",
-                                          selected: "",
-                                          disabled: ""
-                                        }
+                                        attrs: { disabled: "", selected: "" }
+                                      }),
+                                      _vm._v(" "),
+                                      _vm._l(_vm.programs, function(program) {
+                                        return _c(
+                                          "option",
+                                          { domProps: { value: program.CODE } },
+                                          [
+                                            _vm._v(
+                                              _vm._s(program.CODE) +
+                                                ", " +
+                                                _vm._s(program.DESCRIPTION)
+                                            )
+                                          ]
+                                        )
                                       })
-                                    ]
+                                    ],
+                                    2
                                   )
                                 ])
                               ])
@@ -78582,9 +79193,24 @@ var render = function() {
                                   },
                                   [
                                     _c("option", {
-                                      attrs: { value: "", selected: "" }
+                                      attrs: { disabled: "", selected: "" }
+                                    }),
+                                    _vm._v(" "),
+                                    _vm._l(_vm.programs, function(program) {
+                                      return _c(
+                                        "option",
+                                        { domProps: { value: program.CODE } },
+                                        [
+                                          _vm._v(
+                                            _vm._s(program.CODE) +
+                                              ", " +
+                                              _vm._s(program.DESCRIPTION)
+                                          )
+                                        ]
+                                      )
                                     })
-                                  ]
+                                  ],
+                                  2
                                 )
                               ])
                             ]
@@ -78641,9 +79267,24 @@ var render = function() {
                                   },
                                   [
                                     _c("option", {
-                                      attrs: { value: "", selected: "" }
+                                      attrs: { disabled: "", selected: "" }
+                                    }),
+                                    _vm._v(" "),
+                                    _vm._l(_vm.programs, function(program) {
+                                      return _c(
+                                        "option",
+                                        { domProps: { value: program.CODE } },
+                                        [
+                                          _vm._v(
+                                            _vm._s(program.CODE) +
+                                              ", " +
+                                              _vm._s(program.DESCRIPTION)
+                                          )
+                                        ]
+                                      )
                                     })
-                                  ]
+                                  ],
+                                  2
                                 )
                               ])
                             ]
@@ -79088,6 +79729,14 @@ var staticRenderFns = [
           "(if boarding or living with relative, indicate name of landlady of guardian as person to contact)"
         )
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" }, [
+      _c("div", { staticClass: "form-select-list" })
     ])
   }
 ]

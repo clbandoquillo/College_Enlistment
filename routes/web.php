@@ -11,9 +11,14 @@
 |
 */
 
-//Countries
+//JSON Lists
+Route::get('/citieslist','CityController@cities');
 Route::get('/countrieslist','CountriesController@countries');
 Route::get('/nationalitylist','NationalityController@nationalities');
+Route::get('/provinceslist','ProvinceController@provinces');
+Route::get('/religionlist','ReligionController@religions');
+Route::get('/schoolslist','SchoolController@schools');
+Route::get('/programslist','ProgramController@programs');
 
 /*Route::get('/', function () {
     return view('welcome');
