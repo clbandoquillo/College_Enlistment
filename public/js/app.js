@@ -1807,9 +1807,1955 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/enlist/EnlistComponent.vue?vue&type=script&lang=js& ***!
   \****************************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Git\\AdDU_Enlistment\\resources\\js\\views\\enlist\\EnlistComponent.vue: Unexpected token, expected \";\" (1878:60)\n\n\u001b[0m \u001b[90m 1876 | \u001b[39m      \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msubmitted \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 1877 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 1878 | \u001b[39m      axios\u001b[33m.\u001b[39mpost(\u001b[32m'http://127.0.0.1:8000/student_enlistment'\u001b[39m){\u001b[0m\n\u001b[0m \u001b[90m      | \u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 1879 | \u001b[39m        surname\u001b[33m:\u001b[39m \u001b[32m\"\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 1880 | \u001b[39m        suffix\u001b[33m:\u001b[39m \u001b[32m\"\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 1881 | \u001b[39m        firstname\u001b[33m:\u001b[39m \u001b[32m\"\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n    at Parser.raise (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:7013:17)\n    at Parser.unexpected (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:8384:16)\n    at Parser.semicolon (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:8366:40)\n    at Parser.parseExpressionStatement (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:11193:10)\n    at Parser.parseStatementContent (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10792:19)\n    at Parser.parseStatement (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10658:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:11234:25)\n    at Parser.parseBlockBody (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:11221:10)\n    at Parser.parseBlock (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:11205:10)\n    at Parser.parseFunctionBody (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10220:24)\n    at Parser.parseFunctionBodyAndFinish (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10190:10)\n    at Parser.parseMethod (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10160:10)\n    at Parser.parseObjectMethod (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10077:19)\n    at Parser.parseObjPropValue (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10119:23)\n    at Parser.parseObjectMember (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10043:10)\n    at Parser.parseObj (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9963:25)\n    at Parser.parseExprAtom (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9582:28)\n    at Parser.parseExprSubscripts (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Parser.parseMaybeUnary (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Parser.parseExprOps (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Parser.parseMaybeConditional (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Parser.parseMaybeAssign (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Parser.parseObjectProperty (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10094:101)\n    at Parser.parseObjPropValue (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10119:101)\n    at Parser.parseObjectMember (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10043:10)\n    at Parser.parseObj (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9963:25)\n    at Parser.parseExprAtom (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9582:28)\n    at Parser.parseExprSubscripts (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Parser.parseMaybeUnary (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Parser.parseExprOps (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Parser.parseMaybeConditional (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Parser.parseMaybeAssign (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Parser.parseExportDefaultExpression (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:11836:24)\n    at Parser.parseExport (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:11738:31)\n    at Parser.parseStatementContent (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10762:27)\n    at Parser.parseStatement (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10658:17)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    var _enlist;
+
+    return {
+      enlist: (_enlist = {
+        applicantID: "",
+        surname: "",
+        suffix: "",
+        firstname: "",
+        middlename: "",
+        birthDate: "",
+        birthPlace: "",
+        gender: "",
+        civilStatus: "",
+        citizenship: "",
+        religion: "",
+        permanentAddress: "",
+        permanentProvince: "",
+        permanentCity: "",
+        permanentzippostalcode: "",
+        permanentCountry: "",
+        sameAsPermanent: "",
+        boarding: "",
+        withRelative: "",
+        cityAddress: "",
+        cityProvince: "",
+        cityCity: "",
+        cityzippostalcode: "",
+        cityCountry: "",
+        email: "",
+        mobileNum: "",
+        personToContact: "",
+        personToContactRelationship: "",
+        personToContactTelNo: "",
+        personToContactMobileNo: "",
+        bloodGroup: "",
+        rh: "",
+        physicianName: "",
+        physicianContactInformation: "",
+        takingMedication: "",
+        medicationInfo: "",
+        specialNeeds: "",
+        typeOfSpecialNeeds: "",
+        othersSpecialNeeds: "",
+        positionFamily: "",
+        numBrothers: "",
+        numSisters: "",
+        fatherName: "",
+        fatherLiving: "",
+        fatherOccupation: "",
+        fatherAddress: "",
+        fatherContactNum: "",
+        motherName: "",
+        motherLiving: "",
+        motherOccupation: "",
+        motherAddress: "",
+        motherContactNum: "",
+        parentsMaritalStatus: "",
+        nameOfSpouse: "",
+        annualFamilyIncome: "",
+        preSchoolName: "",
+        preSchoolAddress: "",
+        preSchoolGraduated: "",
+        gradeSchoolName: "",
+        gradeSchoolAddress: "",
+        gradeSchoolGraduated: "",
+        highSchoolName: "",
+        highSchoolAddress: "",
+        highSchoolGraduated: "",
+        nameSHS: "",
+        addressSHS: "",
+        principalSHS: "",
+        track: "",
+        strand: "",
+        isIndigenous: "",
+        indigenousCommunity: "",
+        nameCollegeUniv: "",
+        addressCollegeUniv: "",
+        programChoiceOne: "",
+        programChoiceTwo: "",
+        programChoiceThree: "",
+        currTherapyRehabCounseling: "",
+        currTherapyRehabCounselingName: "",
+        currTherapyRehabCounselingContact: "",
+        reasonToSeekHelp: "",
+        status: "",
+        isCollege: "",
+        isSHS: ""
+      }, _defineProperty(_enlist, "isIndigenous", ""), _defineProperty(_enlist, "takingMedication", ""), _defineProperty(_enlist, "specialNeeds", ""), _enlist),
+      submitted: false,
+      cities: [],
+      countries: [],
+      nationalities: [],
+      provinces: [],
+      religions: [],
+      schools: [],
+      programs: [],
+      url_cities: "http://127.0.0.1:8000/citieslist",
+      url_countries: "http://127.0.0.1:8000/countrieslist",
+      url_nationalities: "http://127.0.0.1:8000/nationalitylist",
+      url_provinces: "http://127.0.0.1:8000/provinceslist",
+      url_religions: "http://127.0.0.1:8000/religionlist",
+      url_schools: "http://127.0.0.1:8000/schoolslist",
+      url_programs: "http://127.0.0.1:8000/programslist"
+    };
+  },
+  methods: {
+    makeToast: function makeToast() {
+      $("#PrimaryModalalert").modal("hide");
+      toastr.success("hahaha");
+    },
+    submitModal: function submitModal() {
+      $("#PrimaryModalalert").modal("show");
+    },
+    load_cities: function load_cities() {
+      var _this = this;
+
+      axios.get(this.url_cities).then(function (response) {
+        _this.cities = response.data.cities;
+      });
+    },
+    load_countries: function load_countries() {
+      var _this2 = this;
+
+      axios.get(this.url_countries).then(function (response) {
+        _this2.countries = response.data.countries;
+      });
+    },
+    load_nationalities: function load_nationalities() {
+      var _this3 = this;
+
+      axios.get(this.url_nationalities).then(function (response) {
+        _this3.nationalities = response.data.nationalities;
+      });
+    },
+    load_provinces: function load_provinces() {
+      var _this4 = this;
+
+      axios.get(this.url_provinces).then(function (response) {
+        _this4.provinces = response.data.provinces;
+      });
+    },
+    load_religions: function load_religions() {
+      var _this5 = this;
+
+      axios.get(this.url_religions).then(function (response) {
+        _this5.religions = response.data.religions;
+      });
+    },
+    load_schools: function load_schools() {
+      var _this6 = this;
+
+      axios.get(this.url_schools).then(function (response) {
+        _this6.schools = response.data.schools;
+      });
+    },
+    load_programs: function load_programs() {
+      var _this7 = this;
+
+      axios.get(this.url_programs).then(function (response) {
+        _this7.programs = response.data.programs;
+      });
+    },
+    create_enlistment: function create_enlistment() {
+      var _axios$post,
+          _this8 = this;
+
+      this.submitted = true;
+      axios.post("http://127.0.0.1:8000/student_enlistment", (_axios$post = {
+        surname: this.enlist.surname,
+        suffix: this.enlist.suffix,
+        firstname: this.enlist.firstname,
+        middlename: this.enlist.middlename,
+        birthDate: this.enlist.birthDate,
+        birthPlace: this.enlist.birthPlace,
+        gender: this.enlist.gender,
+        civilStatus: this.enlist.civilStatus,
+        citizenship: this.enlist.citizenship,
+        religion: this.enlist.religion,
+        permanentAddress: this.enlist.permanentAddress,
+        permanentProvince: this.enlist.permanentProvince,
+        permanentCity: this.enlist.permanentCity,
+        permanentzippostalcode: this.enlist.permanentzippostalcode,
+        permanentCountry: this.enlist.permanentCountry,
+        sameAsPermanent: this.enlist.sameAsPermanent,
+        boarding: this.enlist.boarding,
+        withRelative: this.enlist.withRelative,
+        cityAddress: this.enlist.cityAddress,
+        cityProvince: this.enlist.cityProvince,
+        cityCity: this.enlist.cityCity,
+        cityzippostalcode: this.enlist.cityzippostalcode,
+        cityCountry: this.enlist.cityCountry,
+        email: this.enlist.email,
+        mobileNum: this.enlist.mobileNum
+      }, _defineProperty(_axios$post, "mobileNum", this.enlist.mobileNum), _defineProperty(_axios$post, "personToContactRelationship", this.enlist.personToContactRelationship), _defineProperty(_axios$post, "personToContactTelNo", this.enlist.personToContactTelNo), _defineProperty(_axios$post, "personToContactMobileNo", this.enlist.personToContactMobileNo), _defineProperty(_axios$post, "bloodGroup", this.enlist.bloodGroup), _defineProperty(_axios$post, "rh", this.enlist.rh), _defineProperty(_axios$post, "physicianName", this.enlist.physicianName), _defineProperty(_axios$post, "physicianContactInformation", this.enlist.physicianContactInformation), _defineProperty(_axios$post, "takingMedication", this.enlist.takingMedication), _defineProperty(_axios$post, "medicationInfo", this.enlist.medicationInfo), _defineProperty(_axios$post, "specialNeeds", this.enlist.specialNeeds), _defineProperty(_axios$post, "typeOfSpecialNeeds", this.enlist.typeOfSpecialNeeds), _defineProperty(_axios$post, "othersSpecialNeeds", this.enlist.othersSpecialNeeds), _defineProperty(_axios$post, "positionFamily", this.enlist.positionFamily), _defineProperty(_axios$post, "numBrothers", this.enlist.numBrothers), _defineProperty(_axios$post, "numSisters", this.enlist.numSisters), _defineProperty(_axios$post, "fatherName", this.enlist.fatherName), _defineProperty(_axios$post, "fatherLiving", this.enlist.fatherLiving), _defineProperty(_axios$post, "fatherOccupation", this.enlist.fatherOccupation), _defineProperty(_axios$post, "fatherAddress", this.enlist.fatherAddress), _defineProperty(_axios$post, "fatherContactNum", this.enlist.fatherContactNum), _defineProperty(_axios$post, "motherName", this.enlist.motherName), _defineProperty(_axios$post, "motherLiving", this.enlist.motherLiving), _defineProperty(_axios$post, "motherOccupation", this.enlist.motherOccupation), _defineProperty(_axios$post, "motherAddress", this.enlist.motherAddress), _defineProperty(_axios$post, "motherContactNum", this.enlist.motherContactNum), _defineProperty(_axios$post, "parentsMaritalStatus", this.enlist.parentsMaritalStatus), _defineProperty(_axios$post, "nameOfSpouse", this.enlist.nameOfSpouse), _defineProperty(_axios$post, "annualFamilyIncome", this.enlist.annualFamilyIncome), _defineProperty(_axios$post, "preSchoolName", this.enlist.preSchoolName), _defineProperty(_axios$post, "preSchoolAddress", this.enlist.preSchoolAddress), _defineProperty(_axios$post, "preSchoolGraduated", this.enlist.preSchoolGraduated), _defineProperty(_axios$post, "gradeSchoolName", this.enlist.gradeSchoolName), _defineProperty(_axios$post, "gradeSchoolAddress", this.enlist.gradeSchoolAddress), _defineProperty(_axios$post, "gradeSchoolGraduated", this.enlist.gradeSchoolGraduated), _defineProperty(_axios$post, "highSchoolName", this.enlist.highSchoolName), _defineProperty(_axios$post, "highSchoolAddress", this.enlist.highSchoolAddress), _defineProperty(_axios$post, "highSchoolGraduated", this.enlist.highSchoolGraduated), _defineProperty(_axios$post, "nameSHS", this.enlist.nameSHS), _defineProperty(_axios$post, "addressSHS", this.enlist.addressSHS), _defineProperty(_axios$post, "principalSHS", this.enlist.principalSHS), _defineProperty(_axios$post, "track", this.enlist.track), _defineProperty(_axios$post, "strand", this.enlist.strand), _defineProperty(_axios$post, "isIndigenous", this.enlist.isIndigenous), _defineProperty(_axios$post, "indigenousCommunity", this.enlist.indigenousCommunity), _defineProperty(_axios$post, "nameCollegeUniv", this.enlist.nameCollegeUniv), _defineProperty(_axios$post, "addressCollegeUniv", this.enlist.addressCollegeUniv), _defineProperty(_axios$post, "programChoiceOne", this.enlist.programChoiceOne), _defineProperty(_axios$post, "programChoiceTwo", this.enlist.programChoiceTwo), _defineProperty(_axios$post, "programChoiceThree", this.enlist.programChoiceThree), _defineProperty(_axios$post, "currTherapyRehabCounseling", this.enlist.currTherapyRehabCounseling), _defineProperty(_axios$post, "currTherapyRehabCounselingName", this.enlist.currTherapyRehabCounselingName), _defineProperty(_axios$post, "currTherapyRehabCounselingContact", this.enlist.currTherapyRehabCounselingContact), _defineProperty(_axios$post, "reasonToSeekHelp", this.enlist.reasonToSeekHelp), _defineProperty(_axios$post, "status", this.enlist.status), _defineProperty(_axios$post, "isCollege", this.enlist.isCollege), _defineProperty(_axios$post, "isSHS", this.enlist.isSHS), _defineProperty(_axios$post, "isIndigenous", this.enlist.isIndigenous), _defineProperty(_axios$post, "takingMedication", this.enlist.takingMedication), _defineProperty(_axios$post, "specialNeeds", this.enlist.specialNeeds), _axios$post)).then(function (response) {
+        _this8.resetData();
+
+        _this8.submitted = false;
+        $("#PrimaryModalalert").modal("hide");
+        _this8.makeToast;
+      });
+    }
+  },
+  computed: {},
+  watch: {
+    highSchoolAddress: {
+      handler: function handler(val) {
+        console.log("changed!", val);
+      },
+      deep: true
+    }
+  },
+  mounted: function mounted() {
+    this.load_cities();
+    this.load_countries();
+    this.load_nationalities();
+    this.load_provinces();
+    this.load_religions();
+    this.load_schools();
+    this.load_programs();
+  }
+});
 
 /***/ }),
 
@@ -71657,6 +73603,488 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/toastr/toastr.js":
+/*!***************************************!*\
+  !*** ./node_modules/toastr/toastr.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
+ * Toastr
+ * Copyright 2012-2015
+ * Authors: John Papa, Hans Fjällemark, and Tim Ferrell.
+ * All Rights Reserved.
+ * Use, reproduction, distribution, and modification of this code is subject to the terms and
+ * conditions of the MIT license, available at http://www.opensource.org/licenses/mit-license.php
+ *
+ * ARIA Support: Greta Krafsig
+ *
+ * Project: https://github.com/CodeSeven/toastr
+ */
+/* global define */
+(function (define) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")], __WEBPACK_AMD_DEFINE_RESULT__ = (function ($) {
+        return (function () {
+            var $container;
+            var listener;
+            var toastId = 0;
+            var toastType = {
+                error: 'error',
+                info: 'info',
+                success: 'success',
+                warning: 'warning'
+            };
+
+            var toastr = {
+                clear: clear,
+                remove: remove,
+                error: error,
+                getContainer: getContainer,
+                info: info,
+                options: {},
+                subscribe: subscribe,
+                success: success,
+                version: '2.1.4',
+                warning: warning
+            };
+
+            var previousToast;
+
+            return toastr;
+
+            ////////////////
+
+            function error(message, title, optionsOverride) {
+                return notify({
+                    type: toastType.error,
+                    iconClass: getOptions().iconClasses.error,
+                    message: message,
+                    optionsOverride: optionsOverride,
+                    title: title
+                });
+            }
+
+            function getContainer(options, create) {
+                if (!options) { options = getOptions(); }
+                $container = $('#' + options.containerId);
+                if ($container.length) {
+                    return $container;
+                }
+                if (create) {
+                    $container = createContainer(options);
+                }
+                return $container;
+            }
+
+            function info(message, title, optionsOverride) {
+                return notify({
+                    type: toastType.info,
+                    iconClass: getOptions().iconClasses.info,
+                    message: message,
+                    optionsOverride: optionsOverride,
+                    title: title
+                });
+            }
+
+            function subscribe(callback) {
+                listener = callback;
+            }
+
+            function success(message, title, optionsOverride) {
+                return notify({
+                    type: toastType.success,
+                    iconClass: getOptions().iconClasses.success,
+                    message: message,
+                    optionsOverride: optionsOverride,
+                    title: title
+                });
+            }
+
+            function warning(message, title, optionsOverride) {
+                return notify({
+                    type: toastType.warning,
+                    iconClass: getOptions().iconClasses.warning,
+                    message: message,
+                    optionsOverride: optionsOverride,
+                    title: title
+                });
+            }
+
+            function clear($toastElement, clearOptions) {
+                var options = getOptions();
+                if (!$container) { getContainer(options); }
+                if (!clearToast($toastElement, options, clearOptions)) {
+                    clearContainer(options);
+                }
+            }
+
+            function remove($toastElement) {
+                var options = getOptions();
+                if (!$container) { getContainer(options); }
+                if ($toastElement && $(':focus', $toastElement).length === 0) {
+                    removeToast($toastElement);
+                    return;
+                }
+                if ($container.children().length) {
+                    $container.remove();
+                }
+            }
+
+            // internal functions
+
+            function clearContainer (options) {
+                var toastsToClear = $container.children();
+                for (var i = toastsToClear.length - 1; i >= 0; i--) {
+                    clearToast($(toastsToClear[i]), options);
+                }
+            }
+
+            function clearToast ($toastElement, options, clearOptions) {
+                var force = clearOptions && clearOptions.force ? clearOptions.force : false;
+                if ($toastElement && (force || $(':focus', $toastElement).length === 0)) {
+                    $toastElement[options.hideMethod]({
+                        duration: options.hideDuration,
+                        easing: options.hideEasing,
+                        complete: function () { removeToast($toastElement); }
+                    });
+                    return true;
+                }
+                return false;
+            }
+
+            function createContainer(options) {
+                $container = $('<div/>')
+                    .attr('id', options.containerId)
+                    .addClass(options.positionClass);
+
+                $container.appendTo($(options.target));
+                return $container;
+            }
+
+            function getDefaults() {
+                return {
+                    tapToDismiss: true,
+                    toastClass: 'toast',
+                    containerId: 'toast-container',
+                    debug: false,
+
+                    showMethod: 'fadeIn', //fadeIn, slideDown, and show are built into jQuery
+                    showDuration: 300,
+                    showEasing: 'swing', //swing and linear are built into jQuery
+                    onShown: undefined,
+                    hideMethod: 'fadeOut',
+                    hideDuration: 1000,
+                    hideEasing: 'swing',
+                    onHidden: undefined,
+                    closeMethod: false,
+                    closeDuration: false,
+                    closeEasing: false,
+                    closeOnHover: true,
+
+                    extendedTimeOut: 1000,
+                    iconClasses: {
+                        error: 'toast-error',
+                        info: 'toast-info',
+                        success: 'toast-success',
+                        warning: 'toast-warning'
+                    },
+                    iconClass: 'toast-info',
+                    positionClass: 'toast-top-right',
+                    timeOut: 5000, // Set timeOut and extendedTimeOut to 0 to make it sticky
+                    titleClass: 'toast-title',
+                    messageClass: 'toast-message',
+                    escapeHtml: false,
+                    target: 'body',
+                    closeHtml: '<button type="button">&times;</button>',
+                    closeClass: 'toast-close-button',
+                    newestOnTop: true,
+                    preventDuplicates: false,
+                    progressBar: false,
+                    progressClass: 'toast-progress',
+                    rtl: false
+                };
+            }
+
+            function publish(args) {
+                if (!listener) { return; }
+                listener(args);
+            }
+
+            function notify(map) {
+                var options = getOptions();
+                var iconClass = map.iconClass || options.iconClass;
+
+                if (typeof (map.optionsOverride) !== 'undefined') {
+                    options = $.extend(options, map.optionsOverride);
+                    iconClass = map.optionsOverride.iconClass || iconClass;
+                }
+
+                if (shouldExit(options, map)) { return; }
+
+                toastId++;
+
+                $container = getContainer(options, true);
+
+                var intervalId = null;
+                var $toastElement = $('<div/>');
+                var $titleElement = $('<div/>');
+                var $messageElement = $('<div/>');
+                var $progressElement = $('<div/>');
+                var $closeElement = $(options.closeHtml);
+                var progressBar = {
+                    intervalId: null,
+                    hideEta: null,
+                    maxHideTime: null
+                };
+                var response = {
+                    toastId: toastId,
+                    state: 'visible',
+                    startTime: new Date(),
+                    options: options,
+                    map: map
+                };
+
+                personalizeToast();
+
+                displayToast();
+
+                handleEvents();
+
+                publish(response);
+
+                if (options.debug && console) {
+                    console.log(response);
+                }
+
+                return $toastElement;
+
+                function escapeHtml(source) {
+                    if (source == null) {
+                        source = '';
+                    }
+
+                    return source
+                        .replace(/&/g, '&amp;')
+                        .replace(/"/g, '&quot;')
+                        .replace(/'/g, '&#39;')
+                        .replace(/</g, '&lt;')
+                        .replace(/>/g, '&gt;');
+                }
+
+                function personalizeToast() {
+                    setIcon();
+                    setTitle();
+                    setMessage();
+                    setCloseButton();
+                    setProgressBar();
+                    setRTL();
+                    setSequence();
+                    setAria();
+                }
+
+                function setAria() {
+                    var ariaValue = '';
+                    switch (map.iconClass) {
+                        case 'toast-success':
+                        case 'toast-info':
+                            ariaValue =  'polite';
+                            break;
+                        default:
+                            ariaValue = 'assertive';
+                    }
+                    $toastElement.attr('aria-live', ariaValue);
+                }
+
+                function handleEvents() {
+                    if (options.closeOnHover) {
+                        $toastElement.hover(stickAround, delayedHideToast);
+                    }
+
+                    if (!options.onclick && options.tapToDismiss) {
+                        $toastElement.click(hideToast);
+                    }
+
+                    if (options.closeButton && $closeElement) {
+                        $closeElement.click(function (event) {
+                            if (event.stopPropagation) {
+                                event.stopPropagation();
+                            } else if (event.cancelBubble !== undefined && event.cancelBubble !== true) {
+                                event.cancelBubble = true;
+                            }
+
+                            if (options.onCloseClick) {
+                                options.onCloseClick(event);
+                            }
+
+                            hideToast(true);
+                        });
+                    }
+
+                    if (options.onclick) {
+                        $toastElement.click(function (event) {
+                            options.onclick(event);
+                            hideToast();
+                        });
+                    }
+                }
+
+                function displayToast() {
+                    $toastElement.hide();
+
+                    $toastElement[options.showMethod](
+                        {duration: options.showDuration, easing: options.showEasing, complete: options.onShown}
+                    );
+
+                    if (options.timeOut > 0) {
+                        intervalId = setTimeout(hideToast, options.timeOut);
+                        progressBar.maxHideTime = parseFloat(options.timeOut);
+                        progressBar.hideEta = new Date().getTime() + progressBar.maxHideTime;
+                        if (options.progressBar) {
+                            progressBar.intervalId = setInterval(updateProgress, 10);
+                        }
+                    }
+                }
+
+                function setIcon() {
+                    if (map.iconClass) {
+                        $toastElement.addClass(options.toastClass).addClass(iconClass);
+                    }
+                }
+
+                function setSequence() {
+                    if (options.newestOnTop) {
+                        $container.prepend($toastElement);
+                    } else {
+                        $container.append($toastElement);
+                    }
+                }
+
+                function setTitle() {
+                    if (map.title) {
+                        var suffix = map.title;
+                        if (options.escapeHtml) {
+                            suffix = escapeHtml(map.title);
+                        }
+                        $titleElement.append(suffix).addClass(options.titleClass);
+                        $toastElement.append($titleElement);
+                    }
+                }
+
+                function setMessage() {
+                    if (map.message) {
+                        var suffix = map.message;
+                        if (options.escapeHtml) {
+                            suffix = escapeHtml(map.message);
+                        }
+                        $messageElement.append(suffix).addClass(options.messageClass);
+                        $toastElement.append($messageElement);
+                    }
+                }
+
+                function setCloseButton() {
+                    if (options.closeButton) {
+                        $closeElement.addClass(options.closeClass).attr('role', 'button');
+                        $toastElement.prepend($closeElement);
+                    }
+                }
+
+                function setProgressBar() {
+                    if (options.progressBar) {
+                        $progressElement.addClass(options.progressClass);
+                        $toastElement.prepend($progressElement);
+                    }
+                }
+
+                function setRTL() {
+                    if (options.rtl) {
+                        $toastElement.addClass('rtl');
+                    }
+                }
+
+                function shouldExit(options, map) {
+                    if (options.preventDuplicates) {
+                        if (map.message === previousToast) {
+                            return true;
+                        } else {
+                            previousToast = map.message;
+                        }
+                    }
+                    return false;
+                }
+
+                function hideToast(override) {
+                    var method = override && options.closeMethod !== false ? options.closeMethod : options.hideMethod;
+                    var duration = override && options.closeDuration !== false ?
+                        options.closeDuration : options.hideDuration;
+                    var easing = override && options.closeEasing !== false ? options.closeEasing : options.hideEasing;
+                    if ($(':focus', $toastElement).length && !override) {
+                        return;
+                    }
+                    clearTimeout(progressBar.intervalId);
+                    return $toastElement[method]({
+                        duration: duration,
+                        easing: easing,
+                        complete: function () {
+                            removeToast($toastElement);
+                            clearTimeout(intervalId);
+                            if (options.onHidden && response.state !== 'hidden') {
+                                options.onHidden();
+                            }
+                            response.state = 'hidden';
+                            response.endTime = new Date();
+                            publish(response);
+                        }
+                    });
+                }
+
+                function delayedHideToast() {
+                    if (options.timeOut > 0 || options.extendedTimeOut > 0) {
+                        intervalId = setTimeout(hideToast, options.extendedTimeOut);
+                        progressBar.maxHideTime = parseFloat(options.extendedTimeOut);
+                        progressBar.hideEta = new Date().getTime() + progressBar.maxHideTime;
+                    }
+                }
+
+                function stickAround() {
+                    clearTimeout(intervalId);
+                    progressBar.hideEta = 0;
+                    $toastElement.stop(true, true)[options.showMethod](
+                        {duration: options.showDuration, easing: options.showEasing}
+                    );
+                }
+
+                function updateProgress() {
+                    var percentage = ((progressBar.hideEta - (new Date().getTime())) / progressBar.maxHideTime) * 100;
+                    $progressElement.width(percentage + '%');
+                }
+            }
+
+            function getOptions() {
+                return $.extend({}, getDefaults(), toastr.options);
+            }
+
+            function removeToast($toastElement) {
+                if (!$container) { $container = getContainer(); }
+                if ($toastElement.is(':visible')) {
+                    return;
+                }
+                $toastElement.remove();
+                $toastElement = null;
+                if ($container.children().length === 0) {
+                    $container.remove();
+                    previousToast = undefined;
+                }
+            }
+
+        })();
+    }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+}(__webpack_require__(/*! !webpack amd define */ "./node_modules/webpack/buildin/amd-define.js")));
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-functional-data-merge/dist/lib.esm.js":
 /*!****************************************************************!*\
   !*** ./node_modules/vue-functional-data-merge/dist/lib.esm.js ***!
@@ -78001,7 +80429,7 @@ var render = function() {
                 {
                   staticClass: "btn btn-custon-rounded-four btn-primary",
                   attrs: { disabled: _vm.submitted },
-                  on: { click: _vm.create_enlistment }
+                  on: { click: _vm.makeToast }
                 },
                 [_vm._v("Confirm Enlistment")]
               )
@@ -93117,6 +95545,20 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/webpack/buildin/amd-define.js":
+/*!***************************************!*\
+  !*** (webpack)/buildin/amd-define.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function() {
+	throw new Error("define cannot be used indirect");
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
@@ -93280,7 +95722,9 @@ if (token) {
  * for events that are broadcast by Laravel. Echo and event broadcasting
  * allows your team to easily build robust real-time web applications.
  */
-// import Echo from 'laravel-echo'
+
+
+window.toastr = __webpack_require__(/*! toastr */ "./node_modules/toastr/toastr.js"); // import Echo from 'laravel-echo'
 // window.Pusher = require('pusher-js');
 // window.Echo = new Echo({
 //     broadcaster: 'pusher',
