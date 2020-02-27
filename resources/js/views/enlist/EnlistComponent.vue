@@ -66,6 +66,20 @@
             aria-controls="v-pills-psychologicalProfile"
             aria-selected="false"
           >Psychological Profile</a>
+          <br />
+
+          <button @click="submitModal" class="btn btn-primary btn-lg btn-block">Submit Enlistment</button>
+          <br />
+
+          <!-- <a
+            class="nav-link"
+            id="v-pills-review-tab"
+            data-toggle="pill"
+            href="#v-pills-review"
+            role="tab"
+            aria-controls="v-pills-review"
+            aria-selected="false"
+          >Review</a>-->
         </div>
       </div>
       <div class="col-xs-9 col-9">
@@ -84,7 +98,7 @@
                   <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                       <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                           <div class="form-group">
                             <label>Surname</label>
                             <input
@@ -101,25 +115,12 @@
                           <div class="form-group">
                             <label>Suffix (Jr., III, IV etc.)</label>
                             <input
+                              v-model="enlist.suffix"
                               name="suffix"
                               type="text"
                               class="form-control"
                               placeholder="Suffix"
                             />
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                          <div class="form-group">
-                            <label>Applicant Number</label>
-                            <input
-                              name="suffix"
-                              type="text"
-                              class="form-control"
-                              placeholder="Applicant Number"
-                            />
-                            <b
-                              class="text-danger"
-                            >(The number indicated on your Notice of Acceptance letter)</b>
                           </div>
                         </div>
                       </div>
@@ -272,9 +273,9 @@
                             >
                               <option disabled selected></option>
                               <option
-                                v-for="country in countries"
-                                v-bind:value="country.id"
-                              >{{country.description}}</option>
+                                v-for="religion in religions"
+                                v-bind:value="religion.code"
+                              >{{religion.descr}}</option>
                             </select>
                           </div>
                         </div>
@@ -806,7 +807,10 @@
                     </div>
                   </div>
                 </div>
-                <div v-if="enlist.specialNeeds == 1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div
+                  v-if="enlist.specialNeeds == 1"
+                  class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                >
                   <div class="row">
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                       <div class="form-select-list">
@@ -826,7 +830,7 @@
                       </div>
                     </div>
                     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-                      <div class="form-select-list">
+                      <div class="form-select-list" v-if="enlist.typeOfSpecialNeeds == 3">
                         <label>Others: (Please specify)</label>
                         <input
                           id="othersSpecialNeeds"
@@ -923,7 +927,6 @@
                         <input
                           class="pull-left"
                           type="checkbox"
-                          onclick="javascript:checkFather();"
                           id="fatherLiving"
                           value="1"
                           name="fatherLiving"
@@ -1004,7 +1007,6 @@
                         <input
                           class="pull-left"
                           type="checkbox"
-                          onclick="javascript:checkMother();"
                           id="motherLiving"
                           v-model="enlist.motherLiving"
                           value="1"
@@ -1329,7 +1331,7 @@
                             data-placeholder="Choose a School..."
                             id="nameCollegeUniv"
                             name="nameCollegeUniv"
-                            v-model="enlist.preSchoolName"
+                            v-model="enlist.nameCollegeUniv"
                             class="form-control"
                             tabindex="-1"
                           >
@@ -1382,14 +1384,20 @@
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="form-select-list">
                           <label>Name of Senior High School Attended</label>
-                          <input
+                          <select
+                            data-placeholder="Choose a School..."
+                            id="nameSHS"
                             name="nameSHS"
                             v-model="enlist.nameSHS"
-                            id="nameSHS"
-                            type="text"
                             class="form-control"
-                            placeholder="Name of Senior High School"
-                          />
+                            tabindex="-1"
+                          >
+                            <option disabled selected></option>
+                            <option
+                              v-for="school in schools"
+                              v-bind:value="school.SchoolId"
+                            >{{school.SchoolName}}</option>
+                          </select>
                         </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -1466,20 +1474,30 @@
                             class="form-control"
                           >
                             <option value="none" selected></option>
-                            <option value="HUMSS" id="HUMSS">HUMSS</option>
-                            <option value="STEM" id="STEM">STEM</option>
-                            <option value="ABM" id="ABM">ABM</option>
-                            <option value="GAS" id="GAS">GAS</option>
+                            <option v-if="enlist.track == 'ACADEMIC'" value="HUMSS" id="HUMSS">HUMSS</option>
+                            <option v-if="enlist.track == 'ACADEMIC'" value="STEM" id="STEM">STEM</option>
+                            <option v-if="enlist.track == 'ACADEMIC'" value="ABM" id="ABM">ABM</option>
+                            <option v-if="enlist.track == 'ACADEMIC'" value="GAS" id="GAS">GAS</option>
                             <option
+                              v-if="enlist.track == 'TVL'"
                               value="Agri-Fishery Arts Strand"
                               id="Agri"
                             >Agri-Fishery Arts Strand</option>
-                            <option value="Home Economics Strand" id="Home">Home Economics Strand</option>
                             <option
+                              v-if="enlist.track == 'TVL'"
+                              value="Home Economics Strand"
+                              id="Home"
+                            >Home Economics Strand</option>
+                            <option
+                              v-if="enlist.track == 'TVL'"
                               value="Industrial Arts Strand"
                               id="Industrial"
                             >Industrial Arts Strand</option>
-                            <option value="ICT Strand" id="ICT">ICT Strand</option>
+                            <option
+                              v-if="enlist.track == 'TVL'"
+                              value="ICT Strand"
+                              id="ICT"
+                            >ICT Strand</option>
                           </select>
                         </div>
                       </div>
@@ -1601,7 +1619,6 @@
                             value="1"
                             name="currTherapyRehabCounseling"
                             v-model="enlist.currTherapyRehabCounseling"
-                            onclick="javascript:yesnoCounseling();"
                             id="yesCheckCounseling"
                           />Yes
                         </label>
@@ -1612,12 +1629,11 @@
                             value="0"
                             name="currTherapyRehabCounseling"
                             v-model="enlist.currTherapyRehabCounseling"
-                            onclick="javascript:yesnoCounseling();"
                             id="noCheckCounseling"
                           />No
                         </label>
                       </div>
-                      <div class="form-select-list">
+                      <div v-if="enlist.currTherapyRehabCounseling == 1" class="form-select-list">
                         <label>If yes, with whom:</label>
                         <input
                           id="currTherapyRehabCounselingName"
@@ -1628,7 +1644,7 @@
                           placeholder
                         />
                       </div>
-                      <div class="form-select-list">
+                      <div v-if="enlist.currTherapyRehabCounseling == 1" class="form-select-list">
                         <label>Contact Information</label>
                         <input
                           name="currTherapyRehabCounselingContact"
@@ -1640,7 +1656,7 @@
                           data-mask="+63 999-999-9999"
                         />
                       </div>
-                      <div class="form-select-list">
+                      <div v-if="enlist.currTherapyRehabCounseling == 1" class="form-select-list">
                         <label>Briefly describe your reason for seeking help:</label>
                         <textarea
                           class="form-control"
@@ -1648,6 +1664,7 @@
                           name="reasonToSeekHelp"
                           v-model="enlist.reasonToSeekHelp"
                         ></textarea>
+                        <br />
                       </div>
                     </div>
                   </div>
@@ -1658,10 +1675,43 @@
 
           <div
             class="tab-pane fade"
-            id="v-pills-preinterview"
+            id="v-pills-review"
             role="tabpanel"
-            aria-labelledby="v-pills-preinterview-tab"
-          >Pre-Interview Questions</div>
+            aria-labelledby="v-pills-review-tab"
+          >
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item">Firstname</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="PrimaryModalalert"
+      class="modal modal-edu-general default-popup-PrimaryModal fade"
+      role="dialog"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-close-area modal-close-df">
+            <a class="close" data-dismiss="modal" href="#">
+              <i class="fa fa-close"></i>
+            </a>
+          </div>
+          <div class="modal-body">
+            <span class="educate-icon educate-warning modal-check-pro information-icon-pro"></span>
+            <h2>Please Review your Enlistment Information.</h2>
+            <p>This form will not be submitted unless all required fields are filled up. The pre-enrollee assures that all data filled-up in this form is accurate. A feedback will be given along with confirmation message will also be sent to the e-mail that you have provided once the pre-registration is successful.</p>
+          </div>
+          <div class="modal-footer">
+            <button data-dismiss="modal" class="btn btn-custon-rounded-four btn-primary">Cancel</button>
+            <button
+              @click="create_enlistment"
+              :disabled="submitted"
+              class="btn btn-custon-rounded-four btn-primary"
+            >Confirm Enlistment</button>
+          </div>
         </div>
       </div>
     </div>
@@ -1673,6 +1723,7 @@ export default {
   data() {
     return {
       enlist: {
+        applicantID: "",
         surname: "",
         suffix: "",
         firstname: "",
@@ -1759,7 +1810,8 @@ export default {
         takingMedication: "",
         specialNeeds: ""
       },
-      
+
+      submitted: false,
 
       cities: [],
       countries: [],
@@ -1780,6 +1832,10 @@ export default {
   },
 
   methods: {
+    submitModal() {
+      $("#PrimaryModalalert").modal("show");
+    },
+
     load_cities() {
       axios.get(this.url_cities).then(response => {
         this.cities = response.data.cities;
@@ -1814,6 +1870,98 @@ export default {
       axios.get(this.url_programs).then(response => {
         this.programs = response.data.programs;
       });
+    },
+
+    create_enlistment(){
+      this.submitted = true;
+
+      axios.post('http://127.0.0.1:8000/student_enlistment'){
+        surname: "",
+        suffix: "",
+        firstname: "",
+        middlename: "",
+        birthDate: "",
+        birthPlace: "",
+        gender: "",
+        civilStatus: "",
+        citizenship: "",
+        religion: "",
+        permanentAddress: "",
+        permanentProvince: "",
+        permanentCity: "",
+        permanentzippostalcode: "",
+        permanentCountry: "",
+        sameAsPermanent: "",
+        boarding: "",
+        withRelative: "",
+        cityAddress: "",
+        cityProvince: "",
+        cityCity: "",
+        cityzippostalcode: "",
+        cityCountry: "",
+        email: "",
+        mobileNum: "",
+        personToContact: "",
+        personToContactRelationship: "",
+        personToContactTelNo: "",
+        personToContactMobileNo: "",
+        bloodGroup: "",
+        rh: "",
+        physicianName: "",
+        physicianContactInformation: "",
+        takingMedication: "",
+        medicationInfo: "",
+        specialNeeds: "",
+        typeOfSpecialNeeds: "",
+        othersSpecialNeeds: "",
+        positionFamily: "",
+        numBrothers: "",
+        numSisters: "",
+        fatherName: "",
+        fatherLiving: "",
+        fatherOccupation: "",
+        fatherAddress: "",
+        fatherContactNum: "",
+        motherName: "",
+        motherLiving: "",
+        motherOccupation: "",
+        motherAddress: "",
+        motherContactNum: "",
+        parentsMaritalStatus: "",
+        nameOfSpouse: "",
+        annualFamilyIncome: "",
+        preSchoolName: "",
+        preSchoolAddress: "",
+        preSchoolGraduated: "",
+        gradeSchoolName: "",
+        gradeSchoolAddress: "",
+        gradeSchoolGraduated: "",
+        highSchoolName: "",
+        highSchoolAddress: "",
+        highSchoolGraduated: "",
+        nameSHS: "",
+        addressSHS: "",
+        principalSHS: "",
+        track: "",
+        strand: "",
+        isIndigenous: "",
+        indigenousCommunity: "",
+        nameCollegeUniv: "",
+        addressCollegeUniv: "",
+        programChoiceOne: "",
+        programChoiceTwo: "",
+        programChoiceThree: "",
+        currTherapyRehabCounseling: "",
+        currTherapyRehabCounselingName: "",
+        currTherapyRehabCounselingContact: "",
+        reasonToSeekHelp: "",
+        status: "",
+        isCollege: "",
+        isSHS: "",
+        isIndigenous: "",
+        takingMedication: "",
+        specialNeeds: ""
+      }
     }
   },
 

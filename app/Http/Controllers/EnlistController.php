@@ -229,6 +229,153 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
 
     }
 
+    public function store(Request $request){
+
+
+        $enlist = new Enlist;
+        $enlist->surname = mb_strtoupper($request->surname);
+        $enlist->suffix = mb_strtoupper($request->suffix);
+        $enlist->firstname = mb_strtoupper($request->firstname);
+        $enlist->middlename = mb_strtoupper($request->middlename);
+        $name = mb_strtoupper($request->surname." ".$request->suffix.", ".$request->firstname." ".$request->middlename);
+        $enlist->birthDate = $request->birthDate;
+        $enlist->birthPlace = $request->birthPlace;
+        $enlist->gender = $request->gender;
+        $enlist->civilStatus = $request->civilStatus;
+        $enlist->citizenship = $request->citizenship;
+        $enlist->religion = $request->religion;
+
+        $enlist->permanentAddress = $request->permanentAddress;
+        $enlist->permanentProvince = $request->permanentProvince;
+        $enlist->permanentCity = $request->permanentCity;
+        $enlist->permanentzippostalcode = $request->permanentzippostalcode;
+        $enlist->permanentCountry = $request->permanentCountry;
+
+        $enlist->sameAsPermanent = $request->sameAsPermanent;
+        $enlist->boarding = $request->boarding;
+        $enlist->withRelative = $request->withRelative;
+
+        $enlist->cityAddress = "";
+        $enlist->cityProvince = "";
+        $enlist->cityCity = "";
+        $enlist->cityzippostalcode = "";
+        $enlist->cityCountry = "";
+        
+        if($request->sameAsPermanent == 0){
+            $enlist->cityAddress = $request->cityAddress;
+            $enlist->cityProvince = $request->cityProvince;
+            $enlist->cityCity = $request->cityCity;
+            $enlist->cityzippostalcode = $request->cityzippostalcode;
+            $enlist->cityCountry = $request->cityCountry;    
+        }
+
+        if($request->sameAsPermanent == 1){
+            $enlist->cityAddress = $request->permanentAddress;
+            $enlist->cityProvince = $request->permanentProvince;
+            $enlist->cityCity = $request->permanentCity;
+            $enlist->cityzippostalcode = $request->permanentzippostalcode;
+            $enlist->cityCountry = $request->permanentCountry;    
+        }
+
+        $enlist->email = $request->email;
+        $enlist->mobileNum = $request->mobileNum;
+
+        $enlist->personToContact = $request->personToContact;
+        $enlist->personToContactRelationship = $request->personToContactRelationship;
+        $enlist->personToContactTelNo = $request->personToContactTelNo;
+        $enlist->personToContactMobileNo = $request->personToContactMobileNo;
+
+        $enlist->bloodGroup = $request->bloodGroup;
+        $enlist->rh = $request->rh;
+        $enlist->physicianName = $request->physicianName;
+        $enlist->physicianContactInformation = $request->physicianContactInformation;
+        $enlist->takingMedication = $request->takingMedication;
+        $enlist->medicationInfo = $request->medicationInfo;
+        $enlist->specialNeeds = $request->specialNeeds;
+        $enlist->typeOfSpecialNeeds = $request->typeOfSpecialNeeds;
+        $enlist->othersSpecialNeeds = $request->othersSpecialNeeds;
+
+        $enlist->positionFamily = $request->positionFamily;
+        $enlist->numBrothers = $request->numBrothers;
+        $enlist->numSisters = $request->numSisters;
+
+        $enlist->fatherName = $request->fatherName;
+        $enlist->fatherliving = $request->fatherLiving;
+        $enlist->fatherOccupation = $request->fatherOccupation;
+        $enlist->fatherAddress = $request->fatherAddress;
+        $enlist->fatherContactNum = $request->fatherContactNum;
+
+        $enlist->motherName = $request->motherName;
+        $enlist->motherliving = $request->motherLiving;
+        $enlist->motherOccupation = $request->motherOccupation;
+        $enlist->motherAddress = $request->motherAddress;
+        $enlist->motherContactNum = $request->motherContactNum;
+
+        $enlist->parentsMaritalStatus = $request->parentsMaritalStatus;
+        $enlist->nameOfSpouse = $request->nameOfSpouse;
+
+        $enlist->preSchoolName = $request->preSchoolName;
+        $enlist->preSchoolAddress = $request->preSchoolAddress;
+        $enlist->preSchoolGraduated = $request->preSchoolGraduated;
+
+        $enlist->gradeSchoolName = $request->gradeSchoolName;
+        $enlist->gradeSchoolAddress = $request->gradeSchoolAddress;
+        $enlist->gradeSchoolGraduated = $request->gradeSchoolGraduated;
+
+        $enlist->highSchoolName = $request->highSchoolName;
+        $enlist->highSchoolAddress = $request->highSchoolAddress;
+        $enlist->highSchoolGraduated = $request->highSchoolGraduated;
+
+        $enlist->nameSHS = $request->nameSHS;
+        $enlist->addressSHS = $request->addressSHS;
+        $enlist->track = $request->track;
+        $enlist->strand = $request->strand;
+        $enlist->isIndigenous = $request->isIndigenous;
+        $enlist->indigenousCommunity = $request->indigenousCommunity;
+        $enlist->nameCollegeUniv = $request->nameCollegeUniv;
+        $enlist->addressCollegeUniv = $request->addressCollegeUniv;
+        $enlist->principalSHS = $request->principalSHS;
+        $enlist->programChoiceOne = $request->programChoiceOne;
+        $enlist->programChoiceTwo = $request->programChoiceTwo;
+        $enlist->programChoiceThree = $request->programChoiceThree;
+        $enlist->fatherName = $request->fatherName;
+        $enlist->fatherOccupation = $request->fatherOccupation;
+        $enlist->motherName = $request->motherName;
+        $enlist->motherOccupation = $request->motherOccupation;
+        $enlist->annualFamilyIncome = $request->annualFamilyIncome;
+        $choice1 = $request->programChoiceOne;
+        $choice2 = $request->programChoiceTwo;
+        $choice3 = $request->programChoiceThree;
+
+        $enlist->currTherapyRehabCounseling = $request->currTherapyRehabCounseling;
+        $enlist->currTherapyRehabCounselingName = $request->currTherapyRehabCounselingName;
+        $enlist->currTherapyRehabCounselingContact = $request->currTherapyRehabCounselingContact;
+        $enlist->reasonToSeekHelp = $request->reasonToSeekHelp;
+        $choices = array();
+        array_push($choices, $choice1);
+        if($choice2 != ""){
+            array_push($choices, $choice2);
+        }
+        if($choice3 != ""){
+            array_push($choices, $choice3);
+        }
+       // $curr_content = CurricontentController::loadFirstSemSubjects($choice1, $choice2, $choice3);
+ /*       $to_name = 'MIS';
+        $to_email = $enlist->email;
+$data = array('name'=>"Sam Jose", "body" => "Test mail");
+    
+Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
+    $message->to($to_email, $to_name)
+            ->subject('Artisans Web Testing Mail');
+    $message->from('clbandoquillo@gmail.com','Artisans Web');
+});*/   $enlist->save();
+        if($enlist->save()){
+            \Mail::to($request->email)->send(new SendCourse($name, $choices, $choice1, $choice2, $choice3));
+        }
+        return Redirect::back()->with('success', "Hi ($name). You are now enlisted! Please check your e-mail for further instructions. Thank you.");
+
+    }
+
     public function all()
     {
         $enlist = Enlist::all();

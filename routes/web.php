@@ -11,6 +11,7 @@
 |
 */
 
+Route::resource('/student_enlistment', 'EnlistController');
 //JSON Lists
 Route::get('/citieslist','CityController@cities');
 Route::get('/countrieslist','CountriesController@countries');

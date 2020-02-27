@@ -1807,1857 +1807,9 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/enlist/EnlistComponent.vue?vue&type=script&lang=js& ***!
   \****************************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    var _enlist;
-
-    return {
-      enlist: (_enlist = {
-        surname: "",
-        suffix: "",
-        firstname: "",
-        middlename: "",
-        birthDate: "",
-        birthPlace: "",
-        gender: "",
-        civilStatus: "",
-        citizenship: "",
-        religion: "",
-        permanentAddress: "",
-        permanentProvince: "",
-        permanentCity: "",
-        permanentzippostalcode: "",
-        permanentCountry: "",
-        sameAsPermanent: "",
-        boarding: "",
-        withRelative: "",
-        cityAddress: "",
-        cityProvince: "",
-        cityCity: "",
-        cityzippostalcode: "",
-        cityCountry: "",
-        email: "",
-        mobileNum: "",
-        personToContact: "",
-        personToContactRelationship: "",
-        personToContactTelNo: "",
-        personToContactMobileNo: "",
-        bloodGroup: "",
-        rh: "",
-        physicianName: "",
-        physicianContactInformation: "",
-        takingMedication: "",
-        medicationInfo: "",
-        specialNeeds: "",
-        typeOfSpecialNeeds: "",
-        othersSpecialNeeds: "",
-        positionFamily: "",
-        numBrothers: "",
-        numSisters: "",
-        fatherName: "",
-        fatherLiving: "",
-        fatherOccupation: "",
-        fatherAddress: "",
-        fatherContactNum: "",
-        motherName: "",
-        motherLiving: "",
-        motherOccupation: "",
-        motherAddress: "",
-        motherContactNum: "",
-        parentsMaritalStatus: "",
-        nameOfSpouse: "",
-        annualFamilyIncome: "",
-        preSchoolName: "",
-        preSchoolAddress: "",
-        preSchoolGraduated: "",
-        gradeSchoolName: "",
-        gradeSchoolAddress: "",
-        gradeSchoolGraduated: "",
-        highSchoolName: "",
-        highSchoolAddress: "",
-        highSchoolGraduated: "",
-        nameSHS: "",
-        addressSHS: "",
-        principalSHS: "",
-        track: "",
-        strand: "",
-        isIndigenous: "",
-        indigenousCommunity: "",
-        nameCollegeUniv: "",
-        addressCollegeUniv: "",
-        programChoiceOne: "",
-        programChoiceTwo: "",
-        programChoiceThree: "",
-        currTherapyRehabCounseling: "",
-        currTherapyRehabCounselingName: "",
-        currTherapyRehabCounselingContact: "",
-        reasonToSeekHelp: "",
-        status: "",
-        isCollege: "",
-        isSHS: ""
-      }, _defineProperty(_enlist, "isIndigenous", ""), _defineProperty(_enlist, "takingMedication", ""), _defineProperty(_enlist, "specialNeeds", ""), _enlist),
-      cities: [],
-      countries: [],
-      nationalities: [],
-      provinces: [],
-      religions: [],
-      schools: [],
-      programs: [],
-      url_cities: "http://127.0.0.1:8000/citieslist",
-      url_countries: "http://127.0.0.1:8000/countrieslist",
-      url_nationalities: "http://127.0.0.1:8000/nationalitylist",
-      url_provinces: "http://127.0.0.1:8000/provinceslist",
-      url_religions: "http://127.0.0.1:8000/religionlist",
-      url_schools: "http://127.0.0.1:8000/schoolslist",
-      url_programs: "http://127.0.0.1:8000/programslist"
-    };
-  },
-  methods: {
-    load_cities: function load_cities() {
-      var _this = this;
-
-      axios.get(this.url_cities).then(function (response) {
-        _this.cities = response.data.cities;
-      });
-    },
-    load_countries: function load_countries() {
-      var _this2 = this;
-
-      axios.get(this.url_countries).then(function (response) {
-        _this2.countries = response.data.countries;
-      });
-    },
-    load_nationalities: function load_nationalities() {
-      var _this3 = this;
-
-      axios.get(this.url_nationalities).then(function (response) {
-        _this3.nationalities = response.data.nationalities;
-      });
-    },
-    load_provinces: function load_provinces() {
-      var _this4 = this;
-
-      axios.get(this.url_provinces).then(function (response) {
-        _this4.provinces = response.data.provinces;
-      });
-    },
-    load_religions: function load_religions() {
-      var _this5 = this;
-
-      axios.get(this.url_religions).then(function (response) {
-        _this5.religions = response.data.religions;
-      });
-    },
-    load_schools: function load_schools() {
-      var _this6 = this;
-
-      axios.get(this.url_schools).then(function (response) {
-        _this6.schools = response.data.schools;
-      });
-    },
-    load_programs: function load_programs() {
-      var _this7 = this;
-
-      axios.get(this.url_programs).then(function (response) {
-        _this7.programs = response.data.programs;
-      });
-    }
-  },
-  computed: {},
-  watch: {
-    highSchoolAddress: {
-      handler: function handler(val) {
-        console.log("changed!", val);
-      },
-      deep: true
-    }
-  },
-  mounted: function mounted() {
-    this.load_cities();
-    this.load_countries();
-    this.load_nationalities();
-    this.load_provinces();
-    this.load_religions();
-    this.load_schools();
-    this.load_programs();
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Git\\AdDU_Enlistment\\resources\\js\\views\\enlist\\EnlistComponent.vue: Unexpected token, expected \";\" (1878:60)\n\n\u001b[0m \u001b[90m 1876 | \u001b[39m      \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msubmitted \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 1877 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 1878 | \u001b[39m      axios\u001b[33m.\u001b[39mpost(\u001b[32m'http://127.0.0.1:8000/student_enlistment'\u001b[39m){\u001b[0m\n\u001b[0m \u001b[90m      | \u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 1879 | \u001b[39m        surname\u001b[33m:\u001b[39m \u001b[32m\"\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 1880 | \u001b[39m        suffix\u001b[33m:\u001b[39m \u001b[32m\"\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 1881 | \u001b[39m        firstname\u001b[33m:\u001b[39m \u001b[32m\"\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n    at Parser.raise (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:7013:17)\n    at Parser.unexpected (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:8384:16)\n    at Parser.semicolon (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:8366:40)\n    at Parser.parseExpressionStatement (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:11193:10)\n    at Parser.parseStatementContent (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10792:19)\n    at Parser.parseStatement (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10658:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:11234:25)\n    at Parser.parseBlockBody (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:11221:10)\n    at Parser.parseBlock (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:11205:10)\n    at Parser.parseFunctionBody (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10220:24)\n    at Parser.parseFunctionBodyAndFinish (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10190:10)\n    at Parser.parseMethod (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10160:10)\n    at Parser.parseObjectMethod (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10077:19)\n    at Parser.parseObjPropValue (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10119:23)\n    at Parser.parseObjectMember (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10043:10)\n    at Parser.parseObj (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9963:25)\n    at Parser.parseExprAtom (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9582:28)\n    at Parser.parseExprSubscripts (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Parser.parseMaybeUnary (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Parser.parseExprOps (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Parser.parseMaybeConditional (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Parser.parseMaybeAssign (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Parser.parseObjectProperty (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10094:101)\n    at Parser.parseObjPropValue (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10119:101)\n    at Parser.parseObjectMember (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10043:10)\n    at Parser.parseObj (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9963:25)\n    at Parser.parseExprAtom (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9582:28)\n    at Parser.parseExprSubscripts (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Parser.parseMaybeUnary (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Parser.parseExprOps (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Parser.parseMaybeConditional (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Parser.parseMaybeAssign (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Parser.parseExportDefaultExpression (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:11836:24)\n    at Parser.parseExport (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:11738:31)\n    at Parser.parseStatementContent (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10762:27)\n    at Parser.parseStatement (C:\\Git\\AdDU_Enlistment\\node_modules\\@babel\\parser\\lib\\index.js:10658:17)");
 
 /***/ }),
 
@@ -73823,7 +71975,129 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container-fluid" }, [
     _c("div", { staticClass: "row" }, [
-      _vm._m(0),
+      _c("div", { staticClass: "col-xs-3" }, [
+        _c(
+          "div",
+          {
+            staticClass: "nav flex-column nav-pills",
+            attrs: {
+              id: "v-pills-tab",
+              role: "tablist",
+              "aria-orientation": "vertical"
+            }
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass: "nav-link active",
+                attrs: {
+                  id: "v-pills-personalinfo-tab",
+                  "data-toggle": "pill",
+                  href: "#v-pills-personalinfo",
+                  role: "tab",
+                  "aria-controls": "v-pills-personalinfo",
+                  "aria-selected": "true"
+                }
+              },
+              [_vm._v("Basic Personal Information")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "nav-link",
+                attrs: {
+                  id: "v-pills-addressAndContact-tab",
+                  "data-toggle": "pill",
+                  href: "#v-pills-addressAndContact",
+                  role: "tab",
+                  "aria-controls": "v-pills-addressAndContact",
+                  "aria-selected": "false"
+                }
+              },
+              [_vm._v("Address and Contact Information")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "nav-link",
+                attrs: {
+                  id: "v-pills-medicalProfile-tab",
+                  "data-toggle": "pill",
+                  href: "#v-pills-medicalProfile",
+                  role: "tab",
+                  "aria-controls": "v-pills-medicalProfile",
+                  "aria-selected": "false"
+                }
+              },
+              [_vm._v("Health / Medical profile")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "nav-link",
+                attrs: {
+                  id: "v-pills-familyInfo-tab",
+                  "data-toggle": "pill",
+                  href: "#v-pills-familyInfo",
+                  role: "tab",
+                  "aria-controls": "v-pills-familyInfo",
+                  "aria-selected": "false"
+                }
+              },
+              [_vm._v("Family Information")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "nav-link",
+                attrs: {
+                  id: "v-pills-educationalBackground-tab",
+                  "data-toggle": "pill",
+                  href: "#v-pills-educationalBackground",
+                  role: "tab",
+                  "aria-controls": "v-pills-educationalBackground",
+                  "aria-selected": "false"
+                }
+              },
+              [_vm._v("Educational Background")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "nav-link",
+                attrs: {
+                  id: "v-pills-psychologicalProfile-tab",
+                  "data-toggle": "pill",
+                  href: "#v-pills-psychologicalProfile",
+                  role: "tab",
+                  "aria-controls": "v-pills-psychologicalProfile",
+                  "aria-selected": "false"
+                }
+              },
+              [_vm._v("Psychological Profile")]
+            ),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary btn-lg btn-block",
+                on: { click: _vm.submitModal }
+              },
+              [_vm._v("Submit Enlistment")]
+            ),
+            _vm._v(" "),
+            _c("br")
+          ]
+        )
+      ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-xs-9 col-9" }, [
         _c(
@@ -73865,7 +72139,7 @@ var render = function() {
                                   "div",
                                   {
                                     staticClass:
-                                      "col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                                      "col-lg-9 col-md-9 col-sm-9 col-xs-12"
                                   },
                                   [
                                     _c("div", { staticClass: "form-group" }, [
@@ -73905,9 +72179,50 @@ var render = function() {
                                   ]
                                 ),
                                 _vm._v(" "),
-                                _vm._m(1),
-                                _vm._v(" "),
-                                _vm._m(2)
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-lg-3 col-md-3 col-sm-3 col-xs-12"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", [
+                                        _vm._v("Suffix (Jr., III, IV etc.)")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.enlist.suffix,
+                                            expression: "enlist.suffix"
+                                          }
+                                        ],
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          name: "suffix",
+                                          type: "text",
+                                          placeholder: "Suffix"
+                                        },
+                                        domProps: { value: _vm.enlist.suffix },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "suffix",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ])
+                                  ]
+                                )
                               ])
                             ]
                           )
@@ -74471,19 +72786,17 @@ var render = function() {
                                             }
                                           }),
                                           _vm._v(" "),
-                                          _vm._l(_vm.countries, function(
-                                            country
+                                          _vm._l(_vm.religions, function(
+                                            religion
                                           ) {
                                             return _c(
                                               "option",
                                               {
-                                                domProps: { value: country.id }
+                                                domProps: {
+                                                  value: religion.code
+                                                }
                                               },
-                                              [
-                                                _vm._v(
-                                                  _vm._s(country.description)
-                                                )
-                                              ]
+                                              [_vm._v(_vm._s(religion.descr))]
                                             )
                                           })
                                         ],
@@ -75682,7 +73995,7 @@ var render = function() {
                         ])
                       ]),
                       _vm._v(" "),
-                      _vm._m(3),
+                      _vm._m(0),
                       _vm._v(" "),
                       _c("div", { staticClass: "form-group" }, [
                         _c("div", { staticClass: "row" }, [
@@ -76599,52 +74912,55 @@ var render = function() {
                                     "col-lg-7 col-md-7 col-sm-7 col-xs-12"
                                 },
                                 [
-                                  _c(
-                                    "div",
-                                    { staticClass: "form-select-list" },
-                                    [
-                                      _c("label", [
-                                        _vm._v("Others: (Please specify)")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("input", {
-                                        directives: [
-                                          {
-                                            name: "model",
-                                            rawName: "v-model",
-                                            value:
-                                              _vm.enlist.othersSpecialNeeds,
-                                            expression:
-                                              "enlist.othersSpecialNeeds"
-                                          }
-                                        ],
-                                        staticClass:
-                                          "form-control basic-ele-mg-t-10",
-                                        attrs: {
-                                          id: "othersSpecialNeeds",
-                                          name: "othersSpecialNeeds",
-                                          type: "text",
-                                          placeholder:
-                                            "Others: (Please specify)"
-                                        },
-                                        domProps: {
-                                          value: _vm.enlist.othersSpecialNeeds
-                                        },
-                                        on: {
-                                          input: function($event) {
-                                            if ($event.target.composing) {
-                                              return
+                                  _vm.enlist.typeOfSpecialNeeds == 3
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "form-select-list" },
+                                        [
+                                          _c("label", [
+                                            _vm._v("Others: (Please specify)")
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "model",
+                                                rawName: "v-model",
+                                                value:
+                                                  _vm.enlist.othersSpecialNeeds,
+                                                expression:
+                                                  "enlist.othersSpecialNeeds"
+                                              }
+                                            ],
+                                            staticClass:
+                                              "form-control basic-ele-mg-t-10",
+                                            attrs: {
+                                              id: "othersSpecialNeeds",
+                                              name: "othersSpecialNeeds",
+                                              type: "text",
+                                              placeholder:
+                                                "Others: (Please specify)"
+                                            },
+                                            domProps: {
+                                              value:
+                                                _vm.enlist.othersSpecialNeeds
+                                            },
+                                            on: {
+                                              input: function($event) {
+                                                if ($event.target.composing) {
+                                                  return
+                                                }
+                                                _vm.$set(
+                                                  _vm.enlist,
+                                                  "othersSpecialNeeds",
+                                                  $event.target.value
+                                                )
+                                              }
                                             }
-                                            _vm.$set(
-                                              _vm.enlist,
-                                              "othersSpecialNeeds",
-                                              $event.target.value
-                                            )
-                                          }
-                                        }
-                                      })
-                                    ]
-                                  )
+                                          })
+                                        ]
+                                      )
+                                    : _vm._e()
                                 ]
                               )
                             ])
@@ -76899,7 +75215,6 @@ var render = function() {
                                   staticClass: "pull-left",
                                   attrs: {
                                     type: "checkbox",
-                                    onclick: "javascript:checkFather();",
                                     id: "fatherLiving",
                                     value: "1",
                                     name: "fatherLiving"
@@ -77181,7 +75496,6 @@ var render = function() {
                                   staticClass: "pull-left",
                                   attrs: {
                                     type: "checkbox",
-                                    onclick: "javascript:checkMother();",
                                     id: "motherLiving",
                                     value: "1",
                                     name: "motherLiving"
@@ -78272,9 +76586,10 @@ var render = function() {
                                               {
                                                 name: "model",
                                                 rawName: "v-model",
-                                                value: _vm.enlist.preSchoolName,
+                                                value:
+                                                  _vm.enlist.nameCollegeUniv,
                                                 expression:
-                                                  "enlist.preSchoolName"
+                                                  "enlist.nameCollegeUniv"
                                               }
                                             ],
                                             staticClass: "form-control",
@@ -78303,7 +76618,7 @@ var render = function() {
                                                   })
                                                 _vm.$set(
                                                   _vm.enlist,
-                                                  "preSchoolName",
+                                                  "nameCollegeUniv",
                                                   $event.target.multiple
                                                     ? $$selectedVal
                                                     : $$selectedVal[0]
@@ -78494,39 +76809,79 @@ var render = function() {
                                           )
                                         ]),
                                         _vm._v(" "),
-                                        _c("input", {
-                                          directives: [
-                                            {
-                                              name: "model",
-                                              rawName: "v-model",
-                                              value: _vm.enlist.nameSHS,
-                                              expression: "enlist.nameSHS"
-                                            }
-                                          ],
-                                          staticClass: "form-control",
-                                          attrs: {
-                                            name: "nameSHS",
-                                            id: "nameSHS",
-                                            type: "text",
-                                            placeholder:
-                                              "Name of Senior High School"
-                                          },
-                                          domProps: {
-                                            value: _vm.enlist.nameSHS
-                                          },
-                                          on: {
-                                            input: function($event) {
-                                              if ($event.target.composing) {
-                                                return
+                                        _c(
+                                          "select",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "model",
+                                                rawName: "v-model",
+                                                value: _vm.enlist.nameSHS,
+                                                expression: "enlist.nameSHS"
                                               }
-                                              _vm.$set(
-                                                _vm.enlist,
-                                                "nameSHS",
-                                                $event.target.value
-                                              )
+                                            ],
+                                            staticClass: "form-control",
+                                            attrs: {
+                                              "data-placeholder":
+                                                "Choose a School...",
+                                              id: "nameSHS",
+                                              name: "nameSHS",
+                                              tabindex: "-1"
+                                            },
+                                            on: {
+                                              change: function($event) {
+                                                var $$selectedVal = Array.prototype.filter
+                                                  .call(
+                                                    $event.target.options,
+                                                    function(o) {
+                                                      return o.selected
+                                                    }
+                                                  )
+                                                  .map(function(o) {
+                                                    var val =
+                                                      "_value" in o
+                                                        ? o._value
+                                                        : o.value
+                                                    return val
+                                                  })
+                                                _vm.$set(
+                                                  _vm.enlist,
+                                                  "nameSHS",
+                                                  $event.target.multiple
+                                                    ? $$selectedVal
+                                                    : $$selectedVal[0]
+                                                )
+                                              }
                                             }
-                                          }
-                                        })
+                                          },
+                                          [
+                                            _c("option", {
+                                              attrs: {
+                                                disabled: "",
+                                                selected: ""
+                                              }
+                                            }),
+                                            _vm._v(" "),
+                                            _vm._l(_vm.schools, function(
+                                              school
+                                            ) {
+                                              return _c(
+                                                "option",
+                                                {
+                                                  domProps: {
+                                                    value: school.SchoolId
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(school.SchoolName)
+                                                  )
+                                                ]
+                                              )
+                                            })
+                                          ],
+                                          2
+                                        )
                                       ]
                                     )
                                   ]
@@ -78654,7 +77009,7 @@ var render = function() {
                                   ]
                                 ),
                                 _vm._v(" "),
-                                _vm._m(4)
+                                _vm._m(1)
                               ])
                             ]
                           )
@@ -78848,108 +77203,124 @@ var render = function() {
                                                 }
                                               }),
                                               _vm._v(" "),
-                                              _c(
-                                                "option",
-                                                {
-                                                  attrs: {
-                                                    value: "HUMSS",
-                                                    id: "HUMSS"
-                                                  }
-                                                },
-                                                [_vm._v("HUMSS")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "option",
-                                                {
-                                                  attrs: {
-                                                    value: "STEM",
-                                                    id: "STEM"
-                                                  }
-                                                },
-                                                [_vm._v("STEM")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "option",
-                                                {
-                                                  attrs: {
-                                                    value: "ABM",
-                                                    id: "ABM"
-                                                  }
-                                                },
-                                                [_vm._v("ABM")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "option",
-                                                {
-                                                  attrs: {
-                                                    value: "GAS",
-                                                    id: "GAS"
-                                                  }
-                                                },
-                                                [_vm._v("GAS")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "option",
-                                                {
-                                                  attrs: {
-                                                    value:
-                                                      "Agri-Fishery Arts Strand",
-                                                    id: "Agri"
-                                                  }
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    "Agri-Fishery Arts Strand"
+                                              _vm.enlist.track == "ACADEMIC"
+                                                ? _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "HUMSS",
+                                                        id: "HUMSS"
+                                                      }
+                                                    },
+                                                    [_vm._v("HUMSS")]
                                                   )
-                                                ]
-                                              ),
+                                                : _vm._e(),
                                               _vm._v(" "),
-                                              _c(
-                                                "option",
-                                                {
-                                                  attrs: {
-                                                    value:
-                                                      "Home Economics Strand",
-                                                    id: "Home"
-                                                  }
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    "Home Economics Strand"
+                                              _vm.enlist.track == "ACADEMIC"
+                                                ? _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "STEM",
+                                                        id: "STEM"
+                                                      }
+                                                    },
+                                                    [_vm._v("STEM")]
                                                   )
-                                                ]
-                                              ),
+                                                : _vm._e(),
                                               _vm._v(" "),
-                                              _c(
-                                                "option",
-                                                {
-                                                  attrs: {
-                                                    value:
-                                                      "Industrial Arts Strand",
-                                                    id: "Industrial"
-                                                  }
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    "Industrial Arts Strand"
+                                              _vm.enlist.track == "ACADEMIC"
+                                                ? _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "ABM",
+                                                        id: "ABM"
+                                                      }
+                                                    },
+                                                    [_vm._v("ABM")]
                                                   )
-                                                ]
-                                              ),
+                                                : _vm._e(),
                                               _vm._v(" "),
-                                              _c(
-                                                "option",
-                                                {
-                                                  attrs: {
-                                                    value: "ICT Strand",
-                                                    id: "ICT"
-                                                  }
-                                                },
-                                                [_vm._v("ICT Strand")]
-                                              )
+                                              _vm.enlist.track == "ACADEMIC"
+                                                ? _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "GAS",
+                                                        id: "GAS"
+                                                      }
+                                                    },
+                                                    [_vm._v("GAS")]
+                                                  )
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              _vm.enlist.track == "TVL"
+                                                ? _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value:
+                                                          "Agri-Fishery Arts Strand",
+                                                        id: "Agri"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "Agri-Fishery Arts Strand"
+                                                      )
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              _vm.enlist.track == "TVL"
+                                                ? _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value:
+                                                          "Home Economics Strand",
+                                                        id: "Home"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "Home Economics Strand"
+                                                      )
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              _vm.enlist.track == "TVL"
+                                                ? _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value:
+                                                          "Industrial Arts Strand",
+                                                        id: "Industrial"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "Industrial Arts Strand"
+                                                      )
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              _vm.enlist.track == "TVL"
+                                                ? _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "ICT Strand",
+                                                        id: "ICT"
+                                                      }
+                                                    },
+                                                    [_vm._v("ICT Strand")]
+                                                  )
+                                                : _vm._e()
                                             ]
                                           )
                                         ]
@@ -79374,7 +77745,6 @@ var render = function() {
                                       type: "radio",
                                       value: "1",
                                       name: "currTherapyRehabCounseling",
-                                      onclick: "javascript:yesnoCounseling();",
                                       id: "yesCheckCounseling"
                                     },
                                     domProps: {
@@ -79413,7 +77783,6 @@ var render = function() {
                                       type: "radio",
                                       value: "0",
                                       name: "currTherapyRehabCounseling",
-                                      onclick: "javascript:yesnoCounseling();",
                                       id: "noCheckCounseling"
                                     },
                                     domProps: {
@@ -79436,128 +77805,158 @@ var render = function() {
                                 ])
                               ]),
                               _vm._v(" "),
-                              _c("div", { staticClass: "form-select-list" }, [
-                                _c("label", [_vm._v("If yes, with whom:")]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value:
-                                        _vm.enlist
-                                          .currTherapyRehabCounselingName,
-                                      expression:
-                                        "enlist.currTherapyRehabCounselingName"
-                                    }
-                                  ],
-                                  staticClass: "form-control basic-ele-mg-t-10",
-                                  attrs: {
-                                    id: "currTherapyRehabCounselingName",
-                                    name: "currTherapyRehabCounselingName",
-                                    type: "text",
-                                    placeholder: ""
-                                  },
-                                  domProps: {
-                                    value:
-                                      _vm.enlist.currTherapyRehabCounselingName
-                                  },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.enlist,
-                                        "currTherapyRehabCounselingName",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "form-select-list" }, [
-                                _c("label", [_vm._v("Contact Information")]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value:
-                                        _vm.enlist
-                                          .currTherapyRehabCounselingContact,
-                                      expression:
-                                        "enlist.currTherapyRehabCounselingContact"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    name: "currTherapyRehabCounselingContact",
-                                    id: "currTherapyRehabCounselingContact",
-                                    type: "tel",
-                                    placeholder: "Mobile no.",
-                                    "data-mask": "+63 999-999-9999"
-                                  },
-                                  domProps: {
-                                    value:
-                                      _vm.enlist
-                                        .currTherapyRehabCounselingContact
-                                  },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.enlist,
-                                        "currTherapyRehabCounselingContact",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "form-select-list" }, [
-                                _c("label", [
-                                  _vm._v(
-                                    "Briefly describe your reason for seeking help:"
+                              _vm.enlist.currTherapyRehabCounseling == 1
+                                ? _c(
+                                    "div",
+                                    { staticClass: "form-select-list" },
+                                    [
+                                      _c("label", [
+                                        _vm._v("If yes, with whom:")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value:
+                                              _vm.enlist
+                                                .currTherapyRehabCounselingName,
+                                            expression:
+                                              "enlist.currTherapyRehabCounselingName"
+                                          }
+                                        ],
+                                        staticClass:
+                                          "form-control basic-ele-mg-t-10",
+                                        attrs: {
+                                          id: "currTherapyRehabCounselingName",
+                                          name:
+                                            "currTherapyRehabCounselingName",
+                                          type: "text",
+                                          placeholder: ""
+                                        },
+                                        domProps: {
+                                          value:
+                                            _vm.enlist
+                                              .currTherapyRehabCounselingName
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "currTherapyRehabCounselingName",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ]
                                   )
-                                ]),
-                                _vm._v(" "),
-                                _c("textarea", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.enlist.reasonToSeekHelp,
-                                      expression: "enlist.reasonToSeekHelp"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    id: "reasonToSeekHelp",
-                                    name: "reasonToSeekHelp"
-                                  },
-                                  domProps: {
-                                    value: _vm.enlist.reasonToSeekHelp
-                                  },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.enlist,
-                                        "reasonToSeekHelp",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                })
-                              ])
+                                : _vm._e(),
+                              _vm._v(" "),
+                              _vm.enlist.currTherapyRehabCounseling == 1
+                                ? _c(
+                                    "div",
+                                    { staticClass: "form-select-list" },
+                                    [
+                                      _c("label", [
+                                        _vm._v("Contact Information")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value:
+                                              _vm.enlist
+                                                .currTherapyRehabCounselingContact,
+                                            expression:
+                                              "enlist.currTherapyRehabCounselingContact"
+                                          }
+                                        ],
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          name:
+                                            "currTherapyRehabCounselingContact",
+                                          id:
+                                            "currTherapyRehabCounselingContact",
+                                          type: "tel",
+                                          placeholder: "Mobile no.",
+                                          "data-mask": "+63 999-999-9999"
+                                        },
+                                        domProps: {
+                                          value:
+                                            _vm.enlist
+                                              .currTherapyRehabCounselingContact
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "currTherapyRehabCounselingContact",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ]
+                                  )
+                                : _vm._e(),
+                              _vm._v(" "),
+                              _vm.enlist.currTherapyRehabCounseling == 1
+                                ? _c(
+                                    "div",
+                                    { staticClass: "form-select-list" },
+                                    [
+                                      _c("label", [
+                                        _vm._v(
+                                          "Briefly describe your reason for seeking help:"
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("textarea", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.enlist.reasonToSeekHelp,
+                                            expression:
+                                              "enlist.reasonToSeekHelp"
+                                          }
+                                        ],
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          id: "reasonToSeekHelp",
+                                          name: "reasonToSeekHelp"
+                                        },
+                                        domProps: {
+                                          value: _vm.enlist.reasonToSeekHelp
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.enlist,
+                                              "reasonToSeekHelp",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("br")
+                                    ]
+                                  )
+                                : _vm._e()
                             ]
                           )
                         ])
@@ -79568,178 +77967,52 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "tab-pane fade",
-                attrs: {
-                  id: "v-pills-preinterview",
-                  role: "tabpanel",
-                  "aria-labelledby": "v-pills-preinterview-tab"
-                }
-              },
-              [_vm._v("Pre-Interview Questions")]
-            )
+            _vm._m(2)
           ]
         )
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal modal-edu-general default-popup-PrimaryModal fade",
+        attrs: { id: "PrimaryModalalert", role: "dialog" }
+      },
+      [
+        _c("div", { staticClass: "modal-dialog" }, [
+          _c("div", { staticClass: "modal-content" }, [
+            _vm._m(3),
+            _vm._v(" "),
+            _vm._m(4),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-custon-rounded-four btn-primary",
+                  attrs: { "data-dismiss": "modal" }
+                },
+                [_vm._v("Cancel")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-custon-rounded-four btn-primary",
+                  attrs: { disabled: _vm.submitted },
+                  on: { click: _vm.create_enlistment }
+                },
+                [_vm._v("Confirm Enlistment")]
+              )
+            ])
+          ])
+        ])
+      ]
+    )
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-xs-3" }, [
-      _c(
-        "div",
-        {
-          staticClass: "nav flex-column nav-pills",
-          attrs: {
-            id: "v-pills-tab",
-            role: "tablist",
-            "aria-orientation": "vertical"
-          }
-        },
-        [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link active",
-              attrs: {
-                id: "v-pills-personalinfo-tab",
-                "data-toggle": "pill",
-                href: "#v-pills-personalinfo",
-                role: "tab",
-                "aria-controls": "v-pills-personalinfo",
-                "aria-selected": "true"
-              }
-            },
-            [_vm._v("Basic Personal Information")]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
-              attrs: {
-                id: "v-pills-addressAndContact-tab",
-                "data-toggle": "pill",
-                href: "#v-pills-addressAndContact",
-                role: "tab",
-                "aria-controls": "v-pills-addressAndContact",
-                "aria-selected": "false"
-              }
-            },
-            [_vm._v("Address and Contact Information")]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
-              attrs: {
-                id: "v-pills-medicalProfile-tab",
-                "data-toggle": "pill",
-                href: "#v-pills-medicalProfile",
-                role: "tab",
-                "aria-controls": "v-pills-medicalProfile",
-                "aria-selected": "false"
-              }
-            },
-            [_vm._v("Health / Medical profile")]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
-              attrs: {
-                id: "v-pills-familyInfo-tab",
-                "data-toggle": "pill",
-                href: "#v-pills-familyInfo",
-                role: "tab",
-                "aria-controls": "v-pills-familyInfo",
-                "aria-selected": "false"
-              }
-            },
-            [_vm._v("Family Information")]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
-              attrs: {
-                id: "v-pills-educationalBackground-tab",
-                "data-toggle": "pill",
-                href: "#v-pills-educationalBackground",
-                role: "tab",
-                "aria-controls": "v-pills-educationalBackground",
-                "aria-selected": "false"
-              }
-            },
-            [_vm._v("Educational Background")]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
-              attrs: {
-                id: "v-pills-psychologicalProfile-tab",
-                "data-toggle": "pill",
-                href: "#v-pills-psychologicalProfile",
-                role: "tab",
-                "aria-controls": "v-pills-psychologicalProfile",
-                "aria-selected": "false"
-              }
-            },
-            [_vm._v("Psychological Profile")]
-          )
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" }, [
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", [_vm._v("Suffix (Jr., III, IV etc.)")]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: { name: "suffix", type: "text", placeholder: "Suffix" }
-        })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-3 col-xs-12" }, [
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", [_vm._v("Applicant Number")]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: {
-            name: "suffix",
-            type: "text",
-            placeholder: "Applicant Number"
-          }
-        }),
-        _vm._v(" "),
-        _c("b", { staticClass: "text-danger" }, [
-          _vm._v("(The number indicated on your Notice of Acceptance letter)")
-        ])
-      ])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -79759,6 +78032,62 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" }, [
       _c("div", { staticClass: "form-select-list" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "tab-pane fade",
+        attrs: {
+          id: "v-pills-review",
+          role: "tabpanel",
+          "aria-labelledby": "v-pills-review-tab"
+        }
+      },
+      [
+        _c("ul", { staticClass: "list-group list-group-horizontal" }, [
+          _c("li", { staticClass: "list-group-item" }, [_vm._v("Firstname")]),
+          _vm._v(" "),
+          _c("li", { staticClass: "list-group-item" }, [
+            _vm._v("Dapibus ac facilisis in")
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-close-area modal-close-df" }, [
+      _c(
+        "a",
+        { staticClass: "close", attrs: { "data-dismiss": "modal", href: "#" } },
+        [_c("i", { staticClass: "fa fa-close" })]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-body" }, [
+      _c("span", {
+        staticClass:
+          "educate-icon educate-warning modal-check-pro information-icon-pro"
+      }),
+      _vm._v(" "),
+      _c("h2", [_vm._v("Please Review your Enlistment Information.")]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "This form will not be submitted unless all required fields are filled up. The pre-enrollee assures that all data filled-up in this form is accurate. A feedback will be given along with confirmation message will also be sent to the e-mail that you have provided once the pre-registration is successful."
+        )
+      ])
     ])
   }
 ]

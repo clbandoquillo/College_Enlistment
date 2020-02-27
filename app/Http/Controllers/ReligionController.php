@@ -8,7 +8,7 @@ class ReligionController extends Controller
 {
     //
     public function religions(){
-        $religions = DB::select(DB::raw("SELECT * FROM [Enlistment].[dbo].[religion] order by DESCRIPTION asc;"));
+        $religions = DB::select(DB::raw("SELECT distinct r.description as descr, r.code code FROM [Enlistment].[dbo].[religion] r where code != '' and description != '' order by DESCRIPTION asc;"));
         return response()->json([
             'religions'=>$religions
         ], 200);
