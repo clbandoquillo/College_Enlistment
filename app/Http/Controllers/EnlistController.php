@@ -367,22 +367,21 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
             'firstname' => $firstname,
             'middlename' => $middlename,
             'birthDate' => $birthDate,
-           /* 'birthDate' => $request->birthDate,
             'birthPlace' => $request->birthPlace,
             'gender' => $request->gender,
             'civilStatus' => $request->civilStatus,
             'citizenship' => $request->citizenship,
             'religion' => $request->religion,
 
-            'permanentAddress' = $request->permanentAddress;
-            'permanentProvince' = $request->permanentProvince;
-            'permanentCity' = $request->permanentCity;
-            'permanentzippostalcode' = $request->permanentzippostalcode;
-            'permanentCountry' = $request->permanentCountry;
+            'permanentAddress' => $request->permanentAddress,
+            'permanentProvince' => $request->permanentProvince,
+            'permanentCity' => $request->permanentCity,
+            'permanentzippostalcode' => $request->permanentzippostalcode,
+            'permanentCountry' => $request->permanentCountry,
 
-            $enlist->sameAsPermanent = $request->sameAsPermanent;
-            $enlist->boarding = $request->boarding;
-            $enlist->withRelative = $request->withRelative;*/
+            'sameAsPermanent' => $request->sameAsPermanent,
+            'boarding' => $request->boarding,
+            'withRelative' => $request->withRelative
         ]);
         
         $student_enlistments->save();

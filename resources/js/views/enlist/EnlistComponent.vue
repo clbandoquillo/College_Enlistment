@@ -1887,7 +1887,7 @@ export default {
           firstname: this.enlist.firstname,
           middlename: this.enlist.middlename,
           birthDate: this.enlist.birthDate,
-          /*birthPlace: this.enlist.birthPlace,
+          birthPlace: this.enlist.birthPlace,
           gender: this.enlist.gender,
           civilStatus: this.enlist.civilStatus,
           citizenship: this.enlist.citizenship,
@@ -1968,7 +1968,7 @@ export default {
           isSHS: this.enlist.isSHS,
           isIndigenous: this.enlist.isIndigenous,
           takingMedication: this.enlist.takingMedication,
-          specialNeeds: this.enlist.specialNeeds*/
+          specialNeeds: this.enlist.specialNeeds
         })
         .then(response => {
           this.resetData();

@@ -3698,16 +3698,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
     },
     create_enlistment: function create_enlistment() {
-      var _this8 = this;
+      var _axios$post,
+          _this8 = this;
 
       this.submitted = true;
-      axios.post("http://127.0.0.1:8000/student_enlistment", {
+      axios.post("http://127.0.0.1:8000/student_enlistment", (_axios$post = {
         surname: this.enlist.surname,
         suffix: this.enlist.suffix,
         firstname: this.enlist.firstname,
         middlename: this.enlist.middlename,
-        birthDate: this.enlist.birthDate
-        /*birthPlace: this.enlist.birthPlace,
+        birthDate: this.enlist.birthDate,
+        birthPlace: this.enlist.birthPlace,
         gender: this.enlist.gender,
         civilStatus: this.enlist.civilStatus,
         citizenship: this.enlist.citizenship,
@@ -3726,71 +3727,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         cityzippostalcode: this.enlist.cityzippostalcode,
         cityCountry: this.enlist.cityCountry,
         email: this.enlist.email,
-        mobileNum: this.enlist.mobileNum,
-        mobileNum: this.enlist.mobileNum,
-        personToContactRelationship: this.enlist.personToContactRelationship,
-        personToContactTelNo: this.enlist.personToContactTelNo,
-        personToContactMobileNo: this.enlist.personToContactMobileNo,
-        bloodGroup: this.enlist.bloodGroup,
-        rh: this.enlist.rh,
-        physicianName: this.enlist.physicianName,
-        physicianContactInformation: this.enlist.physicianContactInformation,
-        takingMedication: this.enlist.takingMedication,
-        medicationInfo: this.enlist.medicationInfo,
-        specialNeeds: this.enlist.specialNeeds,
-        typeOfSpecialNeeds: this.enlist.typeOfSpecialNeeds,
-        othersSpecialNeeds: this.enlist.othersSpecialNeeds,
-        positionFamily: this.enlist.positionFamily,
-        numBrothers: this.enlist.numBrothers,
-        numSisters: this.enlist.numSisters,
-        fatherName: this.enlist.fatherName,
-        fatherLiving: this.enlist.fatherLiving,
-        fatherOccupation: this.enlist.fatherOccupation,
-        fatherAddress: this.enlist.fatherAddress,
-        fatherContactNum: this.enlist.fatherContactNum,
-        motherName: this.enlist.motherName,
-        motherLiving: this.enlist.motherLiving,
-        motherOccupation: this.enlist.motherOccupation,
-        motherAddress: this.enlist.motherAddress,
-        motherContactNum: this.enlist.motherContactNum,
-        parentsMaritalStatus: this.enlist.parentsMaritalStatus,
-        nameOfSpouse: this.enlist.nameOfSpouse,
-        annualFamilyIncome: this.enlist.annualFamilyIncome,
-        preSchoolName: this.enlist.preSchoolName,
-        preSchoolAddress: this.enlist.preSchoolAddress,
-        preSchoolGraduated: this.enlist.preSchoolGraduated,
-        gradeSchoolName: this.enlist.gradeSchoolName,
-        gradeSchoolAddress: this.enlist.gradeSchoolAddress,
-        gradeSchoolGraduated: this.enlist.gradeSchoolGraduated,
-        highSchoolName: this.enlist.highSchoolName,
-        highSchoolAddress: this.enlist.highSchoolAddress,
-        highSchoolGraduated: this.enlist.highSchoolGraduated,
-        nameSHS: this.enlist.nameSHS,
-        addressSHS: this.enlist.addressSHS,
-        principalSHS: this.enlist.principalSHS,
-        track: this.enlist.track,
-        strand: this.enlist.strand,
-        isIndigenous: this.enlist.isIndigenous,
-        indigenousCommunity: this.enlist.indigenousCommunity,
-        nameCollegeUniv: this.enlist.nameCollegeUniv,
-        addressCollegeUniv: this.enlist.addressCollegeUniv,
-        programChoiceOne: this.enlist.programChoiceOne,
-        programChoiceTwo: this.enlist.programChoiceTwo,
-        programChoiceThree: this.enlist.programChoiceThree,
-        currTherapyRehabCounseling: this.enlist.currTherapyRehabCounseling,
-        currTherapyRehabCounselingName: this.enlist
-          .currTherapyRehabCounselingName,
-        currTherapyRehabCounselingContact: this.enlist
-          .currTherapyRehabCounselingContact,
-        reasonToSeekHelp: this.enlist.reasonToSeekHelp,
-        status: this.enlist.status,
-        isCollege: this.enlist.isCollege,
-        isSHS: this.enlist.isSHS,
-        isIndigenous: this.enlist.isIndigenous,
-        takingMedication: this.enlist.takingMedication,
-        specialNeeds: this.enlist.specialNeeds*/
-
-      }).then(function (response) {
+        mobileNum: this.enlist.mobileNum
+      }, _defineProperty(_axios$post, "mobileNum", this.enlist.mobileNum), _defineProperty(_axios$post, "personToContactRelationship", this.enlist.personToContactRelationship), _defineProperty(_axios$post, "personToContactTelNo", this.enlist.personToContactTelNo), _defineProperty(_axios$post, "personToContactMobileNo", this.enlist.personToContactMobileNo), _defineProperty(_axios$post, "bloodGroup", this.enlist.bloodGroup), _defineProperty(_axios$post, "rh", this.enlist.rh), _defineProperty(_axios$post, "physicianName", this.enlist.physicianName), _defineProperty(_axios$post, "physicianContactInformation", this.enlist.physicianContactInformation), _defineProperty(_axios$post, "takingMedication", this.enlist.takingMedication), _defineProperty(_axios$post, "medicationInfo", this.enlist.medicationInfo), _defineProperty(_axios$post, "specialNeeds", this.enlist.specialNeeds), _defineProperty(_axios$post, "typeOfSpecialNeeds", this.enlist.typeOfSpecialNeeds), _defineProperty(_axios$post, "othersSpecialNeeds", this.enlist.othersSpecialNeeds), _defineProperty(_axios$post, "positionFamily", this.enlist.positionFamily), _defineProperty(_axios$post, "numBrothers", this.enlist.numBrothers), _defineProperty(_axios$post, "numSisters", this.enlist.numSisters), _defineProperty(_axios$post, "fatherName", this.enlist.fatherName), _defineProperty(_axios$post, "fatherLiving", this.enlist.fatherLiving), _defineProperty(_axios$post, "fatherOccupation", this.enlist.fatherOccupation), _defineProperty(_axios$post, "fatherAddress", this.enlist.fatherAddress), _defineProperty(_axios$post, "fatherContactNum", this.enlist.fatherContactNum), _defineProperty(_axios$post, "motherName", this.enlist.motherName), _defineProperty(_axios$post, "motherLiving", this.enlist.motherLiving), _defineProperty(_axios$post, "motherOccupation", this.enlist.motherOccupation), _defineProperty(_axios$post, "motherAddress", this.enlist.motherAddress), _defineProperty(_axios$post, "motherContactNum", this.enlist.motherContactNum), _defineProperty(_axios$post, "parentsMaritalStatus", this.enlist.parentsMaritalStatus), _defineProperty(_axios$post, "nameOfSpouse", this.enlist.nameOfSpouse), _defineProperty(_axios$post, "annualFamilyIncome", this.enlist.annualFamilyIncome), _defineProperty(_axios$post, "preSchoolName", this.enlist.preSchoolName), _defineProperty(_axios$post, "preSchoolAddress", this.enlist.preSchoolAddress), _defineProperty(_axios$post, "preSchoolGraduated", this.enlist.preSchoolGraduated), _defineProperty(_axios$post, "gradeSchoolName", this.enlist.gradeSchoolName), _defineProperty(_axios$post, "gradeSchoolAddress", this.enlist.gradeSchoolAddress), _defineProperty(_axios$post, "gradeSchoolGraduated", this.enlist.gradeSchoolGraduated), _defineProperty(_axios$post, "highSchoolName", this.enlist.highSchoolName), _defineProperty(_axios$post, "highSchoolAddress", this.enlist.highSchoolAddress), _defineProperty(_axios$post, "highSchoolGraduated", this.enlist.highSchoolGraduated), _defineProperty(_axios$post, "nameSHS", this.enlist.nameSHS), _defineProperty(_axios$post, "addressSHS", this.enlist.addressSHS), _defineProperty(_axios$post, "principalSHS", this.enlist.principalSHS), _defineProperty(_axios$post, "track", this.enlist.track), _defineProperty(_axios$post, "strand", this.enlist.strand), _defineProperty(_axios$post, "isIndigenous", this.enlist.isIndigenous), _defineProperty(_axios$post, "indigenousCommunity", this.enlist.indigenousCommunity), _defineProperty(_axios$post, "nameCollegeUniv", this.enlist.nameCollegeUniv), _defineProperty(_axios$post, "addressCollegeUniv", this.enlist.addressCollegeUniv), _defineProperty(_axios$post, "programChoiceOne", this.enlist.programChoiceOne), _defineProperty(_axios$post, "programChoiceTwo", this.enlist.programChoiceTwo), _defineProperty(_axios$post, "programChoiceThree", this.enlist.programChoiceThree), _defineProperty(_axios$post, "currTherapyRehabCounseling", this.enlist.currTherapyRehabCounseling), _defineProperty(_axios$post, "currTherapyRehabCounselingName", this.enlist.currTherapyRehabCounselingName), _defineProperty(_axios$post, "currTherapyRehabCounselingContact", this.enlist.currTherapyRehabCounselingContact), _defineProperty(_axios$post, "reasonToSeekHelp", this.enlist.reasonToSeekHelp), _defineProperty(_axios$post, "status", this.enlist.status), _defineProperty(_axios$post, "isCollege", this.enlist.isCollege), _defineProperty(_axios$post, "isSHS", this.enlist.isSHS), _defineProperty(_axios$post, "isIndigenous", this.enlist.isIndigenous), _defineProperty(_axios$post, "takingMedication", this.enlist.takingMedication), _defineProperty(_axios$post, "specialNeeds", this.enlist.specialNeeds), _axios$post)).then(function (response) {
         _this8.resetData();
 
         _this8.submitted = false;
