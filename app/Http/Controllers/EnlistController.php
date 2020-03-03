@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Carbon\Carbon;
 use App\Enlist;
 use App\Mail\SendCourse;
@@ -16,6 +17,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class EnlistController extends Controller
 {
@@ -31,8 +33,99 @@ class EnlistController extends Controller
 
     public function index()
     {
+        $currentYear = date("Y") - 1;
+        $student_enlistments = DB::select(DB::raw("
+        SELECT top 10 [id]
+              ,[surname]
+              ,[suffix]
+              ,[firstname]
+              ,[middlename]
+              ,[birthDate]
+              ,[birthPlace]
+              ,[gender]
+              ,[civilStatus]
+              ,[citizenship]
+              ,[religion]
+              ,[permanentAddress]
+              ,[permanentProvince]
+              ,[permanentCity]
+              ,[permanentzippostalcode]
+              ,[permanentCountry]
+              ,[sameAsPermanent]
+              ,[boarding]
+              ,[withRelative]
+              ,[cityAddress]
+              ,[cityProvince]
+              ,[cityCity]
+              ,[cityzippostalcode]
+              ,[cityCountry]
+              ,[email]
+              ,[mobileNum]
+              ,[personToContact]
+              ,[personToContactRelationship]
+              ,[personToContactTelNo]
+              ,[personToContactMobileNo]
+              ,[bloodGroup]
+              ,[rh]
+              ,[physicianName]
+              ,[physicianContactInformation]
+              ,[takingMedication]
+              ,[medicationInfo]
+              ,[specialNeeds]
+              ,[typeOfSpecialNeeds]
+              ,[othersSpecialNeeds]
+              ,[positionFamily]
+              ,[numBrothers]
+              ,[numSisters]
+              ,[fatherName]
+              ,[fatherLiving]
+              ,[fatherOccupation]
+              ,[fatherAddress]
+              ,[fatherContactNum]
+              ,[motherName]
+              ,[motherLiving]
+              ,[motherOccupation]
+              ,[motherAddress]
+              ,[motherContactNum]
+              ,[parentsMaritalStatus]
+              ,[nameOfSpouse]
+              ,[annualFamilyIncome]
+              ,[preSchoolName]
+              ,[preSchoolAddress]
+              ,[preSchoolGraduated]
+              ,[gradeSchoolName]
+              ,[gradeSchoolAddress]
+              ,[gradeSchoolGraduated]
+              ,[highSchoolName]
+              ,[highSchoolAddress]
+              ,[highSchoolGraduated]
+              ,[nameSHS]
+              ,[addressSHS]
+              ,[principalSHS]
+              ,[track]
+              ,[strand]
+              ,[isIndigenous]
+              ,[indigenousCommunity]
+              ,[nameCollegeUniv]
+              ,[addressCollegeUniv]
+              ,[programChoiceOne]
+              ,[programChoiceTwo]
+              ,[programChoiceThree]
+              ,[currTherapyRehabCounseling]
+              ,[currTherapyRehabCounselingName]
+              ,[currTherapyRehabCounselingContact]
+              ,[reasonToSeekHelp]
+              ,[status]
+              ,[created_at]
+              ,[updated_at]
+              ,[applicantID]
+          FROM [Enlistment].[dbo].[enlist] where YEAR(created_at) = '$currentYear' order by id desc"));
+        return response()->json([
+            'student_enlistments' => $student_enlistments
+        ], 200);
         // dd();
         //$users = User::all();
+        /*
         $program = DB::select(DB::raw("SELECT * FROM [Enlistment].[dbo].[curriculumn] 
         WHERE CODE IN (SELECT COURSECODE
                 FROM [Enlistment].[dbo].[CURRICCONTENT] 
@@ -54,7 +147,7 @@ class EnlistController extends Controller
                                    ->with('nationality', $nationality)
                                    ->with('countries', $countries);
                                    
-               //->with('users', $users);
+               //->with('users', $users);*/
     }
 
     public function allin()
@@ -64,8 +157,8 @@ class EnlistController extends Controller
         $program = Program::all();
         $division = Division::all();
         return view('enlist.allenlistment')->with('programs', $program)
-                                           ->with('divisions', $division);
-               //->with('users', $users);
+            ->with('divisions', $division);
+        //->with('users', $users);
     }
 
     public function filter(Request $request)
@@ -79,18 +172,19 @@ class EnlistController extends Controller
         $programFilter = $request->program;
         $query = DB::select(DB::raw("select * frp, "));
         return view('enlist.allenlistment')->with('programs', $program)
-                                           ->with('divisions', $division);
-               //->with('users', $users);
+            ->with('divisions', $division);
+        //->with('users', $users);
     }
 
-    public function create(Request $request){
+    public function create(Request $request)
+    {
 
         $enlist = new Enlist;
         $enlist->surname = mb_strtoupper($request->surname);
         $enlist->suffix = mb_strtoupper($request->suffix);
         $enlist->firstname = mb_strtoupper($request->firstname);
         $enlist->middlename = mb_strtoupper($request->middlename);
-        $name = mb_strtoupper($request->surname." ".$request->suffix.", ".$request->firstname." ".$request->middlename);
+        $name = mb_strtoupper($request->surname . " " . $request->suffix . ", " . $request->firstname . " " . $request->middlename);
         $enlist->birthDate = $request->birthDate;
         $enlist->birthPlace = $request->birthPlace;
         $enlist->gender = $request->gender;
@@ -113,21 +207,21 @@ class EnlistController extends Controller
         $enlist->cityCity = "";
         $enlist->cityzippostalcode = "";
         $enlist->cityCountry = "";
-        
-        if($request->sameAsPermanent == 0){
+
+        if ($request->sameAsPermanent == 0) {
             $enlist->cityAddress = $request->cityAddress;
             $enlist->cityProvince = $request->cityProvince;
             $enlist->cityCity = $request->cityCity;
             $enlist->cityzippostalcode = $request->cityzippostalcode;
-            $enlist->cityCountry = $request->cityCountry;    
+            $enlist->cityCountry = $request->cityCountry;
         }
 
-        if($request->sameAsPermanent == 1){
+        if ($request->sameAsPermanent == 1) {
             $enlist->cityAddress = $request->permanentAddress;
             $enlist->cityProvince = $request->permanentProvince;
             $enlist->cityCity = $request->permanentCity;
             $enlist->cityzippostalcode = $request->permanentzippostalcode;
-            $enlist->cityCountry = $request->permanentCountry;    
+            $enlist->cityCountry = $request->permanentCountry;
         }
 
         $enlist->email = $request->email;
@@ -206,14 +300,14 @@ class EnlistController extends Controller
         $enlist->reasonToSeekHelp = $request->reasonToSeekHelp;
         $choices = array();
         array_push($choices, $choice1);
-        if($choice2 != ""){
+        if ($choice2 != "") {
             array_push($choices, $choice2);
         }
-        if($choice3 != ""){
+        if ($choice3 != "") {
             array_push($choices, $choice3);
         }
-       // $curr_content = CurricontentController::loadFirstSemSubjects($choice1, $choice2, $choice3);
- /*       $to_name = 'MIS';
+        // $curr_content = CurricontentController::loadFirstSemSubjects($choice1, $choice2, $choice3);
+        /*       $to_name = 'MIS';
         $to_email = $enlist->email;
 $data = array('name'=>"Sam Jose", "body" => "Test mail");
     
@@ -221,23 +315,90 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
     $message->to($to_email, $to_name)
             ->subject('Artisans Web Testing Mail');
     $message->from('clbandoquillo@gmail.com','Artisans Web');
-});*/   $enlist->save();
-        if($enlist->save()){
+});*/
+        $enlist->save();
+        if ($enlist->save()) {
             \Mail::to($request->email)->send(new SendCourse($name, $choices, $choice1, $choice2, $choice3));
         }
         return Redirect::back()->with('success', "Hi ($name). You are now enlisted! Please check your e-mail for further instructions. Thank you.");
-
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
 
+        //dd($request->surname);
+        $request->validate([
+            'surname' => 'required',
+            'firstname' => 'required',
+            'middlename' => 'required',
+           /* 'contact_number' => 'required',
+            'birthDate' => 'required',
+            'birthPlace' => 'required',
+            'gender' => 'required',
+            'civilStatus' => 'required',
+            'religion' => 'required',
 
+            'permanentAddress' => 'required',
+            'permanentProvince' => 'required',
+            'permanentCity' => 'required',
+            'permanentzippostalcode' => 'required',
+            'permanentCountry' => 'required',
+
+            'sameAsPermanent' => 'required',
+            'boarding' => 'required',
+            'withRelative' => 'required',
+
+            'email' => 'required',
+            'mobileNum' => 'required',
+
+            'personToContact' => 'required',
+            'personToContactRelationship' => 'required',*/
+        ]);
+        
+        $surname = $request->surname;
+        $suffix = $request->suffix;
+        $firstname = $request->firstname;
+        $middlename = $request->middlename;
+        $birthDate = $request->birthDate;
+
+        $student_enlistments = new Enlist([
+            'surname' => $surname,
+            'suffix' => $suffix,
+            'firstname' => $firstname,
+            'middlename' => $middlename,
+            'birthDate' => $birthDate,
+           /* 'birthDate' => $request->birthDate,
+            'birthPlace' => $request->birthPlace,
+            'gender' => $request->gender,
+            'civilStatus' => $request->civilStatus,
+            'citizenship' => $request->citizenship,
+            'religion' => $request->religion,
+
+            'permanentAddress' = $request->permanentAddress;
+            'permanentProvince' = $request->permanentProvince;
+            'permanentCity' = $request->permanentCity;
+            'permanentzippostalcode' = $request->permanentzippostalcode;
+            'permanentCountry' = $request->permanentCountry;
+
+            $enlist->sameAsPermanent = $request->sameAsPermanent;
+            $enlist->boarding = $request->boarding;
+            $enlist->withRelative = $request->withRelative;*/
+        ]);
+        
+        $student_enlistments->save();
+
+        return response()->json([
+
+            'student_enlistments' => $student_enlistments,
+            'message' => 'Student has been enlisted'
+        ]);
+/*
         $enlist = new Enlist;
         $enlist->surname = mb_strtoupper($request->surname);
         $enlist->suffix = mb_strtoupper($request->suffix);
         $enlist->firstname = mb_strtoupper($request->firstname);
         $enlist->middlename = mb_strtoupper($request->middlename);
-        $name = mb_strtoupper($request->surname." ".$request->suffix.", ".$request->firstname." ".$request->middlename);
+        $name = mb_strtoupper($request->surname . " " . $request->suffix . ", " . $request->firstname . " " . $request->middlename);
         $enlist->birthDate = $request->birthDate;
         $enlist->birthPlace = $request->birthPlace;
         $enlist->gender = $request->gender;
@@ -260,21 +421,21 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
         $enlist->cityCity = "";
         $enlist->cityzippostalcode = "";
         $enlist->cityCountry = "";
-        
-        if($request->sameAsPermanent == 0){
+
+        if ($request->sameAsPermanent == 0) {
             $enlist->cityAddress = $request->cityAddress;
             $enlist->cityProvince = $request->cityProvince;
             $enlist->cityCity = $request->cityCity;
             $enlist->cityzippostalcode = $request->cityzippostalcode;
-            $enlist->cityCountry = $request->cityCountry;    
+            $enlist->cityCountry = $request->cityCountry;
         }
 
-        if($request->sameAsPermanent == 1){
+        if ($request->sameAsPermanent == 1) {
             $enlist->cityAddress = $request->permanentAddress;
             $enlist->cityProvince = $request->permanentProvince;
             $enlist->cityCity = $request->permanentCity;
             $enlist->cityzippostalcode = $request->permanentzippostalcode;
-            $enlist->cityCountry = $request->permanentCountry;    
+            $enlist->cityCountry = $request->permanentCountry;
         }
 
         $enlist->email = $request->email;
@@ -353,14 +514,14 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
         $enlist->reasonToSeekHelp = $request->reasonToSeekHelp;
         $choices = array();
         array_push($choices, $choice1);
-        if($choice2 != ""){
+        if ($choice2 != "") {
             array_push($choices, $choice2);
         }
-        if($choice3 != ""){
+        if ($choice3 != "") {
             array_push($choices, $choice3);
         }
-       // $curr_content = CurricontentController::loadFirstSemSubjects($choice1, $choice2, $choice3);
- /*       $to_name = 'MIS';
+        // $curr_content = CurricontentController::loadFirstSemSubjects($choice1, $choice2, $choice3);
+        /*       $to_name = 'MIS';
         $to_email = $enlist->email;
 $data = array('name'=>"Sam Jose", "body" => "Test mail");
     
@@ -368,12 +529,12 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
     $message->to($to_email, $to_name)
             ->subject('Artisans Web Testing Mail');
     $message->from('clbandoquillo@gmail.com','Artisans Web');
-});*/   $enlist->save();
-        if($enlist->save()){
+});*/
+     /*   $enlist->save();
+        if ($enlist->save()) {
             \Mail::to($request->email)->send(new SendCourse($name, $choices, $choice1, $choice2, $choice3));
         }
-        return Redirect::back()->with('success', "Hi ($name). You are now enlisted! Please check your e-mail for further instructions. Thank you.");
-
+        return Redirect::back()->with('success', "Hi ($name). You are now enlisted! Please check your e-mail for further instructions. Thank you.");*/
     }
 
     public function all()
@@ -383,12 +544,10 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
 
         $data = array();
         //dd($enlist);
-        if(isset($enlist))
-        {
-            foreach($enlist as $a)
-            {
+        if (isset($enlist)) {
+            foreach ($enlist as $a) {
                 $array = array();
-               /* $array['edit'] = '<span class="server-maintenance-button" data-toggle="modal" data-target="#add-modal"><button class="btn btn-xs btn-primary" id="editUser" name="editUser" value='.$a->id.'>
+                /* $array['edit'] = '<span class="server-maintenance-button" data-toggle="modal" data-target="#add-modal"><button class="btn btn-xs btn-primary" id="editUser" name="editUser" value='.$a->id.'>
                 <i class="fa fa-pencil"></i> EDIT</button></span>';*/
                 $array['surname'] = $a->surname;
                 $array['firstmiddlename'] = $a->firstmiddlename;
@@ -399,7 +558,7 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
             }
         }
 
-        $data = array('data' => $data, 'message' =>$message);
+        $data = array('data' => $data, 'message' => $message);
 
         return json_encode($data);
     }

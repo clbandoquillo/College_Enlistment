@@ -356,7 +356,7 @@
                             <input
                               name="permanentzippostalcode"
                               v-model="enlist.permanentzippostalcode"
-                              type="text"
+                              type="number"
                               class="form-control"
                               placeholder="Zip/Postal Code"
                               required
@@ -502,7 +502,7 @@
                                 id="cityzippostalcode"
                                 name="cityzippostalcode"
                                 v-model="enlist.cityzippostalcode"
-                                type="text"
+                                type="number"
                                 class="form-control"
                                 placeholder="Zip/Postal Code"
                               />
@@ -1707,7 +1707,7 @@
           <div class="modal-footer">
             <button data-dismiss="modal" class="btn btn-custon-rounded-four btn-primary">Cancel</button>
             <button
-              @click="makeToast"
+              @click="create_enlistment"
               :disabled="submitted"
               class="btn btn-custon-rounded-four btn-primary"
             >Confirm Enlistment</button>
@@ -1879,7 +1879,7 @@ export default {
 
     create_enlistment() {
       this.submitted = true;
-
+  
       axios
         .post("http://127.0.0.1:8000/student_enlistment", {
           surname: this.enlist.surname,
@@ -1887,7 +1887,7 @@ export default {
           firstname: this.enlist.firstname,
           middlename: this.enlist.middlename,
           birthDate: this.enlist.birthDate,
-          birthPlace: this.enlist.birthPlace,
+          /*birthPlace: this.enlist.birthPlace,
           gender: this.enlist.gender,
           civilStatus: this.enlist.civilStatus,
           citizenship: this.enlist.citizenship,
@@ -1968,7 +1968,7 @@ export default {
           isSHS: this.enlist.isSHS,
           isIndigenous: this.enlist.isIndigenous,
           takingMedication: this.enlist.takingMedication,
-          specialNeeds: this.enlist.specialNeeds
+          specialNeeds: this.enlist.specialNeeds*/
         })
         .then(response => {
           this.resetData();
