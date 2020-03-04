@@ -536,7 +536,7 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
             'highSchoolName' => $highSchoolName,
             'highSchoolAddress' => $highSchoolAddress,
             'highSchoolGraduated' => $highSchoolGraduated,
-x
+
             'nameSHS' => $nameSHS,
             'addressSHS' => $addressSHS,
             'track' => $track,
