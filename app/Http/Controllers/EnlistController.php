@@ -316,28 +316,9 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
             'surname' => 'required',
             'firstname' => 'required',
             'middlename' => 'required',
-            'contact_number' => 'required',
             'birthDate' => 'required',
             'birthPlace' => 'required',
             'gender' => 'required',
-            'civilStatus' => 'required',
-            'religion' => 'required',
-
-            'permanentAddress' => 'required',
-            'permanentProvince' => 'required',
-            'permanentCity' => 'required',
-            'permanentzippostalcode' => 'required',
-            'permanentCountry' => 'required',
-
-            'sameAsPermanent' => 'required',
-            'boarding' => 'required',
-            'withRelative' => 'required',
-
-            'email' => 'required',
-            'mobileNum' => 'required',
-
-            'personToContact' => 'required',
-            'personToContactRelationship' => 'required',
         ]);
         
         $surname = $request->surname;
@@ -465,7 +446,6 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
             'firstname' => $firstname,
             'middlename' => $middlename,
             'birthDate' => $birthDate,
-            'birthDate' => $birthDate,
             'birthPlace' => $birthPlace,
             'gender' => $gender,
             'civilStatus' => $civilStatus,
@@ -554,9 +534,9 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
             'motherName' => $motherName,
             'motherOccupation' => $motherOccupation,
             'annualFamilyIncome' => $annualFamilyIncome,
-            'choice1' => $choice1,
-            'choice2' => $choice2,
-            'choice3' => $choice3,
+            'programChoiceOne' => $choice1,
+            'programChoiceTwo' => $choice2,
+            'programChoiceThree' => $choice3,
             'currTherapyRehabCounseling' => $currTherapyRehabCounseling,
             'currTherapyRehabCounselingName' => $currTherapyRehabCounselingName,
             'currTherapyRehabCounselingContact' => $currTherapyRehabCounselingContact,
