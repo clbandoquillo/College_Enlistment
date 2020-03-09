@@ -1147,20 +1147,13 @@
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                       <div class="form-select-list">
                         <label>Name of School</label>
-                        <select
-                          data-placeholder="Choose a School..."
-                          id="preSchoolName"
-                          name="preSchoolName"
+                        <input
                           v-model="enlist.preSchoolName"
+                          type="text"
                           class="form-control"
-                          tabindex="-1"
-                        >
-                          <option disabled selected></option>
-                          <option
-                            v-for="school in schools"
-                            v-bind:value="school.SchoolId"
-                          >{{school.SchoolName}}</option>
-                        </select>
+                          placeholder="Name of School"
+                          required
+                        />
                       </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -1202,20 +1195,13 @@
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                       <div class="form-select-list">
                         <label>Name of School</label>
-                        <select
-                          data-placeholder="Choose a School..."
-                          id="gradeSchoolName"
-                          name="gradeSchoolName"
+                        <input
                           v-model="enlist.gradeSchoolName"
+                          type="text"
                           class="form-control"
-                          tabindex="-1"
-                        >
-                          <option disabled selected></option>
-                          <option
-                            v-for="school in schools"
-                            v-bind:value="school.SchoolId"
-                          >{{school.SchoolName}}</option>
-                        </select>
+                          placeholder="Name of School"
+                          required
+                        />
                       </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -1257,20 +1243,13 @@
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                       <div class="form-select-list">
                         <label>Name of School</label>
-                        <select
-                          data-placeholder="Choose a School..."
-                          id="highSchoolName"
-                          name="highSchoolName"
+                        <input
                           v-model="enlist.highSchoolName"
+                          type="text"
                           class="form-control"
-                          tabindex="-1"
-                        >
-                          <option disabled selected></option>
-                          <option
-                            v-for="school in schools"
-                            v-bind:value="school.SchoolId"
-                          >{{school.SchoolName}}</option>
-                        </select>
+                          placeholder="Name of School"
+                          required
+                        />
                       </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -1327,20 +1306,13 @@
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="form-select-list">
                           <label>Name of College or University Attended(if transfer student)</label>
-                          <select
-                            data-placeholder="Choose a School..."
-                            id="nameCollegeUniv"
-                            name="nameCollegeUniv"
+                          <input
                             v-model="enlist.nameCollegeUniv"
+                            type="text"
                             class="form-control"
-                            tabindex="-1"
-                          >
-                            <option disabled selected></option>
-                            <option
-                              v-for="school in schools"
-                              v-bind:value="school.SchoolId"
-                            >{{school.SchoolName}}</option>
-                          </select>
+                            placeholder="Name of School"
+                            required
+                          />
                         </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -1384,20 +1356,13 @@
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="form-select-list">
                           <label>Name of Senior High School Attended</label>
-                          <select
-                            data-placeholder="Choose a School..."
-                            id="nameSHS"
-                            name="nameSHS"
+                          <input
                             v-model="enlist.nameSHS"
+                            type="text"
                             class="form-control"
-                            tabindex="-1"
-                          >
-                            <option disabled selected></option>
-                            <option
-                              v-for="school in schools"
-                              v-bind:value="school.SchoolId"
-                            >{{school.SchoolName}}</option>
-                          </select>
+                            placeholder="Name of School"
+                            required
+                          />
                         </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -1702,7 +1667,13 @@
           <div class="modal-body">
             <span class="educate-icon educate-warning modal-check-pro information-icon-pro"></span>
             <h2>Please Review your Enlistment Information.</h2>
-            <p>This form will not be submitted unless all required fields are filled up. The pre-enrollee assures that all data filled-up in this form is accurate. A feedback will be given along with confirmation message will also be sent to the e-mail that you have provided once the pre-registration is successful.</p>
+            <h5>
+              <b>
+                <font
+                  color="red"
+                >This form will not be submitted unless all required fields are filled up.</font>
+              </b> The pre-enrollee assures that all data filled-up in this form is accurate. A feedback will be given along with confirmation message will also be sent to the e-mail that you have provided once the pre-registration is successful.
+            </h5>
           </div>
           <div class="modal-footer">
             <button data-dismiss="modal" class="btn btn-custon-rounded-four btn-primary">Cancel</button>
@@ -1711,6 +1682,7 @@
               :disabled="submitted"
               class="btn btn-custon-rounded-four btn-primary"
             >Confirm Enlistment</button>
+            <b-button variant="success" @click="makeToast('success')" class="mb-2">Success</b-button>
           </div>
         </div>
       </div>
@@ -1832,9 +1804,22 @@ export default {
   },
 
   methods: {
-    makeToast() {
+    /* makeToast() {
       $("#PrimaryModalalert").modal("hide");
       toastr.success("hahaha");
+    },*/
+
+    makeToast(variant = null) {
+      $("#PrimaryModalalert").modal("hide");
+      this.$bvToast.toast(
+        `You are now enlisted ${this.enlist.surname}, ${this.enlist.firstname} ${this.enlist.middlename}. Please check your e-mail for further details.`,
+        {
+          title: "Student Enlistment was successful!",
+          variant: variant,
+          solid: true,
+          autoHideDelay: 10000
+        }
+      );
     },
 
     submitModal() {
@@ -1879,7 +1864,7 @@ export default {
 
     create_enlistment() {
       this.submitted = true;
-  
+
       axios
         .post("http://127.0.0.1:8000/student_enlistment", {
           surname: this.enlist.surname,
@@ -1972,11 +1957,106 @@ export default {
           specialNeeds: this.enlist.specialNeeds
         })
         .then(response => {
-          this.resetData();
           this.submitted = false;
-          $("#PrimaryModalalert").modal("hide");
-          this.makeToast;
+          //$("#PrimaryModalalert").modal("hide");
+          this.makeToast("success");
+          this.resetData();
+          setTimeout(function() {
+            this.$router.push("");
+          }, 11000);
+        })
+        .catch(error => {
+          this.submitted = false;
         });
+    },
+
+    resetData() {
+      this.enlist.applicantID = "";
+      this.enlist.surname = "";
+      this.enlist.suffix = "";
+      this.enlist.firstname = "";
+      this.enlist.middlename = "";
+      this.enlist.birthDate = "";
+      this.enlist.birthPlace = "";
+      this.enlist.gender = "";
+      this.enlist.civilStatus = "";
+      this.enlist.citizenship = "";
+      this.enlist.religion = "";
+      this.enlist.permanentAddress = "";
+      this.enlist.permanentProvince = "";
+      this.enlist.permanentCity = "";
+      this.enlist.permanentzippostalcode = "";
+      this.enlist.permanentCountry = "";
+      this.enlist.sameAsPermanent = "";
+      this.enlist.boarding = "";
+      this.enlist.withRelative = "";
+      this.enlist.cityAddress = "";
+      this.enlist.cityProvince = "";
+      this.enlist.cityCity = "";
+      this.enlist.cityzippostalcode = "";
+      this.enlist.cityCountry = "";
+      this.enlist.email = "";
+      this.enlist.mobileNum = "";
+      this.enlist.personToContact = "";
+      this.enlist.personToContactRelationship = "";
+      this.enlist.personToContactTelNo = "";
+      this.enlist.personToContactMobileNo = "";
+      this.enlist.bloodGroup = "";
+      this.enlist.rh = "";
+      this.enlist.physicianName = "";
+      this.enlist.physicianContactInformation = "";
+      this.enlist.takingMedication = "";
+      this.enlist.medicationInfo = "";
+      this.enlist.specialNeeds = "";
+      this.enlist.typeOfSpecialNeeds = "";
+      this.enlist.othersSpecialNeeds = "";
+      this.enlist.positionFamily = "";
+      this.enlist.numBrothers = "";
+      this.enlist.numSisters = "";
+      this.enlist.fatherName = "";
+      this.enlist.fatherLiving = "";
+      this.enlist.fatherOccupation = "";
+      this.enlist.fatherAddress = "";
+      this.enlist.fatherContactNum = "";
+      this.enlist.motherName = "";
+      this.enlist.motherLiving = "";
+      this.enlist.motherOccupation = "";
+      this.enlist.motherAddress = "";
+      this.enlist.motherContactNum = "";
+      this.enlist.parentsMaritalStatus = "";
+      this.enlist.nameOfSpouse = "";
+      this.enlist.annualFamilyIncome = "";
+      this.enlist.preSchoolName = "";
+      this.enlist.preSchoolAddress = "";
+      this.enlist.preSchoolGraduated = "";
+      this.enlist.gradeSchoolName = "";
+      this.enlist.gradeSchoolAddress = "";
+      this.enlist.gradeSchoolGraduated = "";
+      this.enlist.highSchoolName = "";
+      this.enlist.highSchoolAddress = "";
+      this.enlist.highSchoolGraduated = "";
+      this.enlist.nameSHS = "";
+      this.enlist.addressSHS = "";
+      this.enlist.principalSHS = "";
+      this.enlist.track = "";
+      this.enlist.strand = "";
+      this.enlist.isIndigenous = "";
+      this.enlist.indigenousCommunity = "";
+      this.enlist.nameCollegeUniv = "";
+      this.enlist.addressCollegeUniv = "";
+      this.enlist.programChoiceOne = "";
+      this.enlist.programChoiceTwo = "";
+      this.enlist.programChoiceThree = "";
+      this.enlist.currTherapyRehabCounseling = "";
+      this.enlist.currTherapyRehabCounselingName = "";
+      this.enlist.currTherapyRehabCounselingContact = "";
+      this.enlist.reasonToSeekHelp = "";
+      this.enlist.status = "";
+      this.enlist.isCollege = "";
+      this.enlist.isSHS = "";
+      this.enlist.isIndigenous = "";
+      this.enlist.takingMedication = "";
+      this.enlist.specialNeeds = "";
     }
   },
 

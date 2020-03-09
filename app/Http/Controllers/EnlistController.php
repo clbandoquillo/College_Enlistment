@@ -434,6 +434,14 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
         $choice1 = $request->programChoiceOne;
         $choice2 = $request->programChoiceTwo;
         $choice3 = $request->programChoiceThree;
+        $choices = array();
+        array_push($choices, $choice1);
+        if ($choice2 != "") {
+            array_push($choices, $choice2);
+        }
+        if ($choice3 != "") {
+            array_push($choices, $choice3);
+        }
 
         $currTherapyRehabCounseling = $request->currTherapyRehabCounseling;
         $currTherapyRehabCounselingName = $request->currTherapyRehabCounselingName;
@@ -544,6 +552,10 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
         ]);
         
         $student_enlistments->save();
+
+        if ($student_enlistments->save()) {
+            \Mail::to($request->email)->send(new SendCourse($name, $choices, $choice1, $choice2, $choice3));
+        }
 
         return response()->json([
 

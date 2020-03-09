@@ -13,7 +13,7 @@ import Home from './views/Home'
 import Enlist from './views/enlist/EnlistComponent'
 
 //import 'bootstrap/dist/css/bootstrap.css'
-//import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
