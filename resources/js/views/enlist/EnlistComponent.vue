@@ -1793,13 +1793,13 @@ export default {
       schools: [],
       programs: [],
 
-      url_cities: "http://127.0.0.1:8000/citieslist",
-      url_countries: "http://127.0.0.1:8000/countrieslist",
-      url_nationalities: "http://127.0.0.1:8000/nationalitylist",
-      url_provinces: "http://127.0.0.1:8000/provinceslist",
-      url_religions: "http://127.0.0.1:8000/religionlist",
-      url_schools: "http://127.0.0.1:8000/schoolslist",
-      url_programs: "http://127.0.0.1:8000/programslist"
+      url_cities: "http://enlist.addu.edu.ph/citieslist",
+      url_countries: "http://enlist.addu.edu.ph/countrieslist",
+      url_nationalities: "http://enlist.addu.edu.ph/nationalitylist",
+      url_provinces: "http://enlist.addu.edu.ph/provinceslist",
+      url_religions: "http://enlist.addu.edu.ph/religionlist",
+      url_schools: "http://enlist.addu.edu.ph/schoolslist",
+      url_programs: "http://enlist.addu.edu.ph/programslist"
     };
   },
 
@@ -1866,7 +1866,7 @@ export default {
       this.submitted = true;
 
       axios
-        .post("http://127.0.0.1:8000/student_enlistment", {
+        .post("http://enlist.addu.edu.ph/student_enlistment", {
           surname: this.enlist.surname,
           suffix: this.enlist.suffix,
           firstname: this.enlist.firstname,

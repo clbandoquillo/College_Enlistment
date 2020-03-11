@@ -554,13 +554,13 @@ Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
         $student_enlistments->save();
 
         if ($student_enlistments->save()) {
-            \Mail::to($request->email)->send(new SendCourse($name, $choices, $choice1, $choice2, $choice3));
+            \Mail::to($email)->send(new SendCourse($name, $choices, $choice1, $choice2, $choice3));
         }
 
         return response()->json([
 
             'student_enlistments' => $student_enlistments,
-            'message' => 'Student has been enlisted'
+            'message' => 'Student has b een enlisted'
         ]);
     }
 
