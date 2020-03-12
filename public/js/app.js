@@ -80395,45 +80395,26 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "modal-footer" },
-              [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-custon-rounded-four btn-primary",
-                    attrs: { "data-dismiss": "modal" }
-                  },
-                  [_vm._v("Cancel")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-custon-rounded-four btn-primary",
-                    attrs: { disabled: _vm.submitted },
-                    on: { click: _vm.create_enlistment }
-                  },
-                  [_vm._v("Confirm Enlistment")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "b-button",
-                  {
-                    staticClass: "mb-2",
-                    attrs: { variant: "success" },
-                    on: {
-                      click: function($event) {
-                        return _vm.makeToast("success")
-                      }
-                    }
-                  },
-                  [_vm._v("Success")]
-                )
-              ],
-              1
-            )
+            _c("div", { staticClass: "modal-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-custon-rounded-four btn-primary",
+                  attrs: { "data-dismiss": "modal" }
+                },
+                [_vm._v("Cancel")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-custon-rounded-four btn-primary",
+                  attrs: { disabled: _vm.submitted },
+                  on: { click: _vm.create_enlistment }
+                },
+                [_vm._v("Confirm Enlistment")]
+              )
+            ])
           ])
         ])
       ]

@@ -1682,7 +1682,7 @@
               :disabled="submitted"
               class="btn btn-custon-rounded-four btn-primary"
             >Confirm Enlistment</button>
-            <b-button variant="success" @click="makeToast('success')" class="mb-2">Success</b-button>
+            <!--<b-button variant="success" @click="makeToast('success')" class="mb-2">Success</b-button>-->
           </div>
         </div>
       </div>
